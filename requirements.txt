@@ -1,0 +1,17 @@
+asgiref
+Django
+django-cors-headers
+djangorestframework
+djangorestframework-simplejwt
+PyJWT
+pytz
+sqlparse
+psycopg2-binary
+python-dotenv
+pytest
+mysqlclient
+mysql-connector-python
+pillow
+pytest-django
+pytest-cov
+pytest-mock
