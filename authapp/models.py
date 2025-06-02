@@ -3,9 +3,9 @@
 
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-from django.utils import timezone
-import random
-import string
+from django.core.validators import RegexValidator
+import uuid
+from datetime import datetime, timedelta
 
 class User(AbstractUser):
     GENDER_CHOICES = [
@@ -13,117 +13,133 @@ class User(AbstractUser):
         ('F', 'Female'),
     ]
     
+    # Override email to be unique and required
     email = models.EmailField(unique=True)
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
-    phone_number = models.CharField(max_length=20, blank=True, null=True)
+    
+    # Additional profile fields
+    phone_number = models.CharField(
+        max_length=15,
+        blank=True,
+        null=True,
+        validators=[RegexValidator(r'^\+?1?\d{9,15}$', 'Phone number must be valid')]
+    )
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, blank=True, null=True)
     country = models.CharField(max_length=100, blank=True, null=True)
     date_of_birth = models.DateField(blank=True, null=True)
-    avatar = models.ImageField(upload_to='avatars/', blank=True, null=True)
-    is_admin = models.BooleanField(default=False)
+    
+    # Account status fields
     is_verified = models.BooleanField(default=False)
+    is_admin_user = models.BooleanField(default=False)  # For admin dashboard access
+    
+    # Profile image
+    avatar = models.ImageField(upload_to='avatars/', blank=True, null=True)
+    
+    # Timestamps
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
+    # Use email as username
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
+    
+    class Meta:
+        db_table = 'users'
+        verbose_name = 'User'
+        verbose_name_plural = 'Users'
     
     def __str__(self):
         return f"{self.first_name} {self.last_name} ({self.email})"
     
     @property
     def full_name(self):
-        return f"{self.first_name} {self.last_name}"
-
+        return f"{self.first_name} {self.last_name}".strip()
+    
+    @property
+    def is_admin(self):
+        return self.is_admin_user or self.is_superuser
 
 class EmailVerification(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='email_verifications')
     code = models.CharField(max_length=6)
     created_at = models.DateTimeField(auto_now_add=True)
-    expires_at = models.DateTimeField()
     is_used = models.BooleanField(default=False)
+    expires_at = models.DateTimeField()
+    
+    class Meta:
+        db_table = 'email_verifications'
+        ordering = ['-created_at']
     
     def save(self, *args, **kwargs):
-        if not self.code:
-            self.code = self.generate_code()
         if not self.expires_at:
-            self.expires_at = timezone.now() + timezone.timedelta(minutes=15)
+            self.expires_at = datetime.now() + timedelta(minutes=15)  # 15 minutes expiry
         super().save(*args, **kwargs)
     
-    @staticmethod
-    def generate_code():
-        return ''.join(random.choices(string.digits, k=6))
-    
     def is_expired(self):
-        return timezone.now() > self.expires_at
+        return datetime.now() > self.expires_at
     
     def __str__(self):
-        return f"Verification code for {self.user.email}: {self.code}"
+        return f"Verification code for {self.user.email}"
 
-
-class UserActivity(models.Model):
-    ACTIVITY_TYPES = [
-        ('VIEW', 'View'),
-        ('LIKE', 'Like'),
-        ('UNLIKE', 'Unlike'), 
-        ('COMMENT', 'Comment'),
-        ('SHARE', 'Share'),
-        ('WATCH', 'Watch'),
-        ('READ', 'Read'),
-    ]
-    
+class UserLibrary(models.Model):
     CONTENT_TYPES = [
-        ('STORY', 'Story'),
-        ('FILM', 'Film'),
-        ('CONTENT', 'Content'),
-        ('PODCAST', 'Podcast'),
-        ('ANIMATION', 'Animation'),
-        ('SNEAK_PEEK', 'Sneak Peek'),
+        ('story', 'Story'),
+        ('film', 'Film'),
+        ('content', 'Content'),
+        ('podcast', 'Podcast'),
+        ('animation', 'Animation'),
+        ('sneak_peek', 'Sneak Peek'),
     ]
     
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='activities')
-    activity_type = models.CharField(max_length=10, choices=ACTIVITY_TYPES)
-    content_type = models.CharField(max_length=15, choices=CONTENT_TYPES)
-    content_id = models.PositiveIntegerField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='library')
+    content_type = models.CharField(max_length=20, choices=CONTENT_TYPES)
+    content_id = models.PositiveIntegerField()  # Generic foreign key
+    watched_at = models.DateTimeField(auto_now_add=True)
+    is_completed = models.BooleanField(default=False)
+    watch_progress = models.FloatField(default=0.0)  # Percentage watched (0-100)
+    
+    class Meta:
+        db_table = 'user_library'
+        unique_together = ['user', 'content_type', 'content_id']
+        ordering = ['-watched_at']
+    
+    def __str__(self):
+        return f"{self.user.email} - {self.content_type} {self.content_id}"
+
+class UserFavorites(models.Model):
+    CONTENT_TYPES = [
+        ('story', 'Story'),
+        ('film', 'Film'),
+        ('content', 'Content'),
+        ('podcast', 'Podcast'),
+        ('animation', 'Animation'),
+        ('sneak_peek', 'Sneak Peek'),
+    ]
+    
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='favorites')
+    content_type = models.CharField(max_length=20, choices=CONTENT_TYPES)
+    content_id = models.PositiveIntegerField()  # Generic foreign key
     created_at = models.DateTimeField(auto_now_add=True)
     
     class Meta:
+        db_table = 'user_favorites'
+        unique_together = ['user', 'content_type', 'content_id']
         ordering = ['-created_at']
-        indexes = [
-            models.Index(fields=['user', 'activity_type']),
-            models.Index(fields=['content_type', 'content_id']),
-        ]
     
     def __str__(self):
-        return f"{self.user.full_name} {self.activity_type} {self.content_type} {self.content_id}"
+        return f"{self.user.email} favorited {self.content_type} {self.content_id}"
 
-
-class UserLibrary(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='library_items')
-    content_type = models.CharField(max_length=15, choices=UserActivity.CONTENT_TYPES)
-    content_id = models.PositiveIntegerField()
-    added_at = models.DateTimeField(auto_now_add=True)
-    last_accessed = models.DateTimeField(auto_now=True)
-    progress = models.FloatField(default=0.0)  # For tracking watch/read progress
+class UserSession(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sessions')
+    session_key = models.CharField(max_length=40, unique=True)
+    device_info = models.TextField(blank=True, null=True)
+    ip_address = models.GenericIPAddressField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    last_activity = models.DateTimeField(auto_now=True)
+    is_active = models.BooleanField(default=True)
     
     class Meta:
-        unique_together = ['user', 'content_type', 'content_id']
-        ordering = ['-last_accessed']
+        db_table = 'user_sessions'
+        ordering = ['-last_activity']
     
     def __str__(self):
-        return f"{self.user.full_name}'s {self.content_type} {self.content_id}"
-
-
-class UserFavorites(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='favorites')
-    content_type = models.CharField(max_length=15, choices=UserActivity.CONTENT_TYPES)
-    content_id = models.PositiveIntegerField()
-    added_at = models.DateTimeField(auto_now_add=True)
-    
-    class Meta:
-        unique_together = ['user', 'content_type', 'content_id']
-        ordering = ['-added_at']
-    
-    def __str__(self):
-        return f"{self.user.full_name}'s favorite {self.content_type} {self.content_id}"
+        return f"{self.user.email} session"

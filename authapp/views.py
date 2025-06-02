@@ -2,246 +2,358 @@
 # authapp/views.py
 
 
-from rest_framework import status, generics, permissions
+from rest_framework import status, permissions, generics
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
-from django.contrib.auth import login
+from django.contrib.auth import get_user_model, logout
 from django.core.mail import send_mail
 from django.conf import settings
-from django.db import transaction
-
-from .models import User, EmailVerification, UserActivity, UserLibrary, UserFavorites
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+from .models import EmailVerification, UserLibrary, UserFavorites
 from .serializers import (
-    UserRegistrationSerializer, EmailVerificationSerializer, UserLoginSerializer,
-    UserProfileSerializer, UserUpdateSerializer, UserActivitySerializer,
-    UserLibrarySerializer, UserFavoritesSerializer, PasswordChangeSerializer
+    UserRegistrationSerializer, UserLoginSerializer, EmailVerificationSerializer,
+    ResendVerificationSerializer, UserProfileSerializer, UserProfileUpdateSerializer,
+    ChangePasswordSerializer, UserLibrarySerializer, UserLibraryCreateSerializer,
+    UserFavoritesSerializer, UserFavoritesCreateSerializer, UserListSerializer
 )
-from .utils import send_verification_email
+import random
+import string
 
+User = get_user_model()
 
-class UserRegistrationView(generics.CreateAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserRegistrationSerializer
-    permission_classes = [AllowAny]
-    
-    def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        
-        with transaction.atomic():
-            user = serializer.save()
-            
-            # Create and send verification code
-            verification = EmailVerification.objects.create(user=user)
-            send_verification_email(user.email, verification.code)
-            
-        return Response({
-            'message': 'User registered successfully. Please check your email for verification code.',
-            'user_id': user.id
-        }, status=status.HTTP_201_CREATED)
-
-
-class EmailVerificationView(generics.GenericAPIView):
-    serializer_class = EmailVerificationSerializer
-    permission_classes = [AllowAny]
+class UserRegistrationView(APIView):
+    permission_classes = [permissions.AllowAny]
     
     def post(self, request):
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
+        serializer = UserRegistrationSerializer(data=request.data)
+        if serializer.is_valid():
+            user = serializer.save()
+            
+            # Send verification email
+            verification = EmailVerification.objects.filter(user=user).first()
+            self.send_verification_email(user, verification.code)
+            
+            return Response({
+                'message': 'User registered successfully. Please check your email for verification code.',
+                'user_id': user.id,
+                'email': user.email
+            }, status=status.HTTP_201_CREATED)
         
-        user = serializer.validated_data['user']
-        verification = serializer.validated_data['verification']
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    def send_verification_email(self, user, code):
+        subject = 'Verify Your Email - Streaming Platform'
+        context = {
+            'user': user,
+            'code': code,
+            'site_name': 'Streaming Platform'
+        }
         
-        with transaction.atomic():
+        # HTML email content
+        html_message = f"""
+        <html>
+        <body>
+            <h2>Welcome to Streaming Platform!</h2>
+            <p>Hi {user.first_name},</p>
+            <p>Thank you for registering with us. Please use the following code to verify your email:</p>
+            <h3 style="color: #007bff; font-size: 24px; letter-spacing: 2px;">{code}</h3>
+            <p>This code will expire in 15 minutes.</p>
+            <p>If you didn't create this account, please ignore this email.</p>
+            <br>
+            <p>Best regards,<br>Streaming Platform Team</p>
+        </body>
+        </html>
+        """
+        
+        plain_message = f"""
+        Welcome to Streaming Platform!
+        
+        Hi {user.first_name},
+        
+        Thank you for registering with us. Please use the following code to verify your email:
+        
+        {code}
+        
+        This code will expire in 15 minutes.
+        
+        If you didn't create this account, please ignore this email.
+        
+        Best regards,
+        Streaming Platform Team
+        """
+        
+        send_mail(
+            subject,
+            plain_message,
+            settings.DEFAULT_FROM_EMAIL,
+            [user.email],
+            html_message=html_message,
+            fail_silently=False,
+        )
+
+class EmailVerificationView(APIView):
+    permission_classes = [permissions.AllowAny]
+    
+    def post(self, request):
+        serializer = EmailVerificationSerializer(data=request.data)
+        if serializer.is_valid():
+            user = serializer.validated_data['user']
+            verification = serializer.validated_data['verification']
+            
+            # Mark user as verified
             user.is_verified = True
             user.save()
             
+            # Mark verification as used
             verification.is_used = True
             verification.save()
-        
-        return Response({
-            'message': 'Email verified successfully. You can now log in.'
-        }, status=status.HTTP_200_OK)
-
-
-class ResendVerificationView(generics.GenericAPIView):
-    permission_classes = [AllowAny]
-    
-    def post(self, request):
-        email = request.data.get('email')
-        
-        if not email:
+            
             return Response({
-                'error': 'Email is required.'
-            }, status=status.HTTP_400_BAD_REQUEST)
-        
-        try:
-            user = User.objects.get(email=email)
-        except User.DoesNotExist:
-            return Response({
-                'error': 'User with this email does not exist.'
-            }, status=status.HTTP_404_NOT_FOUND)
-        
-        if user.is_verified:
-            return Response({
-                'message': 'User is already verified.'
+                'message': 'Email verified successfully. You can now log in.'
             }, status=status.HTTP_200_OK)
         
-        # Create new verification code
-        verification = EmailVerification.objects.create(user=user)
-        send_verification_email(user.email, verification.code)
-        
-        return Response({
-            'message': 'Verification code sent successfully.'
-        }, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
-class UserLoginView(generics.GenericAPIView):
-    serializer_class = UserLoginSerializer
-    permission_classes = [AllowAny]
+class ResendVerificationView(APIView):
+    permission_classes = [permissions.AllowAny]
     
     def post(self, request):
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
+        serializer = ResendVerificationSerializer(data=request.data)
+        if serializer.is_valid():
+            email = serializer.validated_data['email']
+            user = User.objects.get(email=email)
+            
+            # Generate new verification code
+            code = ''.join(random.choices(string.digits, k=6))
+            EmailVerification.objects.create(user=user, code=code)
+            
+            # Send email
+            UserRegistrationView().send_verification_email(user, code)
+            
+            return Response({
+                'message': 'Verification code sent successfully.'
+            }, status=status.HTTP_200_OK)
         
-        user = serializer.validated_data['user']
-        
-        # Generate JWT tokens
-        refresh = RefreshToken.for_user(user)
-        access_token = refresh.access_token
-        
-        # Add custom claims
-        access_token['is_admin'] = user.is_admin
-        access_token['full_name'] = user.full_name
-        
-        return Response({
-            'access_token': str(access_token),
-            'refresh_token': str(refresh),
-            'user': UserProfileSerializer(user).data
-        }, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
-class UserProfileView(generics.RetrieveUpdateAPIView):
-    serializer_class = UserProfileSerializer
-    permission_classes = [IsAuthenticated]
-    
-    def get_object(self):
-        return self.request.user
-    
-    def get_serializer_class(self):
-        if self.request.method == 'PUT' or self.request.method == 'PATCH':
-            return UserUpdateSerializer
-        return UserProfileSerializer
-
-
-class ChangePasswordView(generics.GenericAPIView):
-    serializer_class = PasswordChangeSerializer
-    permission_classes = [IsAuthenticated]
+class UserLoginView(APIView):
+    permission_classes = [permissions.AllowAny]
     
     def post(self, request):
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
+        serializer = UserLoginSerializer(data=request.data)
+        if serializer.is_valid():
+            user = serializer.validated_data['user']
+            
+            # Generate JWT tokens
+            refresh = RefreshToken.for_user(user)
+            access_token = refresh.access_token
+            
+            # Update last login
+            user.save(update_fields=['last_login'])
+            
+            return Response({
+                'message': 'Login successful',
+                'user': UserProfileSerializer(user).data,
+                'tokens': {
+                    'access': str(access_token),
+                    'refresh': str(refresh),
+                }
+            }, status=status.HTTP_200_OK)
         
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class UserLogoutView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def post(self, request):
+        try:
+            refresh_token = request.data.get('refresh')
+            if refresh_token:
+                token = RefreshToken(refresh_token)
+                token.blacklist()
+            
+            logout(request)
+            return Response({
+                'message': 'Logout successful'
+            }, status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({
+                'error': 'Invalid token'
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+class UserProfileView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def get(self, request):
+        serializer = UserProfileSerializer(request.user)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
+    def put(self, request):
+        serializer = UserProfileUpdateSerializer(request.user, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({
+                'message': 'Profile updated successfully',
+                'user': UserProfileSerializer(request.user).data
+            }, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class ChangePasswordView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def post(self, request):
+        serializer = ChangePasswordSerializer(data=request.data, context={'request': request})
+        if serializer.is_valid():
+            user = request.user
+            user.set_password(serializer.validated_data['new_password'])
+            user.save()
+            
+            return Response({
+                'message': 'Password changed successfully'
+            }, status=status.HTTP_200_OK)
+        
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class DeleteAccountView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def delete(self, request):
         user = request.user
-        user.set_password(serializer.validated_data['new_password'])
-        user.save()
-        
-        return Response({
-            'message': 'Password changed successfully.'
-        }, status=status.HTTP_200_OK)
-
-
-class DeleteAccountView(generics.DestroyAPIView):
-    permission_classes = [IsAuthenticated]
-    
-    def get_object(self):
-        return self.request.user
-    
-    def destroy(self, request, *args, **kwargs):
-        user = self.get_object()
         user.delete()
         
         return Response({
-            'message': 'Account deleted successfully.'
-        }, status=status.HTTP_204_NO_CONTENT)
-
-
-class UserLibraryView(generics.ListCreateAPIView):
-    serializer_class = UserLibrarySerializer
-    permission_classes = [IsAuthenticated]
-    
-    def get_queryset(self):
-        return UserLibrary.objects.filter(user=self.request.user)
-    
-    def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
-
-
-class UserLibraryDetailView(generics.RetrieveUpdateDestroyAPIView):
-    serializer_class = UserLibrarySerializer
-    permission_classes = [IsAuthenticated]
-    
-    def get_queryset(self):
-        return UserLibrary.objects.filter(user=self.request.user)
-
-
-class UserFavoritesView(generics.ListCreateAPIView):
-    serializer_class = UserFavoritesSerializer
-    permission_classes = [IsAuthenticated]
-    
-    def get_queryset(self):
-        return UserFavorites.objects.filter(user=self.request.user)
-    
-    def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
-
-
-class UserFavoritesDetailView(generics.RetrieveDestroyAPIView):
-    serializer_class = UserFavoritesSerializer
-    permission_classes = [IsAuthenticated]
-    
-    def get_queryset(self):
-        return UserFavorites.objects.filter(user=self.request.user)
-
-
-class UserActivityView(generics.ListCreateAPIView):
-    serializer_class = UserActivitySerializer
-    permission_classes = [IsAuthenticated]
-    
-    def get_queryset(self):
-        return UserActivity.objects.filter(user=self.request.user)
-    
-    def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
-
-
-@api_view(['POST'])
-@permission_classes([AllowAny])
-def google_auth(request):
-    """Handle Google OAuth authentication"""
-    # This will be implemented with Google OAuth library
-    # For now, return a placeholder response
-    return Response({
-        'message': 'Google authentication endpoint - to be implemented'
-    }, status=status.HTTP_501_NOT_IMPLEMENTED)
-
-
-@api_view(['POST'])
-@permission_classes([IsAuthenticated])
-def logout_view(request):
-    """Handle user logout"""
-    try:
-        refresh_token = request.data.get('refresh_token')
-        if refresh_token:
-            token = RefreshToken(refresh_token)
-            token.blacklist()
-        
-        return Response({
-            'message': 'Logged out successfully.'
+            'message': 'Account deleted successfully'
         }, status=status.HTTP_200_OK)
-    except Exception as e:
+
+# User Library Views
+class UserLibraryListView(generics.ListAPIView):
+    serializer_class = UserLibrarySerializer
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def get_queryset(self):
+        return UserLibrary.objects.filter(user=self.request.user)
+
+class UserLibraryCreateView(generics.CreateAPIView):
+    serializer_class = UserLibraryCreateSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
+class UserLibraryUpdateView(generics.UpdateAPIView):
+    serializer_class = UserLibraryCreateSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def get_queryset(self):
+        return UserLibrary.objects.filter(user=self.request.user)
+
+# User Favorites Views
+class UserFavoritesListView(generics.ListAPIView):
+    serializer_class = UserFavoritesSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def get_queryset(self):
+        return UserFavorites.objects.filter(user=self.request.user)
+
+class UserFavoritesCreateView(generics.CreateAPIView):
+    serializer_class = UserFavoritesCreateSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
+class UserFavoritesDeleteView(generics.DestroyAPIView):
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def get_queryset(self):
+        return UserFavorites.objects.filter(user=self.request.user)
+    
+    def get_object(self):
+        content_type = self.request.data.get('content_type')
+        content_id = self.request.data.get('content_id')
+        
+        return UserFavorites.objects.get(
+            user=self.request.user,
+            content_type=content_type,
+            content_id=content_id
+        )
+
+# Admin Views
+class UserListView(generics.ListAPIView):
+    """Admin only - List all users"""
+    serializer_class = UserListSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    queryset = User.objects.all()
+    
+    def get(self, request, *args, **kwargs):
+        if not request.user.is_admin:
+            return Response({
+                'error': 'Permission denied. Admin access required.'
+            }, status=status.HTTP_403_FORBIDDEN)
+        
+        return super().get(request, *args, **kwargs)
+
+class MakeUserAdminView(APIView):
+    """Admin only - Make a user admin"""
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def post(self, request):
+        if not request.user.is_admin:
+            return Response({
+                'error': 'Permission denied. Admin access required.'
+            }, status=status.HTTP_403_FORBIDDEN)
+        
+        user_id = request.data.get('user_id')
+        try:
+            user = User.objects.get(id=user_id)
+            user.is_admin_user = True
+            user.save()
+            
+            return Response({
+                'message': f'User {user.email} is now an admin.'
+            }, status=status.HTTP_200_OK)
+        
+        except User.DoesNotExist:
+            return Response({
+                'error': 'User not found.'
+            }, status=status.HTTP_404_NOT_FOUND)
+
+class DeleteUserView(APIView):
+    """Admin only - Delete a user"""
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def delete(self, request, user_id):
+        if not request.user.is_admin:
+            return Response({
+                'error': 'Permission denied. Admin access required.'
+            }, status=status.HTTP_403_FORBIDDEN)
+        
+        try:
+            user = User.objects.get(id=user_id)
+            if user.is_superuser:
+                return Response({
+                    'error': 'Cannot delete superuser.'
+                }, status=status.HTTP_400_BAD_REQUEST)
+            
+            user.delete()
+            return Response({
+                'message': 'User deleted successfully.'
+            }, status=status.HTTP_200_OK)
+        
+        except User.DoesNotExist:
+            return Response({
+                'error': 'User not found.'
+            }, status=status.HTTP_404_NOT_FOUND)
+
+# Google OAuth (placeholder for future implementation)
+class GoogleAuthView(APIView):
+    permission_classes = [permissions.AllowAny]
+    
+    def post(self, request):
+        # This will be implemented with Google OAuth integration
         return Response({
-            'error': 'Invalid token.'
-        }, status=status.HTTP_400_BAD_REQUEST)
+            'message': 'Google authentication will be implemented soon.'
+        }, status=status.HTTP_501_NOT_IMPLEMENTED)

@@ -4,31 +4,48 @@
 
 from django.urls import path
 from rest_framework_simplejwt.views import TokenRefreshView
-from . import views
+from .views import (
+    UserRegistrationView, UserLoginView, UserLogoutView,
+    EmailVerificationView, ResendVerificationView,
+    UserProfileView, ChangePasswordView, DeleteAccountView,
+    UserLibraryListView, UserLibraryCreateView, UserLibraryUpdateView,
+    UserFavoritesListView, UserFavoritesCreateView, UserFavoritesDeleteView,
+    UserListView, MakeUserAdminView, DeleteUserView, GoogleAuthView
+)
+
+app_name = 'authapp'
 
 urlpatterns = [
     # Authentication endpoints
-    path('register/', views.UserRegistrationView.as_view(), name='user-register'),
-    path('verify-email/', views.EmailVerificationView.as_view(), name='verify-email'),
-    path('resend-verification/', views.ResendVerificationView.as_view(), name='resend-verification'),
-    path('login/', views.UserLoginView.as_view(), name='user-login'),
-    path('logout/', views.logout_view, name='user-logout'),
-    path('google-auth/', views.google_auth, name='google-auth'),
+    path('register/', UserRegistrationView.as_view(), name='register'),
+    path('login/', UserLoginView.as_view(), name='login'),
+    path('logout/', UserLogoutView.as_view(), name='logout'),
+    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     
-    # Token management
-    path('token/refresh/', TokenRefreshView.as_view(), name='token-refresh'),
+    # Email verification
+    path('verify-email/', EmailVerificationView.as_view(), name='verify_email'),
+    path('resend-verification/', ResendVerificationView.as_view(), name='resend_verification'),
     
-    # User profile management
-    path('profile/', views.UserProfileView.as_view(), name='user-profile'),
-    path('change-password/', views.ChangePasswordView.as_view(), name='change-password'),
-    path('delete-account/', views.DeleteAccountView.as_view(), name='delete-account'),
+    # Profile management
+    path('profile/', UserProfileView.as_view(), name='profile'),
+    path('change-password/', ChangePasswordView.as_view(), name='change_password'),
+    path('delete-account/', DeleteAccountView.as_view(), name='delete_account'),
     
-    # User library and favorites
-    path('library/', views.UserLibraryView.as_view(), name='user-library'),
-    path('library/<int:pk>/', views.UserLibraryDetailView.as_view(), name='user-library-detail'),
-    path('favorites/', views.UserFavoritesView.as_view(), name='user-favorites'),
-    path('favorites/<int:pk>/', views.UserFavoritesDetailView.as_view(), name='user-favorites-detail'),
+    # User library
+    path('library/', UserLibraryListView.as_view(), name='library_list'),
+    path('library/add/', UserLibraryCreateView.as_view(), name='library_add'),
+    path('library/<int:pk>/update/', UserLibraryUpdateView.as_view(), name='library_update'),
     
-    # User activity
-    path('activity/', views.UserActivityView.as_view(), name='user-activity'),
+    # User favorites
+    path('favorites/', UserFavoritesListView.as_view(), name='favorites_list'),
+    path('favorites/add/', UserFavoritesCreateView.as_view(), name='favorites_add'),
+    path('favorites/remove/', UserFavoritesDeleteView.as_view(), name='favorites_remove'),
+    
+    # Admin endpoints
+    path('admin/users/', UserListView.as_view(), name='admin_users_list'),
+    path('admin/make-admin/', MakeUserAdminView.as_view(), name='make_user_admin'),
+    path('admin/delete-user/<int:user_id>/', DeleteUserView.as_view(), name='delete_user'),
+    
+    # Google OAuth
+    path('google/', GoogleAuthView.as_view(), name='google_auth'),
 ]
