@@ -39,7 +39,7 @@ LOCAL_APPS = [
     'password_reset',
     # 'comments',
     'stories',
-    # 'media_content',
+    'media_content',
     # 'podcasts',
     # 'animations',
     # 'sneak_peeks',
