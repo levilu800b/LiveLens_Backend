@@ -610,3 +610,44 @@ Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 Logged activity: levilu18@gmail.com - login
 Logged activity: levilu18@gmail.com - login
+Unauthorized: /api/auth/register/
+Bad Request: /api/auth/register/
+Bad Request: /api/auth/register/
+Bad Request: /api/auth/register/
+Watching for file changes with StatReloader
+Bad Request: /api/auth/register/
+Bad Request: /api/auth/register/
+Bad Request: /api/auth/register/
+/Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /api/auth/register/
+Bad Request: /api/auth/register/
+/Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /api/auth/register/
+Bad Request: /api/auth/register/
+/Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /api/auth/register/
+Bad Request: /api/auth/register/
+/Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /api/auth/register/
+Verification email sent successfully to levilu18@gmail.com
+Logged activity: levilu18@gmail.com - signup
+Unauthorized: /api/auth/verify-email/
+Unauthorized: /api/auth/verify-email/
+Logged activity: levilu18@gmail.com - profile_update
+Logged activity: levilu18@gmail.com - login
+Logged activity: levilu18@gmail.com - login
+Password reset email sent successfully to levilu18@gmail.com
+Logged activity: levilu18@gmail.com - password_change
+Logged activity: levilu18@gmail.com - login
