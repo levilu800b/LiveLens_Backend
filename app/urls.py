@@ -26,7 +26,7 @@ urlpatterns = [
     path('api/password-reset/', include('password_reset.urls')),
     
     # Content APIs (will be added in next steps)
-    # path('api/stories/', include('stories.urls')),
+    path('api/stories/', include('stories.urls')),
     # path('api/media/', include('media_content.urls')),
     # path('api/podcasts/', include('podcasts.urls')),
     # path('api/animations/', include('animations.urls')),

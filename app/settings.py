@@ -38,7 +38,7 @@ LOCAL_APPS = [
     'authapp',
     'password_reset',
     # 'comments',
-    # 'stories',
+    'stories',
     # 'media_content',
     # 'podcasts',
     # 'animations',
