@@ -1,35 +1,25 @@
 #type: ignore
 # authapp/serializers.py
 
-
 from rest_framework import serializers
 from django.contrib.auth import authenticate
 from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError
-from .models import User, EmailVerification, UserLibrary, UserFavorites
-import random
-import string
+from .models import User, EmailVerificationCode, UserPreferences
+from .utils import send_verification_email
 
 class UserRegistrationSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True, validators=[validate_password])
-    confirm_password = serializers.CharField(write_only=True)
+    password_confirm = serializers.CharField(write_only=True)
     
     class Meta:
         model = User
-        fields = [
-            'email', 'username', 'first_name', 'last_name', 
-            'password', 'confirm_password'
-        ]
+        fields = ('email', 'username', 'first_name', 'last_name', 'password', 'password_confirm')
         extra_kwargs = {
+            'email': {'required': True},
             'first_name': {'required': True},
             'last_name': {'required': True},
-            'email': {'required': True},
         }
-    
-    def validate(self, attrs):
-        if attrs['password'] != attrs['confirm_password']:
-            raise serializers.ValidationError("Passwords don't match.")
-        return attrs
     
     def validate_email(self, value):
         if User.objects.filter(email=value).exists():
@@ -41,67 +31,188 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("A user with this username already exists.")
         return value
     
+    def validate(self, attrs):
+        if attrs['password'] != attrs['password_confirm']:
+            raise serializers.ValidationError("Passwords don't match.")
+        return attrs
+    
     def create(self, validated_data):
-        validated_data.pop('confirm_password')
+        validated_data.pop('password_confirm')
         user = User.objects.create_user(**validated_data)
         
-        # Generate verification code
-        verification_code = ''.join(random.choices(string.digits, k=6))
-        EmailVerification.objects.create(user=user, code=verification_code)
+        # Create user preferences
+        UserPreferences.objects.create(user=user)
+        
+        # Send verification email
+        verification_code = EmailVerificationCode.objects.create(
+            user=user,
+            code_type='verification'
+        )
+        send_verification_email(user, verification_code.code)
         
         return user
 
-class UserLoginSerializer(serializers.Serializer):
+class GoogleSignUpSerializer(serializers.Serializer):
     email = serializers.EmailField()
-    password = serializers.CharField(style={'input_type': 'password'})
+    first_name = serializers.CharField(max_length=30)
+    last_name = serializers.CharField(max_length=30)
+    google_id = serializers.CharField(max_length=100)
+    avatar_url = serializers.URLField(required=False)
+    
+    def validate_email(self, value):
+        if User.objects.filter(email=value).exists():
+            raise serializers.ValidationError("A user with this email already exists.")
+        return value
+    
+    def create(self, validated_data):
+        avatar_url = validated_data.pop('avatar_url', None)
+        
+        # Generate a username from email
+        username = validated_data['email'].split('@')[0]
+        counter = 1
+        original_username = username
+        while User.objects.filter(username=username).exists():
+            username = f"{original_username}{counter}"
+            counter += 1
+        
+        user = User.objects.create_user(
+            username=username,
+            email=validated_data['email'],
+            first_name=validated_data['first_name'],
+            last_name=validated_data['last_name'],
+            google_id=validated_data['google_id'],
+            is_verified=True,  # Google accounts are pre-verified
+            password=None  # No password for Google sign-up
+        )
+        
+        # Create user preferences
+        UserPreferences.objects.create(user=user)
+        
+        # Handle avatar URL if provided
+        if avatar_url:
+            # You can download and save the avatar here if needed
+            pass
+        
+        return user
+
+class EmailVerificationSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    code = serializers.CharField(max_length=6)
+    
+    def validate(self, attrs):
+        try:
+            user = User.objects.get(email=attrs['email'])
+        except User.DoesNotExist:
+            raise serializers.ValidationError("User with this email does not exist.")
+        
+        try:
+            verification_code = EmailVerificationCode.objects.get(
+                user=user,
+                code=attrs['code'],
+                code_type='verification'
+            )
+        except EmailVerificationCode.DoesNotExist:
+            raise serializers.ValidationError("Invalid verification code.")
+        
+        if not verification_code.is_valid():
+            raise serializers.ValidationError("Verification code has expired or been used.")
+        
+        attrs['user'] = user
+        attrs['verification_code'] = verification_code
+        return attrs
+    
+    def save(self):
+        user = self.validated_data['user']
+        verification_code = self.validated_data['verification_code']
+        
+        user.is_verified = True
+        user.save()
+        
+        verification_code.mark_as_used()
+        return user
+
+class LoginSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    password = serializers.CharField()
     
     def validate(self, attrs):
         email = attrs.get('email')
         password = attrs.get('password')
         
         if email and password:
+            # Use email for authentication since USERNAME_FIELD = 'email'
             user = authenticate(username=email, password=password)
             
             if not user:
-                raise serializers.ValidationError('Invalid email or password.')
-            
-            if not user.is_active:
-                raise serializers.ValidationError('User account is disabled.')
+                raise serializers.ValidationError("Invalid credentials.")
             
             if not user.is_verified:
-                raise serializers.ValidationError('Please verify your email before logging in.')
+                raise serializers.ValidationError("Please verify your email before logging in.")
             
             attrs['user'] = user
             return attrs
         else:
-            raise serializers.ValidationError('Must include email and password.')
+            raise serializers.ValidationError("Email and password are required.")
 
-class EmailVerificationSerializer(serializers.Serializer):
+class GoogleLoginSerializer(serializers.Serializer):
+    google_id = serializers.CharField(max_length=100)
     email = serializers.EmailField()
-    code = serializers.CharField(max_length=6, min_length=6)
     
     def validate(self, attrs):
-        email = attrs.get('email')
-        code = attrs.get('code')
-        
         try:
-            user = User.objects.get(email=email)
+            user = User.objects.get(
+                google_id=attrs['google_id'],
+                email=attrs['email']
+            )
         except User.DoesNotExist:
-            raise serializers.ValidationError('User with this email does not exist.')
-        
-        verification = EmailVerification.objects.filter(
-            user=user, code=code, is_used=False
-        ).first()
-        
-        if not verification:
-            raise serializers.ValidationError('Invalid verification code.')
-        
-        if verification.is_expired():
-            raise serializers.ValidationError('Verification code has expired.')
+            raise serializers.ValidationError("User not found. Please sign up first.")
         
         attrs['user'] = user
-        attrs['verification'] = verification
         return attrs
+
+class UserProfileSerializer(serializers.ModelSerializer):
+    full_name = serializers.CharField(read_only=True)
+    
+    class Meta:
+        model = User
+        fields = (
+            'id', 'email', 'username', 'first_name', 'last_name', 'full_name',
+            'phone_number', 'gender', 'country', 'date_of_birth', 'avatar',
+            'is_verified', 'created_at', 'updated_at'
+        )
+        read_only_fields = ('id', 'email', 'username', 'is_verified', 'created_at', 'updated_at')
+
+class UserPreferencesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserPreferences
+        fields = (
+            'email_notifications', 'push_notifications', 'auto_play_videos',
+            'preferred_video_quality', 'preferred_language', 'dark_mode'
+        )
+
+class PasswordChangeSerializer(serializers.Serializer):
+    old_password = serializers.CharField()
+    new_password = serializers.CharField(validators=[validate_password])
+    new_password_confirm = serializers.CharField()
+    
+    def __init__(self, *args, **kwargs):
+        self.user = kwargs.pop('user', None)
+        super().__init__(*args, **kwargs)
+    
+    def validate_old_password(self, value):
+        if not self.user.check_password(value):
+            raise serializers.ValidationError("Invalid old password.")
+        return value
+    
+    def validate(self, attrs):
+        if attrs['new_password'] != attrs['new_password_confirm']:
+            raise serializers.ValidationError("New passwords don't match.")
+        return attrs
+    
+    def save(self):
+        self.user.set_password(self.validated_data['new_password'])
+        self.user.save()
+        return self.user
 
 class ResendVerificationSerializer(serializers.Serializer):
     email = serializers.EmailField()
@@ -109,92 +220,29 @@ class ResendVerificationSerializer(serializers.Serializer):
     def validate_email(self, value):
         try:
             user = User.objects.get(email=value)
-            if user.is_verified:
-                raise serializers.ValidationError('User is already verified.')
         except User.DoesNotExist:
-            raise serializers.ValidationError('User with this email does not exist.')
-        return value
-
-class UserProfileSerializer(serializers.ModelSerializer):
-    full_name = serializers.ReadOnlyField()
-    
-    class Meta:
-        model = User
-        fields = [
-            'id', 'email', 'username', 'first_name', 'last_name', 'full_name',
-            'phone_number', 'gender', 'country', 'date_of_birth', 'avatar',
-            'is_verified', 'is_admin_user', 'created_at', 'updated_at'
-        ]
-        read_only_fields = ['id', 'email', 'is_verified', 'is_admin_user', 'created_at', 'updated_at']
-
-class UserProfileUpdateSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = [
-            'first_name', 'last_name', 'phone_number', 
-            'gender', 'country', 'date_of_birth', 'avatar'
-        ]
-    
-    def validate_phone_number(self, value):
-        if value and User.objects.filter(phone_number=value).exclude(id=self.instance.id).exists():
-            raise serializers.ValidationError("A user with this phone number already exists.")
-        return value
-
-class ChangePasswordSerializer(serializers.Serializer):
-    current_password = serializers.CharField(style={'input_type': 'password'})
-    new_password = serializers.CharField(style={'input_type': 'password'}, validators=[validate_password])
-    confirm_new_password = serializers.CharField(style={'input_type': 'password'})
-    
-    def validate_current_password(self, value):
-        user = self.context['request'].user
-        if not user.check_password(value):
-            raise serializers.ValidationError('Current password is incorrect.')
+            raise serializers.ValidationError("User with this email does not exist.")
+        
+        if user.is_verified:
+            raise serializers.ValidationError("User is already verified.")
+        
         return value
     
-    def validate(self, attrs):
-        if attrs['new_password'] != attrs['confirm_new_password']:
-            raise serializers.ValidationError("New passwords don't match.")
-        return attrs
-
-class UserLibrarySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = UserLibrary
-        fields = '__all__'
-        read_only_fields = ['user', 'watched_at']
-
-class UserLibraryCreateSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = UserLibrary
-        fields = ['content_type', 'content_id', 'is_completed', 'watch_progress']
-
-class UserFavoritesSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = UserFavorites
-        fields = '__all__'
-        read_only_fields = ['user', 'created_at']
-
-class UserFavoritesCreateSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = UserFavorites
-        fields = ['content_type', 'content_id']
-
-class GoogleAuthSerializer(serializers.Serializer):
-    token = serializers.CharField()
-    
-    def validate_token(self, value):
-        # This will be implemented with Google OAuth validation
-        # For now, we'll just validate that a token is provided
-        if not value:
-            raise serializers.ValidationError('Google token is required.')
-        return value
-
-class UserListSerializer(serializers.ModelSerializer):
-    """Serializer for listing users (admin only)"""
-    full_name = serializers.ReadOnlyField()
-    
-    class Meta:
-        model = User
-        fields = [
-            'id', 'email', 'username', 'first_name', 'last_name', 'full_name',
-            'is_active', 'is_verified', 'is_admin_user', 'created_at', 'last_login'
-        ]
+    def save(self):
+        user = User.objects.get(email=self.validated_data['email'])
+        
+        # Invalidate existing codes
+        EmailVerificationCode.objects.filter(
+            user=user,
+            code_type='verification',
+            is_used=False
+        ).update(is_used=True)
+        
+        # Create new verification code
+        verification_code = EmailVerificationCode.objects.create(
+            user=user,
+            code_type='verification'
+        )
+        
+        send_verification_email(user, verification_code.code)
+        return user

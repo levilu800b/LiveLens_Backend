@@ -1,11 +1,11 @@
 #type: ignore
 # authapp/models.py
-
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-from django.core.validators import RegexValidator
-import uuid
-from datetime import datetime, timedelta
+from django.utils import timezone
+from datetime import timedelta
+import random
+import string
 
 class User(AbstractUser):
     GENDER_CHOICES = [
@@ -13,133 +13,112 @@ class User(AbstractUser):
         ('F', 'Female'),
     ]
     
-    # Override email to be unique and required
     email = models.EmailField(unique=True)
-    
-    # Additional profile fields
-    phone_number = models.CharField(
-        max_length=15,
-        blank=True,
-        null=True,
-        validators=[RegexValidator(r'^\+?1?\d{9,15}$', 'Phone number must be valid')]
-    )
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    phone_number = models.CharField(max_length=20, blank=True, null=True)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, blank=True, null=True)
     country = models.CharField(max_length=100, blank=True, null=True)
     date_of_birth = models.DateField(blank=True, null=True)
-    
-    # Account status fields
-    is_verified = models.BooleanField(default=False)
-    is_admin_user = models.BooleanField(default=False)  # For admin dashboard access
-    
-    # Profile image
     avatar = models.ImageField(upload_to='avatars/', blank=True, null=True)
-    
-    # Timestamps
+    is_verified = models.BooleanField(default=False)
+    is_admin_user = models.BooleanField(default=False)  # For admin privileges
+    google_id = models.CharField(max_length=100, blank=True, null=True)  # For Google OAuth
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
-    # Use email as username
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
     
-    class Meta:
-        db_table = 'users'
-        verbose_name = 'User'
-        verbose_name_plural = 'Users'
-    
     def __str__(self):
-        return f"{self.first_name} {self.last_name} ({self.email})"
+        return f"{self.first_name} {self.last_name} - {self.email}"
     
     @property
     def full_name(self):
-        return f"{self.first_name} {self.last_name}".strip()
+        return f"{self.first_name} {self.last_name}"
     
-    @property
     def is_admin(self):
-        return self.is_admin_user or self.is_superuser
+        return self.is_superuser or self.is_admin_user
 
-class EmailVerification(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='email_verifications')
+class EmailVerificationCode(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='verification_codes')
     code = models.CharField(max_length=6)
+    code_type = models.CharField(max_length=20, choices=[
+        ('verification', 'Email Verification'),
+        ('password_reset', 'Password Reset'),
+    ])
     created_at = models.DateTimeField(auto_now_add=True)
     is_used = models.BooleanField(default=False)
     expires_at = models.DateTimeField()
     
-    class Meta:
-        db_table = 'email_verifications'
-        ordering = ['-created_at']
-    
     def save(self, *args, **kwargs):
+        if not self.code:
+            self.code = self.generate_code()
         if not self.expires_at:
-            self.expires_at = datetime.now() + timedelta(minutes=15)  # 15 minutes expiry
+            self.expires_at = timezone.now() + timedelta(minutes=30)  # 30 minutes expiry
         super().save(*args, **kwargs)
     
-    def is_expired(self):
-        return datetime.now() > self.expires_at
+    @staticmethod
+    def generate_code():
+        return ''.join(random.choices(string.digits, k=6))
+    
+    def is_valid(self):
+        return not self.is_used and timezone.now() < self.expires_at
+    
+    def mark_as_used(self):
+        self.is_used = True
+        self.save()
     
     def __str__(self):
-        return f"Verification code for {self.user.email}"
+        return f"{self.user.email} - {self.code} ({self.code_type})"
 
-class UserLibrary(models.Model):
-    CONTENT_TYPES = [
-        ('story', 'Story'),
-        ('film', 'Film'),
-        ('content', 'Content'),
-        ('podcast', 'Podcast'),
-        ('animation', 'Animation'),
-        ('sneak_peek', 'Sneak Peek'),
+class UserActivity(models.Model):
+    ACTIVITY_TYPES = [
+        ('login', 'Login'),
+        ('logout', 'Logout'),
+        ('signup', 'Signup'),
+        ('profile_update', 'Profile Update'),
+        ('password_change', 'Password Change'),
+        ('content_view', 'Content View'),
+        ('content_like', 'Content Like'),
+        ('comment_add', 'Comment Add'),
     ]
     
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='library')
-    content_type = models.CharField(max_length=20, choices=CONTENT_TYPES)
-    content_id = models.PositiveIntegerField()  # Generic foreign key
-    watched_at = models.DateTimeField(auto_now_add=True)
-    is_completed = models.BooleanField(default=False)
-    watch_progress = models.FloatField(default=0.0)  # Percentage watched (0-100)
-    
-    class Meta:
-        db_table = 'user_library'
-        unique_together = ['user', 'content_type', 'content_id']
-        ordering = ['-watched_at']
-    
-    def __str__(self):
-        return f"{self.user.email} - {self.content_type} {self.content_id}"
-
-class UserFavorites(models.Model):
-    CONTENT_TYPES = [
-        ('story', 'Story'),
-        ('film', 'Film'),
-        ('content', 'Content'),
-        ('podcast', 'Podcast'),
-        ('animation', 'Animation'),
-        ('sneak_peek', 'Sneak Peek'),
-    ]
-    
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='favorites')
-    content_type = models.CharField(max_length=20, choices=CONTENT_TYPES)
-    content_id = models.PositiveIntegerField()  # Generic foreign key
-    created_at = models.DateTimeField(auto_now_add=True)
-    
-    class Meta:
-        db_table = 'user_favorites'
-        unique_together = ['user', 'content_type', 'content_id']
-        ordering = ['-created_at']
-    
-    def __str__(self):
-        return f"{self.user.email} favorited {self.content_type} {self.content_id}"
-
-class UserSession(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sessions')
-    session_key = models.CharField(max_length=40, unique=True)
-    device_info = models.TextField(blank=True, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='activities')
+    activity_type = models.CharField(max_length=20, choices=ACTIVITY_TYPES)
+    description = models.TextField(blank=True)
     ip_address = models.GenericIPAddressField(blank=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    last_activity = models.DateTimeField(auto_now=True)
-    is_active = models.BooleanField(default=True)
+    user_agent = models.TextField(blank=True)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    extra_data = models.JSONField(default=dict, blank=True)
     
     class Meta:
-        db_table = 'user_sessions'
-        ordering = ['-last_activity']
+        ordering = ['-timestamp']
+        verbose_name_plural = 'User Activities'
     
     def __str__(self):
-        return f"{self.user.email} session"
+        return f"{self.user.email} - {self.activity_type} at {self.timestamp}"
+
+class UserPreferences(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='preferences')
+    email_notifications = models.BooleanField(default=True)
+    push_notifications = models.BooleanField(default=True)
+    auto_play_videos = models.BooleanField(default=True)
+    preferred_video_quality = models.CharField(
+        max_length=10,
+        choices=[
+            ('360p', '360p'),
+            ('480p', '480p'),
+            ('720p', '720p'),
+            ('1080p', '1080p'),
+            ('auto', 'Auto'),
+        ],
+        default='auto'
+    )
+    preferred_language = models.CharField(max_length=10, default='en')
+    dark_mode = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return f"{self.user.email} - Preferences"
