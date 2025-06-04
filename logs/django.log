@@ -683,3 +683,235 @@ Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 Logged activity: levilu18@gmail.com - login
+Logged activity: levilu18@gmail.com - login
+Logged activity: levilu18@gmail.com - login
+Logged activity: levilu18@gmail.com - login
+Internal Server Error: /admin/media_content/content/
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2024, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 867, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 91, in __init__
+    self.root_queryset = model_admin.get_queryset(request)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/media_content/admin.py", line 239, in get_queryset
+    return super().get_queryset(request).select_related('author').annotate(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1645, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1697, in _annotate
+    clone.query.add_annotation(
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/aggregates.py", line 181, in resolve_expression
+    result = super().resolve_expression(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/aggregates.py", line 63, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/expressions.py", line 298, in resolve_expression
+    source_expressions = [
+                         ^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/expressions.py", line 300, in <listcomp>
+    expr.resolve_expression(query, allow_joins, reuse, summarize)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 2046, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1897, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1802, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'mediainteraction' into field. Choices are: author, author_id, average_rating, banner, category, collections, comment_count, content_type, created_at, creator, description, difficulty_level, download_count, duration, episode_number, file_size, id, is_featured, is_live, is_premium, is_trending, language, like_count, live_stream_url, poster, published_at, rating_count, release_year, scheduled_live_time, series_name, short_description, slug, status, subtitles_available, tags, thumbnail, title, trailer_duration, trailer_file, updated_at, video_file, video_quality, view_count
+Internal Server Error: /admin/media_content/film/
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2024, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 867, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 91, in __init__
+    self.root_queryset = model_admin.get_queryset(request)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/media_content/admin.py", line 85, in get_queryset
+    return super().get_queryset(request).select_related('author').annotate(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1645, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1697, in _annotate
+    clone.query.add_annotation(
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/aggregates.py", line 181, in resolve_expression
+    result = super().resolve_expression(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/aggregates.py", line 63, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/expressions.py", line 298, in resolve_expression
+    source_expressions = [
+                         ^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/expressions.py", line 300, in <listcomp>
+    expr.resolve_expression(query, allow_joins, reuse, summarize)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 2046, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1897, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1802, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'mediainteraction' into field. Choices are: author, author_id, average_rating, banner, box_office, budget, cast, category, collections, comment_count, created_at, description, director, download_count, duration, episode_number, file_size, id, is_featured, is_premium, is_series, is_trending, language, like_count, mpaa_rating, poster, producer, published_at, rating_count, release_year, season_number, series_name, short_description, slug, status, studio, subtitles_available, tags, thumbnail, title, trailer_duration, trailer_file, updated_at, video_file, video_quality, view_count
+Internal Server Error: /admin/media_content/content/
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2024, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 867, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 91, in __init__
+    self.root_queryset = model_admin.get_queryset(request)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/media_content/admin.py", line 239, in get_queryset
+    return super().get_queryset(request).select_related('author').annotate(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1645, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1697, in _annotate
+    clone.query.add_annotation(
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/aggregates.py", line 181, in resolve_expression
+    result = super().resolve_expression(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/aggregates.py", line 63, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/expressions.py", line 298, in resolve_expression
+    source_expressions = [
+                         ^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/expressions.py", line 300, in <listcomp>
+    expr.resolve_expression(query, allow_joins, reuse, summarize)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 2046, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1897, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1802, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'mediainteraction' into field. Choices are: author, author_id, average_rating, banner, category, collections, comment_count, content_type, created_at, creator, description, difficulty_level, download_count, duration, episode_number, file_size, id, is_featured, is_live, is_premium, is_trending, language, like_count, live_stream_url, poster, published_at, rating_count, release_year, scheduled_live_time, series_name, short_description, slug, status, subtitles_available, tags, thumbnail, title, trailer_duration, trailer_file, updated_at, video_file, video_quality, view_count
+/Users/levicharles/Documents/liveLens_backend/media_content/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/levicharles/Documents/liveLens_backend/media_content/admin.py changed, reloading.
+Watching for file changes with StatReloader

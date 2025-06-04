@@ -5,7 +5,6 @@ from django.contrib import admin
 from django.utils.html import format_html
 from django.urls import reverse
 from django.utils.safestring import mark_safe
-from django.db.models import Count, Avg
 from .models import (
     Film, Content, MediaInteraction, MediaView, MediaCollection, 
     Playlist, PlaylistItem
@@ -82,9 +81,7 @@ class FilmAdmin(admin.ModelAdmin):
     
     def get_queryset(self, request):
         """Optimize queryset with related data"""
-        return super().get_queryset(request).select_related('author').annotate(
-            total_interactions=Count('mediainteraction')
-        )
+        return super().get_queryset(request).select_related('author')
     
     def thumbnail_preview(self, obj):
         if obj.thumbnail:
@@ -236,9 +233,7 @@ class ContentAdmin(admin.ModelAdmin):
     
     def get_queryset(self, request):
         """Optimize queryset with related data"""
-        return super().get_queryset(request).select_related('author').annotate(
-            total_interactions=Count('mediainteraction')
-        )
+        return super().get_queryset(request).select_related('author')
     
     actions = [
         'make_featured', 'remove_featured', 'make_trending', 'remove_trending',
