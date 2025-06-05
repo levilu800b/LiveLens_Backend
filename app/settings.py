@@ -40,7 +40,7 @@ LOCAL_APPS = [
     # 'comments',
     'stories',
     'media_content',
-    # 'podcasts',
+    'podcasts',
     # 'animations',
     # 'sneak_peeks',
     # 'admin_dashboard',

@@ -28,7 +28,7 @@ urlpatterns = [
     # Content APIs (will be added in next steps)
     path('api/stories/', include('stories.urls')),
     path('api/media/', include('media_content.urls')),
-    # path('api/podcasts/', include('podcasts.urls')),
+    path('api/podcasts/', include('podcasts.urls')),
     # path('api/animations/', include('animations.urls')),
     # path('api/sneak-peeks/', include('sneak_peeks.urls')),
     # path('api/comments/', include('comments.urls')),
