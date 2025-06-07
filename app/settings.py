@@ -1,3 +1,4 @@
+# app/settings.py - Updated to enable all apps
 # type: ignore
 
 import os
@@ -32,18 +33,20 @@ THIRD_PARTY_APPS = [
     'corsheaders',
     'drf_spectacular',
     'django_filters',
+    'cloudinary_storage',  # For secure file storage
+    'cloudinary',
 ]
 
 LOCAL_APPS = [
     'authapp',
     'password_reset',
-    # 'comments',
+    # 'comments',           # Universal commenting system
     'stories',
     'media_content',
     'podcasts',
-    # 'animations',
-    # 'sneak_peeks',
-    # 'admin_dashboard',
+    'animations',         # Now enabled
+    # 'sneak_peeks',        # Sneak peeks content
+    # 'admin_dashboard',    # Admin analytics dashboard
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -124,7 +127,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 
-# Media files
+# Media files - Using Cloudinary for production
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
@@ -153,12 +156,11 @@ REST_FRAMEWORK = {
         'rest_framework.filters.SearchFilter',
         'rest_framework.filters.OrderingFilter',
     ],
-    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 # JWT Configuration
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours=1),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
     'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': True,
@@ -170,39 +172,16 @@ SIMPLE_JWT = {
     'AUTH_HEADER_NAME': 'HTTP_AUTHORIZATION',
     'USER_ID_FIELD': 'id',
     'USER_ID_CLAIM': 'user_id',
-    'USER_AUTHENTICATION_RULE': 'rest_framework_simplejwt.authentication.default_user_authentication_rule',
     'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
     'TOKEN_TYPE_CLAIM': 'token_type',
 }
 
-# CORS Configuration
-CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', default='http://localhost:3000', cast=lambda v: [s.strip() for s in v.split(',')])
-CORS_ALLOW_HEADERS = [
-    'authorization',
-    'content-type',
-    'x-csrftoken',
-    'x-requested-with',
-    'accept',
-    'accept-encoding',
-    'origin',
-    'user-agent',
-    'x-csrftoken',
-    'x-requested-with',
-    'x-xsrf-token',
-    'x-auth-token',
-    'x-api-key',
-    'x-access-token',
-    'x-client-id',
-    'x-client-secret',
-]
-CORS_ALLOW_METHODS = [
-    'GET',
-    'POST',
-    'PUT',
-    'PATCH',
-    'DELETE',
-    'OPTIONS',
-]
+# CORS settings
+CORS_ALLOWED_ORIGINS = config(
+    'CORS_ALLOWED_ORIGINS',
+    default='http://localhost:3000,http://127.0.0.1:3000',
+    cast=lambda v: [s.strip() for s in v.split(',')]
+)
 
 CORS_ALLOW_CREDENTIALS = True
 
@@ -218,23 +197,20 @@ DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='noreply@streamingplat
 # Google AI Configuration
 GOOGLE_AI_API_KEY = config('GOOGLE_AI_API_KEY', default='')
 
-# File Upload Configuration
-FILE_UPLOAD_MAX_MEMORY_SIZE = 1024 * 1024 * 100  # 100MB
-DATA_UPLOAD_MAX_MEMORY_SIZE = 1024 * 1024 * 100  # 100MB
+# File Upload Configuration - No size limits for your platform
+FILE_UPLOAD_MAX_MEMORY_SIZE = None  # Allow unlimited file sizes
+DATA_UPLOAD_MAX_MEMORY_SIZE = None  # Allow unlimited upload sizes
+FILE_UPLOAD_PERMISSIONS = 0o644
 
-# Cloudinary Configuration (for file storage)
+# Cloudinary Configuration (for secure file storage)
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': config('CLOUDINARY_CLOUD_NAME', default=''),
+    'API_KEY': config('CLOUDINARY_API_KEY', default=''),
+    'API_SECRET': config('CLOUDINARY_API_SECRET', default=''),
+}
+
+# Use Cloudinary for media files in production
 if config('USE_CLOUDINARY', default=False, cast=bool):
-    import cloudinary
-    import cloudinary.uploader
-    import cloudinary.api
-    
-    cloudinary.config(
-        cloud_name=config('CLOUDINARY_CLOUD_NAME', default=''),
-        api_key=config('CLOUDINARY_API_KEY', default=''),
-        api_secret=config('CLOUDINARY_API_SECRET', default=''),
-        secure=True
-    )
-    
     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # API Documentation
@@ -258,26 +234,67 @@ CACHES = {
     }
 }
 
+# Session Configuration
+SESSION_COOKIE_AGE = 86400 * 7  # 7 days
+SESSION_COOKIE_SECURE = not DEBUG
+SESSION_COOKIE_HTTPONLY = True
+
 # Logging
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
     'handlers': {
         'file': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
             'filename': BASE_DIR / 'logs' / 'django.log',
+            'formatter': 'verbose',
         },
         'console': {
             'level': 'INFO',
             'class': 'logging.StreamHandler',
+            'formatter': 'simple',
         },
     },
     'root': {
         'handlers': ['file', 'console'],
         'level': 'INFO',
     },
+    'loggers': {
+        'django': {
+            'handlers': ['file', 'console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    },
 }
 
 # Create logs directory if it doesn't exist
 os.makedirs(BASE_DIR / 'logs', exist_ok=True)
+
+# AI Configuration
+AI_SETTINGS = {
+    'GOOGLE_AI_API_KEY': config('GOOGLE_AI_API_KEY', default=''),
+    'DEFAULT_AI_MODEL': 'gemini-pro',
+    'MAX_TOKENS': 1000,
+    'TEMPERATURE': 0.7,
+}
+
+# Content Configuration
+CONTENT_SETTINGS = {
+    'ALLOW_ANONYMOUS_VIEWING': False,  # Require login for full content
+    'TRAILER_MAX_DURATION': 300,      # 5 minutes max for trailers
+    'AUTO_GENERATE_THUMBNAILS': True,
+    'ENABLE_AI_SUBTITLES': True,
+    'ENABLE_AI_VOICE_OVER': True,
+}

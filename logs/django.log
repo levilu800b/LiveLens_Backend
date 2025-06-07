@@ -922,3 +922,53 @@ Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 Logged activity: levilu18@gmail.com - login
 Logged activity: levilu18@gmail.com - login
+Logged activity: levilu18@gmail.com - login
+Logged activity: levilu18@gmail.com - login
+/Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-07 12:00:04,844 autoreload 89430 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-07 12:00:20,336 autoreload 89430 140704394378688 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-07 12:00:20,913 autoreload 89463 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-07 12:00:26,290 autoreload 89463 140704394378688 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-07 12:00:26,820 autoreload 89488 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-07 12:01:28,797 autoreload 89488 140704394378688 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-07 12:01:29,433 autoreload 89641 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-07 12:20:35,108 basehttp 89641 123145539342336 "GET /admin/authapp/user/ HTTP/1.1" 200 30798
+WARNING 2025-06-07 12:20:35,810 log 89641 123145539342336 Not Found: /favicon.ico
+WARNING 2025-06-07 12:20:35,811 basehttp 89641 123145539342336 "GET /favicon.ico HTTP/1.1" 404 3829
+INFO 2025-06-07 12:20:36,607 basehttp 89641 123145539342336 "GET /admin/authapp/user/ HTTP/1.1" 200 30798
+INFO 2025-06-07 12:20:36,639 basehttp 89641 123145539342336 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:36,645 basehttp 89641 123145589710848 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:36,650 basehttp 89641 123145539342336 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:36,655 basehttp 89641 123145572921344 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:36,656 basehttp 89641 123145623289856 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:36,658 basehttp 89641 123145606500352 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:36,659 basehttp 89641 123145589710848 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:36,659 basehttp 89641 123145539342336 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:36,661 basehttp 89641 123145572921344 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:36,667 basehttp 89641 123145539342336 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:36,668 basehttp 89641 123145623289856 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:36,668 basehttp 89641 123145589710848 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:36,668 basehttp 89641 123145606500352 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:36,668 basehttp 89641 123145572921344 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:36,675 basehttp 89641 123145556131840 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-07 12:20:36,689 basehttp 89641 123145623289856 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:36,689 basehttp 89641 123145606500352 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:36,714 basehttp 89641 123145606500352 "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:36,714 basehttp 89641 123145623289856 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:36,714 basehttp 89641 123145556131840 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-06-07 12:20:38,737 basehttp 89641 123145623289856 "GET /admin/authapp/user/ HTTP/1.1" 200 30798
+INFO 2025-06-07 12:20:38,781 basehttp 89641 123145623289856 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-07 12:20:42,976 basehttp 89641 123145623289856 "GET /admin/animations/aianimationrequest/ HTTP/1.1" 200 26057
+INFO 2025-06-07 12:20:43,017 basehttp 89641 123145623289856 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-07 12:20:45,617 basehttp 89641 123145623289856 "GET /admin/animations/animationcollection/ HTTP/1.1" 200 24724
+INFO 2025-06-07 12:20:45,666 basehttp 89641 123145623289856 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-07 12:20:47,462 basehttp 89641 123145623289856 "GET /admin/animations/animationinteraction/ HTTP/1.1" 200 24592
+INFO 2025-06-07 12:20:47,495 basehttp 89641 123145623289856 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-07 12:20:49,201 basehttp 89641 123145539342336 "GET /admin/animations/animationplaylist/ HTTP/1.1" 200 25028
+INFO 2025-06-07 12:20:49,245 basehttp 89641 123145539342336 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-07 12:20:52,914 basehttp 89641 123145539342336 "GET /admin/animations/animationview/ HTTP/1.1" 200 24436
+INFO 2025-06-07 12:20:52,952 basehttp 89641 123145539342336 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-07 12:20:54,522 basehttp 89641 123145539342336 "GET /admin/animations/animation/ HTTP/1.1" 200 29685
+INFO 2025-06-07 12:20:54,564 basehttp 89641 123145539342336 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
