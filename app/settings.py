@@ -40,7 +40,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     'authapp',
     'password_reset',
-    # 'comments',           # Universal commenting system
+    'comments',           # Universal commenting system
     'stories',
     'media_content',
     'podcasts',

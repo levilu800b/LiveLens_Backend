@@ -972,3 +972,27 @@ INFO 2025-06-07 12:20:52,914 basehttp 89641 123145539342336 "GET /admin/animatio
 INFO 2025-06-07 12:20:52,952 basehttp 89641 123145539342336 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
 INFO 2025-06-07 12:20:54,522 basehttp 89641 123145539342336 "GET /admin/animations/animation/ HTTP/1.1" 200 29685
 INFO 2025-06-07 12:20:54,564 basehttp 89641 123145539342336 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-07 12:35:33,986 autoreload 89641 140704394378688 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-07 12:35:35,027 autoreload 91801 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-07 12:40:03,462 autoreload 91801 140704394378688 /Users/levicharles/Documents/liveLens_backend/comments/apps.py changed, reloading.
+INFO 2025-06-07 12:40:04,191 autoreload 92305 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-07 12:43:00,552 autoreload 92305 140704394378688 /Users/levicharles/Documents/liveLens_backend/comments/apps.py changed, reloading.
+INFO 2025-06-07 12:43:01,478 autoreload 92552 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-07 12:43:53,698 autoreload 92552 140704394378688 /Users/levicharles/Documents/liveLens_backend/comments/apps.py changed, reloading.
+INFO 2025-06-07 12:43:54,691 autoreload 92672 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-07 12:43:59,566 autoreload 92672 140704394378688 /Users/levicharles/Documents/liveLens_backend/comments/apps.py changed, reloading.
+INFO 2025-06-07 12:44:00,071 autoreload 92698 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-07 12:44:02,392 autoreload 92698 140704394378688 /Users/levicharles/Documents/liveLens_backend/comments/apps.py changed, reloading.
+INFO 2025-06-07 12:44:03,114 autoreload 92718 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-07 12:44:04,629 autoreload 92718 140704394378688 /Users/levicharles/Documents/liveLens_backend/comments/apps.py changed, reloading.
+INFO 2025-06-07 12:44:05,328 autoreload 92729 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-07 12:44:08,894 autoreload 92729 140704394378688 /Users/levicharles/Documents/liveLens_backend/comments/apps.py changed, reloading.
+INFO 2025-06-07 12:44:09,656 autoreload 92752 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-07 12:44:14,268 autoreload 92752 140704394378688 /Users/levicharles/Documents/liveLens_backend/comments/apps.py changed, reloading.
+INFO 2025-06-07 12:44:14,844 autoreload 92776 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-07 12:44:19,197 autoreload 92776 140704394378688 /Users/levicharles/Documents/liveLens_backend/comments/apps.py changed, reloading.
+INFO 2025-06-07 12:44:19,856 autoreload 92794 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-07 12:44:43,434 autoreload 92794 140704394378688 /Users/levicharles/Documents/liveLens_backend/comments/apps.py changed, reloading.
+INFO 2025-06-07 12:44:44,413 autoreload 92853 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-07 12:44:45,832 autoreload 92853 140704394378688 /Users/levicharles/Documents/liveLens_backend/comments/apps.py changed, reloading.
+INFO 2025-06-07 12:44:46,404 autoreload 92864 140704394378688 Watching for file changes with StatReloader
