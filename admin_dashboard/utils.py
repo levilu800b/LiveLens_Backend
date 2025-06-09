@@ -25,10 +25,10 @@ def calculate_dashboard_stats():
             last_login__date=today
         ).count()
         new_users_today = User.objects.filter(
-            created_at__date=today
+            date_joined__date=today
         ).count()
         new_users_yesterday = User.objects.filter(
-            created_at__date=yesterday
+            date_joined__date=yesterday
         ).count()
         
         # Calculate user growth percentage
@@ -113,8 +113,8 @@ def calculate_dashboard_stats():
         # Recent activities
         recent_user_signups = list(
             User.objects.filter(
-                created_at__gte=timezone.now() - timedelta(hours=24)
-            ).values('id', 'username', 'email', 'created_at').order_by('-created_at')[:5]
+                date_joined__gte=timezone.now() - timedelta(hours=24)
+            ).values('id', 'username', 'email', 'date_joined').order_by('-date_joined')[:5]
         )
         
         # Recent content uploads
@@ -407,7 +407,7 @@ def get_user_analytics(user_id, date_from=None, date_to=None):
                 'id': str(user.id),
                 'username': user.username,
                 'email': user.email,
-                'created_at': user.created_at,
+                'date_joined': user.date_joined,
                 'last_login': user.last_login
             },
             'date_range': {
@@ -440,3 +440,51 @@ def get_client_ip(request):
     else:
         ip = request.META.get('REMOTE_ADDR')
     return ip
+
+def generate_analytics_report(report_type, date_from, date_to, filters=None):
+    """Generate analytics report based on type and date range"""
+    
+    try:
+        from .models import ContentAnalytics, UserActivity
+        
+        if report_type == 'content_performance':
+            analytics = ContentAnalytics.objects.filter(
+                date__range=[date_from, date_to]
+            )
+            
+            if filters:
+                if 'content_type' in filters:
+                    analytics = analytics.filter(content_type=filters['content_type'])
+            
+            return {
+                'type': 'content_performance',
+                'date_range': {'from': date_from, 'to': date_to},
+                'total_items': analytics.count(),
+                'total_views': analytics.aggregate(Sum('views_count'))['views_count__sum'] or 0,
+                'total_likes': analytics.aggregate(Sum('likes_count'))['likes_count__sum'] or 0,
+                'avg_performance': analytics.aggregate(Avg('performance_score'))['performance_score__avg'] or 0,
+                'data': list(analytics.values())
+            }
+        
+        elif report_type == 'user_activity':
+            activities = UserActivity.objects.filter(
+                created_at__range=[date_from, date_to]
+            )
+            
+            return {
+                'type': 'user_activity',
+                'date_range': {'from': date_from, 'to': date_to},
+                'total_activities': activities.count(),
+                'unique_users': activities.values('user').distinct().count(),
+                'activity_breakdown': list(
+                    activities.values('activity_type').annotate(count=Count('id'))
+                ),
+                'data': list(activities.values()[:1000])  # Limit for performance
+            }
+        
+        else:
+            return {'error': f'Unknown report type: {report_type}'}
+            
+    except Exception as e:
+        logger.error(f"Error generating analytics report: {e}")
+        return {'error': str(e)}
