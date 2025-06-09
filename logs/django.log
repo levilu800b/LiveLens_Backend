@@ -996,3 +996,45 @@ INFO 2025-06-07 12:44:43,434 autoreload 92794 140704394378688 /Users/levicharles
 INFO 2025-06-07 12:44:44,413 autoreload 92853 140704394378688 Watching for file changes with StatReloader
 INFO 2025-06-07 12:44:45,832 autoreload 92853 140704394378688 /Users/levicharles/Documents/liveLens_backend/comments/apps.py changed, reloading.
 INFO 2025-06-07 12:44:46,404 autoreload 92864 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-07 14:45:07,491 autoreload 92864 140704394378688 /Users/levicharles/Documents/liveLens_backend/comments/apps.py changed, reloading.
+INFO 2025-06-07 14:45:08,600 autoreload 9792 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-07 14:45:14,326 autoreload 9792 140704394378688 /Users/levicharles/Documents/liveLens_backend/comments/apps.py changed, reloading.
+INFO 2025-06-07 14:45:15,055 autoreload 9817 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-07 14:45:28,569 utils 9817 123145412399104 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-07 14:45:28,658 basehttp 9817 123145412399104 "POST /api/auth/login/ HTTP/1.1" 200 844
+INFO 2025-06-09 11:42:07,558 autoreload 9817 140704394378688 /Users/levicharles/Documents/liveLens_backend/comments/apps.py changed, reloading.
+INFO 2025-06-09 11:42:08,907 autoreload 14481 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 11:42:18,447 autoreload 14481 140704394378688 /Users/levicharles/Documents/liveLens_backend/comments/apps.py changed, reloading.
+INFO 2025-06-09 11:42:19,408 autoreload 14510 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 11:55:52,002 autoreload 14510 140704394378688 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-09 11:55:53,074 autoreload 15811 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 11:59:35,091 autoreload 15811 140704394378688 /Users/levicharles/Documents/liveLens_backend/sneak_peeks/admin.py changed, reloading.
+INFO 2025-06-09 11:59:36,411 autoreload 16218 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 12:01:03,988 basehttp 16218 123145542508544 "GET /admin/animations/animation/ HTTP/1.1" 200 34841
+INFO 2025-06-09 12:01:04,137 basehttp 16218 123145542508544 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,141 basehttp 16218 123145576087552 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,143 basehttp 16218 123145592877056 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,145 basehttp 16218 123145542508544 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,149 basehttp 16218 123145576087552 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,150 basehttp 16218 123145592877056 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,152 basehttp 16218 123145609666560 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,152 basehttp 16218 123145626456064 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,155 basehttp 16218 123145576087552 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,156 basehttp 16218 123145542508544 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,158 basehttp 16218 123145609666560 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,159 basehttp 16218 123145592877056 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,160 basehttp 16218 123145626456064 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,160 basehttp 16218 123145576087552 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,164 basehttp 16218 123145559298048 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 12:01:04,184 basehttp 16218 123145559298048 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,208 basehttp 16218 123145559298048 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,212 basehttp 16218 123145559298048 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,241 basehttp 16218 123145559298048 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,243 basehttp 16218 123145559298048 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:04,243 basehttp 16218 123145576087552 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-06-09 12:01:12,775 basehttp 16218 123145576087552 "GET /admin/sneak_peeks/sneakpeekinteraction/ HTTP/1.1" 200 29904
+INFO 2025-06-09 12:01:12,820 basehttp 16218 123145576087552 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 12:01:16,887 basehttp 16218 123145576087552 "GET /admin/comments/commentmoderationlog/ HTTP/1.1" 200 30026
+INFO 2025-06-09 12:01:16,932 basehttp 16218 123145576087552 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 12:01:27,456 basehttp 16218 123145576087552 "GET /admin/sneak_peeks/sneakpeekplaylistitem/ HTTP/1.1" 200 29257
+INFO 2025-06-09 12:01:27,503 basehttp 16218 123145576087552 "GET /admin/jsi18n/ HTTP/1.1" 200 3342

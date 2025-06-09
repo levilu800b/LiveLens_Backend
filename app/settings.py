@@ -45,7 +45,7 @@ LOCAL_APPS = [
     'media_content',
     'podcasts',
     'animations',         # Now enabled
-    # 'sneak_peeks',        # Sneak peeks content
+    'sneak_peeks',        # Sneak peeks content
     # 'admin_dashboard',    # Admin analytics dashboard
 ]
 

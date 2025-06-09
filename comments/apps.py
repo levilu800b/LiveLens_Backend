@@ -9,4 +9,4 @@ class CommentsConfig(AppConfig):
     verbose_name = 'Comments'
     
     def ready(self):
-        _ = __import__('comments.signals')
+        pass
