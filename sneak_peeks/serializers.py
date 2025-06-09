@@ -380,7 +380,31 @@ class SneakPeekPlaylistCreateUpdateSerializer(serializers.ModelSerializer):
         
         return instance
 
+# Add this class at the end of sneak_peeks/serializers.py
 
+class SneakPeekSerializer(serializers.ModelSerializer):
+    """General serializer for sneak peeks - for backward compatibility"""
+    
+    duration_formatted = serializers.CharField(read_only=True)
+    file_size_formatted = serializers.CharField(read_only=True)
+    
+    class Meta:
+        model = SneakPeek
+        fields = (
+            'id', 'title', 'slug', 'description', 'tags', 'thumbnail', 'video_file',
+            'author', 'status', 'is_featured', 'is_trending', 'view_count',
+            'like_count', 'comment_count', 'share_count', 'average_rating',
+            'rating_count', 'duration', 'duration_formatted', 'video_quality',
+            'file_size', 'file_size_formatted', 'resolution_width', 'resolution_height',
+            'is_premium', 'scheduled_release', 'expires_at', 'content_warning',
+            'age_restriction', 'created_at', 'updated_at', 'published_at'
+        )
+        read_only_fields = (
+            'id', 'slug', 'author', 'view_count', 'like_count', 'comment_count',
+            'share_count', 'average_rating', 'rating_count', 'duration_formatted',
+            'file_size_formatted', 'created_at', 'updated_at', 'published_at'
+        )
+        
 class SneakPeekStatsSerializer(serializers.Serializer):
     """Serializer for sneak peek statistics"""
     

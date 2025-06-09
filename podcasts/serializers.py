@@ -593,6 +593,34 @@ class PodcastViewSerializer(serializers.ModelSerializer):
             user_agent=request.META.get('HTTP_USER_AGENT', ''),
             **validated_data
         )
+        
+# Add this class at the end of podcasts/serializers.py
+
+class PodcastSerializer(serializers.ModelSerializer):
+    """General serializer for podcasts - for backward compatibility"""
+    author = AuthorSerializer(read_only=True)
+    series_info = PodcastSeriesListSerializer(source='series', read_only=True)
+    duration_formatted = serializers.CharField(read_only=True)
+    file_size_formatted = serializers.CharField(read_only=True)
+    
+    class Meta:
+        model = Podcast
+        fields = (
+            'id', 'title', 'slug', 'description', 'summary', 'series', 'series_info',
+            'episode_number', 'season_number', 'episode_type', 'audio_file', 
+            'video_file', 'transcript_file', 'cover_image', 'thumbnail', 'author',
+            'host', 'guest', 'tags', 'status', 'is_featured', 'is_premium',
+            'is_explicit', 'view_count', 'like_count', 'comment_count',
+            'download_count', 'average_rating', 'rating_count', 'duration',
+            'duration_formatted', 'file_size', 'file_size_formatted',
+            'audio_quality', 'external_url', 'scheduled_at', 'created_at',
+            'updated_at', 'published_at'
+        )
+        read_only_fields = (
+            'id', 'slug', 'author', 'view_count', 'like_count', 'comment_count',
+            'download_count', 'average_rating', 'rating_count', 'duration_formatted',
+            'file_size_formatted', 'created_at', 'updated_at', 'published_at'
+        )
 
 class PodcastStatsSerializer(serializers.Serializer):
     """Serializer for podcast statistics"""

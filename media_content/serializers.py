@@ -1,6 +1,6 @@
+# media_content/serializers.py
 # type: ignore
 
-# media_content/serializers.py
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
 from django.utils import timezone
@@ -61,8 +61,8 @@ class BaseMediaSerializer(serializers.ModelSerializer):
         """Get current user's rating for this content"""
         request = self.context.get('request')
         if request and request.user.is_authenticated:
-            content_type = 'film' if isinstance(obj, Film) else 'content'
             try:
+                content_type = 'film' if isinstance(obj, Film) else 'content'
                 interaction = MediaInteraction.objects.get(
                     user=request.user,
                     content_type=content_type,
@@ -75,11 +75,11 @@ class BaseMediaSerializer(serializers.ModelSerializer):
         return None
     
     def get_watch_progress(self, obj):
-        """Get user's watching progress for this content"""
+        """Get user's watch progress for this content"""
         request = self.context.get('request')
         if request and request.user.is_authenticated:
-            content_type = 'film' if isinstance(obj, Film) else 'content'
             try:
+                content_type = 'film' if isinstance(obj, Film) else 'content'
                 interaction = MediaInteraction.objects.get(
                     user=request.user,
                     content_type=content_type,
@@ -93,6 +93,59 @@ class BaseMediaSerializer(serializers.ModelSerializer):
             except MediaInteraction.DoesNotExist:
                 pass
         return None
+
+# ADDED: General serializers for backward compatibility
+class FilmSerializer(BaseMediaSerializer):
+    """General serializer for films - for backward compatibility"""
+    
+    class Meta:
+        model = Film
+        fields = (
+            'id', 'title', 'slug', 'description', 'short_description', 'category', 'tags',
+            'thumbnail', 'poster', 'banner', 'video_file', 'trailer_file',
+            'author', 'status', 'is_featured', 'is_trending', 'is_premium',
+            'view_count', 'like_count', 'comment_count', 'download_count',
+            'average_rating', 'rating_count', 'duration', 'duration_formatted',
+            'trailer_duration', 'trailer_duration_formatted', 'video_quality',
+            'file_size', 'file_size_formatted', 'release_year', 'language',
+            'subtitles_available', 'director', 'cast', 'producer', 'studio',
+            'budget', 'box_office', 'mpaa_rating', 'is_series', 'series_name',
+            'episode_number', 'season_number', 'is_liked', 'is_bookmarked',
+            'user_rating', 'watch_progress', 'created_at', 'updated_at', 'published_at'
+        )
+        read_only_fields = (
+            'id', 'slug', 'author', 'view_count', 'like_count', 'comment_count',
+            'download_count', 'average_rating', 'rating_count', 'duration_formatted',
+            'trailer_duration_formatted', 'file_size_formatted', 'is_liked', 
+            'is_bookmarked', 'user_rating', 'watch_progress', 'created_at', 
+            'updated_at', 'published_at'
+        )
+
+class ContentSerializer(BaseMediaSerializer):
+    """General serializer for content - for backward compatibility"""
+    
+    class Meta:
+        model = Content
+        fields = (
+            'id', 'title', 'slug', 'description', 'short_description', 'category', 'tags',
+            'thumbnail', 'poster', 'banner', 'video_file', 'trailer_file',
+            'author', 'status', 'is_featured', 'is_trending', 'is_premium',
+            'view_count', 'like_count', 'comment_count', 'download_count',
+            'average_rating', 'rating_count', 'duration', 'duration_formatted',
+            'trailer_duration', 'trailer_duration_formatted', 'video_quality',
+            'file_size', 'file_size_formatted', 'release_year', 'language',
+            'subtitles_available', 'content_type', 'creator', 'series_name',
+            'episode_number', 'difficulty_level', 'is_live', 'scheduled_live_time',
+            'live_stream_url', 'is_liked', 'is_bookmarked', 'user_rating',
+            'watch_progress', 'created_at', 'updated_at', 'published_at'
+        )
+        read_only_fields = (
+            'id', 'slug', 'author', 'view_count', 'like_count', 'comment_count',
+            'download_count', 'average_rating', 'rating_count', 'duration_formatted',
+            'trailer_duration_formatted', 'file_size_formatted', 'is_liked', 
+            'is_bookmarked', 'user_rating', 'watch_progress', 'created_at', 
+            'updated_at', 'published_at'
+        )
 
 class FilmListSerializer(BaseMediaSerializer):
     """Serializer for film list view (minimal data)"""
@@ -114,6 +167,7 @@ class FilmListSerializer(BaseMediaSerializer):
 
 class FilmDetailSerializer(BaseMediaSerializer):
     """Serializer for film detail view (full data)"""
+    related_films = serializers.SerializerMethodField()
     
     class Meta:
         model = Film
@@ -128,13 +182,26 @@ class FilmDetailSerializer(BaseMediaSerializer):
             'subtitles_available', 'director', 'cast', 'producer', 'studio',
             'budget', 'box_office', 'mpaa_rating', 'is_series', 'series_name',
             'episode_number', 'season_number', 'is_liked', 'is_bookmarked',
-            'user_rating', 'watch_progress', 'created_at', 'updated_at', 'published_at'
+            'user_rating', 'watch_progress', 'related_films', 'created_at', 'updated_at', 'published_at'
         )
         read_only_fields = (
             'id', 'slug', 'author', 'view_count', 'like_count', 'comment_count',
             'download_count', 'average_rating', 'rating_count', 'created_at',
             'updated_at', 'published_at'
         )
+    
+    def get_related_films(self, obj):
+        """Get related films based on category, director, or genre"""
+        related_films = Film.objects.filter(
+            category=obj.category,
+            status='published'
+        ).exclude(id=obj.id)[:5]
+        
+        return FilmListSerializer(
+            related_films, 
+            many=True, 
+            context=self.context
+        ).data
 
 class FilmCreateUpdateSerializer(serializers.ModelSerializer):
     """Serializer for creating and updating films"""
@@ -151,18 +218,39 @@ class FilmCreateUpdateSerializer(serializers.ModelSerializer):
             'series_name', 'episode_number', 'season_number'
         )
     
+    def validate_title(self, value):
+        """Validate film title"""
+        if len(value.strip()) < 2:
+            raise serializers.ValidationError("Title must be at least 2 characters long.")
+        return value.strip()
+    
+    def validate_description(self, value):
+        """Validate film description"""
+        if len(value.strip()) < 10:
+            raise serializers.ValidationError("Description must be at least 10 characters long.")
+        return value.strip()
+    
     def validate_tags(self, value):
         """Ensure tags is a list of strings"""
         if not isinstance(value, list):
             raise serializers.ValidationError("Tags must be a list.")
         
+        if len(value) > 15:
+            raise serializers.ValidationError("Maximum 15 tags allowed.")
+        
+        cleaned_tags = []
         for tag in value:
             if not isinstance(tag, str):
                 raise serializers.ValidationError("Each tag must be a string.")
-            if len(tag.strip()) == 0:
-                raise serializers.ValidationError("Tags cannot be empty.")
+            tag = tag.strip().lower()
+            if len(tag) == 0:
+                continue
+            if len(tag) > 50:
+                raise serializers.ValidationError("Each tag must be 50 characters or less.")
+            if tag not in cleaned_tags:  # Avoid duplicates
+                cleaned_tags.append(tag)
         
-        return [tag.strip().lower() for tag in value if tag.strip()]
+        return cleaned_tags
     
     def validate_cast(self, value):
         """Ensure cast is a list of strings"""
@@ -180,6 +268,12 @@ class FilmCreateUpdateSerializer(serializers.ModelSerializer):
         if not isinstance(value, list):
             raise serializers.ValidationError("Subtitles available must be a list.")
         
+        return value
+    
+    def validate_duration(self, value):
+        """Validate duration is positive"""
+        if value is not None and value <= 0:
+            raise serializers.ValidationError("Duration must be positive.")
         return value
     
     def create(self, validated_data):
@@ -227,6 +321,7 @@ class ContentListSerializer(BaseMediaSerializer):
 
 class ContentDetailSerializer(BaseMediaSerializer):
     """Serializer for content detail view (full data)"""
+    related_content = serializers.SerializerMethodField()
     
     class Meta:
         model = Content
@@ -241,13 +336,26 @@ class ContentDetailSerializer(BaseMediaSerializer):
             'subtitles_available', 'content_type', 'creator', 'series_name',
             'episode_number', 'difficulty_level', 'is_live', 'scheduled_live_time',
             'live_stream_url', 'is_liked', 'is_bookmarked', 'user_rating',
-            'watch_progress', 'created_at', 'updated_at', 'published_at'
+            'watch_progress', 'related_content', 'created_at', 'updated_at', 'published_at'
         )
         read_only_fields = (
             'id', 'slug', 'author', 'view_count', 'like_count', 'comment_count',
             'download_count', 'average_rating', 'rating_count', 'created_at',
             'updated_at', 'published_at'
         )
+    
+    def get_related_content(self, obj):
+        """Get related content based on category and type"""
+        related_content = Content.objects.filter(
+            category=obj.category,
+            status='published'
+        ).exclude(id=obj.id)[:5]
+        
+        return ContentListSerializer(
+            related_content, 
+            many=True, 
+            context=self.context
+        ).data
 
 class ContentCreateUpdateSerializer(serializers.ModelSerializer):
     """Serializer for creating and updating content"""
@@ -264,18 +372,45 @@ class ContentCreateUpdateSerializer(serializers.ModelSerializer):
             'scheduled_live_time', 'live_stream_url'
         )
     
+    def validate_title(self, value):
+        """Validate content title"""
+        if len(value.strip()) < 2:
+            raise serializers.ValidationError("Title must be at least 2 characters long.")
+        return value.strip()
+    
+    def validate_description(self, value):
+        """Validate content description"""
+        if len(value.strip()) < 10:
+            raise serializers.ValidationError("Description must be at least 10 characters long.")
+        return value.strip()
+    
     def validate_tags(self, value):
         """Ensure tags is a list of strings"""
         if not isinstance(value, list):
             raise serializers.ValidationError("Tags must be a list.")
         
+        if len(value) > 15:
+            raise serializers.ValidationError("Maximum 15 tags allowed.")
+        
+        cleaned_tags = []
         for tag in value:
             if not isinstance(tag, str):
                 raise serializers.ValidationError("Each tag must be a string.")
-            if len(tag.strip()) == 0:
-                raise serializers.ValidationError("Tags cannot be empty.")
+            tag = tag.strip().lower()
+            if len(tag) == 0:
+                continue
+            if len(tag) > 50:
+                raise serializers.ValidationError("Each tag must be 50 characters or less.")
+            if tag not in cleaned_tags:  # Avoid duplicates
+                cleaned_tags.append(tag)
         
-        return [tag.strip().lower() for tag in value if tag.strip()]
+        return cleaned_tags
+    
+    def validate_scheduled_live_time(self, value):
+        """Validate scheduled live time is in the future"""
+        if value and value <= timezone.now():
+            raise serializers.ValidationError("Scheduled live time must be in the future.")
+        return value
     
     def create(self, validated_data):
         """Create content with author"""
@@ -541,6 +676,8 @@ class MediaStatsSerializer(serializers.Serializer):
     total_content = serializers.IntegerField()
     total_views = serializers.IntegerField()
     total_likes = serializers.IntegerField()
+    total_comments = serializers.IntegerField()
+    avg_rating = serializers.FloatField()
     trending_films = FilmListSerializer(many=True)
     trending_content = ContentListSerializer(many=True)
     featured_films = FilmListSerializer(many=True)

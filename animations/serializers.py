@@ -560,6 +560,40 @@ class AIAnimationRequestSerializer(serializers.ModelSerializer):
         """Create AI animation request"""
         validated_data['user'] = self.context['request'].user
         return AIAnimationRequest.objects.create(**validated_data)
+    
+# Add this class at the end of animations/serializers.py
+
+class AnimationSerializer(serializers.ModelSerializer):
+    """General serializer for animations - for backward compatibility"""
+    author = AuthorSerializer(read_only=True)
+    duration_formatted = serializers.CharField(read_only=True)
+    trailer_duration_formatted = serializers.CharField(read_only=True)
+    file_size_formatted = serializers.CharField(read_only=True)
+    
+    class Meta:
+        model = Animation
+        fields = (
+            'id', 'title', 'slug', 'description', 'short_description', 'category',
+            'animation_type', 'tags', 'thumbnail', 'poster', 'banner', 'video_file',
+            'trailer_file', 'project_file', 'storyboard', 'concept_art', 'author',
+            'status', 'is_featured', 'is_trending', 'is_premium', 'view_count',
+            'like_count', 'comment_count', 'download_count', 'average_rating',
+            'rating_count', 'duration', 'duration_formatted', 'trailer_duration',
+            'trailer_duration_formatted', 'video_quality', 'frame_rate', 'file_size',
+            'file_size_formatted', 'resolution_width', 'resolution_height',
+            'animation_software', 'render_engine', 'production_time', 'is_series',
+            'series_name', 'episode_number', 'season_number', 'is_ai_generated',
+            'ai_prompt', 'ai_model_used', 'generation_parameters', 'release_year',
+            'language', 'subtitles_available', 'director', 'animator', 'voice_actors',
+            'music_composer', 'sound_designer', 'studio', 'budget', 'created_at',
+            'updated_at', 'published_at'
+        )
+        read_only_fields = (
+            'id', 'slug', 'author', 'view_count', 'like_count', 'comment_count',
+            'download_count', 'average_rating', 'rating_count', 'duration_formatted',
+            'trailer_duration_formatted', 'file_size_formatted', 'created_at',
+            'updated_at', 'published_at'
+        )
 
 class AnimationStatsSerializer(serializers.Serializer):
     """Serializer for animation statistics"""

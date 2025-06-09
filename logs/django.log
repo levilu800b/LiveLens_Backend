@@ -1399,3 +1399,163 @@ INFO 2025-06-09 16:35:36,548 autoreload 46123 140704394378688 /Users/levicharles
 INFO 2025-06-09 16:35:37,504 autoreload 46150 140704394378688 Watching for file changes with StatReloader
 INFO 2025-06-09 16:37:28,571 autoreload 46353 140704394378688 Watching for file changes with StatReloader
 INFO 2025-06-09 16:45:01,055 autoreload 47969 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:04:11,027 autoreload 47969 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:04:11,048 autoreload 46353 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:04:12,586 autoreload 49395 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:04:12,586 autoreload 49394 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:04:14,892 autoreload 49395 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:04:14,900 autoreload 49394 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:04:15,900 autoreload 49420 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:04:15,902 autoreload 49419 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:05:06,637 autoreload 49419 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:05:06,641 autoreload 49420 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:05:07,591 autoreload 49508 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:05:07,591 autoreload 49507 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:05:10,613 autoreload 49507 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:05:10,614 autoreload 49508 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:05:11,480 autoreload 49533 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:05:11,480 autoreload 49532 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:06:05,548 autoreload 49533 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:06:05,549 autoreload 49532 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:06:06,757 autoreload 49609 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:06:06,757 autoreload 49610 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:10:00,996 autoreload 49925 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:36:57,949 autoreload 49925 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:36:59,481 autoreload 52040 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:37:07,242 autoreload 52040 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:37:07,980 autoreload 52070 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:37:16,708 autoreload 52070 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:37:17,490 autoreload 52095 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:37:21,120 autoreload 52095 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:37:21,862 autoreload 52116 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:37:26,434 autoreload 52116 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:37:27,775 autoreload 52140 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:37:37,619 autoreload 52140 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:37:38,384 autoreload 52166 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:38:16,217 autoreload 52166 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:38:17,265 autoreload 52233 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:38:19,814 autoreload 52233 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:38:20,587 autoreload 52247 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:40:44,118 autoreload 52247 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:40:45,187 autoreload 52497 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:40:50,931 autoreload 52497 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:40:51,626 autoreload 52526 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:40:57,229 autoreload 52526 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:40:57,957 autoreload 52547 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:41:01,498 autoreload 52547 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:41:02,321 autoreload 52564 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:41:04,862 autoreload 52564 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:41:05,606 autoreload 52584 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:41:08,114 autoreload 52584 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:41:08,877 autoreload 52597 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:41:10,349 autoreload 52597 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:41:11,076 autoreload 52614 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 17:41:47,732 autoreload 52614 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 17:41:48,691 autoreload 52705 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:12:20,251 autoreload 53575 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:19:09,500 autoreload 53575 140704394378688 /Users/levicharles/Documents/liveLens_backend/admin_content/views.py changed, reloading.
+INFO 2025-06-09 18:19:11,102 autoreload 54095 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:20:00,189 autoreload 54095 140704394378688 /Users/levicharles/Documents/liveLens_backend/stories/serializers.py changed, reloading.
+INFO 2025-06-09 18:20:01,031 autoreload 54187 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:21:56,647 autoreload 54430 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:23:55,014 autoreload 54430 140704394378688 /Users/levicharles/Documents/liveLens_backend/admin_content/views.py changed, reloading.
+INFO 2025-06-09 18:23:56,641 autoreload 54595 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:25:30,462 autoreload 54595 140704394378688 /Users/levicharles/Documents/liveLens_backend/admin_content/views.py changed, reloading.
+INFO 2025-06-09 18:25:31,766 autoreload 54717 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:26:09,685 autoreload 54717 140704394378688 /Users/levicharles/Documents/liveLens_backend/media_content/serializers.py changed, reloading.
+INFO 2025-06-09 18:26:11,177 autoreload 54792 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:29:37,261 autoreload 54792 140704394378688 /Users/levicharles/Documents/liveLens_backend/admin_content/views.py changed, reloading.
+INFO 2025-06-09 18:29:38,810 autoreload 55054 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:29:58,910 autoreload 55054 140704394378688 /Users/levicharles/Documents/liveLens_backend/media_content/serializers.py changed, reloading.
+INFO 2025-06-09 18:30:00,182 autoreload 55109 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:31:39,503 autoreload 55109 140704394378688 /Users/levicharles/Documents/liveLens_backend/podcasts/serializers.py changed, reloading.
+INFO 2025-06-09 18:31:40,745 autoreload 55319 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:31:51,702 autoreload 55319 140704394378688 /Users/levicharles/Documents/liveLens_backend/podcasts/serializers.py changed, reloading.
+INFO 2025-06-09 18:31:52,390 autoreload 55354 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:32:32,142 autoreload 55354 140704394378688 /Users/levicharles/Documents/liveLens_backend/podcasts/serializers.py changed, reloading.
+INFO 2025-06-09 18:32:32,889 autoreload 55439 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:32:58,987 autoreload 55439 140704394378688 /Users/levicharles/Documents/liveLens_backend/animations/serializers.py changed, reloading.
+INFO 2025-06-09 18:32:59,855 autoreload 55502 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:33:25,911 autoreload 55502 140704394378688 /Users/levicharles/Documents/liveLens_backend/sneak_peeks/serializers.py changed, reloading.
+INFO 2025-06-09 18:33:27,014 autoreload 55568 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:33:32,766 autoreload 55568 140704394378688 /Users/levicharles/Documents/liveLens_backend/sneak_peeks/serializers.py changed, reloading.
+INFO 2025-06-09 18:33:33,513 autoreload 55593 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:34:11,338 autoreload 55593 140704394378688 /Users/levicharles/Documents/liveLens_backend/sneak_peeks/serializers.py changed, reloading.
+INFO 2025-06-09 18:34:12,122 autoreload 55649 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:34:21,805 autoreload 55716 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:34:32,574 autoreload 55716 140704394378688 /Users/levicharles/Documents/liveLens_backend/sneak_peeks/serializers.py changed, reloading.
+INFO 2025-06-09 18:34:33,365 autoreload 55745 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:34:39,016 autoreload 55745 140704394378688 /Users/levicharles/Documents/liveLens_backend/sneak_peeks/serializers.py changed, reloading.
+INFO 2025-06-09 18:34:39,864 autoreload 55768 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:34:44,475 autoreload 55768 140704394378688 /Users/levicharles/Documents/liveLens_backend/sneak_peeks/serializers.py changed, reloading.
+INFO 2025-06-09 18:34:45,239 autoreload 55787 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:34:48,876 autoreload 55787 140704394378688 /Users/levicharles/Documents/liveLens_backend/sneak_peeks/serializers.py changed, reloading.
+INFO 2025-06-09 18:34:49,704 autoreload 55811 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:34:53,181 autoreload 55811 140704394378688 /Users/levicharles/Documents/liveLens_backend/sneak_peeks/serializers.py changed, reloading.
+INFO 2025-06-09 18:34:53,988 autoreload 55827 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:34:56,524 autoreload 55827 140704394378688 /Users/levicharles/Documents/liveLens_backend/sneak_peeks/serializers.py changed, reloading.
+INFO 2025-06-09 18:34:57,367 autoreload 55843 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:34:59,838 autoreload 55843 140704394378688 /Users/levicharles/Documents/liveLens_backend/sneak_peeks/serializers.py changed, reloading.
+INFO 2025-06-09 18:35:00,597 autoreload 55861 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:35:03,186 autoreload 55861 140704394378688 /Users/levicharles/Documents/liveLens_backend/sneak_peeks/serializers.py changed, reloading.
+INFO 2025-06-09 18:35:04,015 autoreload 55876 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:35:24,160 autoreload 55876 140704394378688 /Users/levicharles/Documents/liveLens_backend/sneak_peeks/serializers.py changed, reloading.
+INFO 2025-06-09 18:35:24,964 autoreload 55916 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:35:50,119 autoreload 55916 140704394378688 /Users/levicharles/Documents/liveLens_backend/sneak_peeks/serializers.py changed, reloading.
+INFO 2025-06-09 18:35:51,023 autoreload 55973 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:36:40,228 autoreload 55973 140704394378688 /Users/levicharles/Documents/liveLens_backend/sneak_peeks/serializers.py changed, reloading.
+INFO 2025-06-09 18:36:40,905 autoreload 56087 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:44:59,158 autoreload 58111 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:46:42,258 autoreload 58345 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:47:11,341 autoreload 58427 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:48:04,213 autoreload 58607 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:55:44,460 autoreload 60342 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 18:57:02,332 autoreload 60567 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 19:01:39,769 autoreload 60973 140704394378688 Watching for file changes with StatReloader
+WARNING 2025-06-09 19:01:40,660 file_handling 60973 140704394378688 python-magic not available. File type detection will use basic methods. For enhanced security, install libmagic: 'brew install libmagic' (macOS) or 'apt-get install libmagic1' (Ubuntu)
+INFO 2025-06-09 19:03:42,723 autoreload 60973 140704394378688 /Users/levicharles/Documents/liveLens_backend/admin_content/views.py changed, reloading.
+INFO 2025-06-09 19:03:44,195 autoreload 61144 140704394378688 Watching for file changes with StatReloader
+WARNING 2025-06-09 19:03:45,356 file_handling 61144 140704394378688 python-magic not available. File type detection will use basic methods. For enhanced security, install libmagic: 'brew install libmagic' (macOS) or 'apt-get install libmagic1' (Ubuntu)
+INFO 2025-06-09 19:03:58,618 autoreload 61217 140704394378688 Watching for file changes with StatReloader
+WARNING 2025-06-09 19:03:59,169 file_handling 61217 140704394378688 python-magic not available. File type detection will use basic methods. For enhanced security, install libmagic: 'brew install libmagic' (macOS) or 'apt-get install libmagic1' (Ubuntu)
+INFO 2025-06-09 19:07:04,579 autoreload 61535 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 19:07:32,280 autoreload 61535 140704394378688 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-09 19:07:33,270 autoreload 61590 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 19:08:14,352 autoreload 61849 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 19:09:19,536 autoreload 62054 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 19:09:28,705 basehttp 62054 123145580191744 "GET /admin/admin_dashboard/contentanalytics/ HTTP/1.1" 200 33153
+INFO 2025-06-09 19:09:29,017 basehttp 62054 123145580191744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 19:09:34,286 basehttp 62054 123145580191744 "GET /admin/admin_dashboard/contentanalytics/ HTTP/1.1" 200 33153
+INFO 2025-06-09 19:09:34,333 basehttp 62054 123145580191744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 19:09:35,527 basehttp 62054 123145580191744 "GET /admin/admin_dashboard/dashboardstats/ HTTP/1.1" 200 34475
+INFO 2025-06-09 19:09:35,574 basehttp 62054 123145580191744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 19:09:36,584 basehttp 62054 123145580191744 "GET /admin/admin_dashboard/reportgeneration/ HTTP/1.1" 200 33635
+INFO 2025-06-09 19:09:36,675 basehttp 62054 123145580191744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 19:09:37,754 basehttp 62054 123145580191744 "GET /admin/admin_dashboard/systemalert/ HTTP/1.1" 200 34563
+INFO 2025-06-09 19:09:37,811 basehttp 62054 123145580191744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 19:09:38,686 basehttp 62054 123145580191744 "GET /admin/admin_dashboard/useractivity/ HTTP/1.1" 200 34507
+INFO 2025-06-09 19:09:38,787 basehttp 62054 123145580191744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 19:09:40,665 basehttp 62054 123145580191744 "GET /admin/animations/aianimationrequest/ HTTP/1.1" 200 33970
+INFO 2025-06-09 19:09:40,724 basehttp 62054 123145580191744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 19:09:51,157 basehttp 62054 123145580191744 "GET /admin/animations/animationcollection/ HTTP/1.1" 200 32637
+INFO 2025-06-09 19:09:51,203 basehttp 62054 123145580191744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 19:09:52,972 basehttp 62054 123145580191744 "GET /admin/animations/animationinteraction/ HTTP/1.1" 200 32505
+INFO 2025-06-09 19:09:53,015 basehttp 62054 123145580191744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 19:09:53,816 basehttp 62054 123145580191744 "GET /admin/animations/animationplaylist/ HTTP/1.1" 200 32941
+INFO 2025-06-09 19:09:53,854 basehttp 62054 123145580191744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 19:09:54,680 basehttp 62054 123145580191744 "GET /admin/animations/animationview/ HTTP/1.1" 200 32349
+INFO 2025-06-09 19:09:54,720 basehttp 62054 123145580191744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 19:09:55,514 basehttp 62054 123145580191744 "GET /admin/animations/animation/ HTTP/1.1" 200 37598
+INFO 2025-06-09 19:09:55,601 basehttp 62054 123145580191744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 19:09:57,415 basehttp 62054 123145580191744 "GET /admin/authapp/emailverificationcode/ HTTP/1.1" 200 36314
+INFO 2025-06-09 19:09:57,456 basehttp 62054 123145580191744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 19:10:04,215 basehttp 62054 123145580191744 "GET /admin/authapp/useractivity/ HTTP/1.1" 200 46673
+INFO 2025-06-09 19:10:04,269 basehttp 62054 123145580191744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 19:10:05,679 basehttp 62054 123145580191744 "GET /admin/authapp/userpreferences/ HTTP/1.1" 200 35625
+INFO 2025-06-09 19:10:05,724 basehttp 62054 123145580191744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 19:10:06,935 basehttp 62054 123145580191744 "GET /admin/authapp/user/ HTTP/1.1" 200 38710
+INFO 2025-06-09 19:10:06,980 basehttp 62054 123145580191744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 19:10:09,983 basehttp 62054 123145580191744 "GET /admin/auth/group/ HTTP/1.1" 200 30739
+INFO 2025-06-09 19:10:10,022 basehttp 62054 123145580191744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 19:10:14,209 basehttp 62054 123145580191744 "GET /admin/comments/commentinteraction/ HTTP/1.1" 200 32402
+INFO 2025-06-09 19:10:14,250 basehttp 62054 123145580191744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
