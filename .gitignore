@@ -2,3 +2,16 @@
 profile_pictures
 .idea
 .coverage
+
+# .gitignore (automatically excludes these)
+.env                    # Environment variables
+media/                  # Local media files (if any)
+uploads/                # Upload directories
+*.mp4                   # Video files
+*.mov                   # Video files
+*.avi                   # Video files
+*.jpg                   # Image files
+*.png                   # Image files
+*.gif                   # Image files
+reports/                # Generated reports
+logs/                   # Log files
