@@ -84,7 +84,7 @@ class UserActivity(models.Model):
         ('comment_add', 'Comment Add'),
     ]
     
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='activities')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='auth_activities')
     activity_type = models.CharField(max_length=20, choices=ACTIVITY_TYPES)
     description = models.TextField(blank=True)
     ip_address = models.GenericIPAddressField(blank=True, null=True)

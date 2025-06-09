@@ -1038,3 +1038,27 @@ INFO 2025-06-09 12:01:16,887 basehttp 16218 123145576087552 "GET /admin/comments
 INFO 2025-06-09 12:01:16,932 basehttp 16218 123145576087552 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
 INFO 2025-06-09 12:01:27,456 basehttp 16218 123145576087552 "GET /admin/sneak_peeks/sneakpeekplaylistitem/ HTTP/1.1" 200 29257
 INFO 2025-06-09 12:01:27,503 basehttp 16218 123145576087552 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 12:04:35,419 autoreload 16218 140704394378688 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-09 12:04:36,341 autoreload 17433 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 12:17:04,749 autoreload 17433 140704394378688 /Users/levicharles/Documents/liveLens_backend/admin_dashboard/apps.py changed, reloading.
+INFO 2025-06-09 12:17:05,916 autoreload 18543 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 12:17:12,393 autoreload 18543 140704394378688 /Users/levicharles/Documents/liveLens_backend/admin_dashboard/apps.py changed, reloading.
+INFO 2025-06-09 12:17:13,091 autoreload 18570 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 12:17:15,611 autoreload 18570 140704394378688 /Users/levicharles/Documents/liveLens_backend/admin_dashboard/apps.py changed, reloading.
+INFO 2025-06-09 12:17:16,308 autoreload 18586 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 12:32:54,763 autoreload 18586 140704394378688 /Users/levicharles/Documents/liveLens_backend/authapp/models.py changed, reloading.
+INFO 2025-06-09 12:32:55,528 autoreload 21266 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 12:33:56,043 basehttp 21266 123145508200448 "GET /admin/sneak_peeks/sneakpeekplaylistitem/ HTTP/1.1" 200 32014
+INFO 2025-06-09 12:33:56,160 basehttp 21266 123145508200448 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 12:33:59,384 basehttp 21266 123145508200448 "GET /admin/admin_dashboard/contentanalytics/ HTTP/1.1" 200 33153
+INFO 2025-06-09 12:33:59,427 basehttp 21266 123145508200448 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 12:34:01,165 basehttp 21266 123145508200448 "GET /admin/admin_dashboard/dashboardstats/ HTTP/1.1" 200 34475
+INFO 2025-06-09 12:34:01,219 basehttp 21266 123145508200448 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 12:34:02,760 basehttp 21266 123145508200448 "GET /admin/admin_dashboard/reportgeneration/ HTTP/1.1" 200 33635
+INFO 2025-06-09 12:34:02,808 basehttp 21266 123145508200448 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 12:34:04,717 basehttp 21266 123145508200448 "GET /admin/admin_dashboard/systemalert/ HTTP/1.1" 200 34563
+INFO 2025-06-09 12:34:04,754 basehttp 21266 123145508200448 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 12:34:06,491 basehttp 21266 123145508200448 "GET /admin/admin_dashboard/useractivity/ HTTP/1.1" 200 34507
+INFO 2025-06-09 12:34:06,533 basehttp 21266 123145508200448 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 12:34:09,210 basehttp 21266 123145508200448 "GET /admin/admin_dashboard/contentanalytics/ HTTP/1.1" 200 33153
+INFO 2025-06-09 12:34:09,255 basehttp 21266 123145508200448 "GET /admin/jsi18n/ HTTP/1.1" 200 3342

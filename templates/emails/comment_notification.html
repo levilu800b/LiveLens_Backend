@@ -1,0 +1,123 @@
+<!-- templates/emails/comment_notification.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Notification - {{ platform_name }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+        .content {
+            background-color: white;
+            padding: 30px;
+            border: 1px solid #dee2e6;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+            font-size: 12px;
+            color: #6c757d;
+        }
+        .comment-box {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #007bff;
+            margin: 20px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>{{ platform_name }}</h1>
+        <h2>Comment Notification</h2>
+    </div>
+    
+    <div class="content">
+        <p>Hi {{ recipient.first_name }},</p>
+        
+        {% if notification_type == 'reply' %}
+            <p><strong>{{ sender.username }}</strong> replied to your comment on <strong>{{ content_title }}</strong>.</p>
+        {% elif notification_type == 'like' %}
+            <p><strong>{{ sender.username }}</strong> liked your comment on <strong>{{ content_title }}</strong>.</p>
+        {% elif notification_type == 'mention' %}
+            <p><strong>{{ sender.username }}</strong> mentioned you in a comment on <strong>{{ content_title }}</strong>.</p>
+        {% elif notification_type == 'moderation' %}
+            <p>Your comment on <strong>{{ content_title }}</strong> has been moderated by <strong>{{ sender.username }}</strong>.</p>
+        {% endif %}
+        
+        {% if notification_type != 'like' %}
+        <div class="comment-box">
+            <strong>Comment:</strong><br>
+            {{ comment.text|truncatewords:50 }}
+        </div>
+        {% endif %}
+        
+        <p>
+            <a href="{{ site_url }}" class="btn">View on {{ platform_name }}</a>
+        </p>
+        
+        <p>Stay engaged with your community!</p>
+        
+        <p>Best regards,<br>The {{ platform_name }} Team</p>
+    </div>
+    
+    <div class="footer">
+        <p>You're receiving this email because you have notifications enabled for comments.</p>
+        <p>© 2025 {{ platform_name }}. All rights reserved.</p>
+    </div>
+</body>
+</html>
+
+<!-- templates/emails/comment_notification.txt -->
+{{ platform_name }} - Comment Notification
+
+Hi {{ recipient.first_name }},
+
+{% if notification_type == 'reply' %}
+{{ sender.username }} replied to your comment on {{ content_title }}.
+{% elif notification_type == 'like' %}
+{{ sender.username }} liked your comment on {{ content_title }}.
+{% elif notification_type == 'mention' %}
+{{ sender.username }} mentioned you in a comment on {{ content_title }}.
+{% elif notification_type == 'moderation' %}
+Your comment on {{ content_title }} has been moderated by {{ sender.username }}.
+{% endif %}
+
+{% if notification_type != 'like' %}
+Comment: {{ comment.text|truncatewords:50 }}
+{% endif %}
+
+View on {{ platform_name }}: {{ site_url }}
+
+Stay engaged with your community!
+
+Best regards,
+The {{ platform_name }} Team
+
+---
+You're receiving this email because you have notifications enabled for comments.
+© 2025 {{ platform_name }}. All rights reserved.

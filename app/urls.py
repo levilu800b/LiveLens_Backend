@@ -1,6 +1,6 @@
+# app/urls.py - Updated with all new apps
 # type: ignore
 
-# app/urls.py
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -13,7 +13,7 @@ from drf_spectacular.views import (
 )
 
 urlpatterns = [
-    # Admin
+    # Admin interface
     path('admin/', admin.site.urls),
     
     # API Documentation
@@ -25,14 +25,18 @@ urlpatterns = [
     path('api/auth/', include('authapp.urls')),
     path('api/password-reset/', include('password_reset.urls')),
     
-    # Content APIs (will be added in next steps)
+    # Content APIs
     path('api/stories/', include('stories.urls')),
     path('api/media/', include('media_content.urls')),
     path('api/podcasts/', include('podcasts.urls')),
-    # path('api/animations/', include('animations.urls')),
-    # path('api/sneak-peeks/', include('sneak_peeks.urls')),
-    # path('api/comments/', include('comments.urls')),
-    # path('api/admin-dashboard/', include('admin_dashboard.urls')),
+    path('api/animations/', include('animations.urls')),
+    path('api/sneak-peeks/', include('sneak_peeks.urls')),
+    
+    # Universal commenting system
+    path('api/comments/', include('comments.urls')),
+    
+    # Admin dashboard
+    path('api/admin-dashboard/', include('admin_dashboard.urls')),
 ]
 
 # Serve media files in development

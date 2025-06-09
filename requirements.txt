@@ -1,72 +1,96 @@
-# Core Django packages
-Django==5.2.1
+# Updated requirements.txt for complete streaming platform backend
+# type: ignore
+
+# Django and core dependencies
+Django==5.2.2
 djangorestframework==3.14.0
 django-cors-headers==4.3.1
+python-decouple==3.8
 
 # Database
-mysqlclient==2.2.0
+mysqlclient==2.2.1
 
-# Authentication & Security
+# Authentication and JWT
 djangorestframework-simplejwt==5.3.0
-django-oauth-toolkit==3.0.1
-social-auth-app-django==5.4.0
+PyJWT==2.8.0
 
-# File handling & Media
-Pillow==11.2.1
-django-storages==1.14.2
-boto3==1.38.27
-cloudinary==1.44.0
+# File handling and cloud storage
+cloudinary==1.36.0
 django-cloudinary-storage==0.3.0
+Pillow==11.2.1
 
 # Email
 django-anymail==13.0
 
-# Environment variables
-python-decouple==3.8
-python-dotenv==1.0.0
-
-# API Documentation
+# API documentation
 drf-spectacular==0.28.0
 
-# Testing
-pytest==8.4.0
-pytest-django==4.7.0
-factory-boy==3.3.0
-
-# Utilities
-django-extensions==4.1
+# Filtering and search
 django-filter==25.1
-django-crispy-forms==2.1
-
-# AI Integration
-google-generativeai==0.8.5
-
-# Production
-gunicorn==23.0.0
-whitenoise==6.6.0
-
-# Development
-django-debug-toolbar==5.2.0
+django-elasticsearch-dsl==8.0
 
 # Caching
 redis==6.2.0
 django-redis==5.4.0
 
-# Data validation
-django-phonenumber-field==8.1.0
-phonenumbers==9.0.6
+# Background tasks
+celery==5.3.4
+celery[redis]==5.3.4
 
-# Timezone support
+# Data processing
+pandas==2.1.4
+numpy==2.3.0
+
+# Text processing and validation
+bleach==6.1.0
+python-slugify==8.0.1
+
+# Utilities
+python-dateutil==2.9.0.post0
 pytz==2025.2
+requests==2.31.0
 
-# Password hashing
-argon2-cffi==23.1.0
+# Monitoring and logging
+sentry-sdk[django]==2.29.1
+psutil==7.0.0
 
-# File validation
-python-magic==0.4.27
+# Google AI
+google-generativeai==0.8.5
+google-cloud-aiplatform==1.38.1
 
-# Rate limiting
+# Media processing (for video/audio handling)
+moviepy==2.2.1
+mutagen==1.47.0
+
+# Testing
+pytest==8.4.0
+pytest-django==4.7.0
+pytest-cov==6.1.1
+factory-boy==3.3.0
+
+# Development tools
+django-debug-toolbar==5.2.0
+django-extensions==4.1
+
+# Production server
+gunicorn==23.0.0
+whitenoise==6.6.0
+
+# Security
 django-ratelimit==4.1.0
+cryptography==45.0.3
 
-# Monitoring
-sentry-sdk==2.29.1
+# File format support
+openpyxl==3.1.2
+xlsxwriter==3.1.9
+
+# Time zone support
+backports.zoneinfo==0.2.1
+
+# Environment and deployment
+dj-database-url==3.0.0
+python-dotenv==1.0.0
+
+# Additional utilities
+uuid==1.30
+shortuuid==1.0.11
