@@ -44,9 +44,16 @@ LOCAL_APPS = [
     'stories',
     'media_content',
     'podcasts',
-    'animations',         # Now enabled
-    'sneak_peeks',        # Sneak peeks content
+    'animations',
+    'sneak_peeks',
     'admin_dashboard',    # Admin analytics dashboard
+    'ai_service',         # AI integration services
+    'search',             # Universal search
+    'user_library',       # User library and favorites
+    'notifications',      # Real-time notifications
+    'analytics',          # Content analytics and tracking
+    'recommendations',    # Content recommendation engine
+    'admin_content',      # Admin content management
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

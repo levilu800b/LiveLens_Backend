@@ -1,4 +1,4 @@
-# app/urls.py - Updated with all new apps
+# app/urls.py - Complete URL configuration
 # type: ignore
 
 from django.contrib import admin
@@ -32,11 +32,19 @@ urlpatterns = [
     path('api/animations/', include('animations.urls')),
     path('api/sneak-peeks/', include('sneak_peeks.urls')),
     
-    # Universal commenting system
+    # Universal systems
     path('api/comments/', include('comments.urls')),
+    path('api/search/', include('search.urls')),
+    path('api/user-library/', include('user_library.urls')),
+    path('api/notifications/', include('notifications.urls')),
+    path('api/analytics/', include('analytics.urls')),
     
-    # Admin dashboard
+    # AI services
+    path('api/ai/', include('ai_service.urls')),
+    
+    # Admin interfaces
     path('api/admin-dashboard/', include('admin_dashboard.urls')),
+    path('api/admin-content/', include('admin_content.urls')),
 ]
 
 # Serve media files in development

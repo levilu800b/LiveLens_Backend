@@ -1320,3 +1320,82 @@ INFO 2025-06-09 13:40:54,101 basehttp 29948 123145520820224 "GET /admin/admin_da
 INFO 2025-06-09 13:40:54,140 basehttp 29948 123145520820224 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
 WARNING 2025-06-09 13:41:03,851 log 29948 123145705504768 Forbidden: /api/admin-dashboard/overview/
 WARNING 2025-06-09 13:41:03,851 basehttp 29948 123145705504768 "GET /api/admin-dashboard/overview/ HTTP/1.1" 403 63
+INFO 2025-06-09 14:21:52,651 autoreload 29948 140704394378688 /Users/levicharles/Documents/liveLens_backend/admin_dashboard/views.py changed, reloading.
+INFO 2025-06-09 14:21:54,527 autoreload 33124 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 14:22:03,441 autoreload 33124 140704394378688 /Users/levicharles/Documents/liveLens_backend/admin_dashboard/views.py changed, reloading.
+INFO 2025-06-09 14:22:04,239 autoreload 33160 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 14:24:37,140 autoreload 33160 140704394378688 /Users/levicharles/Documents/liveLens_backend/admin_dashboard/views.py changed, reloading.
+INFO 2025-06-09 14:24:38,241 autoreload 33372 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 14:24:46,820 utils 33372 123145382813696 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-09 14:24:46,886 basehttp 33372 123145382813696 "POST /api/auth/login/ HTTP/1.1" 200 844
+ERROR 2025-06-09 14:25:05,338 views 33372 123145382813696 Error in dashboard_overview: Cannot resolve keyword 'view_count' into field. Choices are: author, author_id, category, collections, comment_count, content, cover_image, created_at, description, estimated_read_time, excerpt, id, is_featured, is_trending, like_count, pages, published_at, read_count, slug, status, storyinteraction, tags, thumbnail, title, updated_at, views
+ERROR 2025-06-09 14:25:05,339 log 33372 123145382813696 Internal Server Error: /api/admin-dashboard/overview/
+ERROR 2025-06-09 14:25:05,339 basehttp 33372 123145382813696 "GET /api/admin-dashboard/overview/ HTTP/1.1" 500 398
+WARNING 2025-06-09 14:27:24,277 log 33372 123145399603200 Forbidden: /api/admin-dashboard/user-stats/
+WARNING 2025-06-09 14:27:24,278 basehttp 33372 123145399603200 "GET /api/admin-dashboard/user-stats/ HTTP/1.1" 403 63
+INFO 2025-06-09 14:28:22,657 basehttp 33372 123145399603200 "GET /api/admin-dashboard/user-activities/ HTTP/1.1" 200 52
+INFO 2025-06-09 15:48:19,182 autoreload 33372 140704394378688 /Users/levicharles/Documents/liveLens_backend/app/urls.py changed, reloading.
+INFO 2025-06-09 15:48:20,632 autoreload 40522 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 15:53:55,108 autoreload 40522 140704394378688 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-09 15:53:56,067 autoreload 41168 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 15:54:14,660 autoreload 41168 140704394378688 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-09 15:54:15,475 autoreload 41205 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 15:54:36,108 autoreload 41205 140704394378688 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-09 15:54:36,896 autoreload 41265 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 15:56:32,341 autoreload 41493 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 15:57:44,312 autoreload 41667 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 15:58:10,944 autoreload 41667 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/apps.py changed, reloading.
+INFO 2025-06-09 15:58:11,834 autoreload 41719 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 15:58:47,671 autoreload 41719 140704394378688 /Users/levicharles/Documents/liveLens_backend/analytics/apps.py changed, reloading.
+INFO 2025-06-09 15:58:48,722 autoreload 41779 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 15:59:24,704 autoreload 41779 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/urls.py changed, reloading.
+INFO 2025-06-09 15:59:25,457 autoreload 41830 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 15:59:43,021 autoreload 41910 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:00:13,495 autoreload 41910 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/urls.py changed, reloading.
+INFO 2025-06-09 16:00:14,576 autoreload 41963 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:00:17,360 autoreload 41963 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/urls.py changed, reloading.
+INFO 2025-06-09 16:00:18,155 autoreload 41990 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:00:19,603 autoreload 41990 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/urls.py changed, reloading.
+INFO 2025-06-09 16:00:20,359 autoreload 42001 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:00:21,819 autoreload 42001 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/urls.py changed, reloading.
+INFO 2025-06-09 16:00:22,707 autoreload 42016 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:00:24,198 autoreload 42016 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/urls.py changed, reloading.
+INFO 2025-06-09 16:00:25,080 autoreload 42034 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:00:28,731 autoreload 42034 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/urls.py changed, reloading.
+INFO 2025-06-09 16:00:29,483 autoreload 42058 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:00:37,125 autoreload 42058 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/urls.py changed, reloading.
+INFO 2025-06-09 16:00:37,865 autoreload 42090 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:01:00,142 autoreload 42090 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/urls.py changed, reloading.
+INFO 2025-06-09 16:01:01,235 autoreload 42130 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:05:17,634 autoreload 42130 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/urls.py changed, reloading.
+INFO 2025-06-09 16:05:18,823 autoreload 42514 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:05:21,405 autoreload 42514 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/urls.py changed, reloading.
+INFO 2025-06-09 16:05:22,194 autoreload 42536 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:05:37,214 autoreload 42536 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/urls.py changed, reloading.
+INFO 2025-06-09 16:05:38,012 autoreload 42569 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:05:57,894 autoreload 42652 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:12:52,571 autoreload 43182 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:13:16,096 autoreload 43255 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:15:37,449 autoreload 43255 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/urls.py changed, reloading.
+INFO 2025-06-09 16:15:38,640 autoreload 43461 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:16:41,415 autoreload 43461 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/urls.py changed, reloading.
+INFO 2025-06-09 16:16:42,297 autoreload 43559 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:17:27,499 autoreload 43559 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/urls.py changed, reloading.
+INFO 2025-06-09 16:17:28,278 autoreload 43640 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:17:31,896 autoreload 43640 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/views.py changed, reloading.
+INFO 2025-06-09 16:17:32,740 autoreload 43658 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:18:29,177 autoreload 43658 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/views.py changed, reloading.
+INFO 2025-06-09 16:18:29,945 autoreload 43758 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:18:32,635 autoreload 43758 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/serializers.py changed, reloading.
+INFO 2025-06-09 16:18:33,382 autoreload 43773 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:18:59,961 autoreload 43773 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/urls.py changed, reloading.
+INFO 2025-06-09 16:19:00,877 autoreload 43837 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:20:37,872 autoreload 43837 140704394378688 /Users/levicharles/Documents/liveLens_backend/notifications/views.py changed, reloading.
+INFO 2025-06-09 16:20:38,982 autoreload 44057 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:35:02,568 autoreload 46084 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:35:30,145 autoreload 46084 140704394378688 /Users/levicharles/Documents/liveLens_backend/analytics/services.py changed, reloading.
+INFO 2025-06-09 16:35:31,085 autoreload 46123 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:35:36,548 autoreload 46123 140704394378688 /Users/levicharles/Documents/liveLens_backend/analytics/services.py changed, reloading.
+INFO 2025-06-09 16:35:37,504 autoreload 46150 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:37:28,571 autoreload 46353 140704394378688 Watching for file changes with StatReloader
+INFO 2025-06-09 16:45:01,055 autoreload 47969 140704394378688 Watching for file changes with StatReloader
