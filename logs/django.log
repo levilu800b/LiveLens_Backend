@@ -1998,3 +1998,9 @@ INFO 2025-06-13 11:34:08,474 utils 36568 123145576140800 Logged activity: levilu
 INFO 2025-06-13 11:34:08,476 basehttp 36568 123145576140800 "POST /api/auth/login/ HTTP/1.1" 200 866
 INFO 2025-06-13 11:34:27,250 utils 36568 123145576140800 Logged activity: levilu18@gmail.com - login
 INFO 2025-06-13 11:34:27,251 basehttp 36568 123145576140800 "POST /api/auth/login/ HTTP/1.1" 200 851
+INFO 2025-06-13 22:27:26,780 autoreload 60855 140704309980608 Watching for file changes with StatReloader
+INFO 2025-06-13 22:29:26,936 autoreload 60855 140704309980608 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-13 22:29:28,138 autoreload 61016 140704309980608 Watching for file changes with StatReloader
+INFO 2025-06-13 22:30:49,595 autoreload 61204 140704309980608 Watching for file changes with StatReloader
+INFO 2025-06-13 22:31:43,356 basehttp 61204 123145397833728 "GET /admin/animations/aianimationrequest/ HTTP/1.1" 200 31213
+INFO 2025-06-13 22:31:43,439 basehttp 61204 123145397833728 "GET /admin/jsi18n/ HTTP/1.1" 200 3342

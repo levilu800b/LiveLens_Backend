@@ -46,8 +46,7 @@ LOCAL_APPS = [
     'podcasts',
     'animations',
     'sneak_peeks',
-    'admin_dashboard',    # Admin analytics dashboard
-]
+    ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 

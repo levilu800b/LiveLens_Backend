@@ -36,7 +36,7 @@ urlpatterns = [
     path('api/comments/', include('comments.urls')),
     
     # Admin interfaces
-    path('api/admin-dashboard/', include('admin_dashboard.urls')),
+    #path('api/admin-dashboard/', include('admin_dashboard.urls')),
 ]
 
 # Serve media files in development
