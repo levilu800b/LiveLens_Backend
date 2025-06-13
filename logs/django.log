@@ -1708,3 +1708,293 @@ WARNING 2025-06-10 16:16:23,409 log 11795 123145435901952 Bad Request: /api/auth
 WARNING 2025-06-10 16:16:23,410 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 400 45
 INFO 2025-06-10 16:17:08,094 utils 11795 123145435901952 Logged activity: levilu18@gmail.com - login
 INFO 2025-06-10 16:17:08,097 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 844
+INFO 2025-06-10 16:24:29,655 utils 11795 123145435901952 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-10 16:24:29,657 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 844
+INFO 2025-06-10 16:36:16,933 utils 11795 123145435901952 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-10 16:36:16,941 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 844
+INFO 2025-06-10 16:46:25,342 utils 11795 123145435901952 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-10 16:46:25,350 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 844
+INFO 2025-06-10 16:47:52,724 utils 11795 123145435901952 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-10 16:47:52,729 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 844
+WARNING 2025-06-10 18:40:22,882 log 11795 123145435901952 Unauthorized: /api/auth/logout/
+WARNING 2025-06-10 18:40:22,886 basehttp 11795 123145435901952 "POST /api/auth/logout/ HTTP/1.1" 401 183
+INFO 2025-06-10 18:40:33,786 basehttp 11795 123145435901952 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-06-10 18:40:34,485 utils 11795 123145435901952 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-10 18:40:34,492 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 844
+WARNING 2025-06-10 18:40:37,323 log 11795 123145435901952 Bad Request: /api/auth/logout/
+WARNING 2025-06-10 18:40:37,323 basehttp 11795 123145435901952 "POST /api/auth/logout/ HTTP/1.1" 400 43
+WARNING 2025-06-10 18:41:19,723 log 11795 123145435901952 Bad Request: /api/auth/register/
+WARNING 2025-06-10 18:41:19,723 basehttp 11795 123145435901952 "POST /api/auth/register/ HTTP/1.1" 400 87
+INFO 2025-06-10 18:46:08,053 utils 11795 123145435901952 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-10 18:46:08,056 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 844
+INFO 2025-06-10 18:54:29,785 utils 11795 123145435901952 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-10 18:54:29,788 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 844
+INFO 2025-06-10 19:16:57,126 basehttp 11795 123145435901952 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+WARNING 2025-06-10 19:16:57,158 log 11795 123145435901952 Bad Request: /api/auth/logout/
+WARNING 2025-06-10 19:16:57,159 basehttp 11795 123145435901952 "POST /api/auth/logout/ HTTP/1.1" 400 43
+INFO 2025-06-10 19:17:31,318 basehttp 11795 123145435901952 "OPTIONS /api/auth/register/ HTTP/1.1" 200 0
+WARNING 2025-06-10 19:17:31,333 log 11795 123145435901952 Bad Request: /api/auth/register/
+WARNING 2025-06-10 19:17:31,333 basehttp 11795 123145435901952 "POST /api/auth/register/ HTTP/1.1" 400 87
+INFO 2025-06-10 20:13:47,459 utils 11795 123145435901952 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-10 20:13:47,469 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 844
+INFO 2025-06-10 20:30:45,547 basehttp 11795 123145435901952 "GET /admin/authapp/user/ HTTP/1.1" 200 38712
+INFO 2025-06-10 20:30:45,705 basehttp 11795 123145435901952 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-10 20:30:50,018 basehttp 11795 123145435901952 "GET /admin/authapp/user/3/change/ HTTP/1.1" 200 65180
+INFO 2025-06-10 20:30:50,103 basehttp 11795 123145435901952 "GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+INFO 2025-06-10 20:30:50,104 basehttp 11795 123145519849472 "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2025-06-10 20:30:50,105 basehttp 11795 123145486270464 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-06-10 20:30:50,108 basehttp 11795 123145503059968 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-06-10 20:30:50,108 basehttp 11795 123145536638976 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15709
+INFO 2025-06-10 20:30:50,118 basehttp 11795 123145469480960 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-10 20:30:50,121 basehttp 11795 123145536638976 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-06-10 20:30:50,131 basehttp 11795 123145536638976 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11991
+INFO 2025-06-10 20:30:50,168 basehttp 11795 123145536638976 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-06-10 20:30:50,306 basehttp 11795 123145536638976 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2025-06-10 20:30:50,306 basehttp 11795 123145469480960 "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+INFO 2025-06-10 20:31:03,624 basehttp 11795 123145435901952 "GET /admin/authapp/user/ HTTP/1.1" 200 38712
+INFO 2025-06-10 20:31:16,348 basehttp 11795 123145435901952 "GET /admin/authapp/user/?is_admin_user__exact=1 HTTP/1.1" 200 39215
+INFO 2025-06-10 20:31:16,807 basehttp 11795 123145435901952 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-10 20:31:19,929 basehttp 11795 123145435901952 "GET /admin/authapp/user/? HTTP/1.1" 200 38712
+INFO 2025-06-10 20:31:19,968 basehttp 11795 123145435901952 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-10 20:50:46,692 basehttp 11795 123145435901952 "OPTIONS /api/api/auth/login/ HTTP/1.1" 200 0
+WARNING 2025-06-10 20:50:46,711 log 11795 123145469480960 Not Found: /api/api/auth/login/
+WARNING 2025-06-10 20:50:46,711 basehttp 11795 123145469480960 "POST /api/api/auth/login/ HTTP/1.1" 404 4490
+WARNING 2025-06-10 20:51:15,368 log 11795 123145469480960 Not Found: /api/api/auth/login/
+WARNING 2025-06-10 20:51:15,368 basehttp 11795 123145469480960 "POST /api/api/auth/login/ HTTP/1.1" 404 4490
+INFO 2025-06-10 20:52:04,350 basehttp 11795 123145435901952 "OPTIONS /api/api/auth/register/ HTTP/1.1" 200 0
+WARNING 2025-06-10 20:52:04,361 log 11795 123145469480960 Not Found: /api/api/auth/register/
+WARNING 2025-06-10 20:52:04,361 basehttp 11795 123145469480960 "POST /api/api/auth/register/ HTTP/1.1" 404 4499
+WARNING 2025-06-10 20:52:34,855 log 11795 123145469480960 Not Found: /api/api/auth/login/
+WARNING 2025-06-10 20:52:34,856 basehttp 11795 123145469480960 "POST /api/api/auth/login/ HTTP/1.1" 404 4490
+INFO 2025-06-10 20:53:38,211 basehttp 11795 123145435901952 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-06-10 20:53:38,941 utils 11795 123145435901952 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-10 20:53:38,947 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 844
+INFO 2025-06-10 20:56:53,398 utils 11795 123145435901952 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-10 20:56:53,399 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 844
+INFO 2025-06-10 21:06:36,073 utils 11795 123145435901952 Verification email sent successfully to levilu800b@gmail.com
+INFO 2025-06-10 21:06:36,076 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - signup
+INFO 2025-06-10 21:06:36,076 basehttp 11795 123145435901952 "POST /api/auth/register/ HTTP/1.1" 201 128
+INFO 2025-06-10 21:11:58,548 basehttp 11795 123145435901952 "GET /admin/authapp/user/? HTTP/1.1" 200 39475
+INFO 2025-06-10 21:11:58,644 basehttp 11795 123145435901952 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-10 21:12:09,734 basehttp 11795 123145435901952 "GET /admin/authapp/user/4/change/ HTTP/1.1" 200 65173
+INFO 2025-06-10 21:12:09,776 basehttp 11795 123145435901952 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-10 21:12:12,914 basehttp 11795 123145435901952 "GET /admin/authapp/user/4/delete/ HTTP/1.1" 200 31109
+INFO 2025-06-10 21:12:12,971 basehttp 11795 123145435901952 "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2025-06-10 21:12:17,600 basehttp 11795 123145435901952 "POST /admin/authapp/user/4/delete/ HTTP/1.1" 302 0
+INFO 2025-06-10 21:12:17,630 basehttp 11795 123145435901952 "GET /admin/authapp/user/ HTTP/1.1" 200 38896
+INFO 2025-06-10 21:12:17,669 basehttp 11795 123145435901952 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-10 21:12:44,121 utils 11795 123145486270464 Verification email sent successfully to levilu800b@gmail.com
+INFO 2025-06-10 21:12:44,125 utils 11795 123145486270464 Logged activity: levilu800b@gmail.com - signup
+INFO 2025-06-10 21:12:44,125 basehttp 11795 123145486270464 "POST /api/auth/register/ HTTP/1.1" 201 128
+INFO 2025-06-10 21:12:56,320 utils 11795 123145486270464 Logged activity: levilu800b@gmail.com - profile_update
+INFO 2025-06-10 21:12:56,320 basehttp 11795 123145486270464 "POST /api/auth/verify-email/ HTTP/1.1" 200 74
+WARNING 2025-06-10 21:14:13,221 log 11795 123145469480960 Bad Request: /api/auth/verify-email/
+WARNING 2025-06-10 21:14:13,221 basehttp 11795 123145469480960 "POST /api/auth/verify-email/ HTTP/1.1" 400 68
+INFO 2025-06-10 21:14:55,920 basehttp 11795 123145435901952 "GET /admin/authapp/user/ HTTP/1.1" 200 39475
+INFO 2025-06-10 21:14:55,977 basehttp 11795 123145435901952 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-10 21:14:58,011 basehttp 11795 123145435901952 "GET /admin/authapp/user/5/change/ HTTP/1.1" 200 65181
+INFO 2025-06-10 21:14:58,074 basehttp 11795 123145435901952 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-10 21:15:00,357 basehttp 11795 123145435901952 "GET /admin/authapp/user/5/delete/ HTTP/1.1" 200 31262
+INFO 2025-06-10 21:15:02,057 basehttp 11795 123145435901952 "POST /admin/authapp/user/5/delete/ HTTP/1.1" 302 0
+INFO 2025-06-10 21:15:02,093 basehttp 11795 123145435901952 "GET /admin/authapp/user/ HTTP/1.1" 200 38896
+INFO 2025-06-10 21:15:02,176 basehttp 11795 123145435901952 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-10 21:15:24,758 utils 11795 123145486270464 Verification email sent successfully to levilu800b@gmail.com
+INFO 2025-06-10 21:15:24,760 utils 11795 123145486270464 Logged activity: levilu800b@gmail.com - signup
+INFO 2025-06-10 21:15:24,761 basehttp 11795 123145486270464 "POST /api/auth/register/ HTTP/1.1" 201 128
+INFO 2025-06-10 21:15:42,900 utils 11795 123145486270464 Logged activity: levilu800b@gmail.com - profile_update
+INFO 2025-06-10 21:15:42,901 basehttp 11795 123145486270464 "POST /api/auth/verify-email/ HTTP/1.1" 200 74
+INFO 2025-06-10 21:16:01,381 utils 11795 123145469480960 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-10 21:16:01,383 basehttp 11795 123145469480960 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-10 21:27:52,765 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-10 21:27:52,767 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+WARNING 2025-06-10 21:28:02,941 log 11795 123145469480960 Not Found: /api/auth/password-reset/request-reset/
+WARNING 2025-06-10 21:28:02,942 basehttp 11795 123145469480960 "POST /api/auth/password-reset/request-reset/ HTTP/1.1" 404 8505
+INFO 2025-06-10 21:31:22,069 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-10 21:31:22,071 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-10 21:31:30,814 utils 11795 123145469480960 Password reset email sent successfully to levilu800b@gmail.com
+INFO 2025-06-10 21:31:30,815 basehttp 11795 123145469480960 "POST /api/password-reset/request/ HTTP/1.1" 200 92
+INFO 2025-06-10 21:37:11,118 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-10 21:37:11,124 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-10 21:37:22,220 utils 11795 123145469480960 Password reset email sent successfully to levilu800b@gmail.com
+INFO 2025-06-10 21:37:22,221 basehttp 11795 123145469480960 "POST /api/password-reset/request/ HTTP/1.1" 200 92
+INFO 2025-06-10 21:37:45,792 basehttp 11795 123145469480960 "POST /api/password-reset/verify/ HTTP/1.1" 200 92
+INFO 2025-06-10 21:38:08,763 utils 11795 123145469480960 Logged activity: levilu800b@gmail.com - password_change
+INFO 2025-06-10 21:38:08,763 basehttp 11795 123145469480960 "POST /api/password-reset/confirm/ HTTP/1.1" 200 97
+INFO 2025-06-10 21:38:18,161 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-10 21:38:18,164 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-10 21:40:32,744 basehttp 11795 123145469480960 "GET /admin/authapp/user/ HTTP/1.1" 200 39498
+INFO 2025-06-10 21:40:32,809 basehttp 11795 123145469480960 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-11 23:24:06,764 basehttp 11795 123145435901952 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-06-11 23:24:07,725 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-11 23:24:07,743 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-11 23:58:14,108 utils 11795 123145435901952 Logged activity: lou24081997@gmail.com - signup
+INFO 2025-06-11 23:58:14,121 basehttp 11795 123145435901952 "POST /api/auth/google-signup/ HTTP/1.1" 201 852
+INFO 2025-06-11 23:58:28,681 basehttp 11795 123145435901952 "GET /admin/authapp/user/ HTTP/1.1" 200 40250
+INFO 2025-06-11 23:58:28,758 basehttp 11795 123145435901952 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,759 basehttp 11795 123145503059968 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,759 basehttp 11795 123145486270464 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,776 basehttp 11795 123145519849472 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,780 basehttp 11795 123145536638976 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,784 basehttp 11795 123145435901952 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,784 basehttp 11795 123145503059968 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,792 basehttp 11795 123145519849472 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,793 basehttp 11795 123145536638976 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,798 basehttp 11795 123145435901952 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,798 basehttp 11795 123145486270464 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,814 basehttp 11795 123145503059968 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,814 basehttp 11795 123145519849472 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,815 basehttp 11795 123145435901952 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,817 basehttp 11795 123145469480960 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-11 23:58:28,818 basehttp 11795 123145536638976 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,818 basehttp 11795 123145486270464 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,941 basehttp 11795 123145469480960 "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,950 basehttp 11795 123145469480960 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,951 basehttp 11795 123145486270464 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,984 basehttp 11795 123145486270464 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,984 basehttp 11795 123145435901952 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,985 basehttp 11795 123145536638976 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:28,985 basehttp 11795 123145469480960 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-06-11 23:58:53,245 basehttp 11795 123145553428480 "OPTIONS /api/auth/google-login/ HTTP/1.1" 200 0
+WARNING 2025-06-11 23:58:53,263 log 11795 123145553428480 Bad Request: /api/auth/google-login/
+WARNING 2025-06-11 23:58:53,265 basehttp 11795 123145553428480 "POST /api/auth/google-login/ HTTP/1.1" 400 77
+WARNING 2025-06-12 00:00:29,842 log 11795 123145553428480 Bad Request: /api/auth/google-login/
+WARNING 2025-06-12 00:00:29,843 basehttp 11795 123145553428480 "POST /api/auth/google-login/ HTTP/1.1" 400 77
+INFO 2025-06-12 00:03:54,450 basehttp 11795 123145435901952 "GET /admin/authapp/user/7/change/ HTTP/1.1" 200 64950
+INFO 2025-06-12 00:03:54,509 basehttp 11795 123145486270464 "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2025-06-12 00:03:54,509 basehttp 11795 123145469480960 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-06-12 00:03:54,514 basehttp 11795 123145503059968 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+INFO 2025-06-12 00:03:54,516 basehttp 11795 123145519849472 "GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+INFO 2025-06-12 00:03:54,516 basehttp 11795 123145536638976 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+INFO 2025-06-12 00:03:54,528 basehttp 11795 123145435901952 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-12 00:03:54,610 basehttp 11795 123145435901952 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-06-12 00:03:54,632 basehttp 11795 123145435901952 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-06-12 00:03:54,691 basehttp 11795 123145435901952 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-06-12 00:03:54,972 basehttp 11795 123145536638976 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+INFO 2025-06-12 00:03:54,972 basehttp 11795 123145435901952 "GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
+WARNING 2025-06-12 00:05:08,906 log 11795 123145435901952 Bad Request: /api/auth/google-login/
+WARNING 2025-06-12 00:05:08,907 basehttp 11795 123145435901952 "POST /api/auth/google-login/ HTTP/1.1" 400 77
+WARNING 2025-06-12 00:07:38,822 log 11795 123145435901952 Bad Request: /api/auth/google-login/
+WARNING 2025-06-12 00:07:38,823 basehttp 11795 123145435901952 "POST /api/auth/google-login/ HTTP/1.1" 400 77
+INFO 2025-06-12 00:09:57,154 basehttp 11795 123145469480960 "GET /admin/authapp/user/ HTTP/1.1" 200 40250
+WARNING 2025-06-12 00:10:47,564 log 11795 123145435901952 Bad Request: /api/auth/google-login/
+WARNING 2025-06-12 00:10:47,565 basehttp 11795 123145435901952 "POST /api/auth/google-login/ HTTP/1.1" 400 77
+WARNING 2025-06-12 00:17:04,910 log 11795 123145435901952 Bad Request: /api/auth/google-login/
+WARNING 2025-06-12 00:17:04,913 basehttp 11795 123145435901952 "POST /api/auth/google-login/ HTTP/1.1" 400 77
+WARNING 2025-06-12 02:16:50,842 log 11795 123145435901952 Bad Request: /api/auth/google-login/
+WARNING 2025-06-12 02:16:50,845 basehttp 11795 123145435901952 "POST /api/auth/google-login/ HTTP/1.1" 400 77
+INFO 2025-06-12 02:20:28,996 utils 11795 123145469480960 Logged activity: lou24081997@gmail.com - login
+INFO 2025-06-12 02:20:29,011 basehttp 11795 123145469480960 "POST /api/auth/google-login/ HTTP/1.1" 200 851
+INFO 2025-06-12 02:40:58,242 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 02:40:58,260 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 02:42:03,306 utils 11795 123145435901952 Logged activity: lou24081997@gmail.com - login
+INFO 2025-06-12 02:42:03,321 basehttp 11795 123145435901952 "POST /api/auth/google-login/ HTTP/1.1" 200 851
+INFO 2025-06-12 02:46:12,778 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 02:46:12,782 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 02:49:25,380 utils 11795 123145435901952 Logged activity: lou24081997@gmail.com - login
+INFO 2025-06-12 02:49:25,383 basehttp 11795 123145435901952 "POST /api/auth/google-login/ HTTP/1.1" 200 851
+INFO 2025-06-12 03:06:08,988 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 03:06:09,002 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 03:07:25,578 utils 11795 123145435901952 Logged activity: lou24081997@gmail.com - login
+INFO 2025-06-12 03:07:25,586 basehttp 11795 123145435901952 "POST /api/auth/google-login/ HTTP/1.1" 200 851
+INFO 2025-06-12 03:11:29,051 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 03:11:29,054 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+WARNING 2025-06-12 03:15:40,741 log 11795 123145435901952 Bad Request: /api/auth/login/
+WARNING 2025-06-12 03:15:40,742 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 400 45
+INFO 2025-06-12 03:16:02,164 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 03:16:02,170 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 03:16:30,382 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 03:16:30,386 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 03:18:32,984 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 03:18:32,987 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 09:44:19,503 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 09:44:19,511 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 09:44:22,878 basehttp 11795 123145435901952 "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-06-12 09:44:22,880 basehttp 11795 123145469480960 "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-06-12 09:44:50,110 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 09:44:50,113 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 09:45:14,914 basehttp 11795 123145435901952 "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-06-12 09:45:14,923 basehttp 11795 123145435901952 "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-06-12 09:57:09,416 basehttp 11795 123145435901952 "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-06-12 09:57:09,421 basehttp 11795 123145435901952 "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-06-12 10:01:26,431 basehttp 11795 123145469480960 "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-06-12 10:01:26,433 basehttp 11795 123145435901952 "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-06-12 10:01:48,371 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 10:01:48,381 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 10:02:11,749 basehttp 11795 123145435901952 "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-06-12 10:02:11,755 basehttp 11795 123145469480960 "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-06-12 10:02:35,440 basehttp 11795 123145435901952 "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-06-12 10:02:35,447 basehttp 11795 123145435901952 "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+WARNING 2025-06-12 10:03:23,842 log 11795 123145435901952 Bad Request: /api/auth/login/
+WARNING 2025-06-12 10:03:23,842 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 400 45
+INFO 2025-06-12 10:03:34,438 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 10:03:34,442 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+WARNING 2025-06-12 10:04:19,404 log 11795 123145435901952 Bad Request: /api/auth/login/
+WARNING 2025-06-12 10:04:19,404 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 400 45
+INFO 2025-06-12 10:04:26,603 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 10:04:26,605 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 10:05:05,104 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 10:05:05,105 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 10:07:31,511 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 10:07:31,512 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 10:25:36,389 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 10:25:36,392 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 10:26:56,085 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 10:26:56,087 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+WARNING 2025-06-12 10:27:01,062 log 11795 123145435901952 Not Found: /api/placeholder/600/400
+WARNING 2025-06-12 10:27:01,062 log 11795 123145469480960 Not Found: /api/placeholder/400/300
+WARNING 2025-06-12 10:27:01,063 basehttp 11795 123145435901952 "GET /api/placeholder/600/400 HTTP/1.1" 404 4501
+WARNING 2025-06-12 10:27:01,063 basehttp 11795 123145469480960 "GET /api/placeholder/400/300 HTTP/1.1" 404 4501
+INFO 2025-06-12 10:28:39,079 utils 11795 123145435901952 Password reset email sent successfully to levilu800b@gmail.com
+INFO 2025-06-12 10:28:39,079 basehttp 11795 123145435901952 "POST /api/password-reset/request/ HTTP/1.1" 200 92
+INFO 2025-06-12 10:29:08,576 basehttp 11795 123145435901952 "POST /api/password-reset/verify/ HTTP/1.1" 200 92
+INFO 2025-06-12 10:29:29,359 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - password_change
+INFO 2025-06-12 10:29:29,360 basehttp 11795 123145435901952 "POST /api/password-reset/confirm/ HTTP/1.1" 200 97
+INFO 2025-06-12 10:29:59,256 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 10:29:59,258 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 10:30:58,291 basehttp 11795 123145435901952 "GET /admin/authapp/user/ HTTP/1.1" 200 40273
+INFO 2025-06-12 10:30:58,440 basehttp 11795 123145435901952 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-12 10:50:50,662 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 10:50:50,664 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 10:52:43,071 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 10:52:43,074 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 11:02:13,808 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 11:02:13,810 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 11:04:48,538 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 11:04:48,540 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 11:40:16,717 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 11:40:16,731 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 11:43:24,018 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 11:43:24,025 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 11:45:28,917 utils 11795 123145435901952 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 11:45:28,920 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 12:09:35,031 utils 11795 123145435901952 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-12 12:09:35,042 basehttp 11795 123145435901952 "POST /api/auth/login/ HTTP/1.1" 200 844
+INFO 2025-06-12 12:48:29,579 utils 11795 123145469480960 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-12 12:48:29,586 basehttp 11795 123145469480960 "POST /api/auth/login/ HTTP/1.1" 200 844
+INFO 2025-06-12 13:50:17,323 utils 11795 123145469480960 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-12 13:50:17,336 basehttp 11795 123145469480960 "POST /api/auth/login/ HTTP/1.1" 200 844
+INFO 2025-06-12 15:20:27,030 autoreload 11795 140704309980608 /Users/levicharles/Documents/liveLens_backend/admin_dashboard/models.py changed, reloading.
+INFO 2025-06-12 15:20:29,708 autoreload 1731 140704309980608 Watching for file changes with StatReloader
+INFO 2025-06-12 15:21:02,911 autoreload 1731 140704309980608 /Users/levicharles/Documents/liveLens_backend/admin_dashboard/models.py changed, reloading.
+INFO 2025-06-12 15:21:04,009 autoreload 1779 140704309980608 Watching for file changes with StatReloader
+INFO 2025-06-12 15:21:12,268 autoreload 1779 140704309980608 /Users/levicharles/Documents/liveLens_backend/admin_dashboard/models.py changed, reloading.
+INFO 2025-06-12 15:21:13,022 autoreload 1801 140704309980608 Watching for file changes with StatReloader
+INFO 2025-06-12 21:17:15,291 utils 1801 123145431109632 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 21:17:15,695 basehttp 1801 123145431109632 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-12 21:17:39,976 utils 1801 123145431109632 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-12 21:17:39,978 basehttp 1801 123145431109632 "POST /api/auth/login/ HTTP/1.1" 200 844
+INFO 2025-06-12 21:19:54,639 utils 1801 123145431109632 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-12 21:19:54,640 basehttp 1801 123145431109632 "POST /api/auth/login/ HTTP/1.1" 200 858
+INFO 2025-06-13 11:13:18,637 basehttp 1801 123145431109632 "GET /admin/authapp/user/ HTTP/1.1" 200 40272
+WARNING 2025-06-13 11:13:19,608 log 1801 123145431109632 Not Found: /favicon.ico
+WARNING 2025-06-13 11:13:19,609 basehttp 1801 123145431109632 "GET /favicon.ico HTTP/1.1" 404 4465
+INFO 2025-06-13 11:26:24,869 autoreload 1801 140704309980608 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-13 11:26:26,456 autoreload 36486 140704309980608 Watching for file changes with StatReloader
+INFO 2025-06-13 11:27:46,154 autoreload 36486 140704309980608 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-13 11:27:47,204 autoreload 36568 140704309980608 Watching for file changes with StatReloader
+INFO 2025-06-13 11:32:34,461 utils 36568 123145576140800 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-13 11:32:34,529 basehttp 36568 123145576140800 "POST /api/auth/login/ HTTP/1.1" 200 851
+INFO 2025-06-13 11:34:08,474 utils 36568 123145576140800 Logged activity: levilu800b@gmail.com - login
+INFO 2025-06-13 11:34:08,476 basehttp 36568 123145576140800 "POST /api/auth/login/ HTTP/1.1" 200 866
+INFO 2025-06-13 11:34:27,250 utils 36568 123145576140800 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-13 11:34:27,251 basehttp 36568 123145576140800 "POST /api/auth/login/ HTTP/1.1" 200 851

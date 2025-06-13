@@ -178,10 +178,27 @@ class UserProfileSerializer(serializers.ModelSerializer):
         fields = (
             'id', 'email', 'username', 'first_name', 'last_name', 'full_name',
             'phone_number', 'gender', 'country', 'date_of_birth', 'avatar',
-            'is_verified', 'created_at', 'updated_at'
+            'is_verified', 'is_admin_user', 'created_at', 'updated_at'
         )
-        read_only_fields = ('id', 'email', 'username', 'is_verified', 'created_at', 'updated_at')
-
+        read_only_fields = ('id', 'email', 'username', 'is_verified', 'is_admin_user', 'created_at', 'updated_at')
+    
+    def to_representation(self, instance):
+        """Customize the output representation"""
+        data = super().to_representation(instance)
+        # Map backend field names to frontend field names
+        data['isAdmin'] = instance.is_admin_user or instance.is_superuser
+        data['firstName'] = data.pop('first_name')
+        data['lastName'] = data.pop('last_name')
+        data['phoneNumber'] = data.pop('phone_number', None)
+        data['dateOfBirth'] = data.pop('date_of_birth', None)
+        data['isVerified'] = data.pop('is_verified')
+        data['createdAt'] = data.pop('created_at')
+        data['updatedAt'] = data.pop('updated_at')
+        
+        # Remove backend-specific field from response
+        data.pop('is_admin_user', None)
+        
+        return data
 class UserPreferencesSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserPreferences
