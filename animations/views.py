@@ -12,12 +12,12 @@ from django.shortcuts import get_object_or_404
 
 from .models import (
     Animation, AnimationInteraction, AnimationView, AnimationCollection,
-    AnimationPlaylist, AIAnimationRequest
+    AnimationPlaylist
 )
 from .serializers import (
     AnimationListSerializer, AnimationDetailSerializer, AnimationCreateUpdateSerializer,
     AnimationInteractionSerializer, AnimationCollectionSerializer, AnimationPlaylistSerializer,
-    AnimationViewSerializer, AIAnimationRequestSerializer, AnimationStatsSerializer
+    AnimationViewSerializer, AnimationStatsSerializer
 )
 from .filters import AnimationFilter
 from .permissions import IsAuthorOrReadOnly, IsAdminOrReadOnly
@@ -181,17 +181,6 @@ class AnimationViewSet(viewsets.ModelViewSet):
         ).order_by('-view_count', '-like_count')[:10]
         
         serializer = self.get_serializer(trending_animations, many=True)
-        return Response(serializer.data)
-    
-    @action(detail=False, methods=['get'])
-    def ai_generated(self, request):
-        """Get AI-generated animations"""
-        ai_animations = self.get_queryset().filter(
-            is_ai_generated=True,
-            status='published'
-        ).order_by('-created_at')[:10]
-        
-        serializer = self.get_serializer(ai_animations, many=True)
         return Response(serializer.data)
     
     @action(detail=False, methods=['get'])
@@ -404,67 +393,6 @@ class AnimationPlaylistViewSet(viewsets.ModelViewSet):
                 status=status.HTTP_404_NOT_FOUND
             )
 
-class AIAnimationRequestViewSet(viewsets.ModelViewSet):
-    """
-    ViewSet for AI Animation Generation Requests
-    """
-    serializer_class = AIAnimationRequestSerializer
-    permission_classes = [permissions.IsAuthenticated]
-    filter_backends = [filters.OrderingFilter]
-    ordering = ['-created_at']
-    
-    def get_queryset(self):
-        """Return user's AI animation requests"""
-        if hasattr(self.request.user, 'is_admin') and self.request.user.is_admin():
-            return AIAnimationRequest.objects.all()
-        return AIAnimationRequest.objects.filter(user=self.request.user)
-    
-    def create(self, request, *args, **kwargs):
-        """Create AI animation generation request"""
-        serializer = self.get_serializer(data=request.data)
-        if serializer.is_valid():
-            ai_request = serializer.save()
-            
-            # Here you would typically trigger the AI animation generation
-            # For now, we'll just set the status to processing
-            ai_request.status = 'processing'
-            ai_request.save()
-            
-            return Response({
-                'message': 'AI animation generation request created successfully.',
-                'request': serializer.data
-            }, status=status.HTTP_201_CREATED)
-        
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
-    @action(detail=True, methods=['post'])
-    def regenerate(self, request, pk=None):
-        """Regenerate animation with modified parameters"""
-        ai_request = self.get_object()
-        
-        if ai_request.user != request.user:
-            return Response(
-                {'detail': 'You can only regenerate your own requests.'}, 
-                status=status.HTTP_403_FORBIDDEN
-            )
-        
-        # Create new request with updated parameters
-        new_data = request.data.copy()
-        new_data['prompt'] = new_data.get('prompt', ai_request.prompt)
-        
-        serializer = self.get_serializer(data=new_data)
-        if serializer.is_valid():
-            new_request = serializer.save()
-            new_request.status = 'processing'
-            new_request.save()
-            
-            return Response({
-                'message': 'Animation regeneration request created successfully.',
-                'request': serializer.data
-            }, status=status.HTTP_201_CREATED)
-        
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
 class AnimationLibraryView(APIView):
     """
     API view for user's animation library
@@ -518,9 +446,7 @@ class AnimationStatsView(APIView):
         """Get comprehensive animation statistics"""
         # Basic counts
         total_animations = Animation.objects.count()
-        published_animations = Animation.objects.filter(status='published').count()
-        ai_generated_animations = Animation.objects.filter(is_ai_generated=True).count()
-        
+        published_animations = Animation.objects.filter(status='published').count()        
         # Aggregate stats
         total_views = Animation.objects.aggregate(
             total=Sum('view_count')
@@ -551,22 +477,16 @@ class AnimationStatsView(APIView):
             count=Count('id')
         ).order_by('-count')[:5]
         
-        # AI requests stats
-        ai_requests_pending = AIAnimationRequest.objects.filter(
-            status__in=['pending', 'processing']
-        ).count()
         
         stats_data = {
             'total_animations': total_animations,
             'published_animations': published_animations,
-            'ai_generated_animations': ai_generated_animations,
             'total_views': total_views,
             'total_likes': total_likes,
             'trending_animations': trending_animations,
             'featured_animations': featured_animations,
             'recent_animations': recent_animations,
             'top_categories': list(top_categories),
-            'ai_requests_pending': ai_requests_pending,
         }
         
         serializer = AnimationStatsSerializer(stats_data)
@@ -606,7 +526,6 @@ class AnimationSearchView(APIView):
         animation_type = request.query_params.get('animation_type', '')
         tags = request.query_params.get('tags', '').split(',') if request.query_params.get('tags') else []
         author = request.query_params.get('author', '')
-        is_ai_generated = request.query_params.get('is_ai_generated', '')
         
         animations = Animation.objects.filter(status='published')
         
@@ -642,12 +561,6 @@ class AnimationSearchView(APIView):
                 Q(author__last_name__icontains=author)
             )
         
-        # AI generated filter
-        if is_ai_generated.lower() in ['true', '1']:
-            animations = animations.filter(is_ai_generated=True)
-        elif is_ai_generated.lower() in ['false', '0']:
-            animations = animations.filter(is_ai_generated=False)
-        
         # Order by relevance
         animations = animations.order_by('-view_count', '-like_count', '-created_at')[:20]
         
@@ -680,72 +593,3 @@ class TrackAnimationViewAPIView(APIView):
             return Response({'message': 'View tracked successfully.'})
         
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-class GenerateAIAnimationView(APIView):
-    """
-    Generate animation using AI
-    """
-    permission_classes = [permissions.IsAuthenticated]
-    
-    def post(self, request):
-        """Generate animation using AI prompt"""
-        prompt = request.data.get('prompt')
-        if not prompt:
-            return Response(
-                {'detail': 'Prompt is required for AI generation.'}, 
-                status=status.HTTP_400_BAD_REQUEST
-            )
-        
-        # Create AI request
-        ai_request_data = {
-            'prompt': prompt,
-            'style': request.data.get('style', '2d'),
-            'duration_requested': request.data.get('duration', 30),
-            'quality_requested': request.data.get('quality', '1080p'),
-            'frame_rate_requested': request.data.get('frame_rate', '24'),
-            'additional_parameters': request.data.get('additional_parameters', {})
-        }
-        
-        serializer = AIAnimationRequestSerializer(
-            data=ai_request_data,
-            context={'request': request}
-        )
-        
-        if serializer.is_valid():
-            ai_request = serializer.save()
-            
-            # Here you would integrate with Google AI or other AI service
-            # For now, simulate the process
-            ai_request.status = 'processing'
-            ai_request.ai_model_used = 'Google AI Animation Generator'
-            ai_request.save()
-            
-            return Response({
-                'message': 'AI animation generation started.',
-                'request_id': ai_request.id,
-                'status': ai_request.status
-            }, status=status.HTTP_201_CREATED)
-        
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-class AIAnimationStatusView(APIView):
-    """
-    Check AI animation generation status
-    """
-    permission_classes = [permissions.IsAuthenticated]
-    
-    def get(self, request, request_id):
-        """Get AI animation generation status"""
-        try:
-            ai_request = AIAnimationRequest.objects.get(
-                id=request_id,
-                user=request.user
-            )
-        except AIAnimationRequest.DoesNotExist:
-            return Response(
-                {'detail': 'AI request not found.'}, 
-                status=status.HTTP_404_NOT_FOUND
-            )
-        
-        serializer = AIAnimationRequestSerializer(ai_request)
-        return Response(serializer.data)

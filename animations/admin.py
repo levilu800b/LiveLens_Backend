@@ -8,20 +8,20 @@ from django.utils.safestring import mark_safe
 from django.db.models import Count, Sum
 from .models import (
     Animation, AnimationInteraction, AnimationView, AnimationCollection,
-    AnimationPlaylist, AIAnimationRequest
+    AnimationPlaylist
 )
 
 @admin.register(Animation)
 class AnimationAdmin(admin.ModelAdmin):
     list_display = (
         'title', 'author', 'category', 'animation_type', 'status', 'is_featured',
-        'is_trending', 'is_premium', 'is_ai_generated', 'view_count', 'like_count',
+        'is_trending', 'is_premium', 'view_count', 'like_count',
         'average_rating', 'duration_formatted', 'video_quality', 'frame_rate',
         'created_at'
     )
     list_filter = (
         'status', 'category', 'animation_type', 'is_featured', 'is_trending',
-        'is_premium', 'is_ai_generated', 'video_quality', 'frame_rate',
+        'is_premium', 'video_quality', 'frame_rate',
         'is_series', 'created_at', 'author'
     )
     search_fields = (
@@ -70,10 +70,6 @@ class AnimationAdmin(admin.ModelAdmin):
         }),
         ('Series Information', {
             'fields': ('is_series', 'series_name', 'episode_number', 'season_number'),
-            'classes': ('collapse',)
-        }),
-        ('AI Generation', {
-            'fields': ('is_ai_generated', 'ai_prompt', 'ai_model_used', 'generation_parameters'),
             'classes': ('collapse',)
         }),
         ('Visibility & Features', {
@@ -128,25 +124,6 @@ class AnimationAdmin(admin.ModelAdmin):
             )
         return "No trailer"
     trailer_file_info.short_description = 'Trailer'
-    
-    def ai_status_display(self, obj):
-        if obj.is_ai_generated:
-            color = 'green'
-            status = f'AI Generated ({obj.ai_model_used})'
-        else:
-            color = 'blue'
-            status = 'Human Created'
-        return format_html(
-            '<span style="color: {}; font-weight: bold;">{}</span>',
-            color,
-            status
-        )
-    ai_status_display.short_description = 'Creation Type'
-    
-    actions = [
-        'make_featured', 'remove_featured', 'make_trending', 'remove_trending',
-        'make_premium', 'remove_premium', 'publish_animations', 'draft_animations'
-    ]
     
     def make_featured(self, request, queryset):
         queryset.update(is_featured=True)
@@ -305,102 +282,6 @@ class AnimationPlaylistAdmin(admin.ModelAdmin):
     
     def get_queryset(self, request):
         return super().get_queryset(request).select_related('creator').prefetch_related('animations')
-
-@admin.register(AIAnimationRequest)
-class AIAnimationRequestAdmin(admin.ModelAdmin):
-    list_display = (
-        'user_display', 'prompt_preview', 'style', 'status', 'duration_requested',
-        'quality_requested', 'ai_model_used', 'processing_time_display', 'created_at'
-    )
-    list_filter = ('status', 'style', 'quality_requested', 'frame_rate_requested', 'created_at')
-    search_fields = ('user__username', 'prompt', 'style', 'ai_model_used')
-    readonly_fields = (
-        'created_at', 'updated_at', 'completed_at', 'processing_time_display'
-    )
-    ordering = ('-created_at',)
-    
-    fieldsets = (
-        ('Basic Information', {
-            'fields': ('user', 'animation', 'status')
-        }),
-        ('Request Details', {
-            'fields': (
-                'prompt', 'style', 'duration_requested', 'quality_requested',
-                'frame_rate_requested', 'additional_parameters'
-            )
-        }),
-        ('Processing Information', {
-            'fields': (
-                'ai_model_used', 'processing_time', 'processing_time_display',
-                'error_message'
-            ),
-            'classes': ('collapse',)
-        }),
-        ('Timestamps', {
-            'fields': ('created_at', 'updated_at', 'completed_at'),
-            'classes': ('collapse',)
-        }),
-    )
-    
-    def user_display(self, obj):
-        return f"{obj.user.username} ({obj.user.email})"
-    user_display.short_description = 'User'
-    
-    def prompt_preview(self, obj):
-        return obj.prompt[:50] + ('...' if len(obj.prompt) > 50 else '')
-    prompt_preview.short_description = 'Prompt'
-    
-    def processing_time_display(self, obj):
-        if obj.processing_time:
-            minutes, seconds = divmod(obj.processing_time, 60)
-            return f"{minutes}m {seconds}s"
-        return "N/A"
-    processing_time_display.short_description = 'Processing Time'
-    
-    def status_display(self, obj):
-        status_colors = {
-            'pending': 'orange',
-            'processing': 'blue',
-            'completed': 'green',
-            'failed': 'red',
-            'cancelled': 'gray',
-        }
-        color = status_colors.get(obj.status, 'black')
-        return format_html(
-            '<span style="color: {}; font-weight: bold;">{}</span>',
-            color,
-            obj.get_status_display()
-        )
-    status_display.short_description = 'Status'
-    
-    def get_queryset(self, request):
-        return super().get_queryset(request).select_related('user', 'animation')
-    
-    actions = ['mark_completed', 'mark_failed', 'cancel_requests']
-    
-    def mark_completed(self, request, queryset):
-        from django.utils import timezone
-        updated = queryset.filter(status__in=['pending', 'processing']).update(
-            status='completed',
-            completed_at=timezone.now()
-        )
-        self.message_user(request, f"{updated} requests marked as completed.")
-    mark_completed.short_description = "Mark selected requests as completed"
-    
-    def mark_failed(self, request, queryset):
-        updated = queryset.filter(status__in=['pending', 'processing']).update(
-            status='failed',
-            error_message='Manually marked as failed by admin'
-        )
-        self.message_user(request, f"{updated} requests marked as failed.")
-    mark_failed.short_description = "Mark selected requests as failed"
-    
-    def cancel_requests(self, request, queryset):
-        updated = queryset.filter(status__in=['pending', 'processing']).update(
-            status='cancelled'
-        )
-        self.message_user(request, f"{updated} requests cancelled.")
-    cancel_requests.short_description = "Cancel selected requests"
 
 # Customize admin site headers
 admin.site.site_header = "Streaming Platform - Animations Admin"

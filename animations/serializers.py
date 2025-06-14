@@ -6,7 +6,7 @@ from django.contrib.auth import get_user_model
 from django.utils import timezone
 from .models import (
     Animation, AnimationInteraction, AnimationView, AnimationCollection,
-    AnimationPlaylist, AIAnimationRequest
+    AnimationPlaylist
 )
 
 User = get_user_model()
@@ -37,7 +37,7 @@ class AnimationListSerializer(serializers.ModelSerializer):
         fields = (
             'id', 'title', 'slug', 'short_description', 'category', 'animation_type',
             'tags', 'thumbnail', 'poster', 'author', 'status', 'is_featured',
-            'is_trending', 'is_premium', 'is_ai_generated', 'view_count', 'like_count',
+            'is_trending', 'is_premium', 'view_count', 'like_count',
             'comment_count', 'average_rating', 'rating_count', 'duration',
             'duration_formatted', 'trailer_duration_formatted', 'video_quality',
             'frame_rate', 'file_size_formatted', 'resolution_formatted',
@@ -127,8 +127,8 @@ class AnimationDetailSerializer(serializers.ModelSerializer):
             'animation_type', 'tags', 'thumbnail', 'poster', 'banner', 'video_file',
             'trailer_file', 'project_file', 'storyboard', 'concept_art', 'author',
             'status', 'is_featured', 'is_trending', 'is_premium', 'is_series',
-            'series_name', 'episode_number', 'season_number', 'is_ai_generated',
-            'ai_prompt', 'ai_model_used', 'generation_parameters', 'view_count',
+            'series_name', 'episode_number', 'season_number',
+            'generation_parameters', 'view_count',
             'like_count', 'comment_count', 'download_count', 'share_count',
             'average_rating', 'rating_count', 'duration', 'duration_formatted',
             'trailer_duration', 'trailer_duration_formatted', 'video_quality',
@@ -261,7 +261,7 @@ class AnimationCreateUpdateSerializer(serializers.ModelSerializer):
             'video_quality', 'frame_rate', 'file_size', 'resolution_width',
             'resolution_height', 'animation_software', 'render_engine', 'production_time',
             'status', 'is_featured', 'is_trending', 'is_premium', 'is_series',
-            'series_name', 'episode_number', 'season_number', 'is_ai_generated',
+            'series_name', 'episode_number', 'season_number',
             'ai_prompt', 'ai_model_used', 'generation_parameters', 'release_year',
             'language', 'subtitles_available', 'director', 'animator', 'voice_actors',
             'music_composer', 'sound_designer', 'studio', 'budget'
@@ -306,12 +306,6 @@ class AnimationCreateUpdateSerializer(serializers.ModelSerializer):
                 raise serializers.ValidationError("Series name is required for series animations.")
             if not attrs.get('episode_number'):
                 raise serializers.ValidationError("Episode number is required for series animations.")
-        
-        # AI generation validation
-        if attrs.get('is_ai_generated') and not attrs.get('ai_prompt'):
-            raise serializers.ValidationError("AI prompt is required for AI-generated animations.")
-        
-        return attrs
     
     def create(self, validated_data):
         """Create animation with author"""
@@ -537,29 +531,6 @@ class AnimationViewSerializer(serializers.ModelSerializer):
             user_agent=request.META.get('HTTP_USER_AGENT', ''),
             **validated_data
         )
-
-class AIAnimationRequestSerializer(serializers.ModelSerializer):
-    """Serializer for AI animation generation requests"""
-    user = AuthorSerializer(read_only=True)
-    animation = AnimationListSerializer(read_only=True)
-    
-    class Meta:
-        model = AIAnimationRequest
-        fields = (
-            'id', 'user', 'animation', 'prompt', 'style', 'duration_requested',
-            'quality_requested', 'frame_rate_requested', 'status', 'ai_model_used',
-            'processing_time', 'error_message', 'additional_parameters',
-            'created_at', 'updated_at', 'completed_at'
-        )
-        read_only_fields = (
-            'id', 'user', 'animation', 'status', 'ai_model_used', 'processing_time',
-            'error_message', 'created_at', 'updated_at', 'completed_at'
-        )
-    
-    def create(self, validated_data):
-        """Create AI animation request"""
-        validated_data['user'] = self.context['request'].user
-        return AIAnimationRequest.objects.create(**validated_data)
     
 # Add this class at the end of animations/serializers.py
 
@@ -582,8 +553,7 @@ class AnimationSerializer(serializers.ModelSerializer):
             'trailer_duration_formatted', 'video_quality', 'frame_rate', 'file_size',
             'file_size_formatted', 'resolution_width', 'resolution_height',
             'animation_software', 'render_engine', 'production_time', 'is_series',
-            'series_name', 'episode_number', 'season_number', 'is_ai_generated',
-            'ai_prompt', 'ai_model_used', 'generation_parameters', 'release_year',
+            'series_name', 'episode_number', 'season_number', 'release_year',
             'language', 'subtitles_available', 'director', 'animator', 'voice_actors',
             'music_composer', 'sound_designer', 'studio', 'budget', 'created_at',
             'updated_at', 'published_at'
@@ -599,11 +569,9 @@ class AnimationStatsSerializer(serializers.Serializer):
     """Serializer for animation statistics"""
     total_animations = serializers.IntegerField()
     published_animations = serializers.IntegerField()
-    ai_generated_animations = serializers.IntegerField()
     total_views = serializers.IntegerField()
     total_likes = serializers.IntegerField()
     trending_animations = AnimationListSerializer(many=True)
     featured_animations = AnimationListSerializer(many=True)
     recent_animations = AnimationListSerializer(many=True)
     top_categories = serializers.ListField()
-    ai_requests_pending = serializers.IntegerField()

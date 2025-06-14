@@ -2004,3 +2004,25 @@ INFO 2025-06-13 22:29:28,138 autoreload 61016 140704309980608 Watching for file 
 INFO 2025-06-13 22:30:49,595 autoreload 61204 140704309980608 Watching for file changes with StatReloader
 INFO 2025-06-13 22:31:43,356 basehttp 61204 123145397833728 "GET /admin/animations/aianimationrequest/ HTTP/1.1" 200 31213
 INFO 2025-06-13 22:31:43,439 basehttp 61204 123145397833728 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-14 10:03:12,876 autoreload 15520 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-14 10:03:23,159 basehttp 15520 123145562980352 "GET /admin/animations/aianimationrequest/ HTTP/1.1" 200 31213
+INFO 2025-06-14 10:03:23,221 basehttp 15520 123145562980352 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-06-14 10:03:23,707 log 15520 123145562980352 Not Found: /favicon.ico
+WARNING 2025-06-14 10:03:23,707 basehttp 15520 123145562980352 "GET /favicon.ico HTTP/1.1" 404 4302
+INFO 2025-06-14 10:03:29,747 basehttp 15520 123145562980352 "GET /admin/authapp/user/ HTTP/1.1" 200 37516
+INFO 2025-06-14 10:03:29,781 basehttp 15520 123145562980352 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-14 10:04:08,537 utils 15520 123145596559360 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-14 10:04:08,633 basehttp 15520 123145596559360 "POST /api/auth/login/ HTTP/1.1" 200 851
+INFO 2025-06-14 10:17:31,056 autoreload 15520 140704484867520 /Users/levicharles/Documents/liveLens_backend/animations/models.py changed, reloading.
+INFO 2025-06-14 10:17:32,333 autoreload 16334 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-14 10:18:12,279 autoreload 16334 140704484867520 /Users/levicharles/Documents/liveLens_backend/animations/models.py changed, reloading.
+INFO 2025-06-14 10:18:13,024 autoreload 16387 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-14 10:30:33,062 autoreload 17410 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-14 10:33:26,667 autoreload 17771 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-14 10:40:25,918 autoreload 18495 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-14 10:41:47,313 autoreload 18495 140704484867520 /Users/levicharles/Documents/liveLens_backend/animations/views.py changed, reloading.
+INFO 2025-06-14 10:41:48,157 autoreload 18676 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-14 10:41:56,892 autoreload 18676 140704484867520 /Users/levicharles/Documents/liveLens_backend/animations/views.py changed, reloading.
+INFO 2025-06-14 10:41:57,613 autoreload 18696 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-14 10:42:34,125 basehttp 18696 123145338589184 "GET /admin/authapp/user/ HTTP/1.1" 200 37009
+INFO 2025-06-14 10:42:34,171 basehttp 18696 123145338589184 "GET /admin/jsi18n/ HTTP/1.1" 200 3342

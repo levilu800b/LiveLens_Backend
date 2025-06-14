@@ -128,12 +128,6 @@ class Animation(models.Model):
     episode_number = models.PositiveIntegerField(blank=True, null=True)
     season_number = models.PositiveIntegerField(blank=True, null=True)
     
-    # AI Generation
-    is_ai_generated = models.BooleanField(default=False)
-    ai_prompt = models.TextField(blank=True, help_text="AI generation prompt")
-    ai_model_used = models.CharField(max_length=100, blank=True, help_text="AI model used for generation")
-    generation_parameters = models.JSONField(default=dict, blank=True, help_text="AI generation parameters")
-    
     # Metrics
     view_count = models.PositiveIntegerField(default=0)
     like_count = models.PositiveIntegerField(default=0)
@@ -179,7 +173,6 @@ class Animation(models.Model):
             models.Index(fields=['animation_type', '-created_at']),
             models.Index(fields=['is_featured', '-created_at']),
             models.Index(fields=['is_trending', '-created_at']),
-            models.Index(fields=['is_ai_generated', '-created_at']),
         ]
     
     def save(self, *args, **kwargs):
@@ -385,48 +378,6 @@ class AnimationPlaylist(models.Model):
     @property
     def total_duration(self):
         return sum(animation.duration for animation in self.animations.all())
-
-class AIAnimationRequest(models.Model):
-    """Track AI animation generation requests"""
-    STATUS_CHOICES = [
-        ('pending', 'Pending'),
-        ('processing', 'Processing'),
-        ('completed', 'Completed'),
-        ('failed', 'Failed'),
-        ('cancelled', 'Cancelled'),
-    ]
-    
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='ai_animation_requests')
-    animation = models.ForeignKey(Animation, on_delete=models.CASCADE, blank=True, null=True, related_name='ai_requests')
-    
-    # AI Generation Parameters
-    prompt = models.TextField(help_text="User's animation description prompt")
-    style = models.CharField(max_length=100, blank=True, help_text="Animation style (e.g., 2D, 3D, cartoon)")
-    duration_requested = models.PositiveIntegerField(default=30, help_text="Requested duration in seconds")
-    quality_requested = models.CharField(max_length=10, choices=Animation.QUALITY_CHOICES, default='1080p')
-    frame_rate_requested = models.CharField(max_length=5, choices=Animation.FRAME_RATE_CHOICES, default='24')
-    
-    # Processing Information
-    status = models.CharField(max_length=15, choices=STATUS_CHOICES, default='pending')
-    ai_model_used = models.CharField(max_length=100, blank=True)
-    processing_time = models.PositiveIntegerField(default=0, help_text="Processing time in seconds")
-    error_message = models.TextField(blank=True)
-    
-    # Additional Parameters
-    additional_parameters = models.JSONField(default=dict, blank=True)
-    
-    # Timestamps
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    completed_at = models.DateTimeField(blank=True, null=True)
-    
-    class Meta:
-        ordering = ['-created_at']
-        verbose_name = 'AI Animation Request'
-        verbose_name_plural = 'AI Animation Requests'
-    
-    def __str__(self):
-        return f"AI Request by {self.user.username}: {self.prompt[:50]}..."
 
 # Signals to update counts when interactions change
 

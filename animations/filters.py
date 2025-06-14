@@ -30,7 +30,6 @@ class AnimationFilter(django_filters.FilterSet):
     is_trending = django_filters.BooleanFilter()
     is_premium = django_filters.BooleanFilter()
     is_series = django_filters.BooleanFilter()
-    is_ai_generated = django_filters.BooleanFilter()
     
     # Date filters
     created_after = django_filters.DateTimeFilter(field_name='created_at', lookup_expr='gte')
@@ -127,7 +126,7 @@ class AnimationFilter(django_filters.FilterSet):
         model = Animation
         fields = [
             'category', 'animation_type', 'status', 'author_id', 'is_featured',
-            'is_trending', 'is_premium', 'is_series', 'is_ai_generated',
+            'is_trending', 'is_premium', 'is_series',
             'release_year', 'video_quality', 'frame_rate', 'language',
             'episode_number', 'season_number'
         ]
@@ -149,8 +148,7 @@ class AnimationFilter(django_filters.FilterSet):
             Q(studio__icontains=value) |
             Q(series_name__icontains=value) |
             Q(animation_software__icontains=value) |
-            Q(voice_actors__icontains=value) |
-            Q(ai_prompt__icontains=value)
+            Q(voice_actors__icontains=value)
         )
     
     def filter_author(self, queryset, name, value):
@@ -259,93 +257,3 @@ class AnimationCollectionFilter(django_filters.FilterSet):
         
         # This requires annotation in the view
         return queryset.filter(animation_count__lte=value)
-
-class AIAnimationRequestFilter(django_filters.FilterSet):
-    """
-    Filter for AIAnimationRequest model
-    """
-    # Status filter
-    status = django_filters.ChoiceFilter(choices=[
-        ('pending', 'Pending'),
-        ('processing', 'Processing'),
-        ('completed', 'Completed'),
-        ('failed', 'Failed'),
-        ('cancelled', 'Cancelled'),
-    ])
-    
-    # User filter
-    user = django_filters.CharFilter(method='filter_user', help_text="Filter by username")
-    user_id = django_filters.UUIDFilter(field_name='user__id')
-    
-    # Text search
-    search = django_filters.CharFilter(method='filter_search', help_text="Search in prompt, style")
-    
-    # Date filters
-    created_after = django_filters.DateTimeFilter(field_name='created_at', lookup_expr='gte')
-    created_before = django_filters.DateTimeFilter(field_name='created_at', lookup_expr='lte')
-    completed_after = django_filters.DateTimeFilter(field_name='completed_at', lookup_expr='gte')
-    completed_before = django_filters.DateTimeFilter(field_name='completed_at', lookup_expr='lte')
-    
-    # Style filter
-    style = django_filters.CharFilter(lookup_expr='icontains')
-    
-    # AI model filter
-    ai_model_used = django_filters.CharFilter(lookup_expr='icontains')
-    
-    # Duration filters
-    min_duration = django_filters.NumberFilter(field_name='duration_requested', lookup_expr='gte')
-    max_duration = django_filters.NumberFilter(field_name='duration_requested', lookup_expr='lte')
-    
-    # Quality filter
-    quality_requested = django_filters.ChoiceFilter(choices=Animation.QUALITY_CHOICES)
-    
-    # Frame rate filter
-    frame_rate_requested = django_filters.ChoiceFilter(choices=Animation.FRAME_RATE_CHOICES)
-    
-    # Processing time filters
-    min_processing_time = django_filters.NumberFilter(field_name='processing_time', lookup_expr='gte')
-    max_processing_time = django_filters.NumberFilter(field_name='processing_time', lookup_expr='lte')
-    
-    # Ordering
-    ordering = django_filters.OrderingFilter(
-        fields=(
-            ('created_at', 'created'),
-            ('updated_at', 'updated'),
-            ('completed_at', 'completed'),
-            ('processing_time', 'processing_time'),
-            ('duration_requested', 'duration'),
-        ),
-        field_labels={
-            'created': 'Date Created',
-            'updated': 'Date Updated',
-            'completed': 'Date Completed',
-            'processing_time': 'Processing Time',
-            'duration': 'Duration Requested',
-        }
-    )
-    
-    class Meta:
-        model = Animation  # Note: Using Animation model as reference
-        fields = ['status', 'user_id', 'style', 'quality_requested', 'frame_rate_requested']
-    
-    def filter_search(self, queryset, name, value):
-        """
-        Search across prompt and style
-        """
-        if not value:
-            return queryset
-        
-        return queryset.filter(
-            Q(prompt__icontains=value) |
-            Q(style__icontains=value) |
-            Q(ai_model_used__icontains=value)
-        )
-    
-    def filter_user(self, queryset, name, value):
-        """
-        Filter by username
-        """
-        if not value:
-            return queryset
-        
-        return queryset.filter(user__username__icontains=value)
