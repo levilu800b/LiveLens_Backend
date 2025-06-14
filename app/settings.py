@@ -46,6 +46,7 @@ LOCAL_APPS = [
     'podcasts',
     'animations',
     'sneak_peeks',
+    'live_video',         # Live video management
     ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -281,14 +282,6 @@ LOGGING = {
 # Create logs directory if it doesn't exist
 os.makedirs(BASE_DIR / 'logs', exist_ok=True)
 
-# AI Configuration
-AI_SETTINGS = {
-    'GOOGLE_AI_API_KEY': config('GOOGLE_AI_API_KEY', default=''),
-    'DEFAULT_AI_MODEL': 'gemini-pro',
-    'MAX_TOKENS': 1000,
-    'TEMPERATURE': 0.7,
-}
-
 # Content Configuration
 CONTENT_SETTINGS = {
     'ALLOW_ANONYMOUS_VIEWING': False,  # Require login for full content
@@ -297,3 +290,76 @@ CONTENT_SETTINGS = {
     'ENABLE_AI_SUBTITLES': True,
     'ENABLE_AI_VOICE_OVER': True,
 }
+
+# Add these Live Video specific settings
+
+# Live Video Configuration
+LIVE_VIDEO_SETTINGS = {
+    'MAX_CONCURRENT_VIEWERS': 10000,
+    'DEFAULT_STREAM_QUALITY': '1080p',
+    'AUTO_START_BUFFER_MINUTES': 5,  # Auto-start streams within 5 minutes of scheduled time
+    'AUTO_END_BUFFER_MINUTES': 30,   # Auto-end streams 30 minutes after scheduled end
+    'CLEANUP_OLD_STREAMS_DAYS': 30,  # Clean up streams older than 30 days
+    'ENABLE_CHAT': True,
+    'ENABLE_NOTIFICATIONS': True,
+    'NOTIFICATION_EMAIL_BATCH_SIZE': 100,  # Send notifications in batches
+}
+
+# Real-time features (optional - for WebSocket support)
+# If you want real-time chat and viewer count updates, you can add:
+# 'channels',
+# 'channels_redis',
+
+# WebSocket configuration (optional)
+# ASGI_APPLICATION = 'app.asgi.application'
+# CHANNEL_LAYERS = {
+#     'default': {
+#         'BACKEND': 'channels_redis.core.RedisChannelLayer',
+#         'CONFIG': {
+#             "hosts": [('127.0.0.1', 6379)],
+#         },
+#     },
+# }
+
+# Celery configuration for background tasks (optional but recommended)
+# CELERY_BROKER_URL = config('CELERY_BROKER_URL', default='redis://localhost:6379')
+# CELERY_RESULT_BACKEND = config('CELERY_RESULT_BACKEND', default='redis://localhost:6379')
+# CELERY_ACCEPT_CONTENT = ['application/json']
+# CELERY_TASK_SERIALIZER = 'json'
+# CELERY_RESULT_SERIALIZER = 'json'
+# CELERY_TIMEZONE = TIME_ZONE
+
+# Streaming Configuration
+STREAMING_SETTINGS = {
+    'RTMP_SERVER_URL': config('RTMP_SERVER_URL', default=''),
+    'HLS_BASE_URL': config('HLS_BASE_URL', default=''),
+    'STREAM_KEY_PREFIX': config('STREAM_KEY_PREFIX', default='live_'),
+    'ENABLE_RECORDING': True,
+    'RECORDING_STORAGE': 'cloudinary',  # Store recordings in Cloudinary
+}
+
+# Security settings for live streaming
+LIVE_VIDEO_SECURITY = {
+    'REQUIRE_AUTH_FOR_VIEWING': True,
+    'ENABLE_STREAM_TOKENS': True,
+    'TOKEN_EXPIRY_HOURS': 24,
+    'MAX_CHAT_MESSAGE_LENGTH': 500,
+    'CHAT_RATE_LIMIT_PER_MINUTE': 30,
+}
+
+# Add live video to your API documentation
+SPECTACULAR_SETTINGS.update({
+    'COMPONENT_SPLIT_REQUEST': True,
+    'SERVE_INCLUDE_SCHEMA': False,
+    'TAGS': [
+        {'name': 'Authentication', 'description': 'User authentication endpoints'},
+        {'name': 'Stories', 'description': 'Story management endpoints'},
+        {'name': 'Media Content', 'description': 'Films and content management'},
+        {'name': 'Podcasts', 'description': 'Podcast management endpoints'},
+        {'name': 'Animations', 'description': 'Animation management endpoints'},
+        {'name': 'Sneak Peeks', 'description': 'Sneak peek management endpoints'},
+        {'name': 'Live Video', 'description': 'Live streaming and video management'},  # ✅ Add this
+        {'name': 'Comments', 'description': 'Comment system endpoints'},
+        {'name': 'Admin Dashboard', 'description': 'Admin dashboard endpoints'},
+    ]
+})

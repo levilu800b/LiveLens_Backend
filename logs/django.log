@@ -2026,3 +2026,29 @@ INFO 2025-06-14 10:41:56,892 autoreload 18676 140704484867520 /Users/levicharles
 INFO 2025-06-14 10:41:57,613 autoreload 18696 140704484867520 Watching for file changes with StatReloader
 INFO 2025-06-14 10:42:34,125 basehttp 18696 123145338589184 "GET /admin/authapp/user/ HTTP/1.1" 200 37009
 INFO 2025-06-14 10:42:34,171 basehttp 18696 123145338589184 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-14 11:13:29,513 basehttp 18696 123145338589184 "GET /admin/password_reset/passwordresetrequest/ HTTP/1.1" 200 36134
+INFO 2025-06-14 11:13:29,575 basehttp 18696 123145338589184 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-14 11:13:48,361 basehttp 18696 123145338589184 "GET /admin/authapp/user/ HTTP/1.1" 200 37009
+INFO 2025-06-14 11:13:48,397 basehttp 18696 123145338589184 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-14 13:52:03,134 autoreload 18696 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-14 13:52:04,428 autoreload 27395 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-14 13:52:07,131 autoreload 27395 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-14 13:52:07,903 autoreload 27420 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-14 13:53:18,005 autoreload 27420 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-14 13:53:18,765 autoreload 27506 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-14 13:55:39,311 autoreload 27506 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-14 13:55:40,363 autoreload 27620 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-14 13:56:57,819 autoreload 27620 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/urls.py changed, reloading.
+INFO 2025-06-14 13:56:58,841 autoreload 27735 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-14 13:57:01,552 autoreload 27735 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/urls.py changed, reloading.
+INFO 2025-06-14 13:57:02,368 autoreload 27754 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-14 13:57:03,900 autoreload 27754 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/urls.py changed, reloading.
+INFO 2025-06-14 13:57:04,685 autoreload 27769 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-14 13:57:06,275 autoreload 27769 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/urls.py changed, reloading.
+INFO 2025-06-14 13:57:07,093 autoreload 27783 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-14 13:58:13,036 basehttp 27783 123145482010624 "GET /admin/authapp/user/ HTTP/1.1" 200 39361
+INFO 2025-06-14 13:58:13,084 basehttp 27783 123145482010624 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-14 13:58:19,526 basehttp 27783 123145482010624 "GET /admin/live_video/livevideo/ HTTP/1.1" 200 34772
+INFO 2025-06-14 13:58:19,557 basehttp 27783 123145482010624 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-14 13:58:24,284 basehttp 27783 123145482010624 "GET /admin/authapp/user/ HTTP/1.1" 200 39361
+INFO 2025-06-14 13:58:24,323 basehttp 27783 123145482010624 "GET /admin/jsi18n/ HTTP/1.1" 200 3342

@@ -35,6 +35,9 @@ urlpatterns = [
     # Universal systems
     path('api/comments/', include('comments.urls')),
     
+    # Live Video Management
+    path('api/live-video/', include('live_video.urls')),
+    
     # Admin interfaces
     #path('api/admin-dashboard/', include('admin_dashboard.urls')),
 ]
