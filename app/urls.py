@@ -39,7 +39,7 @@ urlpatterns = [
     path('api/live-video/', include('live_video.urls')),
     
     # Admin interfaces
-    #path('api/admin-dashboard/', include('admin_dashboard.urls')),
+    path('api/admin-dashboard/', include('admin_dashboard.urls')),
 ]
 
 # Serve media files in development
