@@ -18,6 +18,10 @@ from .serializers import (
 )
 from .utils import log_user_activity, send_verification_email
 
+from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
+import logging
+logger = logging.getLogger(__name__)
+
 
 class RegisterView(APIView):
     permission_classes = [permissions.AllowAny]
@@ -156,25 +160,113 @@ class LogoutView(APIView):
 
 class ProfileView(APIView):
     permission_classes = [permissions.IsAuthenticated]
+    parser_classes = [MultiPartParser, FormParser, JSONParser]
     
     def get(self, request):
-        serializer = UserProfileSerializer(request.user)
+        """Get user profile data"""
+        # Pass request context for avatar URL building
+        serializer = UserProfileSerializer(request.user, context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
     
     def put(self, request):
-        serializer = UserProfileSerializer(request.user, data=request.data, partial=True)
-        if serializer.is_valid():
-            serializer.save()
-            log_user_activity(request.user, 'profile_update', 'Profile updated successfully', request)
+        """Update user profile with field name conversion"""
+        try:
+            # Convert frontend field names to backend field names
+            data = request.data.copy()
             
+            # Log incoming data for debugging
+            logger.info(f"Profile update request data: {data}")
+            
+            # Field name mapping from frontend to backend
+            field_mapping = {
+                'firstName': 'first_name',
+                'lastName': 'last_name', 
+                'phoneNumber': 'phone_number',
+                'dateOfBirth': 'date_of_birth',
+                'gender': 'gender',
+                'country': 'country',
+                'avatar': 'avatar'
+            }
+            
+            # Gender choice mapping
+            gender_mapping = {
+                'Male': 'M',
+                'Female': 'F',
+                'male': 'M',
+                'female': 'F',
+                'M': 'M',
+                'F': 'F',
+                '': '',
+            }
+            
+            # Convert field names
+            converted_data = {}
+            for frontend_name, backend_name in field_mapping.items():
+                if frontend_name in data:
+                    value = data[frontend_name]
+                    
+                    # Special handling for gender field
+                    if frontend_name == 'gender' and value:
+                        if value in gender_mapping:
+                            converted_value = gender_mapping[value]
+                            converted_data[backend_name] = converted_value
+                            logger.info(f"Converted gender '{value}' -> '{converted_value}'")
+                        else:
+                            logger.warning(f"Unknown gender value: {value}")
+                            converted_data[backend_name] = value
+                    else:
+                        converted_data[backend_name] = value
+                        logger.info(f"Converted {frontend_name} -> {backend_name}: {value}")
+            
+            # Handle any fields that don't need conversion
+            for key, value in data.items():
+                if key not in field_mapping and key not in converted_data:
+                    converted_data[key] = value
+            
+            logger.info(f"Converted data: {converted_data}")
+            
+            # Use the converted data with the serializer and pass request context
+            serializer = UserProfileSerializer(
+                request.user, 
+                data=converted_data, 
+                partial=True,
+                context={'request': request}
+            )
+            
+            if serializer.is_valid():
+                user = serializer.save()
+                log_user_activity(request.user, 'profile_update', 'Profile updated successfully', request)
+                
+                # Get fresh user data with proper context for avatar URL
+                updated_serializer = UserProfileSerializer(user, context={'request': request})
+                
+                # Return success response
+                response_data = {
+                    'message': 'Profile updated successfully.',
+                    'user': updated_serializer.data,
+                    'success': True
+                }
+                
+                logger.info("Profile update successful")
+                logger.info(f"Avatar URL in response: {updated_serializer.data.get('avatar')}")
+                return Response(response_data, status=status.HTTP_200_OK)
+            else:
+                # Log validation errors
+                logger.error(f"Profile update validation errors: {serializer.errors}")
+                return Response({
+                    'message': 'Validation failed.',
+                    'errors': serializer.errors,
+                    'success': False
+                }, status=status.HTTP_400_BAD_REQUEST)
+                
+        except Exception as e:
+            # Log unexpected errors
+            logger.error(f"Profile update error: {str(e)}", exc_info=True)
             return Response({
-                'message': 'Profile updated successfully.',
-                'user': serializer.data
-            }, status=status.HTTP_200_OK)
-        
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
+                'message': 'An unexpected error occurred.',
+                'error': str(e),
+                'success': False
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 class UserPreferencesView(APIView):
     permission_classes = [permissions.IsAuthenticated]
     

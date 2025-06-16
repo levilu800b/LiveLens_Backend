@@ -170,22 +170,35 @@ class GoogleLoginSerializer(serializers.Serializer):
         attrs['user'] = user
         return attrs
 
+# authapp/serializers.py - Updated UserProfileSerializer
+
 class UserProfileSerializer(serializers.ModelSerializer):
     full_name = serializers.CharField(read_only=True)
+    avatar_url = serializers.SerializerMethodField()
     
     class Meta:
         model = User
         fields = (
             'id', 'email', 'username', 'first_name', 'last_name', 'full_name',
-            'phone_number', 'gender', 'country', 'date_of_birth', 'avatar',
+            'phone_number', 'gender', 'country', 'date_of_birth', 'avatar', 'avatar_url',
             'is_verified', 'is_admin_user', 'created_at', 'updated_at'
         )
         read_only_fields = ('id', 'email', 'username', 'is_verified', 'is_admin_user', 'created_at', 'updated_at')
     
+    def get_avatar_url(self, obj):
+        """Return full avatar URL for local development"""
+        if obj.avatar:
+            request = self.context.get('request')
+            if request:
+                return request.build_absolute_uri(obj.avatar.url)
+            return obj.avatar.url
+        return None
+    
     def to_representation(self, instance):
-        """Customize the output representation"""
+        """Convert backend field names to frontend field names for output"""
         data = super().to_representation(instance)
-        # Map backend field names to frontend field names
+        
+        # Map backend field names to frontend field names for output
         data['isAdmin'] = instance.is_admin_user or instance.is_superuser
         data['firstName'] = data.pop('first_name')
         data['lastName'] = data.pop('last_name')
@@ -194,6 +207,17 @@ class UserProfileSerializer(serializers.ModelSerializer):
         data['isVerified'] = data.pop('is_verified')
         data['createdAt'] = data.pop('created_at')
         data['updatedAt'] = data.pop('updated_at')
+        
+        # Use avatar_url instead of avatar field
+        data['avatar'] = data.pop('avatar_url', None)
+        data.pop('avatar_url', None)  # Remove the extra field
+        
+        # Convert gender choice value back to display value for frontend
+        gender_value = data.get('gender')
+        if gender_value == 'M':
+            data['gender'] = 'M'
+        elif gender_value == 'F':
+            data['gender'] = 'F'
         
         # Remove backend-specific field from response
         data.pop('is_admin_user', None)

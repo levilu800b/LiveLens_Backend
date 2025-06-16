@@ -3636,3 +3636,1041 @@ INFO 2025-06-15 14:02:08,471 basehttp 64213 123145468981248 "GET /admin/jsi18n/ 
 INFO 2025-06-15 14:02:13,368 basehttp 64213 123145468981248 "GET /admin/admin_dashboard/contentmoderationqueue/ HTTP/1.1" 200 39062
 INFO 2025-06-15 14:02:14,294 basehttp 64213 123145468981248 "GET /admin/admin_dashboard/adminactivity/ HTTP/1.1" 200 34522
 INFO 2025-06-15 14:02:15,381 basehttp 64213 123145468981248 "GET /admin/authapp/user/ HTTP/1.1" 200 41295
+INFO 2025-06-15 18:27:44,068 utils 64213 123145468981248 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-15 18:27:44,185 basehttp 64213 123145468981248 "POST /api/auth/login/ HTTP/1.1" 200 851
+INFO 2025-06-15 18:48:14,803 basehttp 64213 123145485770752 "OPTIONS /api/user/library/ HTTP/1.1" 200 0
+INFO 2025-06-15 18:48:14,803 basehttp 64213 123145468981248 "OPTIONS /api/user/library/ HTTP/1.1" 200 0
+WARNING 2025-06-15 18:48:14,825 log 64213 123145485770752 Not Found: /api/user/library/
+WARNING 2025-06-15 18:48:14,825 basehttp 64213 123145485770752 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-15 18:48:14,832 log 64213 123145468981248 Not Found: /api/user/library/
+WARNING 2025-06-15 18:48:14,833 basehttp 64213 123145468981248 "GET /api/user/library/ HTTP/1.1" 404 4641
+INFO 2025-06-15 18:48:20,302 basehttp 64213 123145468981248 "OPTIONS /api/user/favorites/ HTTP/1.1" 200 0
+INFO 2025-06-15 18:48:20,313 basehttp 64213 123145485770752 "OPTIONS /api/user/favorites/ HTTP/1.1" 200 0
+WARNING 2025-06-15 18:48:20,326 log 64213 123145485770752 Not Found: /api/user/favorites/
+WARNING 2025-06-15 18:48:20,326 basehttp 64213 123145485770752 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-15 18:48:20,334 log 64213 123145468981248 Not Found: /api/user/favorites/
+WARNING 2025-06-15 18:48:20,335 basehttp 64213 123145468981248 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-15 18:52:13,133 log 64213 123145502560256 Unauthorized: /api/auth/profile/
+WARNING 2025-06-15 18:52:13,133 basehttp 64213 123145502560256 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-15 18:52:17,400 log 64213 123145502560256 Unauthorized: /api/auth/profile/
+WARNING 2025-06-15 18:52:17,400 basehttp 64213 123145502560256 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-15 18:52:31,137 log 64213 123145502560256 Unauthorized: /api/auth/profile/
+WARNING 2025-06-15 18:52:31,138 basehttp 64213 123145502560256 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-15 18:52:32,265 log 64213 123145502560256 Unauthorized: /api/auth/profile/
+WARNING 2025-06-15 18:52:32,266 basehttp 64213 123145502560256 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-15 18:52:32,565 log 64213 123145502560256 Unauthorized: /api/auth/profile/
+WARNING 2025-06-15 18:52:32,566 basehttp 64213 123145502560256 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-15 18:52:32,835 log 64213 123145502560256 Unauthorized: /api/auth/profile/
+WARNING 2025-06-15 18:52:32,836 basehttp 64213 123145502560256 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-15 19:01:26,342 log 64213 123145468981248 Not Found: /api/user/favorites/
+WARNING 2025-06-15 19:01:26,343 basehttp 64213 123145468981248 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-15 19:01:26,353 log 64213 123145485770752 Not Found: /api/user/favorites/
+WARNING 2025-06-15 19:01:26,354 basehttp 64213 123145485770752 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-15 19:01:28,356 log 64213 123145485770752 Not Found: /api/user/favorites/
+WARNING 2025-06-15 19:01:28,356 basehttp 64213 123145485770752 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-15 19:01:28,362 log 64213 123145468981248 Not Found: /api/user/favorites/
+WARNING 2025-06-15 19:01:28,362 basehttp 64213 123145468981248 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-15 19:02:11,649 log 64213 123145468981248 Not Found: /api/user/library/
+WARNING 2025-06-15 19:02:11,650 basehttp 64213 123145468981248 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-15 19:02:11,664 log 64213 123145485770752 Not Found: /api/user/library/
+WARNING 2025-06-15 19:02:11,668 basehttp 64213 123145485770752 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-15 19:07:20,107 log 64213 123145468981248 Not Found: /api/user/library/
+WARNING 2025-06-15 19:07:20,108 basehttp 64213 123145468981248 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-15 19:07:20,119 log 64213 123145485770752 Not Found: /api/user/library/
+WARNING 2025-06-15 19:07:20,119 basehttp 64213 123145485770752 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-15 19:07:27,413 log 64213 123145485770752 Not Found: /api/user/favorites/
+WARNING 2025-06-15 19:07:27,413 basehttp 64213 123145485770752 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-15 19:07:27,421 log 64213 123145468981248 Not Found: /api/user/favorites/
+WARNING 2025-06-15 19:07:27,421 basehttp 64213 123145468981248 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-15 21:31:09,182 log 64213 123145468981248 Not Found: /api/user/favorites/
+WARNING 2025-06-15 21:31:09,185 basehttp 64213 123145468981248 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-15 21:31:09,210 log 64213 123145485770752 Not Found: /api/user/favorites/
+WARNING 2025-06-15 21:31:09,211 basehttp 64213 123145485770752 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-15 21:43:49,663 log 64213 123145468981248 Not Found: /api/user/favorites/
+WARNING 2025-06-15 21:43:49,664 basehttp 64213 123145468981248 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-15 21:43:49,680 log 64213 123145485770752 Not Found: /api/user/favorites/
+WARNING 2025-06-15 21:43:49,681 basehttp 64213 123145485770752 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-15 21:43:51,959 log 64213 123145485770752 Not Found: /api/user/favorites/
+WARNING 2025-06-15 21:43:51,959 basehttp 64213 123145485770752 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-15 21:43:51,966 log 64213 123145468981248 Not Found: /api/user/favorites/
+WARNING 2025-06-15 21:43:51,967 basehttp 64213 123145468981248 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-15 21:43:54,479 log 64213 123145468981248 Not Found: /api/user/library/
+WARNING 2025-06-15 21:43:54,479 basehttp 64213 123145468981248 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-15 21:43:54,498 log 64213 123145485770752 Not Found: /api/user/library/
+WARNING 2025-06-15 21:43:54,498 basehttp 64213 123145485770752 "GET /api/user/library/ HTTP/1.1" 404 4641
+INFO 2025-06-15 21:46:18,715 basehttp 64213 123145485770752 "OPTIONS /api/auth/profile/ HTTP/1.1" 200 0
+WARNING 2025-06-15 21:46:18,727 log 64213 123145485770752 Unauthorized: /api/auth/profile/
+WARNING 2025-06-15 21:46:18,727 basehttp 64213 123145485770752 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-15 21:46:22,916 log 64213 123145485770752 Unauthorized: /api/auth/profile/
+WARNING 2025-06-15 21:46:22,916 basehttp 64213 123145485770752 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-15 21:58:00,700 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-15 21:58:00,701 basehttp 64213 123145468981248 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-15 21:58:05,152 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-15 21:58:05,152 basehttp 64213 123145468981248 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-15 22:04:50,104 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-15 22:04:50,105 basehttp 64213 123145468981248 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-15 22:04:53,095 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-15 22:04:53,096 basehttp 64213 123145468981248 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-15 22:04:54,180 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-15 22:04:54,181 basehttp 64213 123145468981248 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-15 22:05:07,569 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-15 22:05:07,570 basehttp 64213 123145468981248 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-15 22:07:23,107 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-15 22:07:23,108 basehttp 64213 123145468981248 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-15 22:07:35,358 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-15 22:07:35,358 basehttp 64213 123145468981248 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-15 22:10:05,079 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-15 22:10:05,080 basehttp 64213 123145468981248 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-15 22:10:13,713 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-15 22:10:13,714 basehttp 64213 123145468981248 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+INFO 2025-06-16 12:05:43,517 basehttp 64213 123145468981248 "OPTIONS /api/user/library/ HTTP/1.1" 200 0
+INFO 2025-06-16 12:05:43,520 basehttp 64213 123145485770752 "OPTIONS /api/user/library/ HTTP/1.1" 200 0
+WARNING 2025-06-16 12:05:43,599 log 64213 123145468981248 Not Found: /api/user/library/
+WARNING 2025-06-16 12:05:43,599 basehttp 64213 123145468981248 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-16 12:05:43,610 log 64213 123145485770752 Not Found: /api/user/library/
+WARNING 2025-06-16 12:05:43,611 basehttp 64213 123145485770752 "GET /api/user/library/ HTTP/1.1" 404 4641
+INFO 2025-06-16 12:05:47,189 basehttp 64213 123145485770752 "OPTIONS /api/user/favorites/ HTTP/1.1" 200 0
+INFO 2025-06-16 12:05:47,215 basehttp 64213 123145468981248 "OPTIONS /api/user/favorites/ HTTP/1.1" 200 0
+WARNING 2025-06-16 12:05:47,257 log 64213 123145468981248 Not Found: /api/user/favorites/
+WARNING 2025-06-16 12:05:47,258 basehttp 64213 123145468981248 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-16 12:05:47,273 log 64213 123145485770752 Not Found: /api/user/favorites/
+WARNING 2025-06-16 12:05:47,277 basehttp 64213 123145485770752 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-16 12:06:02,576 log 64213 123145502560256 Not Found: /api/placeholder/600/400
+WARNING 2025-06-16 12:06:02,576 basehttp 64213 123145502560256 "GET /api/placeholder/600/400 HTTP/1.1" 404 4659
+WARNING 2025-06-16 12:06:09,331 log 64213 123145502560256 Not Found: /api/placeholder/600/400
+WARNING 2025-06-16 12:06:09,332 basehttp 64213 123145502560256 "GET /api/placeholder/600/400 HTTP/1.1" 404 4659
+WARNING 2025-06-16 12:06:17,808 log 64213 123145485770752 Not Found: /api/user/favorites/
+WARNING 2025-06-16 12:06:17,808 basehttp 64213 123145485770752 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-16 12:06:17,831 log 64213 123145468981248 Not Found: /api/user/favorites/
+WARNING 2025-06-16 12:06:17,832 basehttp 64213 123145468981248 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-16 12:06:20,173 log 64213 123145468981248 Not Found: /api/user/library/
+WARNING 2025-06-16 12:06:20,173 basehttp 64213 123145468981248 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-16 12:06:20,194 log 64213 123145485770752 Not Found: /api/user/library/
+WARNING 2025-06-16 12:06:20,197 basehttp 64213 123145485770752 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-16 12:06:33,148 log 64213 123145485770752 Not Found: /api/user/library/
+WARNING 2025-06-16 12:06:33,148 basehttp 64213 123145485770752 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-16 12:06:33,164 log 64213 123145468981248 Not Found: /api/user/library/
+WARNING 2025-06-16 12:06:33,164 basehttp 64213 123145468981248 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-16 12:08:56,631 log 64213 123145502560256 Not Found: /api/placeholder/600/400
+WARNING 2025-06-16 12:08:56,632 log 64213 123145519349760 Not Found: /api/placeholder/400/300
+WARNING 2025-06-16 12:08:56,632 basehttp 64213 123145519349760 "GET /api/placeholder/400/300 HTTP/1.1" 404 4659
+WARNING 2025-06-16 12:08:56,633 basehttp 64213 123145502560256 "GET /api/placeholder/600/400 HTTP/1.1" 404 4659
+WARNING 2025-06-16 12:09:24,871 log 64213 123145468981248 Not Found: /api/user/library/
+WARNING 2025-06-16 12:09:24,871 basehttp 64213 123145468981248 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-16 12:09:24,881 log 64213 123145485770752 Not Found: /api/user/library/
+WARNING 2025-06-16 12:09:24,882 basehttp 64213 123145485770752 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-16 12:09:27,915 log 64213 123145485770752 Not Found: /api/user/favorites/
+WARNING 2025-06-16 12:09:27,916 basehttp 64213 123145485770752 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-16 12:09:27,926 log 64213 123145468981248 Not Found: /api/user/favorites/
+WARNING 2025-06-16 12:09:27,927 basehttp 64213 123145468981248 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-16 12:09:32,892 log 64213 123145468981248 Not Found: /api/user/favorites/
+WARNING 2025-06-16 12:09:32,893 basehttp 64213 123145468981248 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-16 12:09:32,902 log 64213 123145485770752 Not Found: /api/user/favorites/
+WARNING 2025-06-16 12:09:32,903 basehttp 64213 123145485770752 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-16 12:11:23,517 log 64213 123145502560256 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 12:11:23,518 basehttp 64213 123145502560256 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+INFO 2025-06-16 12:48:07,107 basehttp 64213 123145468981248 "OPTIONS /api/auth/profile/ HTTP/1.1" 200 0
+INFO 2025-06-16 12:48:07,107 basehttp 64213 123145485770752 "OPTIONS /api/auth/profile/ HTTP/1.1" 200 0
+WARNING 2025-06-16 12:48:07,140 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 12:48:07,141 basehttp 64213 123145468981248 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 12:48:07,150 log 64213 123145485770752 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 12:48:07,151 basehttp 64213 123145485770752 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 12:48:25,510 log 64213 123145485770752 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 12:48:25,511 basehttp 64213 123145485770752 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 12:48:25,517 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 12:48:25,517 basehttp 64213 123145468981248 "GET /api/auth/profile/ HTTP/1.1" 401 58
+INFO 2025-06-16 12:53:43,008 utils 64213 123145468981248 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 12:53:43,025 basehttp 64213 123145468981248 "POST /api/auth/login/ HTTP/1.1" 200 851
+WARNING 2025-06-16 12:53:46,465 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 12:53:46,466 basehttp 64213 123145468981248 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 12:53:46,478 log 64213 123145485770752 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 12:53:46,479 basehttp 64213 123145485770752 "GET /api/auth/profile/ HTTP/1.1" 401 58
+INFO 2025-06-16 12:55:38,880 utils 64213 123145502560256 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 12:55:38,887 basehttp 64213 123145502560256 "POST /api/auth/login/ HTTP/1.1" 200 851
+INFO 2025-06-16 12:55:53,537 utils 64213 123145502560256 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 12:55:53,545 basehttp 64213 123145502560256 "POST /api/auth/login/ HTTP/1.1" 200 851
+WARNING 2025-06-16 12:55:56,201 log 64213 123145485770752 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 12:55:56,202 basehttp 64213 123145485770752 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 12:55:56,215 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 12:55:56,215 basehttp 64213 123145468981248 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 12:56:20,546 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 12:56:20,551 basehttp 64213 123145468981248 "PUT /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 12:56:22,959 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 12:56:22,962 basehttp 64213 123145468981248 "PUT /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 12:56:23,911 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 12:56:23,917 basehttp 64213 123145468981248 "PUT /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 12:56:24,629 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 12:56:24,634 basehttp 64213 123145468981248 "PUT /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 12:56:24,857 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 12:56:24,862 basehttp 64213 123145468981248 "PUT /api/auth/profile/ HTTP/1.1" 401 58
+INFO 2025-06-16 12:58:07,432 utils 64213 123145468981248 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 12:58:07,434 basehttp 64213 123145468981248 "POST /api/auth/login/ HTTP/1.1" 200 851
+WARNING 2025-06-16 12:58:11,487 log 64213 123145468981248 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 12:58:11,488 basehttp 64213 123145468981248 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 12:58:11,496 log 64213 123145485770752 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 12:58:11,498 basehttp 64213 123145485770752 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:00:08,838 log 64213 123145502560256 Not Found: /api/placeholder/600/400
+WARNING 2025-06-16 13:00:08,856 log 64213 123145519349760 Not Found: /api/placeholder/400/300
+WARNING 2025-06-16 13:00:08,857 basehttp 64213 123145502560256 "GET /api/placeholder/600/400 HTTP/1.1" 404 4659
+WARNING 2025-06-16 13:00:08,857 basehttp 64213 123145519349760 "GET /api/placeholder/400/300 HTTP/1.1" 404 4659
+WARNING 2025-06-16 13:00:12,095 log 64213 123145502560256 Not Found: /api/placeholder/600/400
+WARNING 2025-06-16 13:00:12,099 log 64213 123145519349760 Not Found: /api/placeholder/400/300
+WARNING 2025-06-16 13:00:12,100 basehttp 64213 123145502560256 "GET /api/placeholder/600/400 HTTP/1.1" 404 4659
+WARNING 2025-06-16 13:00:12,100 basehttp 64213 123145519349760 "GET /api/placeholder/400/300 HTTP/1.1" 404 4659
+INFO 2025-06-16 13:04:05,490 autoreload 64213 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-16 13:04:06,943 autoreload 92256 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 13:04:09,671 autoreload 92256 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-16 13:04:10,386 autoreload 92276 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 13:04:15,043 autoreload 92276 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-16 13:04:15,866 autoreload 92309 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 13:04:17,441 autoreload 92309 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-16 13:04:18,185 autoreload 92338 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 13:07:18,644 utils 92338 123145375166464 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 13:07:18,714 basehttp 92338 123145375166464 "POST /api/auth/login/ HTTP/1.1" 200 851
+WARNING 2025-06-16 13:07:46,483 log 92338 123145375166464 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:07:46,486 basehttp 92338 123145375166464 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:07:46,496 log 92338 123145391955968 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:07:46,498 basehttp 92338 123145391955968 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:07:48,304 log 92338 123145391955968 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:07:48,305 basehttp 92338 123145391955968 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:07:48,311 log 92338 123145375166464 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:07:48,312 basehttp 92338 123145375166464 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:07:54,853 log 92338 123145375166464 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:07:54,854 basehttp 92338 123145375166464 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:07:54,865 log 92338 123145391955968 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:07:54,865 basehttp 92338 123145391955968 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:08:23,099 log 92338 123145391955968 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:08:23,105 basehttp 92338 123145391955968 "PUT /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:08:24,064 log 92338 123145391955968 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:08:24,068 basehttp 92338 123145391955968 "PUT /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:08:24,548 log 92338 123145391955968 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:08:24,554 basehttp 92338 123145391955968 "PUT /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:08:24,799 log 92338 123145391955968 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:08:24,807 basehttp 92338 123145391955968 "PUT /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:08:25,012 log 92338 123145391955968 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:08:25,018 basehttp 92338 123145391955968 "PUT /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:09:18,413 log 92338 123145391955968 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:09:18,414 basehttp 92338 123145391955968 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:09:28,610 log 92338 123145391955968 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:09:28,612 basehttp 92338 123145391955968 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:09:28,615 log 92338 123145375166464 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:09:28,616 basehttp 92338 123145375166464 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:09:49,448 log 92338 123145375166464 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:09:49,453 basehttp 92338 123145375166464 "PUT /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:09:50,130 log 92338 123145375166464 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:09:50,135 basehttp 92338 123145375166464 "PUT /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:09:53,217 log 92338 123145375166464 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:09:53,218 basehttp 92338 123145375166464 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:09:53,232 log 92338 123145391955968 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:09:53,232 basehttp 92338 123145391955968 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:09:54,390 log 92338 123145391955968 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:09:54,392 basehttp 92338 123145391955968 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:09:54,403 log 92338 123145375166464 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:09:54,404 basehttp 92338 123145375166464 "GET /api/auth/profile/ HTTP/1.1" 401 58
+WARNING 2025-06-16 13:21:59,542 log 92338 123145375166464 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:21:59,543 basehttp 92338 123145375166464 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 13:21:59,572 log 92338 123145391955968 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:21:59,573 basehttp 92338 123145391955968 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 13:22:06,598 log 92338 123145391955968 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:22:06,599 basehttp 92338 123145391955968 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 13:22:06,609 log 92338 123145375166464 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:22:06,609 basehttp 92338 123145375166464 "GET /api/auth/profile/ HTTP/1.1" 401 183
+INFO 2025-06-16 13:22:28,279 basehttp 92338 123145375166464 "OPTIONS /api/auth/profile/update/ HTTP/1.1" 200 0
+WARNING 2025-06-16 13:22:28,290 log 92338 123145375166464 Not Found: /api/auth/profile/update/
+WARNING 2025-06-16 13:22:28,290 basehttp 92338 123145375166464 "PATCH /api/auth/profile/update/ HTTP/1.1" 404 8622
+WARNING 2025-06-16 13:22:29,366 log 92338 123145375166464 Not Found: /api/auth/profile/update/
+WARNING 2025-06-16 13:22:29,366 basehttp 92338 123145375166464 "PATCH /api/auth/profile/update/ HTTP/1.1" 404 8622
+WARNING 2025-06-16 13:22:29,884 log 92338 123145375166464 Not Found: /api/auth/profile/update/
+WARNING 2025-06-16 13:22:29,884 basehttp 92338 123145375166464 "PATCH /api/auth/profile/update/ HTTP/1.1" 404 8622
+WARNING 2025-06-16 13:22:30,134 log 92338 123145375166464 Not Found: /api/auth/profile/update/
+WARNING 2025-06-16 13:22:30,139 basehttp 92338 123145375166464 "PATCH /api/auth/profile/update/ HTTP/1.1" 404 8622
+WARNING 2025-06-16 13:22:30,367 log 92338 123145375166464 Not Found: /api/auth/profile/update/
+WARNING 2025-06-16 13:22:30,368 basehttp 92338 123145375166464 "PATCH /api/auth/profile/update/ HTTP/1.1" 404 8622
+WARNING 2025-06-16 13:22:30,567 log 92338 123145375166464 Not Found: /api/auth/profile/update/
+WARNING 2025-06-16 13:22:30,567 basehttp 92338 123145375166464 "PATCH /api/auth/profile/update/ HTTP/1.1" 404 8622
+WARNING 2025-06-16 13:22:30,783 log 92338 123145375166464 Not Found: /api/auth/profile/update/
+WARNING 2025-06-16 13:22:30,783 basehttp 92338 123145375166464 "PATCH /api/auth/profile/update/ HTTP/1.1" 404 8622
+WARNING 2025-06-16 13:22:45,872 log 92338 123145375166464 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:22:45,873 basehttp 92338 123145375166464 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 13:22:45,891 log 92338 123145391955968 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 13:22:45,892 basehttp 92338 123145391955968 "GET /api/auth/profile/ HTTP/1.1" 401 183
+ERROR 2025-06-16 13:38:28,723 log 92338 123145375166464 Internal Server Error: /api/auth/profile/
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/authapp/views.py", line 165, in put
+    serializer = UserProfileSerializer(request.user, data=request.data, partial=True)
+                                                          ^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 216, in data
+    self._load_data_and_files()
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 279, in _load_data_and_files
+    self._data, self._files = self._parse()
+                              ^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 354, in _parse
+    parsed = parser.parse(stream, media_type, self.parser_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/parsers.py", line 108, in parse
+    data, files = parser.parse()
+                  ^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/http/multipartparser.py", line 125, in parse
+    return self._parse()
+           ^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/http/multipartparser.py", line 153, in _parse
+    result = handler.handle_raw_input(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/files/uploadhandler.py", line 207, in handle_raw_input
+    self.activated = content_length <= settings.FILE_UPLOAD_MAX_MEMORY_SIZE
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<=' not supported between instances of 'int' and 'NoneType'
+ERROR 2025-06-16 13:38:28,750 basehttp 92338 123145375166464 "PUT /api/auth/profile/ HTTP/1.1" 500 151797
+ERROR 2025-06-16 13:38:35,892 log 92338 123145375166464 Internal Server Error: /api/auth/profile/
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/authapp/views.py", line 165, in put
+    serializer = UserProfileSerializer(request.user, data=request.data, partial=True)
+                                                          ^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 216, in data
+    self._load_data_and_files()
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 279, in _load_data_and_files
+    self._data, self._files = self._parse()
+                              ^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 354, in _parse
+    parsed = parser.parse(stream, media_type, self.parser_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/parsers.py", line 108, in parse
+    data, files = parser.parse()
+                  ^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/http/multipartparser.py", line 125, in parse
+    return self._parse()
+           ^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/http/multipartparser.py", line 153, in _parse
+    result = handler.handle_raw_input(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/files/uploadhandler.py", line 207, in handle_raw_input
+    self.activated = content_length <= settings.FILE_UPLOAD_MAX_MEMORY_SIZE
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<=' not supported between instances of 'int' and 'NoneType'
+ERROR 2025-06-16 13:38:35,898 basehttp 92338 123145375166464 "PUT /api/auth/profile/ HTTP/1.1" 500 151805
+INFO 2025-06-16 13:41:23,115 autoreload 92338 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-16 13:41:24,424 autoreload 95143 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 13:42:12,823 autoreload 95143 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-16 13:42:13,922 autoreload 95190 140704484867520 Watching for file changes with StatReloader
+WARNING 2025-06-16 13:43:12,855 log 95190 123145464131584 Bad Request: /api/auth/profile/
+WARNING 2025-06-16 13:43:12,856 basehttp 95190 123145464131584 "PUT /api/auth/profile/ HTTP/1.1" 400 46
+WARNING 2025-06-16 13:47:49,167 log 95190 123145464131584 Bad Request: /api/auth/profile/
+WARNING 2025-06-16 13:47:49,168 basehttp 95190 123145464131584 "PUT /api/auth/profile/ HTTP/1.1" 400 46
+WARNING 2025-06-16 13:47:51,072 log 95190 123145464131584 Bad Request: /api/auth/profile/
+WARNING 2025-06-16 13:47:51,073 basehttp 95190 123145464131584 "PUT /api/auth/profile/ HTTP/1.1" 400 46
+WARNING 2025-06-16 13:47:56,169 log 95190 123145464131584 Bad Request: /api/auth/profile/
+WARNING 2025-06-16 13:47:56,170 basehttp 95190 123145464131584 "PUT /api/auth/profile/ HTTP/1.1" 400 46
+INFO 2025-06-16 13:55:54,063 utils 95190 123145464131584 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 13:55:54,072 basehttp 95190 123145464131584 "POST /api/auth/login/ HTTP/1.1" 200 851
+WARNING 2025-06-16 13:56:18,408 log 95190 123145464131584 Bad Request: /api/auth/profile/
+WARNING 2025-06-16 13:56:18,408 basehttp 95190 123145464131584 "PUT /api/auth/profile/ HTTP/1.1" 400 46
+INFO 2025-06-16 13:58:40,369 utils 95190 123145464131584 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 13:58:40,371 basehttp 95190 123145464131584 "POST /api/auth/login/ HTTP/1.1" 200 851
+INFO 2025-06-16 13:59:01,814 basehttp 95190 123145464131584 "GET //api/auth/profile/ HTTP/1.1" 200 318
+INFO 2025-06-16 14:09:58,955 autoreload 95190 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 14:10:00,142 autoreload 96788 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:11:12,375 autoreload 96788 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/views.py changed, reloading.
+INFO 2025-06-16 14:11:13,524 autoreload 96889 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:11:37,865 autoreload 96889 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/views.py changed, reloading.
+INFO 2025-06-16 14:11:38,654 autoreload 96928 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:11:42,172 autoreload 96928 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/views.py changed, reloading.
+INFO 2025-06-16 14:11:42,914 autoreload 96951 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:11:45,564 autoreload 96951 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/views.py changed, reloading.
+INFO 2025-06-16 14:11:46,379 autoreload 96971 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:11:52,095 autoreload 96971 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/views.py changed, reloading.
+INFO 2025-06-16 14:11:52,817 autoreload 96995 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:13:17,264 utils 96995 123145597140992 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 14:13:17,341 basehttp 96995 123145597140992 "POST /api/auth/login/ HTTP/1.1" 200 851
+INFO 2025-06-16 14:29:05,487 utils 96995 123145597140992 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 14:29:05,489 basehttp 96995 123145597140992 "POST /api/auth/login/ HTTP/1.1" 200 851
+WARNING 2025-06-16 14:32:57,363 log 96995 123145597140992 Bad Request: /api/auth/login/
+WARNING 2025-06-16 14:32:57,363 basehttp 96995 123145597140992 "POST /api/auth/login/ HTTP/1.1" 400 45
+INFO 2025-06-16 14:33:35,870 views 96995 123145597140992 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': [''], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>]}>
+ERROR 2025-06-16 14:33:35,950 views 96995 123145597140992 Profile update validation errors: {'first_name': [ErrorDetail(string='Not a valid string.', code='invalid')], 'last_name': [ErrorDetail(string='Not a valid string.', code='invalid')], 'phone_number': [ErrorDetail(string='Not a valid string.', code='invalid')], 'date_of_birth': [ErrorDetail(string='Date has wrong format. Use one of these formats instead: YYYY-MM-DD.', code='invalid')]}
+WARNING 2025-06-16 14:33:35,950 log 96995 123145597140992 Bad Request: /api/auth/profile/
+WARNING 2025-06-16 14:33:35,951 basehttp 96995 123145597140992 "PUT /api/auth/profile/ HTTP/1.1" 400 260
+INFO 2025-06-16 14:37:17,883 autoreload 96995 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/views.py changed, reloading.
+INFO 2025-06-16 14:37:19,055 autoreload 98323 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:37:47,739 autoreload 98323 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 14:37:48,778 autoreload 98372 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:39:00,210 views 98372 123145451626496 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['Male'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16']}>
+INFO 2025-06-16 14:39:00,210 views 98372 123145451626496 Converted firstName -> first_name: Levi
+INFO 2025-06-16 14:39:00,210 views 98372 123145451626496 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 14:39:00,210 views 98372 123145451626496 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 14:39:00,210 views 98372 123145451626496 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 14:39:00,210 views 98372 123145451626496 Converted gender -> gender: Male
+INFO 2025-06-16 14:39:00,210 views 98372 123145451626496 Converted country -> country: United Kingdom
+INFO 2025-06-16 14:39:00,210 views 98372 123145451626496 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'Male', 'country': 'United Kingdom'}
+ERROR 2025-06-16 14:39:00,212 views 98372 123145451626496 Profile update validation errors: {'gender': [ErrorDetail(string='"Male" is not a valid choice.', code='invalid_choice')]}
+WARNING 2025-06-16 14:39:00,212 log 98372 123145451626496 Bad Request: /api/auth/profile/
+WARNING 2025-06-16 14:39:00,212 basehttp 98372 123145451626496 "PUT /api/auth/profile/ HTTP/1.1" 400 104
+INFO 2025-06-16 14:39:01,535 views 98372 123145451626496 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['Male'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16']}>
+INFO 2025-06-16 14:39:01,535 views 98372 123145451626496 Converted firstName -> first_name: Levi
+INFO 2025-06-16 14:39:01,535 views 98372 123145451626496 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 14:39:01,535 views 98372 123145451626496 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 14:39:01,535 views 98372 123145451626496 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 14:39:01,535 views 98372 123145451626496 Converted gender -> gender: Male
+INFO 2025-06-16 14:39:01,535 views 98372 123145451626496 Converted country -> country: United Kingdom
+INFO 2025-06-16 14:39:01,536 views 98372 123145451626496 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'Male', 'country': 'United Kingdom'}
+ERROR 2025-06-16 14:39:01,537 views 98372 123145451626496 Profile update validation errors: {'gender': [ErrorDetail(string='"Male" is not a valid choice.', code='invalid_choice')]}
+WARNING 2025-06-16 14:39:01,537 log 98372 123145451626496 Bad Request: /api/auth/profile/
+WARNING 2025-06-16 14:39:01,538 basehttp 98372 123145451626496 "PUT /api/auth/profile/ HTTP/1.1" 400 104
+INFO 2025-06-16 14:39:01,851 views 98372 123145451626496 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['Male'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16']}>
+INFO 2025-06-16 14:39:01,851 views 98372 123145451626496 Converted firstName -> first_name: Levi
+INFO 2025-06-16 14:39:01,851 views 98372 123145451626496 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 14:39:01,851 views 98372 123145451626496 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 14:39:01,851 views 98372 123145451626496 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 14:39:01,851 views 98372 123145451626496 Converted gender -> gender: Male
+INFO 2025-06-16 14:39:01,851 views 98372 123145451626496 Converted country -> country: United Kingdom
+INFO 2025-06-16 14:39:01,851 views 98372 123145451626496 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'Male', 'country': 'United Kingdom'}
+ERROR 2025-06-16 14:39:01,853 views 98372 123145451626496 Profile update validation errors: {'gender': [ErrorDetail(string='"Male" is not a valid choice.', code='invalid_choice')]}
+WARNING 2025-06-16 14:39:01,853 log 98372 123145451626496 Bad Request: /api/auth/profile/
+WARNING 2025-06-16 14:39:01,853 basehttp 98372 123145451626496 "PUT /api/auth/profile/ HTTP/1.1" 400 104
+INFO 2025-06-16 14:39:02,118 views 98372 123145451626496 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['Male'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16']}>
+INFO 2025-06-16 14:39:02,118 views 98372 123145451626496 Converted firstName -> first_name: Levi
+INFO 2025-06-16 14:39:02,118 views 98372 123145451626496 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 14:39:02,118 views 98372 123145451626496 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 14:39:02,118 views 98372 123145451626496 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 14:39:02,118 views 98372 123145451626496 Converted gender -> gender: Male
+INFO 2025-06-16 14:39:02,118 views 98372 123145451626496 Converted country -> country: United Kingdom
+INFO 2025-06-16 14:39:02,118 views 98372 123145451626496 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'Male', 'country': 'United Kingdom'}
+ERROR 2025-06-16 14:39:02,120 views 98372 123145451626496 Profile update validation errors: {'gender': [ErrorDetail(string='"Male" is not a valid choice.', code='invalid_choice')]}
+WARNING 2025-06-16 14:39:02,120 log 98372 123145451626496 Bad Request: /api/auth/profile/
+WARNING 2025-06-16 14:39:02,121 basehttp 98372 123145451626496 "PUT /api/auth/profile/ HTTP/1.1" 400 104
+INFO 2025-06-16 14:41:50,005 autoreload 98372 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/views.py changed, reloading.
+INFO 2025-06-16 14:41:51,176 autoreload 98677 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:42:15,837 autoreload 98677 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 14:42:16,732 autoreload 98719 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:43:39,805 views 98719 123145537851392 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16']}>
+INFO 2025-06-16 14:43:39,806 views 98719 123145537851392 Converted firstName -> first_name: Levi
+INFO 2025-06-16 14:43:39,806 views 98719 123145537851392 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 14:43:39,806 views 98719 123145537851392 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 14:43:39,806 views 98719 123145537851392 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 14:43:39,806 views 98719 123145537851392 Converted gender 'M' -> 'M'
+INFO 2025-06-16 14:43:39,806 views 98719 123145537851392 Converted country -> country: United Kingdom
+INFO 2025-06-16 14:43:39,806 views 98719 123145537851392 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom'}
+INFO 2025-06-16 14:43:39,818 utils 98719 123145537851392 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-16 14:43:39,823 views 98719 123145537851392 Profile update successful
+INFO 2025-06-16 14:43:39,824 basehttp 98719 123145537851392 "PUT /api/auth/profile/ HTTP/1.1" 200 412
+INFO 2025-06-16 14:44:06,326 views 98719 123145537851392 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>]}>
+INFO 2025-06-16 14:44:06,326 views 98719 123145537851392 Converted firstName -> first_name: Levi
+INFO 2025-06-16 14:44:06,326 views 98719 123145537851392 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 14:44:06,326 views 98719 123145537851392 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 14:44:06,326 views 98719 123145537851392 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 14:44:06,327 views 98719 123145537851392 Converted gender 'M' -> 'M'
+INFO 2025-06-16 14:44:06,327 views 98719 123145537851392 Converted country -> country: United Kingdom
+INFO 2025-06-16 14:44:06,327 views 98719 123145537851392 Converted avatar -> avatar: 20250612_160748.jpg
+INFO 2025-06-16 14:44:06,327 views 98719 123145537851392 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>}
+INFO 2025-06-16 14:44:06,407 utils 98719 123145537851392 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-16 14:44:06,408 views 98719 123145537851392 Profile update successful
+INFO 2025-06-16 14:44:06,409 basehttp 98719 123145537851392 "PUT /api/auth/profile/ HTTP/1.1" 200 444
+INFO 2025-06-16 14:47:13,956 utils 98719 123145537851392 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 14:47:13,958 basehttp 98719 123145537851392 "POST /api/auth/login/ HTTP/1.1" 200 911
+INFO 2025-06-16 14:51:07,334 autoreload 98719 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 14:51:08,597 autoreload 99289 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:51:46,657 autoreload 99289 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/views.py changed, reloading.
+INFO 2025-06-16 14:51:47,591 autoreload 99339 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:53:33,257 autoreload 99339 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/models.py changed, reloading.
+INFO 2025-06-16 14:53:33,912 autoreload 99469 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:53:37,244 autoreload 99469 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/models.py changed, reloading.
+INFO 2025-06-16 14:53:37,940 autoreload 99489 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:53:52,877 autoreload 99489 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/models.py changed, reloading.
+INFO 2025-06-16 14:53:53,548 autoreload 99530 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:54:14,091 autoreload 99530 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/models.py changed, reloading.
+INFO 2025-06-16 14:54:14,764 autoreload 99563 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:54:19,394 autoreload 99563 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/models.py changed, reloading.
+INFO 2025-06-16 14:54:20,103 autoreload 99580 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:54:26,533 autoreload 99580 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/models.py changed, reloading.
+INFO 2025-06-16 14:54:27,259 autoreload 99599 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:56:19,988 autoreload 99599 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 14:56:21,122 autoreload 99924 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:56:33,013 autoreload 99924 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 14:56:33,995 autoreload 99958 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:56:37,698 autoreload 99958 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 14:56:38,486 autoreload 99976 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:56:39,784 autoreload 99976 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 14:56:40,473 autoreload 99991 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:56:42,941 autoreload 99991 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 14:56:43,664 autoreload 116 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:56:49,285 autoreload 116 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 14:56:50,051 autoreload 197 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:57:23,792 autoreload 197 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 14:57:24,943 autoreload 781 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:58:03,960 views 781 123145576853504 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>]}>
+INFO 2025-06-16 14:58:03,960 views 781 123145576853504 Converted firstName -> first_name: Levi
+INFO 2025-06-16 14:58:03,960 views 781 123145576853504 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 14:58:03,960 views 781 123145576853504 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 14:58:03,960 views 781 123145576853504 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 14:58:03,960 views 781 123145576853504 Converted gender 'M' -> 'M'
+INFO 2025-06-16 14:58:03,960 views 781 123145576853504 Converted country -> country: United Kingdom
+INFO 2025-06-16 14:58:03,960 views 781 123145576853504 Converted avatar -> avatar: 20250612_160748.jpg
+INFO 2025-06-16 14:58:03,961 views 781 123145576853504 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>}
+ERROR 2025-06-16 14:58:03,963 views 781 123145576853504 Profile update error: Must supply api_key
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/authapp/views.py", line 237, in put
+    user = serializer.save()
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 1006, in update
+    instance.save()
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/auth/base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1128, in _save_table
+    values = [
+             ^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1132, in <listcomp>
+    (getattr(self, f.attname) if raw else f.pre_save(self, False)),
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/models.py", line 112, in pre_save
+    instance_value = uploader.upload_resource(value, **options)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 253, in upload_resource
+    result = upload_func(file, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 198, in upload
+    return call_cacheable_api("upload", params, file=file, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 834, in call_cacheable_api
+    result = call_api(action, params, http_headers, return_error, unsigned, file, timeout, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 882, in call_api
+    params = utils.sign_request(params, options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/utils.py", line 617, in sign_request
+    raise ValueError("Must supply api_key")
+ValueError: Must supply api_key
+ERROR 2025-06-16 14:58:03,970 log 781 123145576853504 Internal Server Error: /api/auth/profile/
+ERROR 2025-06-16 14:58:03,971 basehttp 781 123145576853504 "PUT /api/auth/profile/ HTTP/1.1" 500 89
+INFO 2025-06-16 14:58:05,332 views 781 123145576853504 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>]}>
+INFO 2025-06-16 14:58:05,332 views 781 123145576853504 Converted firstName -> first_name: Levi
+INFO 2025-06-16 14:58:05,332 views 781 123145576853504 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 14:58:05,332 views 781 123145576853504 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 14:58:05,332 views 781 123145576853504 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 14:58:05,332 views 781 123145576853504 Converted gender 'M' -> 'M'
+INFO 2025-06-16 14:58:05,332 views 781 123145576853504 Converted country -> country: United Kingdom
+INFO 2025-06-16 14:58:05,332 views 781 123145576853504 Converted avatar -> avatar: 20250612_160748.jpg
+INFO 2025-06-16 14:58:05,333 views 781 123145576853504 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>}
+ERROR 2025-06-16 14:58:05,335 views 781 123145576853504 Profile update error: Must supply api_key
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/authapp/views.py", line 237, in put
+    user = serializer.save()
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 1006, in update
+    instance.save()
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/auth/base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1128, in _save_table
+    values = [
+             ^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1132, in <listcomp>
+    (getattr(self, f.attname) if raw else f.pre_save(self, False)),
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/models.py", line 112, in pre_save
+    instance_value = uploader.upload_resource(value, **options)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 253, in upload_resource
+    result = upload_func(file, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 198, in upload
+    return call_cacheable_api("upload", params, file=file, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 834, in call_cacheable_api
+    result = call_api(action, params, http_headers, return_error, unsigned, file, timeout, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 882, in call_api
+    params = utils.sign_request(params, options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/utils.py", line 617, in sign_request
+    raise ValueError("Must supply api_key")
+ValueError: Must supply api_key
+ERROR 2025-06-16 14:58:05,336 log 781 123145576853504 Internal Server Error: /api/auth/profile/
+ERROR 2025-06-16 14:58:05,337 basehttp 781 123145576853504 "PUT /api/auth/profile/ HTTP/1.1" 500 89
+INFO 2025-06-16 14:58:06,525 views 781 123145576853504 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>]}>
+INFO 2025-06-16 14:58:06,525 views 781 123145576853504 Converted firstName -> first_name: Levi
+INFO 2025-06-16 14:58:06,525 views 781 123145576853504 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 14:58:06,525 views 781 123145576853504 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 14:58:06,525 views 781 123145576853504 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 14:58:06,525 views 781 123145576853504 Converted gender 'M' -> 'M'
+INFO 2025-06-16 14:58:06,525 views 781 123145576853504 Converted country -> country: United Kingdom
+INFO 2025-06-16 14:58:06,525 views 781 123145576853504 Converted avatar -> avatar: 20250612_160748.jpg
+INFO 2025-06-16 14:58:06,525 views 781 123145576853504 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>}
+ERROR 2025-06-16 14:58:06,528 views 781 123145576853504 Profile update error: Must supply api_key
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/authapp/views.py", line 237, in put
+    user = serializer.save()
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 1006, in update
+    instance.save()
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/auth/base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1128, in _save_table
+    values = [
+             ^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1132, in <listcomp>
+    (getattr(self, f.attname) if raw else f.pre_save(self, False)),
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/models.py", line 112, in pre_save
+    instance_value = uploader.upload_resource(value, **options)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 253, in upload_resource
+    result = upload_func(file, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 198, in upload
+    return call_cacheable_api("upload", params, file=file, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 834, in call_cacheable_api
+    result = call_api(action, params, http_headers, return_error, unsigned, file, timeout, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 882, in call_api
+    params = utils.sign_request(params, options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/utils.py", line 617, in sign_request
+    raise ValueError("Must supply api_key")
+ValueError: Must supply api_key
+ERROR 2025-06-16 14:58:06,534 log 781 123145576853504 Internal Server Error: /api/auth/profile/
+ERROR 2025-06-16 14:58:06,534 basehttp 781 123145576853504 "PUT /api/auth/profile/ HTTP/1.1" 500 89
+INFO 2025-06-16 14:58:42,977 autoreload 1077 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 14:58:48,319 views 1077 123145568493568 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>]}>
+INFO 2025-06-16 14:58:48,320 views 1077 123145568493568 Converted firstName -> first_name: Levi
+INFO 2025-06-16 14:58:48,320 views 1077 123145568493568 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 14:58:48,320 views 1077 123145568493568 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 14:58:48,320 views 1077 123145568493568 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 14:58:48,320 views 1077 123145568493568 Converted gender 'M' -> 'M'
+INFO 2025-06-16 14:58:48,320 views 1077 123145568493568 Converted country -> country: United Kingdom
+INFO 2025-06-16 14:58:48,320 views 1077 123145568493568 Converted avatar -> avatar: 20250612_160748.jpg
+INFO 2025-06-16 14:58:48,320 views 1077 123145568493568 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>}
+ERROR 2025-06-16 14:58:48,322 views 1077 123145568493568 Profile update error: Must supply api_key
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/authapp/views.py", line 237, in put
+    user = serializer.save()
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 1006, in update
+    instance.save()
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/auth/base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1128, in _save_table
+    values = [
+             ^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1132, in <listcomp>
+    (getattr(self, f.attname) if raw else f.pre_save(self, False)),
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/models.py", line 112, in pre_save
+    instance_value = uploader.upload_resource(value, **options)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 253, in upload_resource
+    result = upload_func(file, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 198, in upload
+    return call_cacheable_api("upload", params, file=file, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 834, in call_cacheable_api
+    result = call_api(action, params, http_headers, return_error, unsigned, file, timeout, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 882, in call_api
+    params = utils.sign_request(params, options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/utils.py", line 617, in sign_request
+    raise ValueError("Must supply api_key")
+ValueError: Must supply api_key
+ERROR 2025-06-16 14:58:48,326 log 1077 123145568493568 Internal Server Error: /api/auth/profile/
+ERROR 2025-06-16 14:58:48,326 basehttp 1077 123145568493568 "PUT /api/auth/profile/ HTTP/1.1" 500 89
+INFO 2025-06-16 15:00:49,976 views 1077 123145568493568 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>]}>
+INFO 2025-06-16 15:00:49,977 views 1077 123145568493568 Converted firstName -> first_name: Levi
+INFO 2025-06-16 15:00:49,977 views 1077 123145568493568 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 15:00:49,977 views 1077 123145568493568 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 15:00:49,977 views 1077 123145568493568 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 15:00:49,977 views 1077 123145568493568 Converted gender 'M' -> 'M'
+INFO 2025-06-16 15:00:49,977 views 1077 123145568493568 Converted country -> country: United Kingdom
+INFO 2025-06-16 15:00:49,977 views 1077 123145568493568 Converted avatar -> avatar: 20250612_160748.jpg
+INFO 2025-06-16 15:00:49,977 views 1077 123145568493568 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>}
+ERROR 2025-06-16 15:00:49,979 views 1077 123145568493568 Profile update error: Must supply api_key
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/authapp/views.py", line 237, in put
+    user = serializer.save()
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 1006, in update
+    instance.save()
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/auth/base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1128, in _save_table
+    values = [
+             ^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1132, in <listcomp>
+    (getattr(self, f.attname) if raw else f.pre_save(self, False)),
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/models.py", line 112, in pre_save
+    instance_value = uploader.upload_resource(value, **options)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 253, in upload_resource
+    result = upload_func(file, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 198, in upload
+    return call_cacheable_api("upload", params, file=file, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 834, in call_cacheable_api
+    result = call_api(action, params, http_headers, return_error, unsigned, file, timeout, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 882, in call_api
+    params = utils.sign_request(params, options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/utils.py", line 617, in sign_request
+    raise ValueError("Must supply api_key")
+ValueError: Must supply api_key
+ERROR 2025-06-16 15:00:49,984 log 1077 123145568493568 Internal Server Error: /api/auth/profile/
+ERROR 2025-06-16 15:00:49,984 basehttp 1077 123145568493568 "PUT /api/auth/profile/ HTTP/1.1" 500 89
+INFO 2025-06-16 15:06:39,231 autoreload 1077 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-16 15:06:40,552 autoreload 1899 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 15:06:44,423 autoreload 1899 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-16 15:06:45,146 autoreload 1924 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 15:06:50,839 autoreload 1924 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-16 15:06:51,578 autoreload 1945 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 15:07:15,960 autoreload 1945 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-16 15:07:16,794 autoreload 2004 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 15:07:18,366 autoreload 2004 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-16 15:07:19,091 autoreload 2016 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 15:07:43,262 views 2016 123145598558208 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>]}>
+INFO 2025-06-16 15:07:43,262 views 2016 123145598558208 Converted firstName -> first_name: Levi
+INFO 2025-06-16 15:07:43,263 views 2016 123145598558208 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 15:07:43,263 views 2016 123145598558208 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 15:07:43,263 views 2016 123145598558208 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 15:07:43,263 views 2016 123145598558208 Converted gender 'M' -> 'M'
+INFO 2025-06-16 15:07:43,263 views 2016 123145598558208 Converted country -> country: United Kingdom
+INFO 2025-06-16 15:07:43,263 views 2016 123145598558208 Converted avatar -> avatar: 20250612_160748.jpg
+INFO 2025-06-16 15:07:43,263 views 2016 123145598558208 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>}
+ERROR 2025-06-16 15:07:43,269 views 2016 123145598558208 Profile update error: Must supply api_key
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/authapp/views.py", line 237, in put
+    user = serializer.save()
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 1006, in update
+    instance.save()
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/auth/base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1128, in _save_table
+    values = [
+             ^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1132, in <listcomp>
+    (getattr(self, f.attname) if raw else f.pre_save(self, False)),
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/models.py", line 112, in pre_save
+    instance_value = uploader.upload_resource(value, **options)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 253, in upload_resource
+    result = upload_func(file, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 198, in upload
+    return call_cacheable_api("upload", params, file=file, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 834, in call_cacheable_api
+    result = call_api(action, params, http_headers, return_error, unsigned, file, timeout, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/uploader.py", line 882, in call_api
+    params = utils.sign_request(params, options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/cloudinary/utils.py", line 617, in sign_request
+    raise ValueError("Must supply api_key")
+ValueError: Must supply api_key
+ERROR 2025-06-16 15:07:43,279 log 2016 123145598558208 Internal Server Error: /api/auth/profile/
+ERROR 2025-06-16 15:07:43,279 basehttp 2016 123145598558208 "PUT /api/auth/profile/ HTTP/1.1" 500 89
+INFO 2025-06-16 15:11:35,662 autoreload 2016 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/models.py changed, reloading.
+INFO 2025-06-16 15:11:36,891 autoreload 2251 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 15:13:15,105 autoreload 2251 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 15:13:16,142 autoreload 2501 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 15:13:17,585 autoreload 2501 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 15:13:18,331 autoreload 2521 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 15:13:25,136 autoreload 2521 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 15:13:25,922 autoreload 2549 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 15:14:10,020 autoreload 2549 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/urls.py changed, reloading.
+INFO 2025-06-16 15:14:11,164 autoreload 2619 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 15:14:15,795 autoreload 2619 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/urls.py changed, reloading.
+INFO 2025-06-16 15:14:16,494 autoreload 2643 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 15:14:28,299 autoreload 2643 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/urls.py changed, reloading.
+INFO 2025-06-16 15:14:29,031 autoreload 2669 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 15:14:59,757 autoreload 2669 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/urls.py changed, reloading.
+INFO 2025-06-16 15:15:00,897 autoreload 2717 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 15:15:09,806 autoreload 2717 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/urls.py changed, reloading.
+INFO 2025-06-16 15:15:10,594 autoreload 2745 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 15:15:16,344 autoreload 2745 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/urls.py changed, reloading.
+INFO 2025-06-16 15:15:17,104 autoreload 2772 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 15:15:23,863 autoreload 2772 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/urls.py changed, reloading.
+INFO 2025-06-16 15:15:24,646 autoreload 2793 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 15:16:08,737 autoreload 2793 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-16 15:16:09,844 autoreload 2923 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 15:17:31,901 views 2923 123145501700096 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>]}>
+INFO 2025-06-16 15:17:31,902 views 2923 123145501700096 Converted firstName -> first_name: Levi
+INFO 2025-06-16 15:17:31,902 views 2923 123145501700096 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 15:17:31,902 views 2923 123145501700096 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 15:17:31,902 views 2923 123145501700096 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 15:17:31,902 views 2923 123145501700096 Converted gender 'M' -> 'M'
+INFO 2025-06-16 15:17:31,902 views 2923 123145501700096 Converted country -> country: United Kingdom
+INFO 2025-06-16 15:17:31,902 views 2923 123145501700096 Converted avatar -> avatar: 20250612_160748.jpg
+INFO 2025-06-16 15:17:31,902 views 2923 123145501700096 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>}
+INFO 2025-06-16 15:17:31,983 utils 2923 123145501700096 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-16 15:17:31,988 views 2923 123145501700096 Profile update successful
+INFO 2025-06-16 15:17:31,988 views 2923 123145501700096 Avatar URL in response: http://127.0.0.1:8000/media/avatars/20250612_160748_GbHplLn.jpg
+INFO 2025-06-16 15:17:31,989 basehttp 2923 123145501700096 "PUT /api/auth/profile/ HTTP/1.1" 200 473
+INFO 2025-06-16 15:17:32,021 basehttp 2923 123145501700096 "GET /media/avatars/20250612_160748_GbHplLn.jpg HTTP/1.1" 200 2273020
+INFO 2025-06-16 15:18:58,023 views 2923 123145518489600 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['F'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16']}>
+INFO 2025-06-16 15:18:58,023 views 2923 123145518489600 Converted firstName -> first_name: Levi
+INFO 2025-06-16 15:18:58,024 views 2923 123145518489600 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 15:18:58,024 views 2923 123145518489600 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 15:18:58,024 views 2923 123145518489600 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 15:18:58,024 views 2923 123145518489600 Converted gender 'F' -> 'F'
+INFO 2025-06-16 15:18:58,024 views 2923 123145518489600 Converted country -> country: United Kingdom
+INFO 2025-06-16 15:18:58,024 views 2923 123145518489600 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'F', 'country': 'United Kingdom'}
+INFO 2025-06-16 15:18:58,033 utils 2923 123145518489600 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-16 15:18:58,035 views 2923 123145518489600 Profile update successful
+INFO 2025-06-16 15:18:58,035 views 2923 123145518489600 Avatar URL in response: http://127.0.0.1:8000/media/avatars/20250612_160748_GbHplLn.jpg
+INFO 2025-06-16 15:18:58,036 basehttp 2923 123145518489600 "PUT /api/auth/profile/ HTTP/1.1" 200 473
+INFO 2025-06-16 15:19:25,268 views 2923 123145518489600 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16']}>
+INFO 2025-06-16 15:19:25,269 views 2923 123145518489600 Converted firstName -> first_name: Levi
+INFO 2025-06-16 15:19:25,269 views 2923 123145518489600 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 15:19:25,269 views 2923 123145518489600 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 15:19:25,269 views 2923 123145518489600 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 15:19:25,269 views 2923 123145518489600 Converted gender 'M' -> 'M'
+INFO 2025-06-16 15:19:25,269 views 2923 123145518489600 Converted country -> country: United Kingdom
+INFO 2025-06-16 15:19:25,269 views 2923 123145518489600 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom'}
+INFO 2025-06-16 15:19:25,275 utils 2923 123145518489600 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-16 15:19:25,277 views 2923 123145518489600 Profile update successful
+INFO 2025-06-16 15:19:25,277 views 2923 123145518489600 Avatar URL in response: http://127.0.0.1:8000/media/avatars/20250612_160748_GbHplLn.jpg
+INFO 2025-06-16 15:19:25,278 basehttp 2923 123145518489600 "PUT /api/auth/profile/ HTTP/1.1" 200 473
+WARNING 2025-06-16 15:21:41,839 log 2923 123145518489600 Unauthorized: /api/auth/change-password/
+WARNING 2025-06-16 15:21:41,840 basehttp 2923 123145518489600 "POST /api/auth/change-password/ HTTP/1.1" 401 183
+INFO 2025-06-16 15:23:57,349 basehttp 2923 123145501700096 "OPTIONS /api/user/library/ HTTP/1.1" 200 0
+INFO 2025-06-16 15:23:57,360 basehttp 2923 123145518489600 "OPTIONS /api/user/library/ HTTP/1.1" 200 0
+WARNING 2025-06-16 15:23:57,419 log 2923 123145518489600 Not Found: /api/user/library/
+WARNING 2025-06-16 15:23:57,420 basehttp 2923 123145518489600 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-16 15:23:57,435 log 2923 123145501700096 Not Found: /api/user/library/
+WARNING 2025-06-16 15:23:57,435 basehttp 2923 123145501700096 "GET /api/user/library/ HTTP/1.1" 404 4641
+INFO 2025-06-16 15:24:07,229 basehttp 2923 123145501700096 "OPTIONS /api/user/favorites/ HTTP/1.1" 200 0
+INFO 2025-06-16 15:24:07,231 basehttp 2923 123145518489600 "OPTIONS /api/user/favorites/ HTTP/1.1" 200 0
+WARNING 2025-06-16 15:24:07,249 log 2923 123145518489600 Not Found: /api/user/favorites/
+WARNING 2025-06-16 15:24:07,249 basehttp 2923 123145518489600 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-16 15:24:07,260 log 2923 123145501700096 Not Found: /api/user/favorites/
+WARNING 2025-06-16 15:24:07,260 basehttp 2923 123145501700096 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-16 15:24:54,151 log 2923 123145501700096 Not Found: /api/user/favorites/
+WARNING 2025-06-16 15:24:54,151 basehttp 2923 123145501700096 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-16 15:24:54,196 log 2923 123145518489600 Not Found: /api/user/favorites/
+WARNING 2025-06-16 15:24:54,197 basehttp 2923 123145518489600 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-16 15:24:57,333 log 2923 123145518489600 Not Found: /api/user/library/
+WARNING 2025-06-16 15:24:57,333 basehttp 2923 123145518489600 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-16 15:24:57,343 log 2923 123145501700096 Not Found: /api/user/library/
+WARNING 2025-06-16 15:24:57,344 basehttp 2923 123145501700096 "GET /api/user/library/ HTTP/1.1" 404 4641
+INFO 2025-06-16 15:25:40,474 utils 2923 123145535279104 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 15:25:40,476 basehttp 2923 123145535279104 "POST /api/auth/login/ HTTP/1.1" 200 919
+INFO 2025-06-16 15:25:52,664 views 2923 123145535279104 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>]}>
+INFO 2025-06-16 15:25:52,664 views 2923 123145535279104 Converted firstName -> first_name: Levi
+INFO 2025-06-16 15:25:52,664 views 2923 123145535279104 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 15:25:52,664 views 2923 123145535279104 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 15:25:52,664 views 2923 123145535279104 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 15:25:52,664 views 2923 123145535279104 Converted gender 'M' -> 'M'
+INFO 2025-06-16 15:25:52,664 views 2923 123145535279104 Converted country -> country: United Kingdom
+INFO 2025-06-16 15:25:52,664 views 2923 123145535279104 Converted avatar -> avatar: 20250612_160748.jpg
+INFO 2025-06-16 15:25:52,664 views 2923 123145535279104 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>}
+INFO 2025-06-16 15:25:52,677 utils 2923 123145535279104 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-16 15:25:52,679 views 2923 123145535279104 Profile update successful
+INFO 2025-06-16 15:25:52,679 views 2923 123145535279104 Avatar URL in response: http://127.0.0.1:8000/media/avatars/20250612_160748_4lkjAls.jpg
+INFO 2025-06-16 15:25:52,679 basehttp 2923 123145535279104 "PUT /api/auth/profile/ HTTP/1.1" 200 473
+INFO 2025-06-16 15:25:52,706 basehttp 2923 123145535279104 "GET /media/avatars/20250612_160748_4lkjAls.jpg HTTP/1.1" 200 2273020
+INFO 2025-06-16 15:33:29,648 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:33:29,670 basehttp 2923 123145518489600 "GET /media/avatars/20250612_160748_4lkjAls.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 15:33:29,671 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:33:52,466 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:33:52,502 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:33:59,279 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:33:59,303 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:34:05,343 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:34:05,374 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:34:14,828 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:34:14,858 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:34:17,223 basehttp 2923 123145518489600 "GET /media/avatars/20250612_160748_4lkjAls.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 15:34:19,772 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:34:19,795 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:37:13,835 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:37:13,863 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:37:14,526 basehttp 2923 123145518489600 "GET /media/avatars/20250612_160748_4lkjAls.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 15:37:31,136 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:37:31,157 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:37:35,237 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:37:35,249 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:37:41,479 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:37:41,489 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:40:52,928 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:40:52,960 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:40:53,621 basehttp 2923 123145518489600 "GET /media/avatars/20250612_160748_4lkjAls.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 15:40:55,908 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:40:55,917 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:41:05,310 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:41:05,323 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:41:10,638 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:41:10,658 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:42:50,418 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:42:50,442 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:42:50,826 basehttp 2923 123145518489600 "GET /media/avatars/20250612_160748_4lkjAls.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 15:43:57,499 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:43:57,532 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:44:05,365 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:44:05,375 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:47:41,293 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:47:41,303 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:47:41,818 basehttp 2923 123145518489600 "GET /media/avatars/20250612_160748_4lkjAls.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 15:48:05,794 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:48:05,820 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:48:30,357 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:48:30,370 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:48:33,818 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:48:33,832 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:48:38,164 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:48:38,172 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:48:50,984 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:48:51,002 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:50:13,741 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:50:13,764 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:50:14,080 basehttp 2923 123145518489600 "GET /media/avatars/20250612_160748_4lkjAls.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 15:50:20,500 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:50:20,528 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:50:38,698 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+INFO 2025-06-16 15:50:38,707 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 200 407
+WARNING 2025-06-16 17:34:26,533 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:34:26,534 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:34:26,550 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:34:26,551 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:34:31,750 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:34:31,751 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:34:31,762 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:34:31,762 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:35:12,595 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:35:12,598 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:35:12,618 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:35:12,619 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:35:26,175 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:35:26,180 basehttp 2923 123145501700096 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:35:49,627 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:35:49,629 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:35:49,637 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:35:49,638 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:35:55,076 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:35:55,077 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:35:55,085 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:35:55,086 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:36:02,410 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:36:02,411 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:36:02,417 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:36:02,417 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:36:25,993 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:36:25,994 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:36:25,998 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:36:25,998 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:36:31,002 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:36:31,003 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:36:31,009 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:36:31,010 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:36:36,963 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:36:36,965 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:36:36,974 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:36:36,975 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:36:43,018 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:36:43,019 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:36:43,028 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:36:43,029 basehttp 2923 123145501700096 "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:38:01,456 log 2923 123145501700096 Unauthorized: /api/auth/profile/
+WARNING 2025-06-16 17:38:01,461 basehttp 2923 123145501700096 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-16 17:39:56,763 log 2923 123145501700096 Not Found: /api/placeholder/600/400
+WARNING 2025-06-16 17:39:56,764 log 2923 123145518489600 Not Found: /api/placeholder/400/300
+WARNING 2025-06-16 17:39:56,764 basehttp 2923 123145501700096 "GET /api/placeholder/600/400 HTTP/1.1" 404 4659
+WARNING 2025-06-16 17:39:56,764 basehttp 2923 123145518489600 "GET /api/placeholder/400/300 HTTP/1.1" 404 4659
+WARNING 2025-06-16 17:39:59,823 log 2923 123145501700096 Not Found: /api/placeholder/600/400
+WARNING 2025-06-16 17:39:59,827 log 2923 123145518489600 Not Found: /api/placeholder/400/300
+WARNING 2025-06-16 17:39:59,827 basehttp 2923 123145501700096 "GET /api/placeholder/600/400 HTTP/1.1" 404 4659
+WARNING 2025-06-16 17:39:59,828 basehttp 2923 123145518489600 "GET /api/placeholder/400/300 HTTP/1.1" 404 4659

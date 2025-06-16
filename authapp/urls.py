@@ -30,3 +30,4 @@ urlpatterns = [
     path('stats/', views.UserStatsView.as_view(), name='user_stats'),
     path('dashboard/', views.user_dashboard, name='user_dashboard'),
 ]
+
