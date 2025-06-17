@@ -3,15 +3,15 @@ profile_pictures
 .idea
 .coverage
 
-media/                  # Local media files (if any)
-uploads/                # Upload directories
-*.mp4                   # Video files
-*.mov                   # Video files
-*.avi                   # Video files
-*.jpg                   # Image files
-*.png                   # Image files
-*.gif                   # Image files
-reports/                # Generated reports
-logs/                   # Log files
-media/avatars/         # Avatar images
-media/uploads/        # User uploads
+media/                 
+uploads/                
+*.mp4                   
+*.mov                   
+*.avi                   
+*.jpg                   
+*.png                  
+*.gif                   
+reports/               
+logs/                   
+media/avatars/         
+media/uploads/        

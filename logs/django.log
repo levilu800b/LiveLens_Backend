@@ -5057,3 +5057,93 @@ WARNING 2025-06-17 20:17:39,295 basehttp 64123 123145514872832 "GET /media/avata
 INFO 2025-06-17 20:17:39,296 basehttp 64123 123145514872832 - Broken pipe from ('127.0.0.1', 58027)
 WARNING 2025-06-17 20:17:52,495 log 64123 123145514872832 Unauthorized: /api/auth/profile/
 WARNING 2025-06-17 20:17:52,496 basehttp 64123 123145514872832 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-17 20:31:23,504 log 64123 123145514872832 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:31:23,507 basehttp 64123 123145514872832 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:31:23,508 basehttp 64123 123145514872832 - Broken pipe from ('127.0.0.1', 61493)
+WARNING 2025-06-17 20:34:50,671 log 64123 123145514872832 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:34:50,673 basehttp 64123 123145514872832 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:34:50,674 basehttp 64123 123145514872832 - Broken pipe from ('127.0.0.1', 62373)
+WARNING 2025-06-17 20:35:00,530 log 64123 123145514872832 Unauthorized: /api/auth/profile/
+WARNING 2025-06-17 20:35:00,532 basehttp 64123 123145514872832 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-17 20:38:14,033 log 64123 123145514872832 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:38:14,033 basehttp 64123 123145514872832 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:38:14,037 basehttp 64123 123145514872832 - Broken pipe from ('127.0.0.1', 63220)
+WARNING 2025-06-17 20:40:06,436 log 64123 123145514872832 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:40:06,437 basehttp 64123 123145514872832 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:40:06,438 basehttp 64123 123145514872832 - Broken pipe from ('127.0.0.1', 63716)
+WARNING 2025-06-17 20:40:37,348 log 64123 123145514872832 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:40:37,348 basehttp 64123 123145514872832 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:40:37,349 basehttp 64123 123145514872832 - Broken pipe from ('127.0.0.1', 63852)
+INFO 2025-06-17 20:40:44,671 basehttp 64123 123145514872832 "OPTIONS /api/auth/profile/ HTTP/1.1" 200 0
+INFO 2025-06-17 20:40:44,761 views 64123 123145514872832 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: DSC00392.JPG (image/jpeg)>]}>
+INFO 2025-06-17 20:40:44,761 views 64123 123145514872832 Converted firstName -> first_name: Levi
+INFO 2025-06-17 20:40:44,762 views 64123 123145514872832 Converted lastName -> last_name: Udeh
+INFO 2025-06-17 20:40:44,762 views 64123 123145514872832 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-17 20:40:44,762 views 64123 123145514872832 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-17 20:40:44,762 views 64123 123145514872832 Converted gender 'M' -> 'M'
+INFO 2025-06-17 20:40:44,762 views 64123 123145514872832 Converted country -> country: United Kingdom
+INFO 2025-06-17 20:40:44,762 views 64123 123145514872832 Converted avatar -> avatar: DSC00392.JPG
+INFO 2025-06-17 20:40:44,762 views 64123 123145514872832 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: DSC00392.JPG (image/jpeg)>}
+INFO 2025-06-17 20:40:44,941 utils 64123 123145514872832 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-17 20:40:44,943 views 64123 123145514872832 Profile update successful
+INFO 2025-06-17 20:40:44,943 views 64123 123145514872832 Avatar URL in response: http://127.0.0.1:8000/media/avatars/DSC00392.JPG
+INFO 2025-06-17 20:40:44,944 basehttp 64123 123145514872832 "PUT /api/auth/profile/ HTTP/1.1" 200 458
+INFO 2025-06-17 20:40:45,075 basehttp 64123 123145531662336 "GET /media/avatars/DSC00392.JPG HTTP/1.1" 200 4751360
+INFO 2025-06-17 20:40:50,154 basehttp 64123 123145531662336 "GET /media/avatars/DSC00392.JPG HTTP/1.1" 304 0
+INFO 2025-06-17 20:40:56,015 basehttp 64123 123145531662336 "GET /media/avatars/DSC00392.JPG HTTP/1.1" 304 0
+INFO 2025-06-17 20:41:17,155 utils 64123 123145548451840 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 20:41:17,157 basehttp 64123 123145548451840 "POST /api/auth/login/ HTTP/1.1" 200 925
+INFO 2025-06-17 20:41:17,224 basehttp 64123 123145531662336 "GET /media/avatars/DSC00392.JPG HTTP/1.1" 304 0
+INFO 2025-06-17 20:44:08,177 basehttp 64123 123145531662336 "GET /media/avatars/DSC00392.JPG HTTP/1.1" 304 0
+INFO 2025-06-17 20:44:28,046 views 64123 123145514872832 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665555543'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16']}>
+INFO 2025-06-17 20:44:28,046 views 64123 123145514872832 Converted firstName -> first_name: Levi
+INFO 2025-06-17 20:44:28,046 views 64123 123145514872832 Converted lastName -> last_name: Udeh
+INFO 2025-06-17 20:44:28,046 views 64123 123145514872832 Converted phoneNumber -> phone_number: 76665555543
+INFO 2025-06-17 20:44:28,046 views 64123 123145514872832 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-17 20:44:28,047 views 64123 123145514872832 Converted gender 'M' -> 'M'
+INFO 2025-06-17 20:44:28,047 views 64123 123145514872832 Converted country -> country: United Kingdom
+INFO 2025-06-17 20:44:28,047 views 64123 123145514872832 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665555543', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom'}
+INFO 2025-06-17 20:44:28,060 utils 64123 123145514872832 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-17 20:44:28,062 views 64123 123145514872832 Profile update successful
+INFO 2025-06-17 20:44:28,062 views 64123 123145514872832 Avatar URL in response: http://127.0.0.1:8000/media/avatars/DSC00392.JPG
+INFO 2025-06-17 20:44:28,062 basehttp 64123 123145514872832 "PUT /api/auth/profile/ HTTP/1.1" 200 458
+INFO 2025-06-17 20:44:43,223 basehttp 64123 123145531662336 "GET /media/avatars/DSC00392.JPG HTTP/1.1" 304 0
+INFO 2025-06-17 20:44:56,644 views 64123 123145514872832 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['07975848939'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16']}>
+INFO 2025-06-17 20:44:56,644 views 64123 123145514872832 Converted firstName -> first_name: Levi
+INFO 2025-06-17 20:44:56,644 views 64123 123145514872832 Converted lastName -> last_name: Udeh
+INFO 2025-06-17 20:44:56,644 views 64123 123145514872832 Converted phoneNumber -> phone_number: 07975848939
+INFO 2025-06-17 20:44:56,644 views 64123 123145514872832 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-17 20:44:56,644 views 64123 123145514872832 Converted gender 'M' -> 'M'
+INFO 2025-06-17 20:44:56,644 views 64123 123145514872832 Converted country -> country: United Kingdom
+INFO 2025-06-17 20:44:56,644 views 64123 123145514872832 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '07975848939', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom'}
+INFO 2025-06-17 20:44:56,656 utils 64123 123145514872832 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-17 20:44:56,657 views 64123 123145514872832 Profile update successful
+INFO 2025-06-17 20:44:56,657 views 64123 123145514872832 Avatar URL in response: http://127.0.0.1:8000/media/avatars/DSC00392.JPG
+INFO 2025-06-17 20:44:56,658 basehttp 64123 123145514872832 "PUT /api/auth/profile/ HTTP/1.1" 200 458
+INFO 2025-06-17 20:45:25,690 utils 64123 123145548451840 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 20:45:25,692 basehttp 64123 123145548451840 "POST /api/auth/login/ HTTP/1.1" 200 925
+INFO 2025-06-17 20:45:40,245 basehttp 64123 123145548451840 "GET //api/auth/profile/ HTTP/1.1" 200 392
+INFO 2025-06-17 20:57:28,072 basehttp 64123 123145514872832 "GET /media/avatars/DSC00392.JPG HTTP/1.1" 304 0
+INFO 2025-06-17 20:57:36,729 basehttp 64123 123145531662336 "OPTIONS /api/user/library/ HTTP/1.1" 200 0
+INFO 2025-06-17 20:57:36,734 basehttp 64123 123145565241344 "OPTIONS /api/user/library/ HTTP/1.1" 200 0
+WARNING 2025-06-17 20:57:36,750 log 64123 123145565241344 Not Found: /api/user/library/
+WARNING 2025-06-17 20:57:36,750 basehttp 64123 123145565241344 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-17 20:57:36,759 log 64123 123145531662336 Not Found: /api/user/library/
+WARNING 2025-06-17 20:57:36,760 basehttp 64123 123145531662336 "GET /api/user/library/ HTTP/1.1" 404 4641
+INFO 2025-06-17 20:59:50,314 basehttp 64123 123145531662336 "OPTIONS /api/user/favorites/ HTTP/1.1" 200 0
+INFO 2025-06-17 20:59:50,318 basehttp 64123 123145565241344 "OPTIONS /api/user/favorites/ HTTP/1.1" 200 0
+WARNING 2025-06-17 20:59:50,372 log 64123 123145565241344 Not Found: /api/user/favorites/
+WARNING 2025-06-17 20:59:50,373 basehttp 64123 123145565241344 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-17 20:59:50,384 log 64123 123145531662336 Not Found: /api/user/favorites/
+WARNING 2025-06-17 20:59:50,384 basehttp 64123 123145531662336 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-17 21:00:41,051 log 64123 123145582030848 Bad Request: /api/auth/change-password/
+WARNING 2025-06-17 21:00:41,051 basehttp 64123 123145582030848 "POST /api/auth/change-password/ HTTP/1.1" 400 52
+WARNING 2025-06-17 21:00:53,617 log 64123 123145531662336 Not Found: /api/user/favorites/
+WARNING 2025-06-17 21:00:53,618 basehttp 64123 123145531662336 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-17 21:00:53,627 log 64123 123145565241344 Not Found: /api/user/favorites/
+WARNING 2025-06-17 21:00:53,629 basehttp 64123 123145565241344 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-17 21:00:54,449 log 64123 123145565241344 Not Found: /api/user/library/
+WARNING 2025-06-17 21:00:54,450 basehttp 64123 123145565241344 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-17 21:00:54,464 log 64123 123145531662336 Not Found: /api/user/library/
+WARNING 2025-06-17 21:00:54,464 basehttp 64123 123145531662336 "GET /api/user/library/ HTTP/1.1" 404 4641
+INFO 2025-06-17 21:00:56,894 basehttp 64123 123145514872832 "GET /media/avatars/DSC00392.JPG HTTP/1.1" 304 0
