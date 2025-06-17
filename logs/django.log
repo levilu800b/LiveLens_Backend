@@ -4674,3 +4674,386 @@ WARNING 2025-06-16 17:39:59,823 log 2923 123145501700096 Not Found: /api/placeho
 WARNING 2025-06-16 17:39:59,827 log 2923 123145518489600 Not Found: /api/placeholder/400/300
 WARNING 2025-06-16 17:39:59,827 basehttp 2923 123145501700096 "GET /api/placeholder/600/400 HTTP/1.1" 404 4659
 WARNING 2025-06-16 17:39:59,828 basehttp 2923 123145518489600 "GET /api/placeholder/400/300 HTTP/1.1" 404 4659
+INFO 2025-06-16 18:02:39,208 utils 2923 123145501700096 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 18:02:39,222 basehttp 2923 123145501700096 "POST /api/auth/login/ HTTP/1.1" 200 919
+INFO 2025-06-16 18:04:30,659 autoreload 2923 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 18:04:32,302 autoreload 12136 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 18:04:39,926 autoreload 12136 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 18:04:40,969 autoreload 12166 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 18:05:02,552 autoreload 12166 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 18:05:03,579 autoreload 12204 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 18:05:39,566 autoreload 12204 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 18:05:40,346 autoreload 12243 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 18:05:41,933 autoreload 12243 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 18:05:42,663 autoreload 12257 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 18:05:52,617 autoreload 12257 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 18:05:53,334 autoreload 12282 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 18:05:58,025 autoreload 12282 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 18:05:58,742 autoreload 12302 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 18:06:00,289 autoreload 12302 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 18:06:01,089 autoreload 12317 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 18:06:03,686 autoreload 12317 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 18:06:04,407 autoreload 12330 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 18:07:53,688 utils 12330 123145397329920 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 18:07:53,693 serializers 12330 123145397329920 Final avatar URL for user 3: /media/avatars/20250612_160748_4lkjAls.jpg
+INFO 2025-06-16 18:07:53,768 basehttp 12330 123145397329920 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-16 18:10:54,934 autoreload 12330 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-16 18:10:55,724 autoreload 12570 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-16 18:15:29,525 views 12570 123145488089088 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['Male'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>]}>
+INFO 2025-06-16 18:15:29,525 views 12570 123145488089088 Converted firstName -> first_name: Levi
+INFO 2025-06-16 18:15:29,525 views 12570 123145488089088 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 18:15:29,525 views 12570 123145488089088 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 18:15:29,525 views 12570 123145488089088 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 18:15:29,525 views 12570 123145488089088 Converted gender 'Male' -> 'M'
+INFO 2025-06-16 18:15:29,525 views 12570 123145488089088 Converted country -> country: United Kingdom
+INFO 2025-06-16 18:15:29,525 views 12570 123145488089088 Converted avatar -> avatar: 20250612_160748.jpg
+INFO 2025-06-16 18:15:29,525 views 12570 123145488089088 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>}
+INFO 2025-06-16 18:15:29,652 utils 12570 123145488089088 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-16 18:15:29,657 views 12570 123145488089088 Profile update successful
+INFO 2025-06-16 18:15:29,657 views 12570 123145488089088 Avatar URL in response: http://127.0.0.1:8000/media/avatars/20250612_160748_NlqNFbw.jpg
+INFO 2025-06-16 18:15:29,659 basehttp 12570 123145488089088 "PUT /api/auth/profile/ HTTP/1.1" 200 473
+INFO 2025-06-16 18:15:29,704 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160748_NlqNFbw.jpg HTTP/1.1" 200 2273020
+INFO 2025-06-16 18:34:23,052 views 12570 123145488089088 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['Male'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>]}>
+INFO 2025-06-16 18:34:23,053 views 12570 123145488089088 Converted firstName -> first_name: Levi
+INFO 2025-06-16 18:34:23,053 views 12570 123145488089088 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 18:34:23,053 views 12570 123145488089088 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 18:34:23,053 views 12570 123145488089088 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 18:34:23,053 views 12570 123145488089088 Converted gender 'Male' -> 'M'
+INFO 2025-06-16 18:34:23,053 views 12570 123145488089088 Converted country -> country: United Kingdom
+INFO 2025-06-16 18:34:23,053 views 12570 123145488089088 Converted avatar -> avatar: 20250612_160748.jpg
+INFO 2025-06-16 18:34:23,053 views 12570 123145488089088 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: 20250612_160748.jpg (image/jpeg)>}
+INFO 2025-06-16 18:34:23,094 utils 12570 123145488089088 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-16 18:34:23,096 views 12570 123145488089088 Profile update successful
+INFO 2025-06-16 18:34:23,096 views 12570 123145488089088 Avatar URL in response: http://127.0.0.1:8000/media/avatars/20250612_160748_e2RDJ45.jpg
+INFO 2025-06-16 18:34:23,099 basehttp 12570 123145488089088 "PUT /api/auth/profile/ HTTP/1.1" 200 473
+INFO 2025-06-16 18:34:23,143 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160748_e2RDJ45.jpg HTTP/1.1" 200 2273020
+INFO 2025-06-16 18:34:31,381 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160748_e2RDJ45.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 18:35:02,289 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160748_e2RDJ45.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 18:37:40,350 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160748_e2RDJ45.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 18:38:03,435 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160748_e2RDJ45.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 18:38:24,657 views 12570 123145504878592 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['Male'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: 20250612_160544.jpg (image/jpeg)>]}>
+INFO 2025-06-16 18:38:24,658 views 12570 123145504878592 Converted firstName -> first_name: Levi
+INFO 2025-06-16 18:38:24,658 views 12570 123145504878592 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 18:38:24,658 views 12570 123145504878592 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 18:38:24,658 views 12570 123145504878592 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 18:38:24,658 views 12570 123145504878592 Converted gender 'Male' -> 'M'
+INFO 2025-06-16 18:38:24,658 views 12570 123145504878592 Converted country -> country: United Kingdom
+INFO 2025-06-16 18:38:24,658 views 12570 123145504878592 Converted avatar -> avatar: 20250612_160544.jpg
+INFO 2025-06-16 18:38:24,658 views 12570 123145504878592 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: 20250612_160544.jpg (image/jpeg)>}
+INFO 2025-06-16 18:38:24,680 utils 12570 123145504878592 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-16 18:38:24,682 views 12570 123145504878592 Profile update successful
+INFO 2025-06-16 18:38:24,682 views 12570 123145504878592 Avatar URL in response: http://127.0.0.1:8000/media/avatars/20250612_160544.jpg
+INFO 2025-06-16 18:38:24,693 basehttp 12570 123145504878592 "PUT /api/auth/profile/ HTTP/1.1" 200 465
+INFO 2025-06-16 18:38:24,735 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160544.jpg HTTP/1.1" 200 2866140
+INFO 2025-06-16 18:38:28,894 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160544.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 18:38:33,159 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160544.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 18:38:38,052 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160544.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 18:39:33,204 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160544.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 18:39:46,136 basehttp 12570 123145504878592 "OPTIONS /api/user/library/ HTTP/1.1" 200 0
+INFO 2025-06-16 18:39:46,146 basehttp 12570 123145521668096 "OPTIONS /api/user/library/ HTTP/1.1" 200 0
+WARNING 2025-06-16 18:39:46,173 log 12570 123145504878592 Not Found: /api/user/library/
+WARNING 2025-06-16 18:39:46,173 basehttp 12570 123145504878592 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-16 18:39:46,182 log 12570 123145521668096 Not Found: /api/user/library/
+WARNING 2025-06-16 18:39:46,183 basehttp 12570 123145521668096 "GET /api/user/library/ HTTP/1.1" 404 4641
+INFO 2025-06-16 18:39:48,101 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160544.jpg HTTP/1.1" 304 0
+WARNING 2025-06-16 18:39:48,127 log 12570 123145521668096 Not Found: /api/user/library/
+WARNING 2025-06-16 18:39:48,127 basehttp 12570 123145521668096 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-16 18:39:48,133 log 12570 123145504878592 Not Found: /api/user/library/
+WARNING 2025-06-16 18:39:48,133 basehttp 12570 123145504878592 "GET /api/user/library/ HTTP/1.1" 404 4641
+INFO 2025-06-16 18:40:01,598 basehttp 12570 123145521668096 "OPTIONS /api/user/favorites/ HTTP/1.1" 200 0
+INFO 2025-06-16 18:40:01,598 basehttp 12570 123145504878592 "OPTIONS /api/user/favorites/ HTTP/1.1" 200 0
+WARNING 2025-06-16 18:40:01,606 log 12570 123145504878592 Not Found: /api/user/favorites/
+WARNING 2025-06-16 18:40:01,606 basehttp 12570 123145504878592 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-16 18:40:01,613 log 12570 123145521668096 Not Found: /api/user/favorites/
+WARNING 2025-06-16 18:40:01,614 basehttp 12570 123145521668096 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+INFO 2025-06-16 18:40:03,869 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160544.jpg HTTP/1.1" 304 0
+WARNING 2025-06-16 18:40:03,892 log 12570 123145521668096 Not Found: /api/user/favorites/
+WARNING 2025-06-16 18:40:03,893 basehttp 12570 123145521668096 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-16 18:40:03,898 log 12570 123145504878592 Not Found: /api/user/favorites/
+WARNING 2025-06-16 18:40:03,898 basehttp 12570 123145504878592 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-16 18:46:21,157 log 12570 123145488089088 Not Found: /api/user/favorites/
+WARNING 2025-06-16 18:46:21,157 basehttp 12570 123145488089088 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-16 18:46:21,172 log 12570 123145504878592 Not Found: /api/user/favorites/
+WARNING 2025-06-16 18:46:21,172 basehttp 12570 123145504878592 "GET /api/user/favorites/ HTTP/1.1" 404 4647
+WARNING 2025-06-16 18:46:24,251 log 12570 123145504878592 Not Found: /api/user/library/
+WARNING 2025-06-16 18:46:24,252 basehttp 12570 123145504878592 "GET /api/user/library/ HTTP/1.1" 404 4641
+WARNING 2025-06-16 18:46:24,261 log 12570 123145488089088 Not Found: /api/user/library/
+WARNING 2025-06-16 18:46:24,262 basehttp 12570 123145488089088 "GET /api/user/library/ HTTP/1.1" 404 4641
+INFO 2025-06-16 18:46:27,485 basehttp 12570 123145521668096 "GET /media/avatars/20250612_160544.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 18:53:47,928 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160544.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 19:05:10,752 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160544.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 19:08:20,967 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160544.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 19:18:01,796 utils 12570 123145488089088 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 19:18:01,807 basehttp 12570 123145488089088 "POST /api/auth/login/ HTTP/1.1" 200 911
+INFO 2025-06-16 19:21:25,973 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160544.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 19:26:35,927 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160544.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 19:32:03,705 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160544.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 19:39:53,076 basehttp 12570 123145488089088 "GET /media/avatars/20250612_160544.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 19:40:52,144 utils 12570 123145504878592 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 19:40:52,153 basehttp 12570 123145504878592 "POST /api/auth/login/ HTTP/1.1" 200 911
+INFO 2025-06-16 19:41:10,663 utils 12570 123145504878592 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 19:41:10,669 basehttp 12570 123145504878592 "POST /api/auth/login/ HTTP/1.1" 200 911
+INFO 2025-06-16 19:42:15,339 utils 12570 123145504878592 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 19:42:15,346 basehttp 12570 123145504878592 "POST /api/auth/login/ HTTP/1.1" 200 911
+INFO 2025-06-16 19:44:09,072 utils 12570 123145504878592 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 19:44:09,078 basehttp 12570 123145504878592 "POST /api/auth/login/ HTTP/1.1" 200 911
+INFO 2025-06-16 19:50:01,849 utils 12570 123145488089088 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 19:50:01,854 basehttp 12570 123145488089088 "POST /api/auth/login/ HTTP/1.1" 200 911
+INFO 2025-06-16 19:51:54,549 views 12570 123145488089088 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: WhatsApp Image 2022-12-18.jpg (image/jpeg)>]}>
+INFO 2025-06-16 19:51:54,551 views 12570 123145488089088 Converted firstName -> first_name: Levi
+INFO 2025-06-16 19:51:54,551 views 12570 123145488089088 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 19:51:54,551 views 12570 123145488089088 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 19:51:54,551 views 12570 123145488089088 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 19:51:54,551 views 12570 123145488089088 Converted gender 'M' -> 'M'
+INFO 2025-06-16 19:51:54,551 views 12570 123145488089088 Converted country -> country: United Kingdom
+INFO 2025-06-16 19:51:54,551 views 12570 123145488089088 Converted avatar -> avatar: WhatsApp Image 2022-12-18.jpg
+INFO 2025-06-16 19:51:54,551 views 12570 123145488089088 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: WhatsApp Image 2022-12-18.jpg (image/jpeg)>}
+INFO 2025-06-16 19:51:54,585 utils 12570 123145488089088 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-16 19:51:54,590 views 12570 123145488089088 Profile update successful
+INFO 2025-06-16 19:51:54,590 views 12570 123145488089088 Avatar URL in response: http://127.0.0.1:8000/media/avatars/WhatsApp_Image_2022-12-18.jpg
+INFO 2025-06-16 19:51:54,592 basehttp 12570 123145488089088 "PUT /api/auth/profile/ HTTP/1.1" 200 475
+INFO 2025-06-16 19:51:54,637 basehttp 12570 123145488089088 "GET /media/avatars/WhatsApp_Image_2022-12-18.jpg HTTP/1.1" 200 70864
+INFO 2025-06-16 19:52:18,281 basehttp 12570 123145488089088 "GET /media/avatars/WhatsApp_Image_2022-12-18.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 19:53:20,652 utils 12570 123145504878592 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 19:53:20,655 basehttp 12570 123145504878592 "POST /api/auth/login/ HTTP/1.1" 200 921
+INFO 2025-06-16 19:56:50,675 utils 12570 123145504878592 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 19:56:50,677 basehttp 12570 123145504878592 "POST /api/auth/login/ HTTP/1.1" 200 921
+INFO 2025-06-16 19:57:00,144 views 12570 123145504878592 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16']}>
+INFO 2025-06-16 19:57:00,144 views 12570 123145504878592 Converted firstName -> first_name: Levi
+INFO 2025-06-16 19:57:00,144 views 12570 123145504878592 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 19:57:00,144 views 12570 123145504878592 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 19:57:00,144 views 12570 123145504878592 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 19:57:00,144 views 12570 123145504878592 Converted gender 'M' -> 'M'
+INFO 2025-06-16 19:57:00,144 views 12570 123145504878592 Converted country -> country: United Kingdom
+INFO 2025-06-16 19:57:00,144 views 12570 123145504878592 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom'}
+INFO 2025-06-16 19:57:00,159 utils 12570 123145504878592 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-16 19:57:00,161 views 12570 123145504878592 Profile update successful
+INFO 2025-06-16 19:57:00,161 views 12570 123145504878592 Avatar URL in response: http://127.0.0.1:8000/media/avatars/WhatsApp_Image_2022-12-18.jpg
+INFO 2025-06-16 19:57:00,161 basehttp 12570 123145504878592 "PUT /api/auth/profile/ HTTP/1.1" 200 475
+INFO 2025-06-16 19:57:00,203 basehttp 12570 123145488089088 "GET /media/avatars/WhatsApp_Image_2022-12-18.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 19:57:37,208 utils 12570 123145504878592 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 19:57:37,210 basehttp 12570 123145504878592 "POST /api/auth/login/ HTTP/1.1" 200 921
+INFO 2025-06-16 19:57:56,007 utils 12570 123145504878592 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-16 19:57:56,009 basehttp 12570 123145504878592 "POST /api/auth/login/ HTTP/1.1" 200 921
+INFO 2025-06-16 19:59:05,583 views 12570 123145504878592 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: WhatsApp Image 2022-12-18.jpg (image/jpeg)>]}>
+INFO 2025-06-16 19:59:05,583 views 12570 123145504878592 Converted firstName -> first_name: Levi
+INFO 2025-06-16 19:59:05,583 views 12570 123145504878592 Converted lastName -> last_name: Udeh
+INFO 2025-06-16 19:59:05,583 views 12570 123145504878592 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-16 19:59:05,583 views 12570 123145504878592 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-16 19:59:05,583 views 12570 123145504878592 Converted gender 'M' -> 'M'
+INFO 2025-06-16 19:59:05,583 views 12570 123145504878592 Converted country -> country: United Kingdom
+INFO 2025-06-16 19:59:05,584 views 12570 123145504878592 Converted avatar -> avatar: WhatsApp Image 2022-12-18.jpg
+INFO 2025-06-16 19:59:05,584 views 12570 123145504878592 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: WhatsApp Image 2022-12-18.jpg (image/jpeg)>}
+INFO 2025-06-16 19:59:05,596 utils 12570 123145504878592 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-16 19:59:05,598 views 12570 123145504878592 Profile update successful
+INFO 2025-06-16 19:59:05,598 views 12570 123145504878592 Avatar URL in response: http://127.0.0.1:8000/media/avatars/WhatsApp_Image_2022-12-18_pZnU1sv.jpg
+INFO 2025-06-16 19:59:05,598 basehttp 12570 123145504878592 "PUT /api/auth/profile/ HTTP/1.1" 200 483
+INFO 2025-06-16 19:59:05,642 basehttp 12570 123145488089088 "GET /media/avatars/WhatsApp_Image_2022-12-18_pZnU1sv.jpg HTTP/1.1" 200 70864
+INFO 2025-06-16 19:59:12,203 basehttp 12570 123145488089088 "GET /media/avatars/WhatsApp_Image_2022-12-18_pZnU1sv.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 20:01:13,131 basehttp 12570 123145488089088 "GET /media/avatars/WhatsApp_Image_2022-12-18_pZnU1sv.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 20:04:10,306 basehttp 12570 123145488089088 "GET /media/avatars/WhatsApp_Image_2022-12-18_pZnU1sv.jpg HTTP/1.1" 304 0
+INFO 2025-06-16 20:44:00,235 basehttp 12570 123145488089088 "GET /media/avatars/WhatsApp_Image_2022-12-18_pZnU1sv.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 16:11:06,704 basehttp 12570 123145488089088 "GET /media/avatars/WhatsApp_Image_2022-12-18_pZnU1sv.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 16:13:06,956 utils 12570 123145504878592 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 16:13:06,976 basehttp 12570 123145504878592 "POST /api/auth/login/ HTTP/1.1" 200 929
+INFO 2025-06-17 16:17:01,941 utils 12570 123145488089088 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 16:17:01,945 basehttp 12570 123145488089088 "POST /api/auth/login/ HTTP/1.1" 200 929
+INFO 2025-06-17 16:19:59,765 utils 12570 123145488089088 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 16:19:59,769 basehttp 12570 123145488089088 "POST /api/auth/login/ HTTP/1.1" 200 929
+INFO 2025-06-17 16:46:52,759 utils 12570 123145488089088 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 16:46:52,769 basehttp 12570 123145488089088 "POST /api/auth/login/ HTTP/1.1" 200 929
+INFO 2025-06-17 16:48:08,178 utils 12570 123145488089088 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 16:48:08,183 basehttp 12570 123145488089088 "POST /api/auth/login/ HTTP/1.1" 200 929
+INFO 2025-06-17 16:48:56,751 utils 12570 123145488089088 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 16:48:56,757 basehttp 12570 123145488089088 "POST /api/auth/login/ HTTP/1.1" 200 929
+INFO 2025-06-17 16:49:17,196 views 12570 123145488089088 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: 133870595447848476.jpg (image/jpeg)>]}>
+INFO 2025-06-17 16:49:17,197 views 12570 123145488089088 Converted firstName -> first_name: Levi
+INFO 2025-06-17 16:49:17,197 views 12570 123145488089088 Converted lastName -> last_name: Udeh
+INFO 2025-06-17 16:49:17,197 views 12570 123145488089088 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-17 16:49:17,197 views 12570 123145488089088 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-17 16:49:17,197 views 12570 123145488089088 Converted gender 'M' -> 'M'
+INFO 2025-06-17 16:49:17,197 views 12570 123145488089088 Converted country -> country: United Kingdom
+INFO 2025-06-17 16:49:17,197 views 12570 123145488089088 Converted avatar -> avatar: 133870595447848476.jpg
+INFO 2025-06-17 16:49:17,197 views 12570 123145488089088 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: 133870595447848476.jpg (image/jpeg)>}
+INFO 2025-06-17 16:49:17,242 utils 12570 123145488089088 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-17 16:49:17,249 views 12570 123145488089088 Profile update successful
+INFO 2025-06-17 16:49:17,249 views 12570 123145488089088 Avatar URL in response: http://127.0.0.1:8000/media/avatars/133870595447848476.jpg
+INFO 2025-06-17 16:49:17,250 basehttp 12570 123145488089088 "PUT /api/auth/profile/ HTTP/1.1" 200 468
+INFO 2025-06-17 16:49:17,295 basehttp 12570 123145488089088 "GET /media/avatars/133870595447848476.jpg HTTP/1.1" 200 1834250
+INFO 2025-06-17 16:49:22,399 basehttp 12570 123145488089088 "GET /media/avatars/133870595447848476.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 16:49:30,991 basehttp 12570 123145488089088 "GET /media/avatars/133870595447848476.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 16:49:37,951 basehttp 12570 123145488089088 "GET /media/avatars/133870595447848476.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 16:54:00,510 basehttp 12570 123145488089088 "GET /media/avatars/133870595447848476.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 16:54:46,473 basehttp 12570 123145488089088 "GET /media/avatars/133870595447848476.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 16:57:34,459 basehttp 12570 123145488089088 "GET /media/avatars/133870595447848476.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 16:58:15,328 utils 12570 123145488089088 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 16:58:15,330 basehttp 12570 123145488089088 "POST /api/auth/login/ HTTP/1.1" 200 914
+INFO 2025-06-17 16:59:06,356 utils 12570 123145488089088 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 16:59:06,358 basehttp 12570 123145488089088 "POST /api/auth/login/ HTTP/1.1" 200 914
+INFO 2025-06-17 17:03:05,622 utils 12570 123145488089088 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:03:05,624 basehttp 12570 123145488089088 "POST /api/auth/login/ HTTP/1.1" 200 914
+INFO 2025-06-17 17:03:14,206 views 12570 123145488089088 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: 133870595447848476.jpg (image/jpeg)>]}>
+INFO 2025-06-17 17:03:14,206 views 12570 123145488089088 Converted firstName -> first_name: Levi
+INFO 2025-06-17 17:03:14,206 views 12570 123145488089088 Converted lastName -> last_name: Udeh
+INFO 2025-06-17 17:03:14,206 views 12570 123145488089088 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-17 17:03:14,206 views 12570 123145488089088 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-17 17:03:14,206 views 12570 123145488089088 Converted gender 'M' -> 'M'
+INFO 2025-06-17 17:03:14,207 views 12570 123145488089088 Converted country -> country: United Kingdom
+INFO 2025-06-17 17:03:14,207 views 12570 123145488089088 Converted avatar -> avatar: 133870595447848476.jpg
+INFO 2025-06-17 17:03:14,207 views 12570 123145488089088 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: 133870595447848476.jpg (image/jpeg)>}
+INFO 2025-06-17 17:03:14,223 utils 12570 123145488089088 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-17 17:03:14,225 views 12570 123145488089088 Profile update successful
+INFO 2025-06-17 17:03:14,225 views 12570 123145488089088 Avatar URL in response: http://127.0.0.1:8000/media/avatars/133870595447848476_AER67TU.jpg
+INFO 2025-06-17 17:03:14,225 basehttp 12570 123145488089088 "PUT /api/auth/profile/ HTTP/1.1" 200 476
+INFO 2025-06-17 17:03:14,271 basehttp 12570 123145488089088 "GET /media/avatars/133870595447848476_AER67TU.jpg HTTP/1.1" 200 1834250
+INFO 2025-06-17 17:03:25,942 basehttp 12570 123145488089088 "GET /media/avatars/133870595447848476_AER67TU.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 17:03:30,153 basehttp 12570 123145488089088 "GET /media/avatars/133870595447848476_AER67TU.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 17:03:58,863 utils 12570 123145504878592 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:03:58,865 basehttp 12570 123145504878592 "POST /api/auth/login/ HTTP/1.1" 200 922
+INFO 2025-06-17 17:04:37,262 utils 12570 123145504878592 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:04:37,264 basehttp 12570 123145504878592 "POST /api/auth/login/ HTTP/1.1" 200 922
+INFO 2025-06-17 17:05:10,098 utils 12570 123145504878592 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:05:10,101 basehttp 12570 123145504878592 "POST /api/auth/login/ HTTP/1.1" 200 922
+INFO 2025-06-17 17:05:31,906 views 12570 123145504878592 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: 133870595447848476.jpg (image/jpeg)>]}>
+INFO 2025-06-17 17:05:31,906 views 12570 123145504878592 Converted firstName -> first_name: Levi
+INFO 2025-06-17 17:05:31,906 views 12570 123145504878592 Converted lastName -> last_name: Udeh
+INFO 2025-06-17 17:05:31,906 views 12570 123145504878592 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-17 17:05:31,906 views 12570 123145504878592 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-17 17:05:31,906 views 12570 123145504878592 Converted gender 'M' -> 'M'
+INFO 2025-06-17 17:05:31,906 views 12570 123145504878592 Converted country -> country: United Kingdom
+INFO 2025-06-17 17:05:31,906 views 12570 123145504878592 Converted avatar -> avatar: 133870595447848476.jpg
+INFO 2025-06-17 17:05:31,906 views 12570 123145504878592 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: 133870595447848476.jpg (image/jpeg)>}
+INFO 2025-06-17 17:05:31,916 utils 12570 123145504878592 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-17 17:05:31,917 views 12570 123145504878592 Profile update successful
+INFO 2025-06-17 17:05:31,917 views 12570 123145504878592 Avatar URL in response: http://127.0.0.1:8000/media/avatars/133870595447848476_NV2TbGf.jpg
+INFO 2025-06-17 17:05:31,918 basehttp 12570 123145504878592 "PUT /api/auth/profile/ HTTP/1.1" 200 476
+INFO 2025-06-17 17:05:31,974 basehttp 12570 123145488089088 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 200 1834250
+INFO 2025-06-17 17:05:37,993 basehttp 12570 123145488089088 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 17:08:46,321 basehttp 12570 123145488089088 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 17:16:12,480 autoreload 12570 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/views.py changed, reloading.
+INFO 2025-06-17 17:16:14,445 autoreload 55090 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-17 17:16:27,614 autoreload 55090 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/views.py changed, reloading.
+INFO 2025-06-17 17:16:28,400 autoreload 55120 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-17 17:17:19,777 utils 55120 123145484148736 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:17:19,880 basehttp 55120 123145484148736 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 17:17:19,951 basehttp 55120 123145484148736 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 17:17:45,195 utils 55120 123145500938240 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:17:45,198 basehttp 55120 123145500938240 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 17:18:32,230 utils 55120 123145500938240 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:18:32,232 basehttp 55120 123145500938240 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 17:18:32,301 basehttp 55120 123145484148736 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 17:20:56,402 utils 55120 123145500938240 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:20:56,405 basehttp 55120 123145500938240 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 17:20:56,476 basehttp 55120 123145484148736 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 17:21:33,691 utils 55120 123145500938240 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:21:33,694 basehttp 55120 123145500938240 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 17:22:34,826 utils 55120 123145500938240 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:22:34,828 basehttp 55120 123145500938240 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 17:22:34,887 basehttp 55120 123145484148736 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 17:32:10,438 utils 55120 123145484148736 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:32:10,448 basehttp 55120 123145484148736 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 17:32:10,536 basehttp 55120 123145484148736 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 17:37:06,369 utils 55120 123145500938240 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:37:06,376 basehttp 55120 123145500938240 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 17:37:06,438 basehttp 55120 123145484148736 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 17:39:23,644 utils 55120 123145500938240 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:39:23,649 basehttp 55120 123145500938240 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 17:40:09,229 utils 55120 123145500938240 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:40:09,234 basehttp 55120 123145500938240 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 17:40:59,141 utils 55120 123145500938240 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:40:59,163 basehttp 55120 123145500938240 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 17:40:59,257 basehttp 55120 123145484148736 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 17:41:27,237 utils 55120 123145500938240 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:41:27,243 basehttp 55120 123145500938240 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 17:42:54,371 utils 55120 123145500938240 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:42:54,374 basehttp 55120 123145500938240 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 17:46:47,846 utils 55120 123145484148736 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:46:47,858 basehttp 55120 123145484148736 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 17:46:47,931 basehttp 55120 123145484148736 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 17:53:47,534 utils 55120 123145484148736 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 17:53:47,559 basehttp 55120 123145484148736 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 17:53:47,640 basehttp 55120 123145484148736 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 18:55:24,158 utils 55120 123145484148736 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 18:55:24,168 basehttp 55120 123145484148736 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 18:55:24,226 basehttp 55120 123145484148736 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 19:02:10,945 utils 55120 123145484148736 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 19:02:10,952 basehttp 55120 123145484148736 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 19:14:12,422 utils 55120 123145484148736 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 19:14:12,426 basehttp 55120 123145484148736 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 19:14:12,495 basehttp 55120 123145484148736 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 19:24:08,078 utils 55120 123145484148736 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 19:24:08,081 basehttp 55120 123145484148736 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 19:24:29,235 utils 55120 123145484148736 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 19:24:29,239 basehttp 55120 123145484148736 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 19:27:05,140 basehttp 55120 123145484148736 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 304 0
+INFO 2025-06-17 19:37:24,151 utils 55120 123145484148736 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 19:37:24,161 basehttp 55120 123145484148736 "POST /api/auth/login/ HTTP/1.1" 200 943
+INFO 2025-06-17 20:02:45,308 autoreload 55120 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/models.py changed, reloading.
+INFO 2025-06-17 20:02:46,997 autoreload 62831 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-17 20:02:58,177 autoreload 62831 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/models.py changed, reloading.
+INFO 2025-06-17 20:02:59,021 autoreload 62872 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-17 20:04:33,915 autoreload 62872 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-17 20:04:35,088 autoreload 62983 140704484867520 Watching for file changes with StatReloader
+WARNING 2025-06-17 20:06:34,348 log 62983 123145495617536 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:06:34,349 basehttp 62983 123145495617536 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:06:34,350 basehttp 62983 123145495617536 - Broken pipe from ('127.0.0.1', 55112)
+WARNING 2025-06-17 20:06:58,310 log 62983 123145495617536 Unauthorized: /api/auth/profile/
+WARNING 2025-06-17 20:06:58,311 basehttp 62983 123145495617536 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-17 20:07:11,603 log 62983 123145495617536 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:07:11,604 basehttp 62983 123145495617536 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:07:11,604 basehttp 62983 123145495617536 - Broken pipe from ('127.0.0.1', 55267)
+WARNING 2025-06-17 20:07:49,600 log 62983 123145495617536 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:07:49,601 basehttp 62983 123145495617536 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:07:49,601 basehttp 62983 123145495617536 - Broken pipe from ('127.0.0.1', 55431)
+WARNING 2025-06-17 20:08:01,712 log 62983 123145495617536 Unauthorized: /api/auth/profile/
+WARNING 2025-06-17 20:08:01,716 basehttp 62983 123145495617536 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-17 20:08:10,859 log 62983 123145495617536 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:08:10,860 basehttp 62983 123145495617536 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:08:10,860 basehttp 62983 123145495617536 - Broken pipe from ('127.0.0.1', 55533)
+INFO 2025-06-17 20:09:36,953 autoreload 62983 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-17 20:09:38,169 autoreload 63470 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-17 20:09:40,876 autoreload 63470 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-17 20:09:41,761 autoreload 63493 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-17 20:09:52,660 autoreload 63493 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/models.py changed, reloading.
+INFO 2025-06-17 20:09:53,502 autoreload 63524 140704484867520 Watching for file changes with StatReloader
+WARNING 2025-06-17 20:10:29,428 log 63524 123145341157376 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:10:29,429 basehttp 63524 123145341157376 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:10:29,429 basehttp 63524 123145341157376 - Broken pipe from ('127.0.0.1', 56155)
+WARNING 2025-06-17 20:10:38,248 log 63524 123145341157376 Unauthorized: /api/auth/profile/
+WARNING 2025-06-17 20:10:38,254 basehttp 63524 123145341157376 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-17 20:11:48,848 log 63524 123145341157376 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:11:48,849 basehttp 63524 123145341157376 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:11:48,850 basehttp 63524 123145341157376 - Broken pipe from ('127.0.0.1', 56487)
+WARNING 2025-06-17 20:12:13,197 log 63524 123145341157376 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:12:13,198 basehttp 63524 123145341157376 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:12:13,198 basehttp 63524 123145341157376 - Broken pipe from ('127.0.0.1', 56593)
+WARNING 2025-06-17 20:12:21,240 log 63524 123145341157376 Unauthorized: /api/auth/profile/
+WARNING 2025-06-17 20:12:21,241 basehttp 63524 123145341157376 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-17 20:12:29,843 log 63524 123145341157376 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:12:29,843 basehttp 63524 123145341157376 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:12:29,844 basehttp 63524 123145341157376 - Broken pipe from ('127.0.0.1', 56670)
+WARNING 2025-06-17 20:14:31,877 log 63524 123145341157376 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:14:31,877 basehttp 63524 123145341157376 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:14:31,878 basehttp 63524 123145341157376 - Broken pipe from ('127.0.0.1', 57202)
+WARNING 2025-06-17 20:14:42,955 log 63524 123145341157376 Unauthorized: /api/auth/profile/
+WARNING 2025-06-17 20:14:42,956 basehttp 63524 123145341157376 "PUT /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-06-17 20:15:23,865 log 63524 123145341157376 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:15:23,865 basehttp 63524 123145341157376 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:15:23,866 basehttp 63524 123145341157376 - Broken pipe from ('127.0.0.1', 57419)
+WARNING 2025-06-17 20:15:49,760 log 63524 123145341157376 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:15:49,760 basehttp 63524 123145341157376 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:15:49,761 basehttp 63524 123145341157376 - Broken pipe from ('127.0.0.1', 57534)
+WARNING 2025-06-17 20:15:59,264 log 63524 123145341157376 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:15:59,265 basehttp 63524 123145341157376 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:15:59,265 basehttp 63524 123145341157376 - Broken pipe from ('127.0.0.1', 57583)
+INFO 2025-06-17 20:16:18,339 autoreload 64123 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-17 20:17:36,478 utils 64123 123145514872832 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-17 20:17:36,541 basehttp 64123 123145514872832 "POST /api/auth/login/ HTTP/1.1" 200 943
+WARNING 2025-06-17 20:17:36,637 log 64123 123145514872832 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:17:36,638 basehttp 64123 123145514872832 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:17:36,655 basehttp 64123 123145514872832 - Broken pipe from ('127.0.0.1', 58011)
+WARNING 2025-06-17 20:17:39,295 log 64123 123145514872832 Not Found: /media/avatars/133870595447848476_NV2TbGf.jpg
+WARNING 2025-06-17 20:17:39,295 basehttp 64123 123145514872832 "GET /media/avatars/133870595447848476_NV2TbGf.jpg HTTP/1.1" 404 4804
+INFO 2025-06-17 20:17:39,296 basehttp 64123 123145514872832 - Broken pipe from ('127.0.0.1', 58027)
+WARNING 2025-06-17 20:17:52,495 log 64123 123145514872832 Unauthorized: /api/auth/profile/
+WARNING 2025-06-17 20:17:52,496 basehttp 64123 123145514872832 "PUT /api/auth/profile/ HTTP/1.1" 401 183

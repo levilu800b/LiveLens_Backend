@@ -3,8 +3,6 @@ profile_pictures
 .idea
 .coverage
 
-# .gitignore (automatically excludes these)
-.env                    # Environment variables
 media/                  # Local media files (if any)
 uploads/                # Upload directories
 *.mp4                   # Video files
@@ -15,3 +13,5 @@ uploads/                # Upload directories
 *.gif                   # Image files
 reports/                # Generated reports
 logs/                   # Log files
+media/avatars/         # Avatar images
+media/uploads/        # User uploads

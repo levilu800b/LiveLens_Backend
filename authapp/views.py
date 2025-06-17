@@ -101,7 +101,7 @@ class LoginView(APIView):
             
             return Response({
                 'message': 'Login successful.',
-                'user': UserProfileSerializer(user).data,
+                'user': UserProfileSerializer(user, context={'request': request}).data,  # ✅ ADD request context!
                 'access_token': str(access_token),
                 'refresh_token': str(refresh)
             }, status=status.HTTP_200_OK)
@@ -129,7 +129,7 @@ class GoogleLoginView(APIView):
             
             return Response({
                 'message': 'Google login successful.',
-                'user': UserProfileSerializer(user).data,
+                'user': UserProfileSerializer(user, context={'request': request}).data,  # ✅ ADD request context!
                 'access_token': str(access_token),
                 'refresh_token': str(refresh)
             }, status=status.HTTP_200_OK)
