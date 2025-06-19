@@ -1,8 +1,11 @@
 # type: ignore
 # authapp/urls.py
+
+
 from django.urls import path
 from rest_framework_simplejwt.views import TokenRefreshView
 from . import views
+from . import user_library_views
 
 app_name = 'authapp'
 
@@ -29,5 +32,9 @@ urlpatterns = [
     # User stats and dashboard
     path('stats/', views.UserStatsView.as_view(), name='user_stats'),
     path('dashboard/', views.user_dashboard, name='user_dashboard'),
+    
+    # User library and favorites endpoints
+    path('library/', user_library_views.user_library, name='user_library'),
+    path('favorites/', user_library_views.user_favorites, name='user_favorites'),
 ]
 

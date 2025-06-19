@@ -1,4 +1,4 @@
-# app/urls.py - Complete URL configuration
+# app/urls.py - Updated URL configuration with user library endpoints
 # type: ignore
 
 from django.contrib import admin
@@ -25,6 +25,9 @@ urlpatterns = [
     path('api/auth/', include('authapp.urls')),
     path('api/password-reset/', include('password_reset.urls')),
     
+    # User-specific APIs (library, favorites, etc.)
+    path('api/user/', include('authapp.urls')),
+    
     # Content APIs
     path('api/stories/', include('stories.urls')),
     path('api/media/', include('media_content.urls')),
@@ -46,4 +49,3 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    
