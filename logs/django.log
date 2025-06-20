@@ -5616,3 +5616,829 @@ INFO 2025-06-19 17:56:09,693 basehttp 4191 123145484525568 "GET /api/user/librar
 INFO 2025-06-19 17:56:09,722 basehttp 4191 123145501315072 "GET /api/user/library/ HTTP/1.1" 200 320
 INFO 2025-06-19 17:57:13,362 basehttp 4191 123145501315072 "GET /api/user/favorites/ HTTP/1.1" 200 231
 INFO 2025-06-19 17:57:13,387 basehttp 4191 123145484525568 "GET /api/user/favorites/ HTTP/1.1" 200 231
+INFO 2025-06-19 17:59:42,819 basehttp 4191 123145484525568 "GET /api/user/favorites/ HTTP/1.1" 200 231
+INFO 2025-06-19 17:59:42,835 basehttp 4191 123145501315072 "GET /api/user/favorites/ HTTP/1.1" 200 231
+WARNING 2025-06-19 18:56:42,184 log 4191 123145484525568 Not Found: /api/placeholder/600/400
+WARNING 2025-06-19 18:56:42,186 log 4191 123145501315072 Not Found: /api/placeholder/400/300
+WARNING 2025-06-19 18:56:42,187 basehttp 4191 123145484525568 "GET /api/placeholder/600/400 HTTP/1.1" 404 4811
+WARNING 2025-06-19 18:56:42,187 basehttp 4191 123145501315072 "GET /api/placeholder/400/300 HTTP/1.1" 404 4811
+WARNING 2025-06-19 18:58:45,851 log 4191 123145484525568 Not Found: /api/placeholder/600/400
+WARNING 2025-06-19 18:58:45,855 log 4191 123145501315072 Not Found: /api/placeholder/400/300
+WARNING 2025-06-19 18:58:45,856 basehttp 4191 123145484525568 "GET /api/placeholder/600/400 HTTP/1.1" 404 4811
+WARNING 2025-06-19 18:58:45,856 basehttp 4191 123145501315072 "GET /api/placeholder/400/300 HTTP/1.1" 404 4811
+INFO 2025-06-19 18:59:17,827 basehttp 4191 123145484525568 "GET /media/avatars/DSC00392.JPG HTTP/1.1" 304 0
+WARNING 2025-06-19 18:59:20,074 log 4191 123145501315072 Not Found: /api/placeholder/600/400
+WARNING 2025-06-19 18:59:20,077 basehttp 4191 123145501315072 "GET /api/placeholder/600/400 HTTP/1.1" 404 4811
+WARNING 2025-06-19 18:59:20,085 log 4191 123145518104576 Not Found: /api/placeholder/400/300
+WARNING 2025-06-19 18:59:20,085 basehttp 4191 123145518104576 "GET /api/placeholder/400/300 HTTP/1.1" 404 4811
+INFO 2025-06-20 03:54:40,238 basehttp 4191 123145484525568 "GET /media/avatars/DSC00392.JPG HTTP/1.1" 304 0
+WARNING 2025-06-20 03:54:43,543 log 4191 123145518104576 Not Found: /api/placeholder/400/300
+WARNING 2025-06-20 03:54:43,543 log 4191 123145501315072 Not Found: /api/placeholder/600/400
+WARNING 2025-06-20 03:54:43,560 basehttp 4191 123145518104576 "GET /api/placeholder/400/300 HTTP/1.1" 404 4811
+WARNING 2025-06-20 03:54:43,561 basehttp 4191 123145501315072 "GET /api/placeholder/600/400 HTTP/1.1" 404 4811
+WARNING 2025-06-20 05:16:26,239 log 4191 123145484525568 Not Found: /api/placeholder/600/400
+WARNING 2025-06-20 05:16:26,244 log 4191 123145501315072 Not Found: /api/placeholder/400/300
+WARNING 2025-06-20 05:16:26,244 basehttp 4191 123145501315072 "GET /api/placeholder/400/300 HTTP/1.1" 404 4811
+WARNING 2025-06-20 05:16:26,244 basehttp 4191 123145484525568 "GET /api/placeholder/600/400 HTTP/1.1" 404 4811
+WARNING 2025-06-20 08:24:35,208 log 4191 123145484525568 Not Found: /api/placeholder/600/400
+WARNING 2025-06-20 08:24:35,215 log 4191 123145501315072 Not Found: /api/placeholder/400/300
+WARNING 2025-06-20 08:24:35,216 basehttp 4191 123145484525568 "GET /api/placeholder/600/400 HTTP/1.1" 404 4811
+WARNING 2025-06-20 08:24:35,217 basehttp 4191 123145501315072 "GET /api/placeholder/400/300 HTTP/1.1" 404 4811
+WARNING 2025-06-20 08:55:10,367 log 4191 123145501315072 Not Found: /api/placeholder/400/300
+WARNING 2025-06-20 08:55:10,372 log 4191 123145484525568 Not Found: /api/placeholder/600/400
+WARNING 2025-06-20 08:55:10,373 basehttp 4191 123145484525568 "GET /api/placeholder/600/400 HTTP/1.1" 404 4811
+WARNING 2025-06-20 08:55:10,373 basehttp 4191 123145501315072 "GET /api/placeholder/400/300 HTTP/1.1" 404 4811
+INFO 2025-06-20 11:40:55,143 basehttp 4191 123145484525568 "GET /media/avatars/DSC00392.JPG HTTP/1.1" 304 0
+WARNING 2025-06-20 11:40:56,219 log 4191 123145518104576 Not Found: /api/placeholder/400/300
+WARNING 2025-06-20 11:40:56,220 log 4191 123145501315072 Not Found: /api/placeholder/600/400
+WARNING 2025-06-20 11:40:56,222 basehttp 4191 123145501315072 "GET /api/placeholder/600/400 HTTP/1.1" 404 4811
+WARNING 2025-06-20 11:40:56,222 basehttp 4191 123145518104576 "GET /api/placeholder/400/300 HTTP/1.1" 404 4811
+WARNING 2025-06-20 11:41:02,341 log 4191 123145501315072 Unauthorized: /api/user/library/
+WARNING 2025-06-20 11:41:02,342 basehttp 4191 123145501315072 "GET /api/user/library/ HTTP/1.1" 401 183
+WARNING 2025-06-20 11:41:02,345 log 4191 123145518104576 Unauthorized: /api/user/library/
+WARNING 2025-06-20 11:41:02,346 basehttp 4191 123145518104576 "GET /api/user/library/ HTTP/1.1" 401 183
+INFO 2025-06-20 11:41:21,301 basehttp 4191 123145518104576 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+ERROR 2025-06-20 11:41:22,231 utils 4191 123145518104576 Failed to log user activity: (1054, "Unknown column 'extra_data' in 'field list'")
+INFO 2025-06-20 11:41:22,251 basehttp 4191 123145518104576 "POST /api/auth/login/ HTTP/1.1" 200 925
+INFO 2025-06-20 11:41:22,493 basehttp 4191 123145518104576 "GET /api/user/library/ HTTP/1.1" 200 320
+INFO 2025-06-20 11:41:22,527 basehttp 4191 123145501315072 "GET /api/user/library/ HTTP/1.1" 200 320
+INFO 2025-06-20 11:41:29,075 basehttp 4191 123145501315072 "GET /api/user/library/ HTTP/1.1" 200 320
+INFO 2025-06-20 11:41:29,119 basehttp 4191 123145518104576 "GET /api/user/library/ HTTP/1.1" 200 320
+INFO 2025-06-20 11:41:31,079 basehttp 4191 123145518104576 "GET /api/user/library/ HTTP/1.1" 200 320
+INFO 2025-06-20 11:41:31,119 basehttp 4191 123145501315072 "GET /api/user/library/ HTTP/1.1" 200 320
+INFO 2025-06-20 11:41:39,204 basehttp 4191 123145501315072 "GET /api/user/favorites/ HTTP/1.1" 200 231
+INFO 2025-06-20 11:41:39,219 basehttp 4191 123145518104576 "GET /api/user/favorites/ HTTP/1.1" 200 231
+INFO 2025-06-20 11:41:41,887 basehttp 4191 123145518104576 "GET /api/user/favorites/ HTTP/1.1" 200 231
+INFO 2025-06-20 11:41:41,896 basehttp 4191 123145501315072 "GET /api/user/favorites/ HTTP/1.1" 200 231
+INFO 2025-06-20 12:16:00,753 autoreload 29687 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-20 12:16:36,119 basehttp 29687 123145426718720 "GET /media/avatars/DSC00392.JPG HTTP/1.1" 200 4751360
+INFO 2025-06-20 12:16:44,948 basehttp 29687 123145443508224 "GET /admin/authapp/user/ HTTP/1.1" 302 0
+INFO 2025-06-20 12:16:44,982 basehttp 29687 123145443508224 "GET /admin/login/?next=/admin/authapp/user/ HTTP/1.1" 200 4209
+INFO 2025-06-20 12:16:45,103 basehttp 29687 123145460297728 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:45,104 basehttp 29687 123145443508224 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:45,104 basehttp 29687 123145493876736 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:45,105 basehttp 29687 123145477087232 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:45,107 basehttp 29687 123145510666240 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:45,108 basehttp 29687 123145527455744 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:45,232 basehttp 29687 123145527455744 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:45,243 basehttp 29687 123145544245248 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:45,290 basehttp 29687 123145544245248 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,648 basehttp 29687 123145527455744 "POST /admin/login/?next=/admin/authapp/user/ HTTP/1.1" 302 0
+INFO 2025-06-20 12:16:55,716 basehttp 29687 123145527455744 "GET /admin/authapp/user/ HTTP/1.1" 200 41295
+INFO 2025-06-20 12:16:55,754 basehttp 29687 123145460297728 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,755 basehttp 29687 123145443508224 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,755 basehttp 29687 123145493876736 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,755 basehttp 29687 123145510666240 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,763 basehttp 29687 123145477087232 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,765 basehttp 29687 123145460297728 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,772 basehttp 29687 123145443508224 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,774 basehttp 29687 123145493876736 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,774 basehttp 29687 123145510666240 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,782 basehttp 29687 123145493876736 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,783 basehttp 29687 123145510666240 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,789 basehttp 29687 123145527455744 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 12:16:55,816 basehttp 29687 123145561034752 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,816 basehttp 29687 123145544245248 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,820 basehttp 29687 123145561034752 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,821 basehttp 29687 123145594613760 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,822 basehttp 29687 123145544245248 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,824 basehttp 29687 123145611403264 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,824 basehttp 29687 123145628192768 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,825 basehttp 29687 123145561034752 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,829 basehttp 29687 123145577824256 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 12:16:55,838 basehttp 29687 123145527455744 "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,841 basehttp 29687 123145527455744 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,903 basehttp 29687 123145527455744 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,904 basehttp 29687 123145493876736 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,904 basehttp 29687 123145443508224 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:55,905 basehttp 29687 123145510666240 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-06-20 12:16:56,454 basehttp 29687 123145577824256 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+WARNING 2025-06-20 12:59:20,735 log 29687 123145426718720 Unauthorized: /api/auth/change-password/
+WARNING 2025-06-20 12:59:20,736 basehttp 29687 123145426718720 "POST /api/auth/change-password/ HTTP/1.1" 401 183
+INFO 2025-06-20 13:05:41,973 basehttp 29687 123145426718720 "OPTIONS /api/auth/change-password/ HTTP/1.1" 200 0
+WARNING 2025-06-20 13:05:41,975 log 29687 123145426718720 Unauthorized: /api/auth/change-password/
+WARNING 2025-06-20 13:05:41,975 basehttp 29687 123145426718720 "POST /api/auth/change-password/ HTTP/1.1" 401 183
+WARNING 2025-06-20 13:05:44,057 log 29687 123145426718720 Unauthorized: /api/auth/change-password/
+WARNING 2025-06-20 13:05:44,057 basehttp 29687 123145426718720 "POST /api/auth/change-password/ HTTP/1.1" 401 183
+INFO 2025-06-20 13:08:44,325 autoreload 32447 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-20 13:10:04,491 basehttp 32447 123145388363776 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+WARNING 2025-06-20 13:10:04,589 log 32447 123145388363776 Unauthorized: /api/auth/logout/
+WARNING 2025-06-20 13:10:04,589 basehttp 32447 123145388363776 "POST /api/auth/logout/ HTTP/1.1" 401 183
+ERROR 2025-06-20 13:10:25,974 utils 32447 123145388363776 Failed to log user activity: (1054, "Unknown column 'extra_data' in 'field list'")
+INFO 2025-06-20 13:10:25,986 basehttp 32447 123145388363776 "POST /api/auth/login/ HTTP/1.1" 200 925
+WARNING 2025-06-20 13:10:56,374 log 32447 123145388363776 Bad Request: /api/auth/change-password/
+WARNING 2025-06-20 13:10:56,374 basehttp 32447 123145388363776 "POST /api/auth/change-password/ HTTP/1.1" 400 52
+INFO 2025-06-20 13:26:42,101 basehttp 32447 123145388363776 "GET /admin/authapp/user/ HTTP/1.1" 200 41294
+INFO 2025-06-20 13:26:42,208 basehttp 32447 123145388363776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 13:26:42,979 basehttp 32447 123145421942784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-06-20 13:26:44,101 log 32447 123145388363776 Internal Server Error: /admin/authapp/useractivity/
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'authapp_useractivity.extra_data' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2163, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 366, in __len__
+    self._fetch_all()
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1945, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'authapp_useractivity.extra_data' in 'field list'")
+ERROR 2025-06-20 13:26:44,109 basehttp 32447 123145388363776 "GET /admin/authapp/useractivity/ HTTP/1.1" 500 217390
+INFO 2025-06-20 13:27:09,686 basehttp 32447 123145388363776 "GET /admin/authapp/user/ HTTP/1.1" 200 41294
+INFO 2025-06-20 13:27:11,993 basehttp 32447 123145388363776 "GET /admin/authapp/userpreferences/ HTTP/1.1" 200 38124
+INFO 2025-06-20 13:27:12,062 basehttp 32447 123145388363776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 13:27:12,212 basehttp 32447 123145421942784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-06-20 13:27:15,971 log 32447 123145388363776 Internal Server Error: /admin/authapp/useractivity/
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'authapp_useractivity.extra_data' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2163, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 366, in __len__
+    self._fetch_all()
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1945, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'authapp_useractivity.extra_data' in 'field list'")
+ERROR 2025-06-20 13:27:15,973 basehttp 32447 123145388363776 "GET /admin/authapp/useractivity/ HTTP/1.1" 500 217401
+INFO 2025-06-20 13:27:18,138 basehttp 32447 123145388363776 "GET /admin/authapp/userpreferences/ HTTP/1.1" 200 38124
+ERROR 2025-06-20 13:27:20,484 log 32447 123145388363776 Internal Server Error: /admin/authapp/emailverificationcode/
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'authapp_emailverificationcode.user_id' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2163, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 366, in __len__
+    self._fetch_all()
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1945, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'authapp_emailverificationcode.user_id' in 'field list'")
+ERROR 2025-06-20 13:27:20,486 basehttp 32447 123145388363776 "GET /admin/authapp/emailverificationcode/ HTTP/1.1" 500 218985
+INFO 2025-06-20 13:27:26,317 basehttp 32447 123145388363776 "GET /admin/authapp/userpreferences/ HTTP/1.1" 200 38124
+INFO 2025-06-20 13:27:28,632 basehttp 32447 123145388363776 "GET /admin/authapp/user/ HTTP/1.1" 200 41294
+INFO 2025-06-20 13:27:28,683 basehttp 32447 123145388363776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 13:27:28,735 basehttp 32447 123145421942784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 13:27:31,910 basehttp 32447 123145388363776 "GET /admin/comments/commentinteraction/ HTTP/1.1" 200 33424
+INFO 2025-06-20 13:27:31,972 basehttp 32447 123145388363776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 13:27:32,147 basehttp 32447 123145421942784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 13:27:35,803 basehttp 32447 123145388363776 "GET /admin/stories/storyview/ HTTP/1.1" 200 33924
+INFO 2025-06-20 13:27:35,842 basehttp 32447 123145388363776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 13:27:36,054 basehttp 32447 123145421942784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 13:27:39,268 basehttp 32447 123145388363776 "GET /admin/stories/storypage/ HTTP/1.1" 200 34444
+INFO 2025-06-20 13:27:39,313 basehttp 32447 123145388363776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 13:27:39,541 basehttp 32447 123145421942784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 13:27:46,563 basehttp 32447 123145388363776 "GET /admin/live_video/livevideo/ HTTP/1.1" 200 36707
+INFO 2025-06-20 13:27:46,596 basehttp 32447 123145388363776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 13:27:46,834 basehttp 32447 123145421942784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 13:27:51,047 basehttp 32447 123145388363776 "GET /admin/authapp/user/ HTTP/1.1" 200 41294
+INFO 2025-06-20 13:27:51,096 basehttp 32447 123145388363776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 13:27:51,130 basehttp 32447 123145421942784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 13:27:53,297 basehttp 32447 123145388363776 "GET /admin/authapp/userpreferences/ HTTP/1.1" 200 38124
+INFO 2025-06-20 13:27:53,335 basehttp 32447 123145388363776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 13:27:53,381 basehttp 32447 123145421942784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-06-20 13:27:55,575 log 32447 123145388363776 Internal Server Error: /admin/authapp/useractivity/
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'authapp_useractivity.extra_data' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2163, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 366, in __len__
+    self._fetch_all()
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1945, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'authapp_useractivity.extra_data' in 'field list'")
+ERROR 2025-06-20 13:27:55,607 basehttp 32447 123145388363776 "GET /admin/authapp/useractivity/ HTTP/1.1" 500 217401
+INFO 2025-06-20 13:31:10,916 autoreload 32447 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/utils.py changed, reloading.
+INFO 2025-06-20 13:31:12,368 autoreload 33675 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-20 14:02:48,987 basehttp 33675 123145389387776 "GET /admin/authapp/userpreferences/ HTTP/1.1" 200 38124
+INFO 2025-06-20 14:02:51,176 basehttp 33675 123145389387776 "GET /admin/authapp/userpreferences/ HTTP/1.1" 200 38124
+INFO 2025-06-20 14:02:51,216 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 14:02:55,823 basehttp 33675 123145389387776 "GET /admin/authapp/userpreferences/ HTTP/1.1" 200 38124
+INFO 2025-06-20 14:02:55,866 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 14:02:58,098 basehttp 33675 123145389387776 "GET /admin/authapp/useractivity/ HTTP/1.1" 200 91809
+INFO 2025-06-20 14:02:58,140 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-06-20 14:03:02,088 log 33675 123145389387776 Internal Server Error: /admin/authapp/emailverificationcode/
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'authapp_emailverificationcode.user_id' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2163, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 366, in __len__
+    self._fetch_all()
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1945, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'authapp_emailverificationcode.user_id' in 'field list'")
+ERROR 2025-06-20 14:03:02,095 basehttp 33675 123145389387776 "GET /admin/authapp/emailverificationcode/ HTTP/1.1" 500 218982
+INFO 2025-06-20 14:03:04,244 basehttp 33675 123145389387776 "GET /admin/authapp/useractivity/ HTTP/1.1" 200 91809
+INFO 2025-06-20 14:07:46,818 basehttp 33675 123145389387776 "GET /admin/authapp/useractivity/ HTTP/1.1" 200 91809
+INFO 2025-06-20 14:07:46,891 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 14:08:06,177 basehttp 33675 123145389387776 "GET /admin/authapp/user/ HTTP/1.1" 200 41294
+INFO 2025-06-20 14:08:06,229 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 14:08:08,176 basehttp 33675 123145389387776 "GET /admin/authapp/userpreferences/ HTTP/1.1" 200 38124
+INFO 2025-06-20 14:08:08,210 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 14:08:09,763 basehttp 33675 123145389387776 "GET /admin/authapp/useractivity/ HTTP/1.1" 200 91809
+INFO 2025-06-20 14:08:09,800 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 14:08:11,693 basehttp 33675 123145389387776 "GET /admin/authapp/userpreferences/ HTTP/1.1" 200 38124
+INFO 2025-06-20 14:08:11,741 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 14:08:14,604 basehttp 33675 123145389387776 "GET /admin/authapp/useractivity/ HTTP/1.1" 200 91809
+INFO 2025-06-20 14:08:14,641 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-06-20 14:08:18,153 log 33675 123145389387776 Internal Server Error: /admin/authapp/emailverificationcode/
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'authapp_emailverificationcode.user_id' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2163, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 366, in __len__
+    self._fetch_all()
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1945, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/levicharles/Documents/liveLens_backend/venv/lib/python3.11/site-packages/MySQLdb/connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'authapp_emailverificationcode.user_id' in 'field list'")
+ERROR 2025-06-20 14:08:18,155 basehttp 33675 123145389387776 "GET /admin/authapp/emailverificationcode/ HTTP/1.1" 500 218982
+INFO 2025-06-20 14:17:08,048 basehttp 33675 123145389387776 "GET /admin/authapp/useractivity/ HTTP/1.1" 200 91809
+INFO 2025-06-20 14:17:10,511 basehttp 33675 123145389387776 "GET /admin/authapp/useractivity/ HTTP/1.1" 200 91809
+INFO 2025-06-20 14:17:10,558 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 14:17:12,618 basehttp 33675 123145389387776 "GET /admin/authapp/emailverificationcode/ HTTP/1.1" 200 34452
+INFO 2025-06-20 14:17:12,669 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-06-20 14:17:45,380 log 33675 123145422966784 Unauthorized: /api/auth/logout/
+WARNING 2025-06-20 14:17:45,381 basehttp 33675 123145422966784 "POST /api/auth/logout/ HTTP/1.1" 401 183
+INFO 2025-06-20 14:18:07,265 basehttp 33675 123145422966784 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-06-20 14:18:08,067 utils 33675 123145422966784 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-20 14:18:08,071 basehttp 33675 123145422966784 "POST /api/auth/login/ HTTP/1.1" 200 925
+INFO 2025-06-20 14:18:14,809 basehttp 33675 123145422966784 "OPTIONS /api/user/library/ HTTP/1.1" 200 0
+INFO 2025-06-20 14:18:14,815 basehttp 33675 123145406177280 "OPTIONS /api/user/library/ HTTP/1.1" 200 0
+INFO 2025-06-20 14:18:14,898 basehttp 33675 123145422966784 "GET /api/user/library/ HTTP/1.1" 200 320
+INFO 2025-06-20 14:18:14,940 basehttp 33675 123145406177280 "GET /api/user/library/ HTTP/1.1" 200 320
+INFO 2025-06-20 14:18:42,569 utils 33675 123145439756288 Logged activity: levilu18@gmail.com - password_change
+INFO 2025-06-20 14:18:42,570 basehttp 33675 123145439756288 "POST /api/auth/change-password/ HTTP/1.1" 200 44
+WARNING 2025-06-20 14:19:10,902 log 33675 123145406177280 Bad Request: /api/auth/logout/
+WARNING 2025-06-20 14:19:10,905 basehttp 33675 123145406177280 "POST /api/auth/logout/ HTTP/1.1" 400 43
+WARNING 2025-06-20 14:19:32,436 log 33675 123145406177280 Bad Request: /api/auth/login/
+WARNING 2025-06-20 14:19:32,436 basehttp 33675 123145406177280 "POST /api/auth/login/ HTTP/1.1" 400 45
+INFO 2025-06-20 14:19:36,644 utils 33675 123145406177280 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-20 14:19:36,647 basehttp 33675 123145406177280 "POST /api/auth/login/ HTTP/1.1" 200 925
+WARNING 2025-06-20 14:19:50,932 log 33675 123145439756288 Bad Request: /api/auth/login/
+WARNING 2025-06-20 14:19:50,933 basehttp 33675 123145439756288 "POST /api/auth/login/ HTTP/1.1" 400 45
+INFO 2025-06-20 14:19:57,184 utils 33675 123145439756288 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-20 14:19:57,186 basehttp 33675 123145439756288 "POST /api/auth/login/ HTTP/1.1" 200 925
+WARNING 2025-06-20 14:20:18,412 log 33675 123145456545792 Bad Request: /api/auth/login/
+WARNING 2025-06-20 14:20:18,413 basehttp 33675 123145456545792 "POST /api/auth/login/ HTTP/1.1" 400 45
+INFO 2025-06-20 14:20:23,459 utils 33675 123145456545792 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-20 14:20:23,461 basehttp 33675 123145456545792 "POST /api/auth/login/ HTTP/1.1" 200 925
+INFO 2025-06-20 14:20:44,615 basehttp 33675 123145389387776 "GET /admin/authapp/emailverificationcode/ HTTP/1.1" 200 34452
+INFO 2025-06-20 14:20:44,682 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 14:20:47,174 basehttp 33675 123145389387776 "GET /admin/authapp/userpreferences/ HTTP/1.1" 200 38124
+INFO 2025-06-20 14:20:47,220 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 14:20:49,665 basehttp 33675 123145389387776 "GET /admin/authapp/useractivity/ HTTP/1.1" 200 91825
+INFO 2025-06-20 14:20:49,706 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 14:28:03,585 basehttp 33675 123145389387776 "GET /admin/authapp/useractivity/ HTTP/1.1" 200 91825
+INFO 2025-06-20 14:28:03,665 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 14:28:08,905 basehttp 33675 123145389387776 "GET /admin/authapp/user/ HTTP/1.1" 200 41294
+INFO 2025-06-20 14:28:08,957 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 14:28:10,067 basehttp 33675 123145389387776 "GET /admin/authapp/userpreferences/ HTTP/1.1" 200 38124
+INFO 2025-06-20 14:28:10,113 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 14:28:12,269 basehttp 33675 123145389387776 "GET /admin/authapp/useractivity/ HTTP/1.1" 200 91825
+INFO 2025-06-20 14:28:12,307 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 14:28:13,592 basehttp 33675 123145389387776 "GET /admin/authapp/emailverificationcode/ HTTP/1.1" 200 34452
+INFO 2025-06-20 14:28:13,643 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 14:59:50,813 basehttp 33675 123145389387776 "GET /media/avatars/DSC00392.JPG HTTP/1.1" 200 4751360
+INFO 2025-06-20 22:26:48,396 basehttp 33675 123145389387776 "GET /media/avatars/DSC00392.JPG HTTP/1.1" 304 0
+INFO 2025-06-20 22:26:49,171 basehttp 33675 123145389387776 "GET /media/avatars/DSC00392.JPG HTTP/1.1" 200 4751360
+INFO 2025-06-20 22:34:02,356 basehttp 33675 123145389387776 "GET /admin/admin_dashboard/adminactivity/ HTTP/1.1" 200 34522
+INFO 2025-06-20 22:34:02,476 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:02,536 basehttp 33675 123145422966784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:04,300 basehttp 33675 123145389387776 "GET /admin/admin_dashboard/contentmoderationqueue/ HTTP/1.1" 200 39370
+INFO 2025-06-20 22:34:04,357 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:04,404 basehttp 33675 123145422966784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:06,235 basehttp 33675 123145389387776 "GET /admin/admin_dashboard/platformstatistics/ HTTP/1.1" 200 33291
+INFO 2025-06-20 22:34:06,283 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:06,326 basehttp 33675 123145422966784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:08,463 basehttp 33675 123145389387776 "GET /admin/animations/animationcollection/ HTTP/1.1" 200 33836
+INFO 2025-06-20 22:34:08,511 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:08,564 basehttp 33675 123145422966784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:09,837 basehttp 33675 123145389387776 "GET /admin/animations/animationinteraction/ HTTP/1.1" 200 33527
+INFO 2025-06-20 22:34:09,877 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:09,898 basehttp 33675 123145422966784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:11,251 basehttp 33675 123145389387776 "GET /admin/animations/animationplaylist/ HTTP/1.1" 200 34146
+INFO 2025-06-20 22:34:11,297 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:11,501 basehttp 33675 123145422966784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:12,439 basehttp 33675 123145389387776 "GET /admin/animations/animationview/ HTTP/1.1" 200 33371
+INFO 2025-06-20 22:34:12,472 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:12,674 basehttp 33675 123145422966784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:13,653 basehttp 33675 123145389387776 "GET /admin/animations/animation/ HTTP/1.1" 200 38483
+INFO 2025-06-20 22:34:13,721 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:13,911 basehttp 33675 123145422966784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:15,724 basehttp 33675 123145389387776 "GET /admin/authapp/emailverificationcode/ HTTP/1.1" 200 34452
+INFO 2025-06-20 22:34:15,767 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:15,812 basehttp 33675 123145422966784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:17,188 basehttp 33675 123145389387776 "GET /admin/authapp/useractivity/ HTTP/1.1" 200 91825
+INFO 2025-06-20 22:34:17,246 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:17,298 basehttp 33675 123145422966784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:29,375 basehttp 33675 123145389387776 "GET /admin/authapp/userpreferences/ HTTP/1.1" 200 38124
+INFO 2025-06-20 22:34:29,522 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:29,570 basehttp 33675 123145422966784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:31,496 basehttp 33675 123145389387776 "GET /admin/authapp/user/ HTTP/1.1" 200 41294
+INFO 2025-06-20 22:34:31,532 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:31,737 basehttp 33675 123145422966784 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:34,150 basehttp 33675 123145389387776 "GET /admin/auth/group/ HTTP/1.1" 200 31761
+INFO 2025-06-20 22:34:34,187 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:36,564 basehttp 33675 123145389387776 "GET /admin/comments/commentinteraction/ HTTP/1.1" 200 33424
+INFO 2025-06-20 22:34:36,601 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:38,386 basehttp 33675 123145389387776 "GET /admin/comments/commentmoderationlog/ HTTP/1.1" 200 33805
+INFO 2025-06-20 22:34:38,426 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:40,045 basehttp 33675 123145389387776 "GET /admin/comments/commentnotification/ HTTP/1.1" 200 33843
+INFO 2025-06-20 22:34:40,083 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:41,608 basehttp 33675 123145389387776 "GET /admin/comments/comment/ HTTP/1.1" 200 39655
+INFO 2025-06-20 22:34:41,686 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:52,577 basehttp 33675 123145389387776 "GET /admin/stories/story/ HTTP/1.1" 200 40953
+INFO 2025-06-20 22:34:52,631 basehttp 33675 123145389387776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:57,951 basehttp 33675 123145389387776 "GET /admin/stories/story/45a67e01-2ab4-4455-9c89-5908e7c15113/change/ HTTP/1.1" 200 52724
+INFO 2025-06-20 22:34:57,995 basehttp 33675 123145389387776 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-06-20 22:34:57,996 basehttp 33675 123145473335296 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-06-20 22:34:57,996 basehttp 33675 123145456545792 "GET /static/admin/js/inlines.js HTTP/1.1" 200 15628
+INFO 2025-06-20 22:34:57,998 basehttp 33675 123145406177280 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:34:58,086 basehttp 33675 123145406177280 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-06-20 22:34:58,089 basehttp 33675 123145406177280 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-06-20 22:34:58,101 basehttp 33675 123145406177280 "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+INFO 2025-06-20 22:34:58,105 basehttp 33675 123145406177280 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-06-20 22:34:58,113 basehttp 33675 123145406177280 "GET /static/admin/img/tooltag-arrowright.svg HTTP/1.1" 200 280
+INFO 2025-06-20 22:35:19,291 basehttp 33675 123145406177280 "GET /admin/stories/story/ HTTP/1.1" 200 40953
+INFO 2025-06-20 22:35:23,580 basehttp 33675 123145406177280 "GET /admin/authapp/user/ HTTP/1.1" 200 41294
+INFO 2025-06-20 22:35:23,621 basehttp 33675 123145406177280 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-20 22:35:27,440 basehttp 33675 123145406177280 "GET /admin/authapp/useractivity/ HTTP/1.1" 200 91825
+INFO 2025-06-20 22:35:27,471 basehttp 33675 123145406177280 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-06-20 22:36:07,289 log 33675 123145490124800 Unauthorized: /api/user/library/
+WARNING 2025-06-20 22:36:07,290 basehttp 33675 123145490124800 "GET /api/user/library/ HTTP/1.1" 401 183
+WARNING 2025-06-20 22:36:07,317 log 33675 123145506914304 Unauthorized: /api/user/library/
+WARNING 2025-06-20 22:36:07,317 basehttp 33675 123145506914304 "GET /api/user/library/ HTTP/1.1" 401 183

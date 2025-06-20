@@ -232,6 +232,7 @@ def send_password_reset_email(user, reset_code):
 def log_user_activity(user, activity_type, description="", request=None, extra_data=None):
     """
     Log user activity for tracking and analytics
+    Safely handles cases where extra_data field might not exist in database
     """
     from .models import UserActivity
     
@@ -250,17 +251,36 @@ def log_user_activity(user, activity_type, description="", request=None, extra_d
         user_agent = request.META.get('HTTP_USER_AGENT', '')
     
     try:
-        UserActivity.objects.create(
-            user=user,
-            activity_type=activity_type,
-            description=description,
-            ip_address=ip_address,
-            user_agent=user_agent,
-            extra_data=extra_data or {}
-        )
+        # Try to create with extra_data field
+        try:
+            UserActivity.objects.create(
+                user=user,
+                activity_type=activity_type,
+                description=description,
+                ip_address=ip_address,
+                user_agent=user_agent,
+                extra_data=extra_data or {}
+            )
+        except Exception as db_error:
+            # If extra_data field doesn't exist, create without it
+            if "Unknown column 'extra_data'" in str(db_error):
+                logger.warning("extra_data field not found in UserActivity table, creating without it")
+                UserActivity.objects.create(
+                    user=user,
+                    activity_type=activity_type,
+                    description=description,
+                    ip_address=ip_address,
+                    user_agent=user_agent
+                    # Note: extra_data field omitted for backward compatibility
+                )
+            else:
+                # Re-raise if it's a different error
+                raise db_error
+            
         logger.info(f"Logged activity: {user.email} - {activity_type}")
     except Exception as e:
         logger.error(f"Failed to log user activity: {str(e)}")
+        # Don't let logging errors break the main functionality
 
 def generate_username_from_email(email):
     """
