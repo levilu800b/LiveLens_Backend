@@ -8,6 +8,9 @@ from django.core.exceptions import ValidationError
 from .models import User, EmailVerificationCode, UserPreferences
 from .utils import send_verification_email
 
+import logging
+logger = logging.getLogger(__name__)
+
 class UserRegistrationSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True, validators=[validate_password])
     password_confirm = serializers.CharField(write_only=True)
@@ -82,16 +85,44 @@ class GoogleSignUpSerializer(serializers.Serializer):
             last_name=validated_data['last_name'],
             google_id=validated_data['google_id'],
             is_verified=True,  # Google accounts are pre-verified
-            password=None  # No password for Google sign-up
+            password=None,  # No password for Google sign-up
+            # ✅ FIXED: Initialize profile fields that might be missing
+            phone_number='',
+            gender='',
+            country='',
+            date_of_birth=None
         )
         
-        # Create user preferences
-        UserPreferences.objects.create(user=user)
+        # Create user preferences - IMPORTANT for profile functionality
+        try:
+            UserPreferences.objects.create(user=user)
+        except Exception as e:
+            logger.warning(f"Failed to create user preferences for Google user {user.id}: {e}")
         
         # Handle avatar URL if provided
         if avatar_url:
-            # You can download and save the avatar here if needed
-            pass
+            try:
+                # Download and save Google avatar
+                import requests
+                from django.core.files.base import ContentFile
+                from django.core.files.storage import default_storage
+                import uuid
+                
+                response = requests.get(avatar_url, timeout=10)
+                if response.status_code == 200:
+                    # Generate unique filename
+                    file_extension = 'jpg'  # Default for Google avatars
+                    filename = f"avatars/google_{user.id}_{uuid.uuid4().hex[:8]}.{file_extension}"
+                    
+                    # Save file
+                    file_content = ContentFile(response.content)
+                    saved_path = default_storage.save(filename, file_content)
+                    user.avatar = saved_path
+                    user.save()
+                    
+            except Exception as e:
+                logger.warning(f"Failed to download Google avatar for user {user.id}: {e}")
+                # Continue without avatar - not critical
         
         return user
 

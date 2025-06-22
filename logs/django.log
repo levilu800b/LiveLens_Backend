@@ -6442,3 +6442,362 @@ WARNING 2025-06-20 22:36:07,289 log 33675 123145490124800 Unauthorized: /api/use
 WARNING 2025-06-20 22:36:07,290 basehttp 33675 123145490124800 "GET /api/user/library/ HTTP/1.1" 401 183
 WARNING 2025-06-20 22:36:07,317 log 33675 123145506914304 Unauthorized: /api/user/library/
 WARNING 2025-06-20 22:36:07,317 basehttp 33675 123145506914304 "GET /api/user/library/ HTTP/1.1" 401 183
+INFO 2025-06-21 15:10:30,733 basehttp 33675 123145389387776 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2025-06-21 15:10:31,853 log 33675 123145389387776 Bad Request: /api/auth/login/
+WARNING 2025-06-21 15:10:31,858 basehttp 33675 123145389387776 "POST /api/auth/login/ HTTP/1.1" 400 45
+WARNING 2025-06-21 15:10:37,288 log 33675 123145389387776 Bad Request: /api/auth/login/
+WARNING 2025-06-21 15:10:37,289 basehttp 33675 123145389387776 "POST /api/auth/login/ HTTP/1.1" 400 45
+INFO 2025-06-21 15:10:43,352 utils 33675 123145389387776 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-21 15:10:43,372 basehttp 33675 123145389387776 "POST /api/auth/login/ HTTP/1.1" 200 925
+INFO 2025-06-21 15:10:43,455 basehttp 33675 123145406177280 "GET /media/avatars/DSC00392.JPG HTTP/1.1" 304 0
+INFO 2025-06-21 15:11:00,127 basehttp 33675 123145389387776 "OPTIONS /api/user/library/ HTTP/1.1" 200 0
+INFO 2025-06-21 15:11:00,148 basehttp 33675 123145422966784 "OPTIONS /api/user/library/ HTTP/1.1" 200 0
+INFO 2025-06-21 15:11:00,256 basehttp 33675 123145389387776 "GET /api/user/library/ HTTP/1.1" 200 320
+INFO 2025-06-21 15:11:00,296 basehttp 33675 123145422966784 "GET /api/user/library/ HTTP/1.1" 200 320
+INFO 2025-06-21 15:13:21,765 utils 33675 123145456545792 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-21 15:13:21,767 basehttp 33675 123145456545792 "POST /api/auth/login/ HTTP/1.1" 200 925
+INFO 2025-06-21 15:13:34,261 basehttp 33675 123145456545792 "GET //api/auth/profile/ HTTP/1.1" 200 392
+INFO 2025-06-21 15:13:46,959 basehttp 33675 123145422966784 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+WARNING 2025-06-21 15:13:46,968 log 33675 123145422966784 Bad Request: /api/auth/logout/
+WARNING 2025-06-21 15:13:46,968 basehttp 33675 123145422966784 "POST /api/auth/logout/ HTTP/1.1" 400 43
+INFO 2025-06-21 15:28:04,734 utils 33675 123145389387776 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-21 15:28:04,742 basehttp 33675 123145389387776 "POST /api/auth/login/ HTTP/1.1" 200 925
+INFO 2025-06-21 15:43:01,208 basehttp 33675 123145406177280 "GET /admin/authapp/useractivity/ HTTP/1.1" 200 91815
+INFO 2025-06-21 15:43:01,392 basehttp 33675 123145406177280 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-21 15:43:17,107 basehttp 33675 123145406177280 "GET /admin/authapp/useractivity/?q=lou HTTP/1.1" 200 38729
+INFO 2025-06-21 15:43:17,168 basehttp 33675 123145406177280 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-21 15:43:26,263 basehttp 33675 123145406177280 "GET /admin/authapp/useractivity/?q= HTTP/1.1" 200 94472
+INFO 2025-06-21 15:43:26,314 basehttp 33675 123145406177280 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-21 16:01:30,860 autoreload 33675 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-21 16:01:32,845 autoreload 47191 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-21 16:03:01,915 autoreload 47191 140704484867520 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-21 16:03:03,072 autoreload 47323 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-21 16:04:16,810 utils 47323 123145405022208 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-21 16:04:16,905 basehttp 47323 123145405022208 "POST /api/auth/login/ HTTP/1.1" 200 925
+INFO 2025-06-21 16:04:24,115 basehttp 47323 123145405022208 "GET /api/user/library/ HTTP/1.1" 200 320
+INFO 2025-06-21 16:04:24,160 basehttp 47323 123145421811712 "GET /api/user/library/ HTTP/1.1" 200 320
+INFO 2025-06-21 16:04:33,524 basehttp 47323 123145421811712 "OPTIONS /api/user/favorites/ HTTP/1.1" 200 0
+INFO 2025-06-21 16:04:33,531 basehttp 47323 123145405022208 "OPTIONS /api/user/favorites/ HTTP/1.1" 200 0
+INFO 2025-06-21 16:04:33,546 basehttp 47323 123145405022208 "GET /api/user/favorites/ HTTP/1.1" 200 231
+INFO 2025-06-21 16:04:33,556 basehttp 47323 123145421811712 "GET /api/user/favorites/ HTTP/1.1" 200 231
+WARNING 2025-06-21 16:04:44,433 log 47323 123145421811712 Bad Request: /api/auth/logout/
+WARNING 2025-06-21 16:04:44,435 basehttp 47323 123145421811712 "POST /api/auth/logout/ HTTP/1.1" 400 43
+INFO 2025-06-21 21:59:54,660 utils 47323 123145405022208 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-21 21:59:54,676 basehttp 47323 123145405022208 "POST /api/auth/login/ HTTP/1.1" 200 925
+WARNING 2025-06-21 22:00:31,046 log 47323 123145405022208 Bad Request: /api/auth/logout/
+WARNING 2025-06-21 22:00:31,047 basehttp 47323 123145405022208 "POST /api/auth/logout/ HTTP/1.1" 400 43
+INFO 2025-06-21 22:05:08,313 utils 47323 123145405022208 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-21 22:05:08,319 basehttp 47323 123145405022208 "POST /api/auth/login/ HTTP/1.1" 200 925
+WARNING 2025-06-21 22:05:17,244 log 47323 123145405022208 Bad Request: /api/auth/logout/
+WARNING 2025-06-21 22:05:17,245 basehttp 47323 123145405022208 "POST /api/auth/logout/ HTTP/1.1" 400 43
+INFO 2025-06-21 22:05:48,067 basehttp 47323 123145405022208 "OPTIONS /api/auth/google-login/ HTTP/1.1" 200 0
+INFO 2025-06-21 22:05:48,366 utils 47323 123145405022208 Logged activity: lou24081997@gmail.com - login
+INFO 2025-06-21 22:05:48,380 basehttp 47323 123145405022208 "POST /api/auth/google-login/ HTTP/1.1" 200 859
+WARNING 2025-06-21 22:08:57,682 log 47323 123145405022208 Bad Request: /api/auth/logout/
+WARNING 2025-06-21 22:08:57,684 basehttp 47323 123145405022208 "POST /api/auth/logout/ HTTP/1.1" 400 43
+WARNING 2025-06-21 22:24:02,254 log 47323 123145405022208 Bad Request: /api/auth/login/
+WARNING 2025-06-21 22:24:02,256 basehttp 47323 123145405022208 "POST /api/auth/login/ HTTP/1.1" 400 45
+INFO 2025-06-21 22:25:28,525 autoreload 50655 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-21 22:26:03,331 utils 50655 123145486577664 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-21 22:26:03,418 basehttp 50655 123145486577664 "POST /api/auth/login/ HTTP/1.1" 200 925
+WARNING 2025-06-21 22:26:09,859 log 50655 123145486577664 Bad Request: /api/auth/logout/
+WARNING 2025-06-21 22:26:09,859 basehttp 50655 123145486577664 "POST /api/auth/logout/ HTTP/1.1" 400 43
+INFO 2025-06-21 22:39:02,895 basehttp 50655 123145486577664 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-06-21 22:39:03,705 utils 50655 123145486577664 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-21 22:39:03,708 basehttp 50655 123145486577664 "POST /api/auth/login/ HTTP/1.1" 200 925
+INFO 2025-06-21 22:39:10,782 basehttp 50655 123145486577664 "OPTIONS /api/user/library/ HTTP/1.1" 200 0
+INFO 2025-06-21 22:39:10,790 basehttp 50655 123145486577664 "OPTIONS /api/user/library/ HTTP/1.1" 200 0
+INFO 2025-06-21 22:39:10,884 basehttp 50655 123145503367168 "GET /api/user/library/ HTTP/1.1" 200 320
+INFO 2025-06-21 22:39:10,921 basehttp 50655 123145486577664 "GET /api/user/library/ HTTP/1.1" 200 320
+INFO 2025-06-21 22:39:19,853 basehttp 50655 123145486577664 "GET /api/user/favorites/ HTTP/1.1" 200 231
+INFO 2025-06-21 22:39:19,865 basehttp 50655 123145503367168 "GET /api/user/favorites/ HTTP/1.1" 200 231
+INFO 2025-06-21 22:39:35,564 basehttp 50655 123145503367168 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+WARNING 2025-06-21 22:39:35,585 log 50655 123145503367168 Bad Request: /api/auth/logout/
+WARNING 2025-06-21 22:39:35,585 basehttp 50655 123145503367168 "POST /api/auth/logout/ HTTP/1.1" 400 43
+INFO 2025-06-21 22:39:46,193 utils 50655 123145503367168 Logged activity: lou24081997@gmail.com - login
+INFO 2025-06-21 22:39:46,202 basehttp 50655 123145503367168 "POST /api/auth/google-login/ HTTP/1.1" 200 859
+INFO 2025-06-21 22:40:04,987 basehttp 50655 123145520156672 "GET /admin/authapp/useractivity/?q= HTTP/1.1" 200 94476
+INFO 2025-06-21 22:40:05,160 basehttp 50655 123145520156672 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-21 22:40:05,784 basehttp 50655 123145553735680 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-21 22:40:29,376 basehttp 50655 123145520156672 "GET /admin/authapp/useractivity/?q= HTTP/1.1" 200 94476
+INFO 2025-06-21 22:40:29,424 basehttp 50655 123145520156672 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-21 22:40:29,434 basehttp 50655 123145553735680 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-21 22:40:44,234 basehttp 50655 123145503367168 "OPTIONS /api/auth/profile/ HTTP/1.1" 200 0
+INFO 2025-06-21 22:40:44,241 views 50655 123145503367168 Profile update request data: <QueryDict: {'firstName': ['L'], 'lastName': ['Udeh'], 'phoneNumber': ['76665555543'], 'gender': [''], 'country': [''], 'dateOfBirth': ['']}>
+INFO 2025-06-21 22:40:44,242 views 50655 123145503367168 Converted firstName -> first_name: L
+INFO 2025-06-21 22:40:44,242 views 50655 123145503367168 Converted lastName -> last_name: Udeh
+INFO 2025-06-21 22:40:44,242 views 50655 123145503367168 Converted phoneNumber -> phone_number: 76665555543
+INFO 2025-06-21 22:40:44,242 views 50655 123145503367168 Converted dateOfBirth -> date_of_birth: 
+INFO 2025-06-21 22:40:44,242 views 50655 123145503367168 Converted gender -> gender: 
+INFO 2025-06-21 22:40:44,242 views 50655 123145503367168 Converted country -> country: 
+INFO 2025-06-21 22:40:44,242 views 50655 123145503367168 Converted data: {'first_name': 'L', 'last_name': 'Udeh', 'phone_number': '76665555543', 'date_of_birth': '', 'gender': '', 'country': ''}
+ERROR 2025-06-21 22:40:44,243 views 50655 123145503367168 Profile update validation errors: {'date_of_birth': [ErrorDetail(string='Date has wrong format. Use one of these formats instead: YYYY-MM-DD.', code='invalid')]}
+WARNING 2025-06-21 22:40:44,244 log 50655 123145503367168 Bad Request: /api/auth/profile/
+WARNING 2025-06-21 22:40:44,244 basehttp 50655 123145503367168 "PUT /api/auth/profile/ HTTP/1.1" 400 148
+INFO 2025-06-21 22:41:35,746 basehttp 50655 123145520156672 "GET /admin/authapp/user/ HTTP/1.1" 200 41296
+INFO 2025-06-21 22:41:35,851 basehttp 50655 123145520156672 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-21 22:41:38,186 basehttp 50655 123145520156672 "GET /admin/authapp/user/7/change/ HTTP/1.1" 200 69936
+INFO 2025-06-21 22:41:38,298 basehttp 50655 123145536946176 "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2025-06-21 22:41:38,301 basehttp 50655 123145570525184 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+INFO 2025-06-21 22:41:38,301 basehttp 50655 123145587314688 "GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+INFO 2025-06-21 22:41:38,301 basehttp 50655 123145604104192 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+INFO 2025-06-21 22:41:38,309 basehttp 50655 123145520156672 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-21 22:41:38,562 basehttp 50655 123145520156672 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+INFO 2025-06-21 22:41:38,564 basehttp 50655 123145520156672 "GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
+WARNING 2025-06-21 22:42:30,759 log 50655 123145486577664 Bad Request: /api/auth/logout/
+WARNING 2025-06-21 22:42:30,759 basehttp 50655 123145486577664 "POST /api/auth/logout/ HTTP/1.1" 400 43
+INFO 2025-06-21 23:34:53,627 utils 50655 123145486577664 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-21 23:34:53,635 basehttp 50655 123145486577664 "POST /api/auth/login/ HTTP/1.1" 200 925
+INFO 2025-06-21 23:35:06,201 views 50655 123145486577664 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['07975847333'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16']}>
+INFO 2025-06-21 23:35:06,201 views 50655 123145486577664 Converted firstName -> first_name: Levi
+INFO 2025-06-21 23:35:06,201 views 50655 123145486577664 Converted lastName -> last_name: Udeh
+INFO 2025-06-21 23:35:06,201 views 50655 123145486577664 Converted phoneNumber -> phone_number: 07975847333
+INFO 2025-06-21 23:35:06,201 views 50655 123145486577664 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-21 23:35:06,201 views 50655 123145486577664 Converted gender 'M' -> 'M'
+INFO 2025-06-21 23:35:06,201 views 50655 123145486577664 Converted country -> country: United Kingdom
+INFO 2025-06-21 23:35:06,201 views 50655 123145486577664 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '07975847333', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom'}
+INFO 2025-06-21 23:35:06,214 utils 50655 123145486577664 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-21 23:35:06,216 views 50655 123145486577664 Profile update successful
+INFO 2025-06-21 23:35:06,216 views 50655 123145486577664 Avatar URL in response: http://127.0.0.1:8000/media/avatars/DSC00392.JPG
+INFO 2025-06-21 23:35:06,216 basehttp 50655 123145486577664 "PUT /api/auth/profile/ HTTP/1.1" 200 458
+INFO 2025-06-21 23:35:53,090 views 50655 123145486577664 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['07975847333'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16'], 'avatar': [<InMemoryUploadedFile: brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg (image/jpeg)>]}>
+INFO 2025-06-21 23:35:53,090 views 50655 123145486577664 Converted firstName -> first_name: Levi
+INFO 2025-06-21 23:35:53,090 views 50655 123145486577664 Converted lastName -> last_name: Udeh
+INFO 2025-06-21 23:35:53,090 views 50655 123145486577664 Converted phoneNumber -> phone_number: 07975847333
+INFO 2025-06-21 23:35:53,090 views 50655 123145486577664 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-21 23:35:53,090 views 50655 123145486577664 Converted gender 'M' -> 'M'
+INFO 2025-06-21 23:35:53,090 views 50655 123145486577664 Converted country -> country: United Kingdom
+INFO 2025-06-21 23:35:53,090 views 50655 123145486577664 Converted avatar -> avatar: brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg
+INFO 2025-06-21 23:35:53,090 views 50655 123145486577664 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '07975847333', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom', 'avatar': <InMemoryUploadedFile: brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg (image/jpeg)>}
+INFO 2025-06-21 23:35:53,501 utils 50655 123145486577664 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-21 23:35:53,503 views 50655 123145486577664 Profile update successful
+INFO 2025-06-21 23:35:53,503 views 50655 123145486577664 Avatar URL in response: http://127.0.0.1:8000/media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg
+INFO 2025-06-21 23:35:53,504 basehttp 50655 123145486577664 "PUT /api/auth/profile/ HTTP/1.1" 200 487
+INFO 2025-06-21 23:35:53,553 basehttp 50655 123145503367168 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 200 1065080
+INFO 2025-06-21 23:35:56,615 basehttp 50655 123145503367168 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 304 0
+WARNING 2025-06-21 23:36:22,700 log 50655 123145486577664 Bad Request: /api/auth/logout/
+WARNING 2025-06-21 23:36:22,701 basehttp 50655 123145486577664 "POST /api/auth/logout/ HTTP/1.1" 400 43
+INFO 2025-06-21 23:36:48,462 utils 50655 123145486577664 Logged activity: lou24081997@gmail.com - login
+INFO 2025-06-21 23:36:48,465 basehttp 50655 123145486577664 "POST /api/auth/google-login/ HTTP/1.1" 200 859
+WARNING 2025-06-21 23:38:33,357 log 50655 123145486577664 Bad Request: /api/auth/logout/
+WARNING 2025-06-21 23:38:33,357 basehttp 50655 123145486577664 "POST /api/auth/logout/ HTTP/1.1" 400 43
+INFO 2025-06-21 23:38:48,726 utils 50655 123145486577664 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-21 23:38:48,728 basehttp 50655 123145486577664 "POST /api/auth/login/ HTTP/1.1" 200 954
+INFO 2025-06-21 23:38:48,789 basehttp 50655 123145503367168 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 304 0
+INFO 2025-06-21 23:39:25,864 utils 50655 123145520156672 Logged activity: levilu18@gmail.com - password_change
+INFO 2025-06-21 23:39:25,865 basehttp 50655 123145520156672 "POST /api/auth/change-password/ HTTP/1.1" 200 44
+INFO 2025-06-21 23:39:44,989 basehttp 50655 123145520156672 "GET /admin/authapp/useractivity/ HTTP/1.1" 200 91870
+INFO 2025-06-21 23:39:45,052 basehttp 50655 123145520156672 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-21 23:52:51,063 autoreload 50655 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/views.py changed, reloading.
+INFO 2025-06-21 23:52:52,386 autoreload 54315 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-21 23:53:42,715 autoreload 54315 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-21 23:53:43,715 autoreload 54374 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-21 23:55:32,314 autoreload 54374 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/serializers.py changed, reloading.
+INFO 2025-06-21 23:55:33,488 autoreload 54500 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-22 00:03:49,578 basehttp 54500 123145440423936 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 304 0
+WARNING 2025-06-22 00:03:52,953 log 54500 123145457213440 Bad Request: /api/auth/logout/
+WARNING 2025-06-22 00:03:52,956 basehttp 54500 123145457213440 "POST /api/auth/logout/ HTTP/1.1" 400 43
+INFO 2025-06-22 00:05:11,776 utils 54500 123145457213440 Logged activity: lou24081997@gmail.com - login
+INFO 2025-06-22 00:05:11,799 basehttp 54500 123145457213440 "POST /api/auth/google-login/ HTTP/1.1" 200 859
+INFO 2025-06-22 00:05:17,085 basehttp 54500 123145457213440 "GET /api/auth/profile/ HTTP/1.1" 200 319
+INFO 2025-06-22 00:05:17,105 basehttp 54500 123145474002944 "GET /api/auth/profile/ HTTP/1.1" 200 319
+INFO 2025-06-22 00:05:41,862 views 54500 123145474002944 Profile update request data: <QueryDict: {'firstName': ['L'], 'lastName': ['Udeh'], 'phoneNumber': ['76665567789'], 'gender': ['Male'], 'country': [''], 'dateOfBirth': ['']}>
+INFO 2025-06-22 00:05:41,862 views 54500 123145474002944 Converted firstName -> first_name: L
+INFO 2025-06-22 00:05:41,862 views 54500 123145474002944 Converted lastName -> last_name: Udeh
+INFO 2025-06-22 00:05:41,862 views 54500 123145474002944 Converted phoneNumber -> phone_number: 76665567789
+INFO 2025-06-22 00:05:41,862 views 54500 123145474002944 Converted dateOfBirth -> date_of_birth: 
+INFO 2025-06-22 00:05:41,862 views 54500 123145474002944 Converted gender 'Male' -> 'M'
+INFO 2025-06-22 00:05:41,862 views 54500 123145474002944 Converted country -> country: 
+INFO 2025-06-22 00:05:41,862 views 54500 123145474002944 Converted data: {'first_name': 'L', 'last_name': 'Udeh', 'phone_number': '76665567789', 'date_of_birth': '', 'gender': 'M', 'country': ''}
+ERROR 2025-06-22 00:05:41,864 views 54500 123145474002944 Profile update validation errors: {'date_of_birth': [ErrorDetail(string='Date has wrong format. Use one of these formats instead: YYYY-MM-DD.', code='invalid')]}
+WARNING 2025-06-22 00:05:41,865 log 54500 123145474002944 Bad Request: /api/auth/profile/
+WARNING 2025-06-22 00:05:41,865 basehttp 54500 123145474002944 "PUT /api/auth/profile/ HTTP/1.1" 400 148
+WARNING 2025-06-22 00:07:11,852 log 54500 123145474002944 Bad Request: /api/auth/logout/
+WARNING 2025-06-22 00:07:11,853 basehttp 54500 123145474002944 "POST /api/auth/logout/ HTTP/1.1" 400 43
+INFO 2025-06-22 00:07:24,684 utils 54500 123145474002944 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-22 00:07:24,698 basehttp 54500 123145474002944 "POST /api/auth/login/ HTTP/1.1" 200 954
+INFO 2025-06-22 00:07:24,758 basehttp 54500 123145440423936 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 304 0
+INFO 2025-06-22 00:07:28,278 basehttp 54500 123145474002944 "GET /api/auth/profile/ HTTP/1.1" 200 421
+INFO 2025-06-22 00:07:28,295 basehttp 54500 123145457213440 "GET /api/auth/profile/ HTTP/1.1" 200 421
+INFO 2025-06-22 00:10:34,036 autoreload 54500 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/views.py changed, reloading.
+INFO 2025-06-22 00:10:35,258 autoreload 55456 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-22 00:10:48,251 autoreload 55456 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/views.py changed, reloading.
+INFO 2025-06-22 00:10:49,321 autoreload 55488 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-22 00:11:07,619 autoreload 55488 140704484867520 /Users/levicharles/Documents/liveLens_backend/authapp/views.py changed, reloading.
+INFO 2025-06-22 00:11:08,773 autoreload 55532 140704484867520 Watching for file changes with StatReloader
+INFO 2025-06-22 00:13:25,499 basehttp 55532 123145357819904 "GET /api/auth/profile/ HTTP/1.1" 200 421
+INFO 2025-06-22 00:13:36,410 basehttp 55532 123145357819904 "GET /api/auth/profile/ HTTP/1.1" 200 421
+INFO 2025-06-22 00:13:45,657 basehttp 55532 123145374609408 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 304 0
+INFO 2025-06-22 00:13:45,687 basehttp 55532 123145357819904 "GET /api/auth/profile/ HTTP/1.1" 200 421
+INFO 2025-06-22 00:13:45,707 basehttp 55532 123145391398912 "GET /api/auth/profile/ HTTP/1.1" 200 421
+INFO 2025-06-22 00:13:45,724 basehttp 55532 123145357819904 "GET /api/auth/profile/ HTTP/1.1" 200 421
+INFO 2025-06-22 00:13:57,862 views 55532 123145357819904 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['07975847333'], 'gender': ['Male'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16']}>
+INFO 2025-06-22 00:13:57,862 views 55532 123145357819904 Converted firstName -> first_name: Levi
+INFO 2025-06-22 00:13:57,862 views 55532 123145357819904 Converted lastName -> last_name: Udeh
+INFO 2025-06-22 00:13:57,862 views 55532 123145357819904 Converted phoneNumber -> phone_number: 07975847333
+INFO 2025-06-22 00:13:57,869 views 55532 123145357819904 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-22 00:13:57,869 views 55532 123145357819904 Converted gender 'Male' -> 'M'
+INFO 2025-06-22 00:13:57,869 views 55532 123145357819904 Converted country -> country: United Kingdom
+INFO 2025-06-22 00:13:57,869 views 55532 123145357819904 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '07975847333', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom'}
+INFO 2025-06-22 00:13:57,886 utils 55532 123145357819904 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-22 00:13:57,886 views 55532 123145357819904 Profile update successful for user 3
+INFO 2025-06-22 00:13:57,888 basehttp 55532 123145357819904 "PUT /api/auth/profile/ HTTP/1.1" 200 472
+INFO 2025-06-22 00:13:57,923 basehttp 55532 123145357819904 "GET /api/auth/profile/ HTTP/1.1" 200 421
+INFO 2025-06-22 00:14:19,137 views 55532 123145357819904 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['079758449059'], 'gender': ['M'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16']}>
+INFO 2025-06-22 00:14:19,137 views 55532 123145357819904 Converted firstName -> first_name: Levi
+INFO 2025-06-22 00:14:19,137 views 55532 123145357819904 Converted lastName -> last_name: Udeh
+INFO 2025-06-22 00:14:19,137 views 55532 123145357819904 Converted phoneNumber -> phone_number: 079758449059
+INFO 2025-06-22 00:14:19,137 views 55532 123145357819904 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-22 00:14:19,137 views 55532 123145357819904 Converted gender 'M' -> 'M'
+INFO 2025-06-22 00:14:19,137 views 55532 123145357819904 Converted country -> country: United Kingdom
+INFO 2025-06-22 00:14:19,138 views 55532 123145357819904 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '079758449059', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom'}
+INFO 2025-06-22 00:14:19,144 utils 55532 123145357819904 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-22 00:14:19,144 views 55532 123145357819904 Profile update successful for user 3
+INFO 2025-06-22 00:14:19,145 basehttp 55532 123145357819904 "PUT /api/auth/profile/ HTTP/1.1" 200 473
+INFO 2025-06-22 00:14:19,180 basehttp 55532 123145357819904 "GET /api/auth/profile/ HTTP/1.1" 200 422
+INFO 2025-06-22 00:14:32,367 views 55532 123145357819904 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['079758449059'], 'gender': ['Male'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16']}>
+INFO 2025-06-22 00:14:32,367 views 55532 123145357819904 Converted firstName -> first_name: Levi
+INFO 2025-06-22 00:14:32,367 views 55532 123145357819904 Converted lastName -> last_name: Udeh
+INFO 2025-06-22 00:14:32,367 views 55532 123145357819904 Converted phoneNumber -> phone_number: 079758449059
+INFO 2025-06-22 00:14:32,367 views 55532 123145357819904 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-22 00:14:32,367 views 55532 123145357819904 Converted gender 'Male' -> 'M'
+INFO 2025-06-22 00:14:32,367 views 55532 123145357819904 Converted country -> country: United Kingdom
+INFO 2025-06-22 00:14:32,367 views 55532 123145357819904 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '079758449059', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom'}
+INFO 2025-06-22 00:14:32,376 utils 55532 123145357819904 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-22 00:14:32,376 views 55532 123145357819904 Profile update successful for user 3
+INFO 2025-06-22 00:14:32,378 basehttp 55532 123145357819904 "PUT /api/auth/profile/ HTTP/1.1" 200 473
+INFO 2025-06-22 00:14:32,394 basehttp 55532 123145357819904 "GET /api/auth/profile/ HTTP/1.1" 200 422
+WARNING 2025-06-22 00:14:49,779 log 55532 123145357819904 Bad Request: /api/auth/logout/
+WARNING 2025-06-22 00:14:49,780 basehttp 55532 123145357819904 "POST /api/auth/logout/ HTTP/1.1" 400 43
+INFO 2025-06-22 00:17:54,667 utils 55532 123145357819904 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-22 00:17:54,671 basehttp 55532 123145357819904 "POST /api/auth/login/ HTTP/1.1" 200 955
+INFO 2025-06-22 00:17:54,755 basehttp 55532 123145374609408 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 304 0
+INFO 2025-06-22 00:18:10,766 views 55532 123145357819904 Profile update request data: <QueryDict: {'firstName': ['Levi'], 'lastName': ['Udeh'], 'phoneNumber': ['079758449059'], 'gender': ['Male'], 'country': ['United Kingdom'], 'dateOfBirth': ['2000-06-16']}>
+INFO 2025-06-22 00:18:10,766 views 55532 123145357819904 Converted firstName -> first_name: Levi
+INFO 2025-06-22 00:18:10,766 views 55532 123145357819904 Converted lastName -> last_name: Udeh
+INFO 2025-06-22 00:18:10,766 views 55532 123145357819904 Converted phoneNumber -> phone_number: 079758449059
+INFO 2025-06-22 00:18:10,767 views 55532 123145357819904 Converted dateOfBirth -> date_of_birth: 2000-06-16
+INFO 2025-06-22 00:18:10,767 views 55532 123145357819904 Converted gender 'Male' -> 'M'
+INFO 2025-06-22 00:18:10,767 views 55532 123145357819904 Converted country -> country: United Kingdom
+INFO 2025-06-22 00:18:10,767 views 55532 123145357819904 Converted data: {'first_name': 'Levi', 'last_name': 'Udeh', 'phone_number': '079758449059', 'date_of_birth': '2000-06-16', 'gender': 'M', 'country': 'United Kingdom'}
+INFO 2025-06-22 00:18:10,776 utils 55532 123145357819904 Logged activity: levilu18@gmail.com - profile_update
+INFO 2025-06-22 00:18:10,776 views 55532 123145357819904 Profile update successful for user 3
+INFO 2025-06-22 00:18:10,777 basehttp 55532 123145357819904 "PUT /api/auth/profile/ HTTP/1.1" 200 473
+WARNING 2025-06-22 00:18:19,149 log 55532 123145357819904 Bad Request: /api/auth/logout/
+WARNING 2025-06-22 00:18:19,149 basehttp 55532 123145357819904 "POST /api/auth/logout/ HTTP/1.1" 400 43
+INFO 2025-06-22 00:18:25,508 basehttp 55532 123145357819904 "OPTIONS /api/auth/google-login/ HTTP/1.1" 200 0
+INFO 2025-06-22 00:18:25,592 utils 55532 123145357819904 Logged activity: lou24081997@gmail.com - login
+INFO 2025-06-22 00:18:25,595 basehttp 55532 123145357819904 "POST /api/auth/google-login/ HTTP/1.1" 200 859
+INFO 2025-06-22 00:18:43,519 views 55532 123145357819904 Profile update request data: <QueryDict: {'firstName': ['L'], 'lastName': ['Udeh'], 'phoneNumber': ['76665555543'], 'gender': ['Male'], 'country': ['']}>
+INFO 2025-06-22 00:18:43,519 views 55532 123145357819904 Converted firstName -> first_name: L
+INFO 2025-06-22 00:18:43,519 views 55532 123145357819904 Converted lastName -> last_name: Udeh
+INFO 2025-06-22 00:18:43,519 views 55532 123145357819904 Converted phoneNumber -> phone_number: 76665555543
+INFO 2025-06-22 00:18:43,519 views 55532 123145357819904 Converted gender 'Male' -> 'M'
+INFO 2025-06-22 00:18:43,519 views 55532 123145357819904 Converted country -> country: 
+INFO 2025-06-22 00:18:43,520 views 55532 123145357819904 Converted data: {'first_name': 'L', 'last_name': 'Udeh', 'phone_number': '76665555543', 'gender': 'M', 'country': ''}
+INFO 2025-06-22 00:18:43,530 utils 55532 123145357819904 Logged activity: lou24081997@gmail.com - profile_update
+INFO 2025-06-22 00:18:43,530 views 55532 123145357819904 Profile update successful for user 7
+INFO 2025-06-22 00:18:43,532 basehttp 55532 123145357819904 "PUT /api/auth/profile/ HTTP/1.1" 200 376
+INFO 2025-06-22 00:19:44,464 views 55532 123145357819904 Profile update request data: <QueryDict: {'firstName': ['L'], 'lastName': ['Udeh'], 'phoneNumber': ['76665555543'], 'gender': ['M'], 'country': [''], 'avatar': [<InMemoryUploadedFile: DSC01508.JPG (image/jpeg)>]}>
+INFO 2025-06-22 00:19:44,464 views 55532 123145357819904 Converted firstName -> first_name: L
+INFO 2025-06-22 00:19:44,464 views 55532 123145357819904 Converted lastName -> last_name: Udeh
+INFO 2025-06-22 00:19:44,465 views 55532 123145357819904 Converted phoneNumber -> phone_number: 76665555543
+INFO 2025-06-22 00:19:44,465 views 55532 123145357819904 Converted gender 'M' -> 'M'
+INFO 2025-06-22 00:19:44,465 views 55532 123145357819904 Converted country -> country: 
+INFO 2025-06-22 00:19:44,465 views 55532 123145357819904 Converted avatar -> avatar: DSC01508.JPG
+INFO 2025-06-22 00:19:44,465 views 55532 123145357819904 Avatar file included in update
+INFO 2025-06-22 00:19:44,465 views 55532 123145357819904 Converted data: {'first_name': 'L', 'last_name': 'Udeh', 'phone_number': '76665555543', 'gender': 'M', 'country': '', 'avatar': <InMemoryUploadedFile: DSC01508.JPG (image/jpeg)>}
+INFO 2025-06-22 00:19:44,617 utils 55532 123145357819904 Logged activity: lou24081997@gmail.com - profile_update
+INFO 2025-06-22 00:19:44,617 views 55532 123145357819904 Profile update successful for user 7
+INFO 2025-06-22 00:19:44,619 basehttp 55532 123145357819904 "PUT /api/auth/profile/ HTTP/1.1" 200 422
+INFO 2025-06-22 00:19:44,748 basehttp 55532 123145374609408 "GET /media/avatars/DSC01508.JPG HTTP/1.1" 200 9961472
+INFO 2025-06-22 00:20:22,654 views 55532 123145357819904 Profile update request data: <QueryDict: {'firstName': ['L'], 'lastName': ['Udeh'], 'phoneNumber': ['76665555543'], 'gender': ['M'], 'country': [''], 'dateOfBirth': ['1998-03-22']}>
+INFO 2025-06-22 00:20:22,654 views 55532 123145357819904 Converted firstName -> first_name: L
+INFO 2025-06-22 00:20:22,655 views 55532 123145357819904 Converted lastName -> last_name: Udeh
+INFO 2025-06-22 00:20:22,655 views 55532 123145357819904 Converted phoneNumber -> phone_number: 76665555543
+INFO 2025-06-22 00:20:22,655 views 55532 123145357819904 Converted dateOfBirth -> date_of_birth: 1998-03-22
+INFO 2025-06-22 00:20:22,655 views 55532 123145357819904 Converted gender 'M' -> 'M'
+INFO 2025-06-22 00:20:22,655 views 55532 123145357819904 Converted country -> country: 
+INFO 2025-06-22 00:20:22,655 views 55532 123145357819904 Converted data: {'first_name': 'L', 'last_name': 'Udeh', 'phone_number': '76665555543', 'date_of_birth': '1998-03-22', 'gender': 'M', 'country': ''}
+INFO 2025-06-22 00:20:22,663 utils 55532 123145357819904 Logged activity: lou24081997@gmail.com - profile_update
+INFO 2025-06-22 00:20:22,663 views 55532 123145357819904 Profile update successful for user 7
+INFO 2025-06-22 00:20:22,664 basehttp 55532 123145357819904 "PUT /api/auth/profile/ HTTP/1.1" 200 430
+INFO 2025-06-22 00:20:30,605 views 55532 123145357819904 Profile update request data: <QueryDict: {'firstName': ['L'], 'lastName': ['Udeh'], 'phoneNumber': ['76665555543'], 'gender': ['M'], 'country': ['United States'], 'dateOfBirth': ['1998-03-22']}>
+INFO 2025-06-22 00:20:30,606 views 55532 123145357819904 Converted firstName -> first_name: L
+INFO 2025-06-22 00:20:30,606 views 55532 123145357819904 Converted lastName -> last_name: Udeh
+INFO 2025-06-22 00:20:30,606 views 55532 123145357819904 Converted phoneNumber -> phone_number: 76665555543
+INFO 2025-06-22 00:20:30,606 views 55532 123145357819904 Converted dateOfBirth -> date_of_birth: 1998-03-22
+INFO 2025-06-22 00:20:30,606 views 55532 123145357819904 Converted gender 'M' -> 'M'
+INFO 2025-06-22 00:20:30,606 views 55532 123145357819904 Converted country -> country: United States
+INFO 2025-06-22 00:20:30,606 views 55532 123145357819904 Converted data: {'first_name': 'L', 'last_name': 'Udeh', 'phone_number': '76665555543', 'date_of_birth': '1998-03-22', 'gender': 'M', 'country': 'United States'}
+INFO 2025-06-22 00:20:30,617 utils 55532 123145357819904 Logged activity: lou24081997@gmail.com - profile_update
+INFO 2025-06-22 00:20:30,617 views 55532 123145357819904 Profile update successful for user 7
+INFO 2025-06-22 00:20:30,619 basehttp 55532 123145357819904 "PUT /api/auth/profile/ HTTP/1.1" 200 443
+INFO 2025-06-22 00:21:14,286 views 55532 123145357819904 Profile update request data: <QueryDict: {'firstName': ['L'], 'lastName': ['Udeh'], 'phoneNumber': ['76665555543'], 'gender': ['Male'], 'country': ['United States'], 'dateOfBirth': ['1998-03-22']}>
+INFO 2025-06-22 00:21:14,286 views 55532 123145357819904 Converted firstName -> first_name: L
+INFO 2025-06-22 00:21:14,286 views 55532 123145357819904 Converted lastName -> last_name: Udeh
+INFO 2025-06-22 00:21:14,286 views 55532 123145357819904 Converted phoneNumber -> phone_number: 76665555543
+INFO 2025-06-22 00:21:14,286 views 55532 123145357819904 Converted dateOfBirth -> date_of_birth: 1998-03-22
+INFO 2025-06-22 00:21:14,286 views 55532 123145357819904 Converted gender 'Male' -> 'M'
+INFO 2025-06-22 00:21:14,286 views 55532 123145357819904 Converted country -> country: United States
+INFO 2025-06-22 00:21:14,286 views 55532 123145357819904 Converted data: {'first_name': 'L', 'last_name': 'Udeh', 'phone_number': '76665555543', 'date_of_birth': '1998-03-22', 'gender': 'M', 'country': 'United States'}
+INFO 2025-06-22 00:21:14,294 utils 55532 123145357819904 Logged activity: lou24081997@gmail.com - profile_update
+INFO 2025-06-22 00:21:14,294 views 55532 123145357819904 Profile update successful for user 7
+INFO 2025-06-22 00:21:14,296 basehttp 55532 123145357819904 "PUT /api/auth/profile/ HTTP/1.1" 200 443
+INFO 2025-06-22 00:22:09,857 basehttp 55532 123145391398912 "GET /admin/authapp/useractivity/ HTTP/1.1" 200 91997
+INFO 2025-06-22 00:22:09,960 basehttp 55532 123145391398912 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-22 00:23:57,359 views 55532 123145357819904 Profile update request data: <QueryDict: {'firstName': ['L'], 'lastName': ['Udeh'], 'phoneNumber': ['76665555543'], 'gender': ['Female'], 'country': ['United States'], 'dateOfBirth': ['1998-03-22']}>
+INFO 2025-06-22 00:23:57,359 views 55532 123145357819904 Converted firstName -> first_name: L
+INFO 2025-06-22 00:23:57,359 views 55532 123145357819904 Converted lastName -> last_name: Udeh
+INFO 2025-06-22 00:23:57,359 views 55532 123145357819904 Converted phoneNumber -> phone_number: 76665555543
+INFO 2025-06-22 00:23:57,359 views 55532 123145357819904 Converted dateOfBirth -> date_of_birth: 1998-03-22
+INFO 2025-06-22 00:23:57,359 views 55532 123145357819904 Converted gender 'Female' -> 'F'
+INFO 2025-06-22 00:23:57,359 views 55532 123145357819904 Converted country -> country: United States
+INFO 2025-06-22 00:23:57,359 views 55532 123145357819904 Converted data: {'first_name': 'L', 'last_name': 'Udeh', 'phone_number': '76665555543', 'date_of_birth': '1998-03-22', 'gender': 'F', 'country': 'United States'}
+INFO 2025-06-22 00:23:57,368 utils 55532 123145357819904 Logged activity: lou24081997@gmail.com - profile_update
+INFO 2025-06-22 00:23:57,368 views 55532 123145357819904 Profile update successful for user 7
+INFO 2025-06-22 00:23:57,370 basehttp 55532 123145357819904 "PUT /api/auth/profile/ HTTP/1.1" 200 443
+INFO 2025-06-22 00:24:06,907 views 55532 123145357819904 Profile update request data: <QueryDict: {'firstName': ['L'], 'lastName': ['Udeh'], 'phoneNumber': ['76665555543'], 'gender': ['Male'], 'country': ['United States'], 'dateOfBirth': ['1998-03-22']}>
+INFO 2025-06-22 00:24:06,907 views 55532 123145357819904 Converted firstName -> first_name: L
+INFO 2025-06-22 00:24:06,907 views 55532 123145357819904 Converted lastName -> last_name: Udeh
+INFO 2025-06-22 00:24:06,907 views 55532 123145357819904 Converted phoneNumber -> phone_number: 76665555543
+INFO 2025-06-22 00:24:06,907 views 55532 123145357819904 Converted dateOfBirth -> date_of_birth: 1998-03-22
+INFO 2025-06-22 00:24:06,907 views 55532 123145357819904 Converted gender 'Male' -> 'M'
+INFO 2025-06-22 00:24:06,907 views 55532 123145357819904 Converted country -> country: United States
+INFO 2025-06-22 00:24:06,907 views 55532 123145357819904 Converted data: {'first_name': 'L', 'last_name': 'Udeh', 'phone_number': '76665555543', 'date_of_birth': '1998-03-22', 'gender': 'M', 'country': 'United States'}
+INFO 2025-06-22 00:24:06,916 utils 55532 123145357819904 Logged activity: lou24081997@gmail.com - profile_update
+INFO 2025-06-22 00:24:06,916 views 55532 123145357819904 Profile update successful for user 7
+INFO 2025-06-22 00:24:06,918 basehttp 55532 123145357819904 "PUT /api/auth/profile/ HTTP/1.1" 200 443
+INFO 2025-06-22 00:24:59,653 basehttp 55532 123145374609408 "GET /media/avatars/DSC01508.JPG HTTP/1.1" 304 0
+INFO 2025-06-22 00:25:07,662 views 55532 123145357819904 Profile update request data: <QueryDict: {'firstName': ['L'], 'lastName': ['Udeh'], 'phoneNumber': ['76665555543'], 'gender': ['Female'], 'country': ['United States'], 'dateOfBirth': ['1998-03-22']}>
+INFO 2025-06-22 00:25:07,662 views 55532 123145357819904 Converted firstName -> first_name: L
+INFO 2025-06-22 00:25:07,662 views 55532 123145357819904 Converted lastName -> last_name: Udeh
+INFO 2025-06-22 00:25:07,662 views 55532 123145357819904 Converted phoneNumber -> phone_number: 76665555543
+INFO 2025-06-22 00:25:07,662 views 55532 123145357819904 Converted dateOfBirth -> date_of_birth: 1998-03-22
+INFO 2025-06-22 00:25:07,662 views 55532 123145357819904 Converted gender 'Female' -> 'F'
+INFO 2025-06-22 00:25:07,662 views 55532 123145357819904 Converted country -> country: United States
+INFO 2025-06-22 00:25:07,662 views 55532 123145357819904 Converted data: {'first_name': 'L', 'last_name': 'Udeh', 'phone_number': '76665555543', 'date_of_birth': '1998-03-22', 'gender': 'F', 'country': 'United States'}
+INFO 2025-06-22 00:25:07,673 utils 55532 123145357819904 Logged activity: lou24081997@gmail.com - profile_update
+INFO 2025-06-22 00:25:07,673 views 55532 123145357819904 Profile update successful for user 7
+INFO 2025-06-22 00:25:07,675 basehttp 55532 123145357819904 "PUT /api/auth/profile/ HTTP/1.1" 200 443
+INFO 2025-06-22 00:25:14,157 views 55532 123145357819904 Profile update request data: <QueryDict: {'firstName': ['L'], 'lastName': ['Udeh'], 'phoneNumber': ['76665555543'], 'gender': ['Male'], 'country': ['United States'], 'dateOfBirth': ['1998-03-22']}>
+INFO 2025-06-22 00:25:14,157 views 55532 123145357819904 Converted firstName -> first_name: L
+INFO 2025-06-22 00:25:14,158 views 55532 123145357819904 Converted lastName -> last_name: Udeh
+INFO 2025-06-22 00:25:14,158 views 55532 123145357819904 Converted phoneNumber -> phone_number: 76665555543
+INFO 2025-06-22 00:25:14,158 views 55532 123145357819904 Converted dateOfBirth -> date_of_birth: 1998-03-22
+INFO 2025-06-22 00:25:14,158 views 55532 123145357819904 Converted gender 'Male' -> 'M'
+INFO 2025-06-22 00:25:14,158 views 55532 123145357819904 Converted country -> country: United States
+INFO 2025-06-22 00:25:14,158 views 55532 123145357819904 Converted data: {'first_name': 'L', 'last_name': 'Udeh', 'phone_number': '76665555543', 'date_of_birth': '1998-03-22', 'gender': 'M', 'country': 'United States'}
+INFO 2025-06-22 00:25:14,167 utils 55532 123145357819904 Logged activity: lou24081997@gmail.com - profile_update
+INFO 2025-06-22 00:25:14,167 views 55532 123145357819904 Profile update successful for user 7
+INFO 2025-06-22 00:25:14,169 basehttp 55532 123145357819904 "PUT /api/auth/profile/ HTTP/1.1" 200 443
+WARNING 2025-06-22 00:25:20,434 log 55532 123145357819904 Bad Request: /api/auth/logout/
+WARNING 2025-06-22 00:25:20,437 basehttp 55532 123145357819904 "POST /api/auth/logout/ HTTP/1.1" 400 43
+INFO 2025-06-22 00:25:34,330 utils 55532 123145357819904 Logged activity: lou24081997@gmail.com - login
+INFO 2025-06-22 00:25:34,332 basehttp 55532 123145357819904 "POST /api/auth/google-login/ HTTP/1.1" 200 932
+INFO 2025-06-22 00:25:34,396 basehttp 55532 123145374609408 "GET /media/avatars/DSC01508.JPG HTTP/1.1" 304 0
+WARNING 2025-06-22 00:25:48,775 log 55532 123145357819904 Bad Request: /api/auth/logout/
+WARNING 2025-06-22 00:25:48,776 basehttp 55532 123145357819904 "POST /api/auth/logout/ HTTP/1.1" 400 43
+INFO 2025-06-22 00:26:01,977 utils 55532 123145357819904 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-22 00:26:01,980 basehttp 55532 123145357819904 "POST /api/auth/login/ HTTP/1.1" 200 955
+INFO 2025-06-22 00:26:02,040 basehttp 55532 123145374609408 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 304 0

@@ -56,7 +56,7 @@ class GoogleSignUpView(APIView):
             
             return Response({
                 'message': 'Google signup successful.',
-                'user': UserProfileSerializer(user).data,
+                'user': UserProfileSerializer(user, context={'request': request}).data,  # ✅ FIXED: Added request context
                 'access_token': str(access_token),
                 'refresh_token': str(refresh)
             }, status=status.HTTP_201_CREATED)
@@ -169,7 +169,7 @@ class ProfileView(APIView):
         return Response(serializer.data, status=status.HTTP_200_OK)
     
     def put(self, request):
-        """Update user profile with field name conversion"""
+        """Update user profile with field name conversion and proper date handling"""
         try:
             # Convert frontend field names to backend field names
             data = request.data.copy()
@@ -199,7 +199,7 @@ class ProfileView(APIView):
                 '': '',
             }
             
-            # Convert field names
+            # Convert field names and handle special cases
             converted_data = {}
             for frontend_name, backend_name in field_mapping.items():
                 if frontend_name in data:
@@ -214,58 +214,89 @@ class ProfileView(APIView):
                         else:
                             logger.warning(f"Unknown gender value: {value}")
                             converted_data[backend_name] = value
+                    
+                    # ✅ FIXED: Special handling for date fields
+                    elif frontend_name == 'dateOfBirth':
+                        if value and value.strip():  # Only process non-empty dates
+                            try:
+                                # Validate date format
+                                from datetime import datetime
+                                datetime.strptime(value, '%Y-%m-%d')
+                                converted_data[backend_name] = value
+                                logger.info(f"Converted {frontend_name} -> {backend_name}: {value}")
+                            except ValueError:
+                                logger.warning(f"Invalid date format for {frontend_name}: {value}")
+                                # Skip invalid dates rather than causing an error
+                                continue
+                        else:
+                            # ✅ CRITICAL FIX: Set empty dates to None, not empty string
+                            converted_data[backend_name] = None
+                            logger.info(f"Converted empty {frontend_name} -> {backend_name}: None")
+                    
+                    # Handle other fields normally
                     else:
                         converted_data[backend_name] = value
                         logger.info(f"Converted {frontend_name} -> {backend_name}: {value}")
             
-            # Handle any fields that don't need conversion
-            for key, value in data.items():
-                if key not in field_mapping and key not in converted_data:
-                    converted_data[key] = value
+            # Handle avatar file separately (it might not be in the mapping)
+            if 'avatar' in data and data['avatar']:
+                converted_data['avatar'] = data['avatar']
+                logger.info("Avatar file included in update")
             
             logger.info(f"Converted data: {converted_data}")
             
-            # Use the converted data with the serializer and pass request context
+            # ✅ ADDITIONAL FIX: Clean up empty string fields that should be None
+            for field_name, field_value in list(converted_data.items()):
+                if isinstance(field_value, str) and field_value.strip() == '':
+                    if field_name in ['date_of_birth']:  # Add other date/nullable fields here
+                        converted_data[field_name] = None
+                        logger.info(f"Cleaned empty string to None for {field_name}")
+                    elif field_name in ['phone_number', 'country']:  # Text fields can be empty
+                        converted_data[field_name] = ''
+            
+            # Update user with converted data
             serializer = UserProfileSerializer(
                 request.user, 
                 data=converted_data, 
-                partial=True,
+                partial=True,  # ✅ Allow partial updates
                 context={'request': request}
             )
             
             if serializer.is_valid():
                 user = serializer.save()
-                log_user_activity(request.user, 'profile_update', 'Profile updated successfully', request)
                 
-                # Get fresh user data with proper context for avatar URL
+                # Log successful update
+                log_user_activity(request.user, 'profile_update', 'Profile updated successfully', request)
+                logger.info(f"Profile update successful for user {user.id}")
+                
+                # Return updated user data with proper context
                 updated_serializer = UserProfileSerializer(user, context={'request': request})
                 
-                # Return success response
-                response_data = {
+                return Response({
                     'message': 'Profile updated successfully.',
-                    'user': updated_serializer.data,
-                    'success': True
-                }
-                
-                logger.info("Profile update successful")
-                logger.info(f"Avatar URL in response: {updated_serializer.data.get('avatar')}")
-                return Response(response_data, status=status.HTTP_200_OK)
+                    'user': updated_serializer.data
+                }, status=status.HTTP_200_OK)
             else:
                 # Log validation errors
                 logger.error(f"Profile update validation errors: {serializer.errors}")
+                
+                # Return detailed error information
+                error_messages = []
+                for field, errors in serializer.errors.items():
+                    for error in errors:
+                        error_messages.append(f"{field}: {error}")
+                
                 return Response({
-                    'message': 'Validation failed.',
-                    'errors': serializer.errors,
-                    'success': False
+                    'error': 'Validation failed',
+                    'details': serializer.errors,
+                    'message': '; '.join(error_messages)
                 }, status=status.HTTP_400_BAD_REQUEST)
                 
         except Exception as e:
-            # Log unexpected errors
             logger.error(f"Profile update error: {str(e)}", exc_info=True)
             return Response({
-                'message': 'An unexpected error occurred.',
-                'error': str(e),
-                'success': False
+                'error': 'Profile update failed',
+                'message': 'An unexpected error occurred. Please try again.'
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 class UserPreferencesView(APIView):
     permission_classes = [permissions.IsAuthenticated]
