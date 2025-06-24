@@ -22,6 +22,17 @@ from .serializers import (
     ContentManagementSerializer, UserManagementSerializer, UserBasicSerializer
 )
 
+try:
+    from email_notifications.signals import trigger_live_notification
+    from email_notifications.models import NewsletterSubscription, EmailNotification
+    from email_notifications.utils import send_live_video_notification
+    from email_notifications.serializers import EmailNotificationSerializer
+    EMAIL_NOTIFICATIONS_AVAILABLE = True
+except ImportError:
+    EMAIL_NOTIFICATIONS_AVAILABLE = False
+import logging
+logger = logging.getLogger(__name__)
+
 User = get_user_model()
 
 class IsAdminPermission(permissions.BasePermission):
@@ -159,6 +170,29 @@ def dashboard_stats(request):
     avg_session_duration = 15.5  # Placeholder
     bounce_rate = 25.3  # Placeholder
     
+    # Email Notification Statistics
+    
+    email_stats = {}
+    if EMAIL_NOTIFICATIONS_AVAILABLE:
+        try:
+            email_stats = {
+                'total_subscribers': NewsletterSubscription.objects.filter(is_active=True).count(),
+                'verified_subscribers': NewsletterSubscription.objects.filter(
+                    is_active=True, is_verified=True
+                ).count(),
+                'emails_sent_today': EmailNotification.objects.filter(
+                    status='sent',
+                    sent_at__date=today
+                ).count(),
+                'failed_emails_today': EmailNotification.objects.filter(
+                    status='failed',
+                    created_at__date=today
+                ).count(),
+            }
+        except Exception as e:
+            logger.error(f"Failed to get email stats: {str(e)}")
+
+    
     stats_data = {
         'total_users': total_users,
         'new_users_today': new_users_today,
@@ -184,10 +218,10 @@ def dashboard_stats(request):
         'pending_moderation': pending_moderation,
         'avg_session_duration': avg_session_duration,
         'bounce_rate': bounce_rate,
+        'email_stats': email_stats,
     }
     
     return Response(stats_data)
-
 
 @extend_schema(
     tags=['Admin Dashboard'],
@@ -596,3 +630,269 @@ def moderation_queue(request):
         'total_count': queue_items.count()
     })
 
+
+@extend_schema(
+    tags=['Admin Dashboard'],
+    summary='Start live stream and notify subscribers',
+    description='Start a live stream and send notifications to all subscribers'
+)
+@api_view(['POST'])
+@permission_classes([IsAdminPermission])
+def start_live_stream(request):
+    """
+    Start a live stream and notify subscribers
+    """
+    try:
+        # You can add any live stream setup logic here
+        live_title = request.data.get('title', 'Live Stream')
+        live_description = request.data.get('description', '')
+        
+        # Create or update live video record if you have a live_video app
+        try:
+            from live_video.models import LiveVideo
+            live_video = LiveVideo.objects.create(
+                title=live_title,
+                description=live_description,
+                is_live=True,
+                author=request.user
+            )
+        except ImportError:
+            # If no live_video app, just proceed with notifications
+            live_video = None
+        
+        # Send notifications to subscribers
+        if EMAIL_NOTIFICATIONS_AVAILABLE:
+            try:
+                trigger_live_notification()
+                
+                # Get count of notified subscribers
+                subscriber_count = NewsletterSubscription.objects.filter(
+                    is_active=True,
+                    is_verified=True,
+                    live_videos=True
+                ).count()
+                
+                # Log admin activity
+                log_admin_activity(
+                    admin=request.user,
+                    activity_type='start_live',
+                    description=f'Started live stream: {live_title}',
+                    metadata={'title': live_title, 'subscribers_notified': subscriber_count},
+                    request=request
+                )
+                
+                return Response({
+                    'message': f'Live stream started and {subscriber_count} subscribers notified.',
+                    'live_video_id': str(live_video.id) if live_video else None,
+                    'subscribers_notified': subscriber_count
+                }, status=status.HTTP_200_OK)
+                
+            except Exception as e:
+                logger.error(f"Failed to send live notifications: {str(e)}")
+                return Response({
+                    'message': 'Live stream started but failed to send notifications.',
+                    'error': str(e)
+                }, status=status.HTTP_206_PARTIAL_CONTENT)
+        else:
+            return Response({
+                'message': 'Live stream started. Email notifications not available.',
+                'live_video_id': str(live_video.id) if live_video else None
+            }, status=status.HTTP_200_OK)
+            
+    except Exception as e:
+        logger.error(f"Failed to start live stream: {str(e)}")
+        return Response({
+            'error': 'Failed to start live stream.',
+            'details': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+@extend_schema(
+    tags=['Admin Dashboard'],
+    summary='Get email notification statistics',
+    description='Get comprehensive email notification statistics for the admin dashboard'
+)
+@api_view(['GET'])
+@permission_classes([IsAdminPermission])
+def email_notification_stats(request):
+    """
+    Get email notification statistics for admin dashboard
+    """
+    if not EMAIL_NOTIFICATIONS_AVAILABLE:
+        return Response({
+            'error': 'Email notifications not available'
+        }, status=status.HTTP_404_NOT_FOUND)
+    
+    try:
+        from datetime import timedelta
+        from django.db.models import Count, Q
+        
+        # Get date ranges
+        today = timezone.now().date()
+        last_30_days = timezone.now() - timedelta(days=30)
+        last_7_days = timezone.now() - timedelta(days=7)
+        
+        # Newsletter statistics  
+        total_subscribers = NewsletterSubscription.objects.filter(is_active=True).count()
+        verified_subscribers = NewsletterSubscription.objects.filter(
+            is_active=True, 
+            is_verified=True
+        ).count()
+        new_subscribers_30d = NewsletterSubscription.objects.filter(
+            subscribed_at__gte=last_30_days
+        ).count()
+        
+        # Email notification statistics
+        total_emails_sent = EmailNotification.objects.filter(status='sent').count()
+        emails_sent_7d = EmailNotification.objects.filter(
+            status='sent',
+            sent_at__gte=last_7_days
+        ).count()
+        failed_emails = EmailNotification.objects.filter(status='failed').count()
+        
+        # Email types breakdown
+        email_types = EmailNotification.objects.filter(
+            created_at__gte=last_30_days
+        ).values('notification_type').annotate(
+            count=Count('id')
+        ).order_by('-count')
+        
+        # Success rate
+        total_attempted = EmailNotification.objects.exclude(status='pending').count()
+        success_rate = (total_emails_sent / total_attempted * 100) if total_attempted > 0 else 0
+        
+        # Recent notifications
+        recent_notifications = EmailNotification.objects.filter(
+            created_at__gte=last_7_days
+        ).order_by('-created_at')[:10]
+        
+        return Response({
+            'newsletter_stats': {
+                'total_subscribers': total_subscribers,
+                'verified_subscribers': verified_subscribers,
+                'new_subscribers_30d': new_subscribers_30d,
+                'verification_rate': (verified_subscribers / total_subscribers * 100) if total_subscribers > 0 else 0
+            },
+            'email_stats': {
+                'total_sent': total_emails_sent,
+                'sent_last_7d': emails_sent_7d,
+                'failed': failed_emails,
+                'success_rate': round(success_rate, 2)
+            },
+            'email_types': list(email_types),
+            'recent_notifications': EmailNotificationSerializer(recent_notifications, many=True).data
+        }, status=status.HTTP_200_OK)
+        
+    except Exception as e:
+        logger.error(f"Failed to get email notification stats: {str(e)}")
+        return Response({
+            'error': 'Failed to fetch email notification statistics.'
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+@extend_schema(
+    tags=['Admin Dashboard'],
+    summary='Send content upload notification',
+    description='Manually send content upload notification to subscribers'
+)
+@api_view(['POST'])
+@permission_classes([IsAdminPermission])
+def send_content_notification(request):
+    """
+    Manually send content upload notification
+    """
+    if not EMAIL_NOTIFICATIONS_AVAILABLE:
+        return Response({
+            'error': 'Email notifications not available'
+        }, status=status.HTTP_404_NOT_FOUND)
+    
+    try:
+        content_type = request.data.get('content_type')  # 'stories', 'films', etc.
+        content_id = request.data.get('content_id')
+        
+        if not content_type or not content_id:
+            return Response({
+                'error': 'content_type and content_id are required'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Get the content instance
+        content_instance = None
+        
+        if content_type == 'stories':
+            try:
+                from stories.models import Story
+                content_instance = Story.objects.get(id=content_id)
+            except ImportError:
+                return Response({'error': 'Stories app not available'}, status=status.HTTP_404_NOT_FOUND)
+        elif content_type == 'films':
+            try:
+                from media_content.models import Film
+                content_instance = Film.objects.get(id=content_id)
+            except ImportError:
+                return Response({'error': 'Media content app not available'}, status=status.HTTP_404_NOT_FOUND)
+        elif content_type == 'content':
+            try:
+                from media_content.models import Content
+                content_instance = Content.objects.get(id=content_id)
+            except ImportError:
+                return Response({'error': 'Media content app not available'}, status=status.HTTP_404_NOT_FOUND)
+        elif content_type == 'podcasts':
+            try:
+                from podcasts.models import Podcast
+                content_instance = Podcast.objects.get(id=content_id)
+            except ImportError:
+                return Response({'error': 'Podcasts app not available'}, status=status.HTTP_404_NOT_FOUND)
+        elif content_type == 'animations':
+            try:
+                from animations.models import Animation
+                content_instance = Animation.objects.get(id=content_id)
+            except ImportError:
+                return Response({'error': 'Animations app not available'}, status=status.HTTP_404_NOT_FOUND)
+        elif content_type == 'sneak_peeks':
+            try:
+                from sneak_peeks.models import SneakPeek
+                content_instance = SneakPeek.objects.get(id=content_id)
+            except ImportError:
+                return Response({'error': 'Sneak peeks app not available'}, status=status.HTTP_404_NOT_FOUND)
+        else:
+            return Response({
+                'error': 'Invalid content_type. Must be one of: stories, films, content, podcasts, animations, sneak_peeks'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        if not content_instance:
+            return Response({
+                'error': f'{content_type[:-1].title()} with id {content_id} not found'
+            }, status=status.HTTP_404_NOT_FOUND)
+        
+        # Send the notification
+        from email_notifications.signals import trigger_content_notification
+        content_type_singular = content_type.rstrip('s')  # Remove 's' from plural
+        trigger_content_notification(content_instance, content_type_singular)
+        
+        # Get subscriber count
+        subscriber_count = NewsletterSubscription.objects.filter(
+            is_active=True,
+            is_verified=True,
+            content_uploads=True
+        ).count()
+        
+        # Log admin activity
+        log_admin_activity(
+            admin=request.user,
+            activity_type='send_notification',
+            description=f'Sent notification for {content_type_singular}: {content_instance.title}',
+            content_object=content_instance,
+            metadata={'subscribers_notified': subscriber_count},
+            request=request
+        )
+        
+        return Response({
+            'message': f'Content notification sent for "{content_instance.title}" to {subscriber_count} subscribers.',
+            'content_title': content_instance.title,
+            'subscribers_notified': subscriber_count
+        }, status=status.HTTP_200_OK)
+        
+    except Exception as e:
+        logger.error(f"Failed to send content notification: {str(e)}")
+        return Response({
+            'error': 'Failed to send content notification.',
+            'details': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

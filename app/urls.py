@@ -41,6 +41,9 @@ urlpatterns = [
     # Live Video Management
     path('api/live-video/', include('live_video.urls')),
     
+    # Email Notifications
+    path('api/email-notifications/', include('email_notifications.urls')),
+    
     # Admin interfaces
     path('api/admin-dashboard/', include('admin_dashboard.urls')),
 ]

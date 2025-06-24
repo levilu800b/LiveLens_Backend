@@ -6801,3 +6801,182 @@ WARNING 2025-06-22 00:25:48,776 basehttp 55532 123145357819904 "POST /api/auth/l
 INFO 2025-06-22 00:26:01,977 utils 55532 123145357819904 Logged activity: levilu18@gmail.com - login
 INFO 2025-06-22 00:26:01,980 basehttp 55532 123145357819904 "POST /api/auth/login/ HTTP/1.1" 200 955
 INFO 2025-06-22 00:26:02,040 basehttp 55532 123145374609408 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 304 0
+INFO 2025-06-22 00:30:17,368 basehttp 55532 123145374609408 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 200 1065080
+WARNING 2025-06-22 00:30:43,039 log 55532 123145391398912 Not Found: /api/placeholder/600/400
+WARNING 2025-06-22 00:30:43,039 log 55532 123145408188416 Not Found: /api/placeholder/400/300
+WARNING 2025-06-22 00:30:43,040 basehttp 55532 123145391398912 "GET /api/placeholder/600/400 HTTP/1.1" 404 4811
+WARNING 2025-06-22 00:30:43,040 basehttp 55532 123145408188416 "GET /api/placeholder/400/300 HTTP/1.1" 404 4811
+WARNING 2025-06-22 00:30:50,595 log 55532 123145391398912 Not Found: /api/placeholder/600/400
+WARNING 2025-06-22 00:30:50,600 log 55532 123145408188416 Not Found: /api/placeholder/400/300
+WARNING 2025-06-22 00:30:50,600 basehttp 55532 123145408188416 "GET /api/placeholder/400/300 HTTP/1.1" 404 4811
+WARNING 2025-06-22 00:30:50,600 basehttp 55532 123145391398912 "GET /api/placeholder/600/400 HTTP/1.1" 404 4811
+INFO 2025-06-22 00:36:25,591 basehttp 55532 123145357819904 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 304 0
+INFO 2025-06-22 00:36:25,633 basehttp 55532 123145374609408 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 200 1065080
+INFO 2025-06-22 22:27:22,399 autoreload 9920 140704602865088 Watching for file changes with StatReloader
+WARNING 2025-06-22 22:29:13,978 log 9920 123145360150528 Not Found: /
+WARNING 2025-06-22 22:29:13,979 basehttp 9920 123145360150528 "GET / HTTP/1.1" 404 4724
+WARNING 2025-06-22 22:29:14,417 log 9920 123145360150528 Not Found: /favicon.ico
+WARNING 2025-06-22 22:29:14,418 basehttp 9920 123145360150528 "GET /favicon.ico HTTP/1.1" 404 4775
+INFO 2025-06-22 22:29:30,860 basehttp 9920 123145360150528 "GET /admin HTTP/1.1" 301 0
+INFO 2025-06-22 22:29:30,975 basehttp 9920 123145376940032 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-06-22 22:29:31,015 basehttp 9920 123145376940032 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4183
+INFO 2025-06-22 22:29:31,074 basehttp 9920 123145427308544 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-06-22 22:29:31,075 basehttp 9920 123145410519040 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-06-22 22:29:31,076 basehttp 9920 123145360150528 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-06-22 22:29:31,077 basehttp 9920 123145393729536 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-06-22 22:29:31,078 basehttp 9920 123145376940032 "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-06-22 22:29:31,078 basehttp 9920 123145444098048 "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2025-06-22 22:29:31,095 basehttp 9920 123145444098048 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-06-22 22:29:53,101 basehttp 9920 123145444098048 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-06-22 22:29:53,160 basehttp 9920 123145444098048 "GET /admin/ HTTP/1.1" 200 39914
+INFO 2025-06-22 22:29:53,181 basehttp 9920 123145444098048 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-06-22 22:29:53,228 basehttp 9920 123145444098048 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-06-22 22:29:53,237 basehttp 9920 123145376940032 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-06-22 22:29:53,237 basehttp 9920 123145444098048 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-06-22 22:29:53,238 basehttp 9920 123145393729536 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2025-06-22 22:30:02,644 basehttp 9920 123145393729536 "GET /admin/authapp/user/ HTTP/1.1" 200 41296
+INFO 2025-06-22 22:30:02,688 basehttp 9920 123145393729536 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO 2025-06-22 22:30:02,697 basehttp 9920 123145360150528 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-06-22 22:30:02,699 basehttp 9920 123145427308544 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-06-22 22:30:02,701 basehttp 9920 123145393729536 "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO 2025-06-22 22:30:02,702 basehttp 9920 123145410519040 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+INFO 2025-06-22 22:30:02,709 basehttp 9920 123145427308544 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-06-22 22:30:02,709 basehttp 9920 123145360150528 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-06-22 22:30:02,713 basehttp 9920 123145410519040 "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2025-06-22 22:30:02,714 basehttp 9920 123145444098048 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-22 22:30:02,717 basehttp 9920 123145360150528 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2025-06-22 22:30:02,720 basehttp 9920 123145444098048 "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2025-06-22 22:30:02,722 basehttp 9920 123145376940032 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2025-06-22 22:30:02,724 basehttp 9920 123145393729536 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-06-22 22:30:02,797 basehttp 9920 123145393729536 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-06-22 22:30:02,813 basehttp 9920 123145393729536 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2025-06-22 22:30:02,818 basehttp 9920 123145393729536 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2025-06-22 22:30:28,703 basehttp 9920 123145460887552 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-06-22 22:30:29,423 utils 9920 123145460887552 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-22 22:30:29,515 basehttp 9920 123145460887552 "POST /api/auth/login/ HTTP/1.1" 200 955
+INFO 2025-06-22 22:30:29,562 basehttp 9920 123145477677056 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 200 1065080
+INFO 2025-06-22 22:32:17,329 basehttp 9920 123145360150528 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 200 1065080
+INFO 2025-06-23 06:27:09,206 basehttp 9920 123145360150528 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 304 0
+INFO 2025-06-23 06:27:09,296 basehttp 9920 123145360150528 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 200 1065080
+INFO 2025-06-23 06:32:27,785 basehttp 9920 123145360150528 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 200 1065080
+INFO 2025-06-23 15:31:52,648 basehttp 9920 123145360150528 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 304 0
+WARNING 2025-06-23 15:32:07,575 log 9920 123145393729536 Not Found: /api/placeholder/400/300
+WARNING 2025-06-23 15:32:07,576 log 9920 123145376940032 Not Found: /api/placeholder/600/400
+WARNING 2025-06-23 15:32:07,576 basehttp 9920 123145393729536 "GET /api/placeholder/400/300 HTTP/1.1" 404 4811
+WARNING 2025-06-23 15:32:07,576 basehttp 9920 123145376940032 "GET /api/placeholder/600/400 HTTP/1.1" 404 4811
+INFO 2025-06-23 15:33:12,248 basehttp 9920 123145360150528 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 200 1065080
+INFO 2025-06-23 17:30:34,979 basehttp 9920 123145360150528 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 200 1065080
+INFO 2025-06-23 17:47:18,567 basehttp 9920 123145360150528 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 200 1065080
+INFO 2025-06-23 17:52:46,889 basehttp 9920 123145360150528 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 200 1065080
+INFO 2025-06-23 18:47:16,324 basehttp 9920 123145360150528 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 200 1065080
+INFO 2025-06-24 04:58:47,002 basehttp 9920 123145360150528 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 304 0
+INFO 2025-06-24 04:58:47,073 basehttp 9920 123145360150528 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 200 1065080
+INFO 2025-06-24 09:06:28,610 basehttp 9920 123145360150528 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 200 1065080
+WARNING 2025-06-24 12:52:25,274 log 9920 123145376940032 Not Found: /api/placeholder/400/300
+WARNING 2025-06-24 12:52:25,277 log 9920 123145360150528 Not Found: /api/placeholder/600/400
+WARNING 2025-06-24 12:52:25,279 basehttp 9920 123145376940032 "GET /api/placeholder/400/300 HTTP/1.1" 404 4811
+WARNING 2025-06-24 12:52:25,280 basehttp 9920 123145360150528 "GET /api/placeholder/600/400 HTTP/1.1" 404 4811
+INFO 2025-06-24 12:55:15,264 autoreload 9920 140704602865088 /Users/levicharles/Documents/liveLens_backend/authapp/utils.py changed, reloading.
+INFO 2025-06-24 12:55:16,712 autoreload 38597 140704602865088 Watching for file changes with StatReloader
+INFO 2025-06-24 13:00:34,953 autoreload 38597 140704602865088 /Users/levicharles/Documents/liveLens_backend/authapp/utils.py changed, reloading.
+INFO 2025-06-24 13:00:36,406 autoreload 38894 140704602865088 Watching for file changes with StatReloader
+INFO 2025-06-24 13:09:57,143 basehttp 38894 123145398554624 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 200 1065080
+INFO 2025-06-24 13:26:51,447 basehttp 38894 123145398554624 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 200 1065080
+INFO 2025-06-24 16:50:50,741 basehttp 38894 123145398554624 "GET /media/avatars/brian-aitkenhead-vhtyJdiQ7Ns-unsplash.jpg HTTP/1.1" 200 1065080
+INFO 2025-06-24 19:35:31,118 autoreload 38894 140704602865088 /Users/levicharles/Documents/liveLens_backend/authapp/views.py changed, reloading.
+INFO 2025-06-24 19:35:32,507 autoreload 43497 140704602865088 Watching for file changes with StatReloader
+INFO 2025-06-24 19:40:31,204 autoreload 43497 140704602865088 /Users/levicharles/Documents/liveLens_backend/app/settings.py changed, reloading.
+INFO 2025-06-24 19:40:32,300 autoreload 43871 140704602865088 Watching for file changes with StatReloader
+INFO 2025-06-24 19:48:23,350 autoreload 43871 140704602865088 /Users/levicharles/Documents/liveLens_backend/authapp/views.py changed, reloading.
+INFO 2025-06-24 19:48:24,796 autoreload 44334 140704602865088 Watching for file changes with StatReloader
+INFO 2025-06-24 20:03:18,012 autoreload 44334 140704602865088 /Users/levicharles/Documents/liveLens_backend/email_notifications/admin.py changed, reloading.
+INFO 2025-06-24 20:03:19,156 autoreload 45567 140704602865088 Watching for file changes with StatReloader
+INFO 2025-06-24 20:07:16,814 autoreload 45858 140704602865088 Watching for file changes with StatReloader
+INFO 2025-06-24 20:08:39,268 autoreload 45858 140704602865088 /Users/levicharles/Documents/liveLens_backend/email_notifications/admin.py changed, reloading.
+INFO 2025-06-24 20:08:40,535 autoreload 45989 140704602865088 Watching for file changes with StatReloader
+INFO 2025-06-24 20:10:26,484 basehttp 45989 123145354874880 "GET /admin/authapp/user/ HTTP/1.1" 200 43425
+INFO 2025-06-24 20:10:26,565 basehttp 45989 123145354874880 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-24 20:10:29,827 basehttp 45989 123145354874880 "GET /admin/authapp/user/ HTTP/1.1" 200 43425
+INFO 2025-06-24 20:10:29,864 basehttp 45989 123145354874880 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-24 20:10:36,855 basehttp 45989 123145354874880 "GET /admin/email_notifications/emailnotification/ HTTP/1.1" 200 37860
+INFO 2025-06-24 20:10:36,909 basehttp 45989 123145354874880 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-24 20:10:43,235 basehttp 45989 123145354874880 "GET /admin/email_notifications/emailtemplate/ HTTP/1.1" 200 36575
+INFO 2025-06-24 20:10:43,281 basehttp 45989 123145354874880 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-24 20:10:48,198 basehttp 45989 123145354874880 "GET /admin/email_notifications/newslettersubscription/ HTTP/1.1" 200 37662
+INFO 2025-06-24 20:10:48,234 basehttp 45989 123145354874880 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-24 20:11:15,275 basehttp 45989 123145388453888 "OPTIONS /api/email-notifications/newsletter/subscribe/ HTTP/1.1" 200 0
+ERROR 2025-06-24 20:11:15,322 utils 45989 123145388453888 Failed to send newsletter confirmation email to levilu18@gmail.com: 'Settings' object has no attribute 'FRONTEND_URL'
+INFO 2025-06-24 20:11:15,323 basehttp 45989 123145388453888 "POST /api/email-notifications/newsletter/subscribe/ HTTP/1.1" 201 151
+INFO 2025-06-24 20:12:01,779 basehttp 45989 123145354874880 "GET /admin/email_notifications/newslettersubscription/ HTTP/1.1" 200 40918
+INFO 2025-06-24 20:12:01,826 basehttp 45989 123145354874880 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-24 20:12:23,178 basehttp 45989 123145354874880 "GET /admin/email_notifications/newslettersubscription/c97decbd-9246-4da7-ab1d-567eeca69ef7/change/ HTTP/1.1" 200 47849
+INFO 2025-06-24 20:12:23,220 basehttp 45989 123145371664384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-24 20:12:23,220 basehttp 45989 123145405243392 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-06-24 20:12:23,221 basehttp 45989 123145354874880 "GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+INFO 2025-06-24 20:12:23,237 basehttp 45989 123145371664384 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11991
+INFO 2025-06-24 20:12:23,254 basehttp 45989 123145371664384 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-06-24 20:12:29,443 basehttp 45989 123145371664384 "GET /admin/email_notifications/newslettersubscription/ HTTP/1.1" 200 40918
+INFO 2025-06-24 20:16:03,315 basehttp 45989 123145371664384 "GET /admin/admin_dashboard/adminactivity/ HTTP/1.1" 200 36651
+INFO 2025-06-24 20:16:03,375 basehttp 45989 123145371664384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-24 20:16:05,626 basehttp 45989 123145371664384 "GET /admin/admin_dashboard/contentmoderationqueue/ HTTP/1.1" 200 41812
+INFO 2025-06-24 20:16:05,662 basehttp 45989 123145371664384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-24 20:16:07,023 basehttp 45989 123145371664384 "GET /admin/admin_dashboard/platformstatistics/ HTTP/1.1" 200 35420
+INFO 2025-06-24 20:16:07,095 basehttp 45989 123145371664384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-24 20:17:20,822 basehttp 45989 123145371664384 "GET /admin/email_notifications/newslettersubscription/ HTTP/1.1" 200 40918
+INFO 2025-06-24 20:17:20,867 basehttp 45989 123145371664384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-06-24 20:18:32,382 signals 45989 123145354874880 Error in welcome email signal: Error 61 connecting to 127.0.0.1:6379. Connection refused.
+INFO 2025-06-24 20:18:32,392 utils 45989 123145354874880 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-24 20:18:32,490 basehttp 45989 123145354874880 "POST /api/auth/login/ HTTP/1.1" 200 955
+WARNING 2025-06-24 20:18:46,671 log 45989 123145354874880 Not Found: /api/admin/notifications/stats/
+WARNING 2025-06-24 20:18:46,671 basehttp 45989 123145354874880 "GET //api/admin/notifications/stats/ HTTP/1.1" 404 4999
+INFO 2025-06-24 20:19:30,048 basehttp 45989 123145354874880 "GET //api/auth/profile/ HTTP/1.1" 200 813
+WARNING 2025-06-24 20:20:18,277 log 45989 123145354874880 Forbidden: /api/admin-dashboard/stats/
+WARNING 2025-06-24 20:20:18,277 basehttp 45989 123145354874880 "GET /api/admin-dashboard/stats/ HTTP/1.1" 403 63
+ERROR 2025-06-24 20:20:30,448 signals 45989 123145354874880 Error in welcome email signal: Error 61 connecting to 127.0.0.1:6379. Connection refused.
+INFO 2025-06-24 20:20:30,449 utils 45989 123145354874880 Logged activity: levilu18@gmail.com - login
+INFO 2025-06-24 20:20:30,451 basehttp 45989 123145354874880 "POST /api/auth/login/ HTTP/1.1" 200 955
+WARNING 2025-06-24 20:20:49,742 log 45989 123145354874880 Forbidden: /api/admin-dashboard/stats/
+WARNING 2025-06-24 20:20:49,742 basehttp 45989 123145354874880 "GET /api/admin-dashboard/stats/ HTTP/1.1" 403 63
+WARNING 2025-06-24 20:21:46,926 log 45989 123145354874880 Not Found: /api/admin/email_notifications/newslettersubscription/
+WARNING 2025-06-24 20:21:46,926 basehttp 45989 123145354874880 "GET /api/admin/email_notifications/newslettersubscription/ HTTP/1.1" 404 5068
+WARNING 2025-06-24 20:22:06,893 log 45989 123145354874880 Forbidden: /api/admin-dashboard/stats/
+WARNING 2025-06-24 20:22:06,894 basehttp 45989 123145354874880 "GET /api/admin-dashboard/stats/ HTTP/1.1" 403 63
+WARNING 2025-06-24 20:22:21,050 log 45989 123145354874880 Not Found: /api/admin/stats/
+WARNING 2025-06-24 20:22:21,051 basehttp 45989 123145354874880 "GET /api/admin/stats/ HTTP/1.1" 404 4957
+INFO 2025-06-24 20:22:30,295 basehttp 45989 123145371664384 "GET /admin/email_notifications/newslettersubscription/ HTTP/1.1" 200 40918
+INFO 2025-06-24 20:22:30,389 basehttp 45989 123145371664384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-06-24 20:24:31,334 log 45989 123145388453888 Not Found: /api/admin/notifications/stats/
+WARNING 2025-06-24 20:24:31,335 basehttp 45989 123145388453888 "GET //api/admin/notifications/stats/ HTTP/1.1" 404 4999
+INFO 2025-06-24 20:25:38,845 basehttp 45989 123145371664384 "GET /admin/admin_dashboard/platformstatistics/ HTTP/1.1" 200 35420
+INFO 2025-06-24 20:25:38,903 basehttp 45989 123145371664384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-24 20:25:47,899 basehttp 45989 123145371664384 "GET /admin/password_reset/passwordresetrequest/ HTTP/1.1" 200 42550
+INFO 2025-06-24 20:25:47,938 basehttp 45989 123145371664384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-24 20:25:52,439 basehttp 45989 123145371664384 "GET /admin/authapp/emailverificationcode/ HTTP/1.1" 200 36581
+INFO 2025-06-24 20:25:52,474 basehttp 45989 123145371664384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-24 20:25:59,155 basehttp 45989 123145371664384 "GET /admin/admin_dashboard/adminactivity/ HTTP/1.1" 200 36651
+INFO 2025-06-24 20:25:59,193 basehttp 45989 123145371664384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-06-24 20:28:37,236 log 45989 123145405243392 Not Found: /api/admin/email_notifications/stats/
+WARNING 2025-06-24 20:28:37,237 basehttp 45989 123145405243392 "GET //api/admin/email_notifications/stats/ HTTP/1.1" 404 5017
+INFO 2025-06-24 20:29:11,873 basehttp 45989 123145371664384 "GET /admin/email_notifications/newslettersubscription/ HTTP/1.1" 200 40918
+INFO 2025-06-24 20:29:11,918 basehttp 45989 123145371664384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-06-24 20:29:29,923 log 45989 123145405243392 Not Found: /api/admin/email_notifications/newslettersubscription/
+WARNING 2025-06-24 20:29:29,923 basehttp 45989 123145405243392 "GET //api/admin/email_notifications/newslettersubscription/ HTTP/1.1" 404 5068
+WARNING 2025-06-24 20:29:42,912 log 45989 123145405243392 Not Found: /api/email_notifications/newslettersubscription/
+WARNING 2025-06-24 20:29:42,913 basehttp 45989 123145405243392 "GET //api/email_notifications/newslettersubscription/ HTTP/1.1" 404 5050
+WARNING 2025-06-24 20:31:56,557 log 45989 123145422032896 Not Found: /api/admin/newsletter/stats/
+WARNING 2025-06-24 20:31:56,558 basehttp 45989 123145422032896 "GET //api/admin/newsletter/stats/ HTTP/1.1" 404 4990
+WARNING 2025-06-24 20:32:12,128 log 45989 123145422032896 Not Found: /api/email_notifications/admin/newsletter/stats/
+WARNING 2025-06-24 20:32:12,129 basehttp 45989 123145422032896 "GET //api/email_notifications/admin/newsletter/stats/ HTTP/1.1" 404 5050
+INFO 2025-06-24 20:32:34,532 basehttp 45989 123145422032896 "GET //api/auth/profile/ HTTP/1.1" 200 813
+INFO 2025-06-24 20:33:09,951 basehttp 45989 123145371664384 "GET /admin/animations/animation/ HTTP/1.1" 200 40612
+INFO 2025-06-24 20:33:10,167 basehttp 45989 123145371664384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-24 20:33:14,120 basehttp 45989 123145371664384 "GET /admin/email_notifications/emailtemplate/ HTTP/1.1" 200 36575
+INFO 2025-06-24 20:33:14,167 basehttp 45989 123145371664384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-24 20:33:19,059 basehttp 45989 123145371664384 "GET /admin/email_notifications/newslettersubscription/ HTTP/1.1" 200 40918
+INFO 2025-06-24 20:33:19,093 basehttp 45989 123145371664384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-24 20:33:30,478 basehttp 45989 123145371664384 "GET /admin/authapp/user/ HTTP/1.1" 200 43424
+INFO 2025-06-24 20:33:30,518 basehttp 45989 123145371664384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-24 20:33:35,029 basehttp 45989 123145371664384 "GET /admin/authapp/userpreferences/ HTTP/1.1" 200 40253
+INFO 2025-06-24 20:33:35,068 basehttp 45989 123145371664384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-24 20:33:45,168 basehttp 45989 123145371664384 "GET /admin/authapp/useractivity/ HTTP/1.1" 200 94162
+INFO 2025-06-24 20:33:45,204 basehttp 45989 123145371664384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342

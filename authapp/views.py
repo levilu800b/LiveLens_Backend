@@ -20,7 +20,17 @@ from .utils import log_user_activity, send_verification_email
 
 from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
 import logging
+
 logger = logging.getLogger(__name__)
+
+try:
+    from email_notifications.signals import send_password_change_notification
+    from email_notifications.utils import send_welcome_email
+    from email_notifications.models import NewsletterSubscription
+    EMAIL_NOTIFICATIONS_AVAILABLE = True
+except ImportError:
+    EMAIL_NOTIFICATIONS_AVAILABLE = False
+    logger.warning("Email notifications app not available")
 
 
 class RegisterView(APIView):
@@ -50,13 +60,33 @@ class GoogleSignUpView(APIView):
             user = serializer.save()
             log_user_activity(user, 'signup', 'User registered with Google', request)
             
+            # ADD THIS: Send welcome email for Google signup
+            if EMAIL_NOTIFICATIONS_AVAILABLE:
+                try:
+                    send_welcome_email(user)
+                    
+                    # Auto-subscribe to newsletter
+                    newsletter_subscription, created = NewsletterSubscription.objects.get_or_create(
+                        user=user,
+                        defaults={
+                            'email': user.email,
+                            'is_verified': True,
+                            'subscription_source': 'account_creation'
+                        }
+                    )
+                    if created:
+                        logger.info(f"Auto-subscribed Google user {user.email} to newsletter")
+                        
+                except Exception as e:
+                    logger.error(f"Failed to send welcome email or subscribe to newsletter: {str(e)}")
+            
             # Generate JWT tokens
             refresh = RefreshToken.for_user(user)
             access_token = refresh.access_token
             
             return Response({
                 'message': 'Google signup successful.',
-                'user': UserProfileSerializer(user, context={'request': request}).data,  # ✅ FIXED: Added request context
+                'user': UserProfileSerializer(user, context={'request': request}).data,
                 'access_token': str(access_token),
                 'refresh_token': str(refresh)
             }, status=status.HTTP_201_CREATED)
@@ -73,13 +103,32 @@ class VerifyEmailView(APIView):
             user = serializer.save()
             log_user_activity(user, 'profile_update', 'Email verified successfully', request)
             
+            # ADD THIS: Send welcome email after successful verification
+            if EMAIL_NOTIFICATIONS_AVAILABLE:
+                try:
+                    send_welcome_email(user)
+                    
+                    # Auto-subscribe to newsletter if email notifications are available
+                    newsletter_subscription, created = NewsletterSubscription.objects.get_or_create(
+                        user=user,
+                        defaults={
+                            'email': user.email,
+                            'is_verified': True,
+                            'subscription_source': 'account_creation'
+                        }
+                    )
+                    if created:
+                        logger.info(f"Auto-subscribed user {user.email} to newsletter")
+                        
+                except Exception as e:
+                    logger.error(f"Failed to send welcome email or subscribe to newsletter: {str(e)}")
+            
             return Response({
                 'message': 'Email verified successfully. You can now log in.',
                 'user_id': user.id
             }, status=status.HTTP_200_OK)
         
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
 
 class LoginView(APIView):
     permission_classes = [permissions.AllowAny]
@@ -166,7 +215,26 @@ class ProfileView(APIView):
         """Get user profile data"""
         # Pass request context for avatar URL building
         serializer = UserProfileSerializer(request.user, context={'request': request})
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        profile_data = serializer.data
+        
+        # ADD THIS: Add newsletter subscription info if available
+        if EMAIL_NOTIFICATIONS_AVAILABLE:
+            try:
+                newsletter_subscription = NewsletterSubscription.objects.filter(
+                    user=request.user,
+                    is_active=True
+                ).first()
+                
+                if newsletter_subscription:
+                    from email_notifications.serializers import NewsletterSubscriptionSerializer
+                    profile_data['newsletter_subscription'] = NewsletterSubscriptionSerializer(newsletter_subscription).data
+                else:
+                    profile_data['newsletter_subscription'] = None
+            except Exception as e:
+                logger.error(f"Failed to get newsletter subscription info: {str(e)}")
+                profile_data['newsletter_subscription'] = None
+        
+        return Response(profile_data, status=status.HTTP_200_OK)
     
     def put(self, request):
         """Update user profile with field name conversion and proper date handling"""
@@ -329,6 +397,13 @@ class ChangePasswordView(APIView):
         if serializer.is_valid():
             serializer.save()
             log_user_activity(request.user, 'password_change', 'Password changed successfully', request)
+            
+            # ADD THIS: Send password change notification email
+            if EMAIL_NOTIFICATIONS_AVAILABLE:
+                try:
+                    send_password_change_notification(request.user, request)
+                except Exception as e:
+                    logger.error(f"Failed to send password change notification: {str(e)}")
             
             return Response({
                 'message': 'Password changed successfully.'

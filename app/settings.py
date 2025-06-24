@@ -48,6 +48,7 @@ LOCAL_APPS = [
     'sneak_peeks',
     'live_video', 
     'admin_dashboard',
+    'email_notifications',
     ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
